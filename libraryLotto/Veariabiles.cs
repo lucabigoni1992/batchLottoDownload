@@ -14,7 +14,7 @@ namespace libraryLotto
         internal static string urlLotto = @"https://www.superenalotto.com/";
         internal static string urlLottoRisultati = @"risultati/";
         internal static string extractData = @"/risultati/estrazione-";
-        internal static string fileDsName = "Data/Lotto.xml";
+        internal static string fileDsName = Properties.Resources.bkDbXml.Replace("|DataDirectory|", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)).Replace("file:\\", "");
         internal static int annoDiInizio = 1997;
 
         //   internal static int annoDiInizio = 1997;
