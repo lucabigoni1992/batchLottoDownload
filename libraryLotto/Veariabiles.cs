@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 using libraryLotto.Data;
@@ -58,7 +59,6 @@ namespace libraryLotto
                     QuotazioniVinciteTA.Fill(_DsLotto.QuotazioniVincite);
                     QuotazioniVinciteTA.Connection.Close();
                 }
-                _DsLotto.Lotto.AcceptChanges();//in questa maniera non aggiorno più quelle nuove
             }
             catch (Exception ex)
             {
@@ -97,8 +97,9 @@ namespace libraryLotto
 
         //LottoPalle
         internal static LottoPalleRow _LottoPalleDs_newRow() { return _DsLotto.LottoPalle.NewLottoPalleRow(); }
-        internal static LottoPalleRow _LottoPalleDs_newRow(int id, int numeroPalla,string tipoPalla) {
-            LottoPalleRow row= _DsLotto.LottoPalle.NewLottoPalleRow();
+        internal static LottoPalleRow _LottoPalleDs_newRow(int id, int numeroPalla, string tipoPalla)
+        {
+            LottoPalleRow row = _DsLotto.LottoPalle.NewLottoPalleRow();
             row.Id = id;
             row.nPalla = numeroPalla;
             row.tipoPalla = tipoPalla;

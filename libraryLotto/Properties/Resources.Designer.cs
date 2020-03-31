@@ -61,7 +61,7 @@ namespace libraryLotto.Properties {
         }
         
         /// <summary>
-        ///   Cerca una stringa localizzata simile a Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\LottoDb.mdf;Trusted_Connection=Yes;.
+        ///   Cerca una stringa localizzata simile a Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\LottoDb.mdf;Persist Security Info=True;User ID=sa;Password=pippo92.
         /// </summary>
         internal static string MyConnectionString {
             get {
