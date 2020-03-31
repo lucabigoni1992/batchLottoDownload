@@ -121,6 +121,6 @@
     <value>|DataDirectory|\Data\LottoDb.xml</value>
   </data>
   <data name="MyConnectionString" xml:space="preserve">
-    <value>Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\LottoDb.mdf;Persist Security Info=True;User ID=sa;Password=pippo92</value>
+    <value>Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\LottoDb.mdf;Integrated Security=True;User ID=sa;Password=pippo92</value>
   </data>
 </root>

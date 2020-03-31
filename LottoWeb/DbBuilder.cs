@@ -15,7 +15,6 @@ namespace LottoWeb
 {
   public class DbBuilder : IHostedService, IDisposable
   {
-    private int executionCount = 0;
     private readonly ILogger<DbBuilder> _logger;
     private Timer _timer;
     private int lastDay = DateTime.Now.Day-1;

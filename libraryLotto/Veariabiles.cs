@@ -4,7 +4,6 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 using libraryLotto.Data;
-using libraryLotto.Data.LottoDsTableAdapters;
 using static libraryLotto.Data.LottoDs;
 
 namespace libraryLotto
@@ -27,52 +26,18 @@ namespace libraryLotto
 
         //struttura Dati 
 
-        internal static LottoTableAdapter LottoTA = new LottoTableAdapter();
-        internal static QuotazioniVinciteTableAdapter QuotazioniVinciteTA = new QuotazioniVinciteTableAdapter();
-        internal static LottoPalleTableAdapter LottoPalleTA = new LottoPalleTableAdapter();
-        internal static string connectionDb = Properties.Resources.MyConnectionString.Replace("|DataDirectory|", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)).Replace("file:\\", "");
 
         internal static LottoDs _DsLotto = new LottoDs();
 
-        private static void UpdateDb()
-        {
-            try
-            {
-                using (LottoTA.Connection = new SqlConnection(connectionDb))
-                {
-                    LottoTA.Connection.Open();
-                    LottoTA.Update(_DsLotto);
-                    LottoTA.Fill(_DsLotto.Lotto);
-                    LottoTA.Connection.Close();
-                }
-                using (LottoPalleTA.Connection = new SqlConnection(connectionDb))
-                {
-                    LottoPalleTA.Connection.Open();
-                    LottoPalleTA.Update(_DsLotto);
-                    LottoPalleTA.Fill(_DsLotto.LottoPalle);
-                    LottoPalleTA.Connection.Close();
-                }
-                using (QuotazioniVinciteTA.Connection = new SqlConnection(connectionDb))
-                {
-                    QuotazioniVinciteTA.Connection.Open();
-                    QuotazioniVinciteTA.Update(_DsLotto);
-                    QuotazioniVinciteTA.Fill(_DsLotto.QuotazioniVincite);
-                    QuotazioniVinciteTA.Connection.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-        }
+
         internal static void _DsLottoSave()
         {
-            UpdateDb();//carico il db
             _DsLotto.WriteXml(fileDsName);//scrivo il file
         }
         internal static void _DsLottoLoad()
         {
-            UpdateDb();
+            if (System.IO.File.Exists(fileDsName))
+                _DsLotto.ReadXml(fileDsName);//scrivo il file
             DateTime LastLottoLoad = _DsLottoGetLastDate();
             annoDiInizio = LastLottoLoad.Year < 1997 ? 1997 : LastLottoLoad.Year;
         }
