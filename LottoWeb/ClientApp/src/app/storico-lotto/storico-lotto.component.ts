@@ -15,4 +15,6 @@ export class StoricoLottoComponent {
     public onButtonClick() {
         this.title = 'Hello from Kendo UI!';
     }
+
+    public mainGridOptions(){ }
 }

@@ -14,7 +14,7 @@ namespace libraryLotto
         private HtmlDocument docDetailes;
         private HtmlDocument doctempRow;
         private HtmlDocument doctemp;
-        private int anno = Variabili.annoDiInizio;
+        private DateTime anno = Variabili.annoDiInizio;
 
         public batchDownloadData()
         {
@@ -30,7 +30,9 @@ namespace libraryLotto
         }
         public void downloadAllLotto()
         {
-            for (int i = 0; i <= (DateTime.Now.Year - Variabili.annoDiInizio); i++)
+            if (DateTime.Now.Year == Variabili.annoDiInizio.Year && DateTime.Now.Month == Variabili.annoDiInizio.Month && DateTime.Now.Day == Variabili.annoDiInizio.Day)
+                return;
+            for (int i = 0; i <= (DateTime.Now.Year - Variabili.annoDiInizio.Year); i++)
             {
                 Task<string> task = Task.Run(async () => await downloadDataEstrazioniLotto());
                 string result = task.Result;
@@ -148,7 +150,8 @@ namespace libraryLotto
             // Call asynchronous network methods in a try/catch block to handle exceptions.
             try
             {
-                string url = Variabili.urlLotto + Variabili.urlLottoRisultati + (anno++).ToString();
+                string url = Variabili.urlLotto + Variabili.urlLottoRisultati + (anno.Year).ToString();
+                anno = anno.AddYears(1);
                 Console.WriteLine(url);
                 HttpResponseMessage response = await client.GetAsync(url);//++annoCoutnis è un operazione atomica ergo ogni chiamata ha un numero differente
                 response.EnsureSuccessStatusCode();

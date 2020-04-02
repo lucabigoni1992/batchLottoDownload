@@ -259,6 +259,13 @@ namespace libraryLotto.Data {
             this.tableLottoPalle = new LottoPalleDataTable();
             base.Tables.Add(this.tableLottoPalle);
             global::System.Data.ForeignKeyConstraint fkc;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_Lotto_QuotazioniVincite", new global::System.Data.DataColumn[] {
+                        this.tableLotto.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableQuotazioniVincite.IdColumn});
+            this.tableQuotazioniVincite.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_Lotto_LottoPalle", new global::System.Data.DataColumn[] {
                         this.tableLotto.IdColumn}, new global::System.Data.DataColumn[] {
                         this.tableLottoPalle.IdColumn});
