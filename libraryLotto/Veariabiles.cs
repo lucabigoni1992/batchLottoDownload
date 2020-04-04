@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using libraryLotto.Data;
 using static libraryLotto.Data.LottoDs;
+using static libraryLotto.dlm.queryDataLogicMapping;
 
 namespace libraryLotto
 {
@@ -39,7 +42,7 @@ namespace libraryLotto
             if (System.IO.File.Exists(fileDsName))
                 _DsLotto.ReadXml(fileDsName);//scrivo il file
             DateTime LastLottoLoad = _DsLottoGetLastDate();
-            annoDiInizio = LastLottoLoad.Year < 1997 ? new DateTime(1997,1,1) : LastLottoLoad;
+            annoDiInizio = LastLottoLoad.Year < 1997 ? new DateTime(1997, 1, 1) : LastLottoLoad;
         }
 
         internal static DateTime _DsLottoGetLastDate()
@@ -91,8 +94,33 @@ namespace libraryLotto
 
         //ITERAZIONI TRA DATATABLE
 
-        internal static LottoDataTable _LottoAndPalle() {
+        internal static List<Struct_Joing_Lotto_LottoPalle> _LottoAndPalle()
+        {
+            return (
+                    from Tablotto in _DsLotto.Lotto
+                    join Tabpalle in _DsLotto.LottoPalle on Tablotto.Id equals Tabpalle.Id
+                    select new Struct_Joing_Lotto_LottoPalle(Tablotto, Tabpalle)
+                    ).ToList();
         }
 
+
+        internal static List<Struct_Joing_Lotto_LottoPalle> _LottoAndPalleTest()
+        {
+            var param = Expression.Parameter(typeof(Struct_Joing_Lotto_LottoPalle), "p");
+            var exeWhere = Expression.Lambda<Func<Struct_Joing_Lotto_LottoPalle, bool>>(
+                Expression.Equal(
+                    Expression.Property(param, "aTest"),
+                    Expression.Constant(1992)
+                ),
+                param
+            );
+
+            return (
+                    from Tablotto in _DsLotto.Lotto
+                    join Tabpalle in _DsLotto.LottoPalle on Tablotto.Id equals Tabpalle.Id
+                    select new Struct_Joing_Lotto_LottoPalle(Tablotto, Tabpalle)
+                    ).Where(exeWhere.Compile()).Where(p => p.lotto.anno == 1992).ToList(); ;
+        }
     }
+
 }

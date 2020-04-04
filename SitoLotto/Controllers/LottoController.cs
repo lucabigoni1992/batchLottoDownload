@@ -28,7 +28,7 @@ namespace LottoWeb.ClientApp
         [HttpGet("{ParamKendo}", Name = "Get")]
         public string Get(string ParamKendo)
         {
-            return JsonConvert.SerializeObject(a.GetLotto()); ;
+            return JsonConvert.SerializeObject(a.GetLottoAndBall()); ;
         }
 
         // POST: api/Lotto
