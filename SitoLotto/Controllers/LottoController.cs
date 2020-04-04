@@ -11,42 +11,42 @@ using Newtonsoft.Json;
 
 namespace LottoWeb.ClientApp
 {
-  [Route("api/[controller]")]
-  [ApiController]
-  public class LottoController : ControllerBase
-  {
-
-    ApiInterface a = new ApiInterface();
-    // GET: api/Lotto
-    [HttpGet]
-    public string Get()
+    [Route("api/[controller]")]
+    [ApiController]
+    public class LottoController : ControllerBase
     {
-      return JsonConvert.SerializeObject(a.GetLotto());
-    }
 
-    // GET: api/Lotto/5
-    [HttpGet("{id}", Name = "Get")]
-    public string Get(int id)
-    {
-      return "value";
-    }
+        ApiInterface a = new ApiInterface();
+        // GET: api/Lotto
+        [HttpGet]
+        public string Get()
+        {
+            return JsonConvert.SerializeObject(a.GetLotto());
+        }
+        
+        // GET: api/Lotto/5
+        [HttpGet("{ParamKendo}", Name = "Get")]
+        public string Get(string ParamKendo)
+        {
+            return JsonConvert.SerializeObject(a.GetLotto()); ;
+        }
 
-    // POST: api/Lotto
-    [HttpPost]
-    public void Post([FromBody] string value)
-    {
-    }
+        // POST: api/Lotto
+        [HttpPost]
+        public void Post([FromBody] string value)
+        {
+        }
 
-    // PUT: api/Lotto/5
-    [HttpPut("{id}")]
-    public void Put(int id, [FromBody] string value)
-    {
-    }
+        // PUT: api/Lotto/5
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody] string value)
+        {
+        }
 
-    // DELETE: api/ApiWithActions/5
-    [HttpDelete("{id}")]
-    public void Delete(int id)
-    {
+        // DELETE: api/ApiWithActions/5
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+        }
     }
-  }
 }

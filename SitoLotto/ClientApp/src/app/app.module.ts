@@ -10,10 +10,10 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { StoricoLottoComponent } from './storico-lotto/storico-lotto.component'
+import { CallRest } from './Access/CallRest'
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { getBaseUrl } from '../main';
 
 
 
@@ -34,11 +34,11 @@ import { getBaseUrl } from '../main';
             { path: '', component: HomeComponent, pathMatch: 'full' },
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
-            { path: 'storico-lotto', component: StoricoLottoComponent },
+            { path: 'storico-lotto', component: StoricoLottoComponent }
         ]),
         ButtonsModule,
         BrowserAnimationsModule,
-        GridModule
+        GridModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

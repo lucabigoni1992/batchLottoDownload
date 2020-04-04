@@ -30,6 +30,8 @@ namespace libraryLotto.Data {
         
         private LottoPalleDataTable tableLottoPalle;
         
+        private global::System.Data.DataRelation relationFK_Lotto_LottoPalle;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -242,6 +244,7 @@ namespace libraryLotto.Data {
                     this.tableLottoPalle.InitVars();
                 }
             }
+            this.relationFK_Lotto_LottoPalle = this.Relations["FK_Lotto_LottoPalle"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -273,6 +276,11 @@ namespace libraryLotto.Data {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            this.relationFK_Lotto_LottoPalle = new global::System.Data.DataRelation("FK_Lotto_LottoPalle", new global::System.Data.DataColumn[] {
+                        this.tableLotto.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableLottoPalle.IdColumn}, false);
+            this.relationFK_Lotto_LottoPalle.Nested = true;
+            this.Relations.Add(this.relationFK_Lotto_LottoPalle);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1106,12 +1114,15 @@ namespace libraryLotto.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LottoPalleRow AddLottoPalleRow(int Id, int nPalla, string tipoPalla) {
+            public LottoPalleRow AddLottoPalleRow(LottoRow parentLottoRowByFK_Lotto_LottoPalle, int nPalla, string tipoPalla) {
                 LottoPalleRow rowLottoPalleRow = ((LottoPalleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
+                        null,
                         nPalla,
                         tipoPalla};
+                if ((parentLottoRowByFK_Lotto_LottoPalle != null)) {
+                    columnValuesArray[0] = parentLottoRowByFK_Lotto_LottoPalle[0];
+                }
                 rowLottoPalleRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLottoPalleRow);
                 return rowLottoPalleRow;
@@ -1446,6 +1457,17 @@ namespace libraryLotto.Data {
                     this[this.tableLotto.hrfQuotazioniColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public LottoPalleRow[] GetLottoPalleRows() {
+                if ((this.Table.ChildRelations["FK_Lotto_LottoPalle"] == null)) {
+                    return new LottoPalleRow[0];
+                }
+                else {
+                    return ((LottoPalleRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Lotto_LottoPalle"])));
+                }
+            }
         }
         
         /// <summary>
@@ -1492,6 +1514,17 @@ namespace libraryLotto.Data {
                 }
                 set {
                     this[this.tableLottoPalle.tipoPallaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public LottoRow LottoRow {
+                get {
+                    return ((LottoRow)(this.GetParentRow(this.Table.ParentRelations["FK_Lotto_LottoPalle"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Lotto_LottoPalle"]);
                 }
             }
         }

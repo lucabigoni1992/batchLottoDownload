@@ -8,7 +8,12 @@ namespace libraryLotto
 {
    public class ApiInterface
     {
-        public LottoDataTable GetLotto() {
+        public LottoDataTable GetLotto()
+        {
+            return Variabili._Lotto();
+        }
+        public LottoDataTable GetLottoAndBall()
+        {
             return Variabili._Lotto();
         }
     }

@@ -7,7 +7,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FetchDataComponent {
     public forecasts: WeatherForecast[];
-    @Inject('BASE_URL') public baseUrl: string;
   
     constructor(http: HttpClient) {
         http.get<WeatherForecast[]>( 'api/weatherforecast').subscribe(result => {

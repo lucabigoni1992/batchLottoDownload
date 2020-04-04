@@ -88,5 +88,11 @@ namespace libraryLotto
         }
         internal static QuotazioniVinciteDataTable _QuatazioniVincite() { return _DsLotto.QuotazioniVincite; }
 
+
+        //ITERAZIONI TRA DATATABLE
+
+        internal static LottoDataTable _LottoAndPalle() {
+        }
+
     }
 }
