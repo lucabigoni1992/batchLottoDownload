@@ -1,14 +1,17 @@
-import { Component, Inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+
+import { Component, Inject, OnInit } from '@angular/core';
 import { State, process } from '@progress/kendo-data-query';
-import { CallRest } from '../Access/CallRest.services'
+import { CallRest } from '../Access/CallRest.services';
+import { DataService } from '../storico-lotto/data.service';
+import { Observable } from 'rxjs';
+import { FormGroup } from '@angular/forms';
 
 @Component({
     selector: 'app-storico-lotto-component',
     templateUrl: './storico-lotto.component.html',
 })
 
-export class StoricoLottoComponent {
+export class StoricoLottoComponent implements OnInit {
     public currentCount = 0;
 
     public incrementCounter() {
@@ -18,22 +21,20 @@ export class StoricoLottoComponent {
 
     public onButtonClick() {
         this.title = 'Hello from Kendo UI!';
-        this.showConfig();
     }
+    constructor(private dataService: DataService) {
 
+    }
+    public view: Observable<any>;
+    public formGroup: FormGroup;
     public Lotto: Object;
     public gridData: any;
 
-    showConfig() {
-        CallRest.CallRest_Lotto_Get().subscribe(result => {
-            this.gridData = result;
-        }, error => console.error(error));
+    public ngOnInit(): void {
+        this.view = this.dataService;
+        this.dataService.read();
     }
-    showConfigpost(State) {
-        CallRest.CallRest_Lotto_Get_state(State).subscribe(result => {
-            this.gridData = result;
-        }, error => console.error(error));
-    }
+
 
 
     public gridState: State = {
@@ -43,9 +44,8 @@ export class StoricoLottoComponent {
     };
 
     public onStateChange(state: State) {
-        this.showConfigpost(state);
+        this.dataService.read(state);
         this.gridState = state;
-        this.gridData = CallRest["CallRest_Lotto_Get"];
     }
 }
 

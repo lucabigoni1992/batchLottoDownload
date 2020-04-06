@@ -13,45 +13,61 @@ using System.Threading.Tasks;
 
 namespace SitoLotto
 {
-  public class DbBuilder : IHostedService, IDisposable
-  {
-    private readonly ILogger<DbBuilder> _logger;
-    private Timer _timer;
-    private int lastDay = DateTime.Now.Day-1;
-    private batchDownloadData lottoData = new batchDownloadData();
-
-    public DbBuilder(ILogger<DbBuilder> logger)
+    public class DbBuilder : IHostedService, IDisposable
     {
-      _logger = logger;
-    }
+        private readonly ILogger<DbBuilder> _logger;
+        private Timer _timer;
+        private int lastDay = DateTime.Now.Day - 1;
+        private batchDownloadData lottoData = new batchDownloadData();
 
-    public Task StartAsync(CancellationToken stoppingToken)
-    {
-      _logger.LogInformation("Timed Hosted Service is running.");
-      _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromSeconds(60*1000));
-      return Task.CompletedTask;
-    }
+        public DbBuilder(ILogger<DbBuilder> logger)
+        {
+            _logger = logger;
+        }
 
-    private void DoWork(object state)
-    {
-      if (lastDay != DateTime.Now.Day )
-      {
-        lastDay = DateTime.Now.Day;
-        lottoData.downloadAllLotto();
-        _logger.LogInformation("Db Updated");
-      }
 
-    }
+        public Task StartAsync(CancellationToken stoppingToken)
+        {
+            _logger.LogInformation("Timed Hosted Service is running.");
+            _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromSeconds(60 * 1000));
+            return Task.CompletedTask;
+        }
 
-    public Task StopAsync(CancellationToken stoppingToken)
-    {
-      _logger.LogInformation("Timed Hosted Service is stopping.");
-      return Task.CompletedTask;
-    }
+        private void DoWork(object state)
+        {
+            if (lastDay != DateTime.Now.Day)
+            {
+                lastDay = DateTime.Now.Day;
+                lottoData.downloadAllLotto();
+                _logger.LogInformation("Db Updated");
+            }
 
-    public void Dispose()
-    {
-      _timer?.Dispose();
+        }
+
+        public Task StopAsync(CancellationToken stoppingToken)
+        {
+            _logger.LogInformation("Timed Hosted Service is stopping.");
+            return Task.CompletedTask;
+        }
+
+        public void Dispose()
+        {
+            _timer?.Dispose();
+        }
+
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
-  }
 }

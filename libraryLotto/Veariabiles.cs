@@ -8,6 +8,11 @@ using System.Text;
 using libraryLotto.Data;
 using static libraryLotto.Data.LottoDs;
 using static libraryLotto.dlm.queryDataLogicMapping;
+using static libraryLotto.bl.BuisnessLogicUtilities;
+using Newtonsoft.Json;
+using static libraryLotto.dlm.KendoDataLogicMapping;
+using libraryLotto.dlm;
+using static libraryLotto.dlm.KendoResultDtaLogicMapping;
 
 namespace libraryLotto
 {
@@ -43,6 +48,7 @@ namespace libraryLotto
                 _DsLotto.ReadXml(fileDsName);//scrivo il file
             DateTime LastLottoLoad = _DsLottoGetLastDate();
             annoDiInizio = LastLottoLoad.Year < 1997 ? new DateTime(1997, 1, 1) : LastLottoLoad;
+
         }
 
         internal static DateTime _DsLottoGetLastDate()
@@ -57,6 +63,10 @@ namespace libraryLotto
         internal static LottoRow _LottoDs_newRow() { return _DsLotto.Lotto.NewLottoRow(); }
         internal static void _LottoDs_addRow(LottoRow row)
         {
+            if (row.Id == 0)
+            {
+                string stop = "" + "dd";
+            }
             if (_DsLotto.Lotto.FindById(row.Id) == null)
                 _DsLotto.Lotto.AddLottoRow(row);
 
@@ -93,33 +103,82 @@ namespace libraryLotto
 
 
         //ITERAZIONI TRA DATATABLE
-
-        internal static List<Struct_Joing_Lotto_LottoPalle> _LottoAndPalle()
+        private static IEnumerable<Struct_Joing_AllTable> _enumTablotto(bool ricalcola = false)
         {
-            return (
+            IEnumerable<Struct_Joing_AllTable> _Tablotto = null;
+            if (_Tablotto == null || ricalcola)
+                _Tablotto = (
+                    from Tablotto in _DsLotto.Lotto
+                    select new Struct_Joing_AllTable(Tablotto)
+                    );
+            return _Tablotto;
+        }
+        private static IEnumerable<Struct_Joing_AllTable> _enumTabLotto_Tabpalle(bool ricalcola = false)
+        {
+            IEnumerable<Struct_Joing_AllTable> _Lotto_Tabpalle = null;
+            if (_Lotto_Tabpalle == null || ricalcola)
+                _Lotto_Tabpalle = (
                     from Tablotto in _DsLotto.Lotto
                     join Tabpalle in _DsLotto.LottoPalle on Tablotto.Id equals Tabpalle.Id
-                    select new Struct_Joing_Lotto_LottoPalle(Tablotto, Tabpalle)
-                    ).ToList();
+                    select new Struct_Joing_AllTable(Tablotto, Tabpalle)
+                    );
+            return _Lotto_Tabpalle;
+        }
+        private static IEnumerable<Struct_Joing_AllTable> _enumTablotto_TabQuVin(bool ricalcola = false)
+        {
+            IEnumerable<Struct_Joing_AllTable> _TablottoTabQuVin = null;
+            if (_TablottoTabQuVin == null || ricalcola)
+                _TablottoTabQuVin = (
+                    from Tablotto in _DsLotto.Lotto
+                    join TabQuVin in _DsLotto.QuotazioniVincite on Tablotto.Id equals TabQuVin.Id
+                    select new Struct_Joing_AllTable(Tablotto, TabQuVin)
+                    );
+            return _TablottoTabQuVin;
         }
 
-
-        internal static List<Struct_Joing_Lotto_LottoPalle> _LottoAndPalleTest()
+        internal static List<Struct_Joing_AllTable> _listLottoAndPalle()
         {
-            var param = Expression.Parameter(typeof(Struct_Joing_Lotto_LottoPalle), "p");
-            var exeWhere = Expression.Lambda<Func<Struct_Joing_Lotto_LottoPalle, bool>>(
-                Expression.Equal(
-                    Expression.Property(param, "aTest"),
-                    Expression.Constant(1992)
-                ),
-                param
-            );
+            return _enumTabLotto_Tabpalle().ToList();
+        }
 
-            return (
-                    from Tablotto in _DsLotto.Lotto
-                    join Tabpalle in _DsLotto.LottoPalle on Tablotto.Id equals Tabpalle.Id
-                    select new Struct_Joing_Lotto_LottoPalle(Tablotto, Tabpalle)
-                    ).Where(exeWhere.Compile()).Where(p => p.lotto.anno == 1992).ToList(); ;
+        public static KendoData _LottoFromKendo(string KendoQuery)
+        {
+            try
+            {
+                IEnumerable<Struct_Joing_AllTable> enumerable = _enumTablotto();
+                if (String.IsNullOrEmpty(KendoQuery))
+                {
+                    enumerable = enumerable.OrderByDescending(estrazione => estrazione.id)
+                        .ToList();
+                    return new KendoData(
+                          enumerable.Count(),
+                          enumerable
+                                .ToList()
+                                .GetRange(0, 10)
+                                  );
+                        }
+                else
+                    return GettableByKendofilter(enumerable, KendoQuery.Replace(@"""","'"));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            return null;
+        }
+
+        private static KendoData GettableByKendofilter(IEnumerable<Struct_Joing_AllTable> enumerable, string kendoQuery)
+        {
+            //applichiamo where
+            QueryDescriptor Qd = JsonConvert.DeserializeObject<QueryDescriptor>(kendoQuery);
+            enumerable = enumerable.Where(Qd)
+                            .OrderBy(Qd);
+            return new KendoData(
+                  enumerable.Count(),
+                  enumerable
+                          .Range(Qd)
+                          .ToList()
+                          );
         }
     }
 

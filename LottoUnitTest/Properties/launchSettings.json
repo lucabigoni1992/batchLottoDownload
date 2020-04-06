@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "LottoUnitTest": {
+      "commandName": "Executable",
+      "sqlDebugging": false,
+      "nativeDebugging": false
+    }
+  }
+}

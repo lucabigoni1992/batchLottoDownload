@@ -39,7 +39,7 @@
   </div>
 </div>
 
-<kendo-grid [data]="gridData"
+<kendo-grid [data]="view | async"
             [height]="410"
             [pageSize]="gridState.take"
             [skip]="gridState.skip"

@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -10,10 +9,12 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { StoricoLottoComponent } from './storico-lotto/storico-lotto.component'
-import { CallRest } from './Access/CallRest'
+import { CallRest } from './Access/CallRest.services'
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DataService } from './storico-lotto/data.service'
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -38,9 +39,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         ]),
         ButtonsModule,
         BrowserAnimationsModule,
-        GridModule,
+        GridModule
+        
     ],
-    providers: [],
+    providers: [DataService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

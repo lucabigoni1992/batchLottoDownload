@@ -46,12 +46,12 @@ namespace libraryLotto.dlm
         }
         public class Struct_QuotazioniVincite
         {
-            public int id;
-            public string enumTipoVincita;
-            public long valore;
-            public int vincitori;
-            public string premio;
-            public string valuta;
+            public int id { get; set; }
+            public string enumTipoVincita { get; set; }
+            public long valore { get; set; }
+            public int vincitori { get; set; }
+            public string premio { get; set; }
+            public string valuta { get; set; }
             public Struct_QuotazioniVincite(int id, string enumTipoVincita, long valore, int vincitori, string premio, string valuta)
             {
                 this.id = id;
@@ -63,22 +63,78 @@ namespace libraryLotto.dlm
             }
         }
 
-        public class Struct_Joing_Lotto_LottoPalle
+        public class Struct_Joing_AllTable
         {
-            public Struct_Joing_Lotto_LottoPalle(LottoDs.LottoRow LottoRow, LottoDs.LottoPalleRow LottoPalleRow)
+
+            public int id { get; set; }//id che le tre tabelle hanno in comune
+            public int anno { get; set; }
+            public DateTime data { get; set; }
+            public string hrfQuotazioni { get; set; }
+            public int nPalla { get; set; }
+            public String tipoPalla { get; set; }
+            public string enumTipoVincita { get; set; }
+            public long valore { get; set; }
+            public int vincitori { get; set; }
+            public string premio { get; set; }
+            public string valuta { get; set; }
+
+            public Struct_Joing_AllTable(int id, int anno, DateTime data, string hrfQuotazioni, int nPalla, string tipoPalla, string enumTipoVincita, long valore, int vincitori, string premio, string valuta)
             {
-                this. aTest = LottoRow.anno;
-                this.lotto.id = LottoRow.Id;
-                this.lotto.anno = LottoRow.anno;
-                this.lotto.data = LottoRow.data;
-                this.lotto.hrfQuotazioni = LottoRow.hrfQuotazioni;
-                this.lottopalle.id = LottoPalleRow.Id;
-                this.lottopalle.nPalla = LottoPalleRow.nPalla;
-                this.lottopalle.tipoPalla = LottoPalleRow.tipoPalla;
+                this.id = id;
+                this.anno = anno;
+                this.data = data;
+                this.hrfQuotazioni = hrfQuotazioni;
+                this.nPalla = nPalla;
+                this.tipoPalla = tipoPalla;
+                this.enumTipoVincita = enumTipoVincita;
+                this.valore = valore;
+                this.vincitori = vincitori;
+                this.premio = premio;
+                this.valuta = valuta;
             }
-            public int aTest { get; set; }
-            public Struct_lotto lotto=new Struct_lotto();
-            public Struct_lottoPalle lottopalle=new Struct_lottoPalle();
+
+            public Struct_Joing_AllTable(LottoDs.LottoRow tablotto, LottoDs.LottoPalleRow tabpalle, LottoDs.QuotazioniVinciteRow tabQuotazioniVincitein)
+            {
+                this.id = tablotto.Id;
+                this.anno = tablotto.anno;
+                this.data = tablotto.data;
+                this.hrfQuotazioni = tablotto.hrfQuotazioni;
+                this.nPalla = tabpalle.nPalla;
+                this.tipoPalla = tabpalle.tipoPalla;
+                this.enumTipoVincita = tabQuotazioniVincitein.enumTipoVincita;
+                this.valore = tabQuotazioniVincitein.valore;
+                this.vincitori = tabQuotazioniVincitein.vincitori;
+                this.premio = tabQuotazioniVincitein.premio;
+                this.valuta = tabQuotazioniVincitein.IsvalutaNull() ? "" : valuta;
+            }
+            public Struct_Joing_AllTable(LottoDs.LottoRow tablotto,  LottoDs.QuotazioniVinciteRow tabQuotazioniVincitein)
+            {
+                this.id = tablotto.Id;
+                this.anno = tablotto.anno;
+                this.data = tablotto.data;
+                this.hrfQuotazioni = tablotto.hrfQuotazioni;
+                this.enumTipoVincita = tabQuotazioniVincitein.enumTipoVincita;
+                this.valore = tabQuotazioniVincitein.valore;
+                this.vincitori = tabQuotazioniVincitein.vincitori;
+                this.premio = tabQuotazioniVincitein.premio;
+                this.valuta = tabQuotazioniVincitein.IsvalutaNull() ? "" : valuta;
+            }
+            public Struct_Joing_AllTable(LottoDs.LottoRow tablotto, LottoDs.LottoPalleRow tabpalle)
+            {
+                this.id = tablotto.Id;
+                this.anno = tablotto.anno;
+                this.data = tablotto.data;
+                this.hrfQuotazioni = tablotto.hrfQuotazioni;
+                this.nPalla = tabpalle.nPalla;
+                this.tipoPalla = tabpalle.tipoPalla;
+            }
+            public Struct_Joing_AllTable(LottoDs.LottoRow tablotto)
+            {
+                this.id = tablotto.Id;
+                this.anno = tablotto.anno;
+                this.data = tablotto.data;
+                this.hrfQuotazioni = tablotto.hrfQuotazioni;
+            }
         }
 
     }

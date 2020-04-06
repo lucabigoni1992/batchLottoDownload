@@ -141,7 +141,7 @@ namespace libraryLotto
             for (int c = estr.Length; c < 4; c++)
                 estr = "0" + estr;
 
-            int.TryParse((anno + estr), out int val);
+            int.TryParse((anno.Year + estr), out int val);
             return val;
         }
 

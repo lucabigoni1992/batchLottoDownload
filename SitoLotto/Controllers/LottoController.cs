@@ -21,14 +21,14 @@ namespace LottoWeb.ClientApp
         [HttpGet]
         public string Get()
         {
-            return JsonConvert.SerializeObject(a.GetLotto());
+            return JsonConvert.SerializeObject(a.GetLottoKendoQuery(""));
         }
         
         // GET: api/Lotto/5
         [HttpGet("{ParamKendo}", Name = "Get")]
         public string Get(string ParamKendo)
         {
-            return JsonConvert.SerializeObject(a.GetLottoAndBall()); ;
+            return JsonConvert.SerializeObject(a.GetLottoKendoQuery(ParamKendo)); ;
         }
 
         // POST: api/Lotto

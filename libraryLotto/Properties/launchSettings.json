@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "libraryLotto": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

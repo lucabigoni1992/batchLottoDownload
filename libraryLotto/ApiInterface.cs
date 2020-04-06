@@ -2,26 +2,24 @@
 using System.Collections.Generic;
 using HtmlAgilityPack;
 using System.Text;
-using static libraryLotto.Data.LottoDs;
 using System.Data;
 using static libraryLotto.dlm.queryDataLogicMapping;
+using libraryLotto.dlm;
+using static libraryLotto.dlm.KendoResultDtaLogicMapping;
 
 namespace libraryLotto
 {
    public class ApiInterface
     {
-        public LottoDataTable GetLotto()
+   
+        public List<Struct_Joing_AllTable> GetLottoAndBall()
         {
-            return Variabili._Lotto();
-        }
-        public List<Struct_Joing_Lotto_LottoPalle> GetLottoAndBall()
-        {
-            return Variabili._LottoAndPalle();
+            return Variabili._listLottoAndPalle();
         }
 
-        public List<Struct_Joing_Lotto_LottoPalle> GetLottoAndBallTestLambda()
+        public KendoData GetLottoKendoQuery(string KendoQuery)
         {
-            return Variabili._LottoAndPalleTest();
+            return  Variabili._LottoFromKendo(KendoQuery);
         }
     }
 }
