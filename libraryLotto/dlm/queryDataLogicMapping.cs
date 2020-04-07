@@ -1,13 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using libraryLotto.Data;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace libraryLotto.dlm
 {
 
     public class queryDataLogicMapping
     {
+        public class DateFormatConverter : IsoDateTimeConverter
+        {
+            public DateFormatConverter(string format)
+            {
+                DateTimeFormat = format;
+            }
+        }
         public class Struct_lotto
         {
             public int id { get; set; }
@@ -68,17 +78,22 @@ namespace libraryLotto.dlm
 
             public int id { get; set; }//id che le tre tabelle hanno in comune
             public int anno { get; set; }
+            [JsonConverter(typeof(DateFormatConverter), "yyyy-MM-dd")]
             public DateTime data { get; set; }
             public string hrfQuotazioni { get; set; }
             public int nPalla { get; set; }
             public String tipoPalla { get; set; }
             public string enumTipoVincita { get; set; }
-            public long valore { get; set; }
+            public string valore { get; set; }
             public int vincitori { get; set; }
             public string premio { get; set; }
             public string valuta { get; set; }
 
-            public Struct_Joing_AllTable(int id, int anno, DateTime data, string hrfQuotazioni, int nPalla, string tipoPalla, string enumTipoVincita, long valore, int vincitori, string premio, string valuta)
+            //statistiche
+            public int nVincitori{ get; set; }
+            public string premio6Punti { get; set; }
+
+            public Struct_Joing_AllTable(int id, int anno, DateTime data, string hrfQuotazioni, int nPalla, string tipoPalla, string enumTipoVincita, string valore, int vincitori, string premio, string valuta)
             {
                 this.id = id;
                 this.anno = anno;
@@ -107,7 +122,7 @@ namespace libraryLotto.dlm
                 this.premio = tabQuotazioniVincitein.premio;
                 this.valuta = tabQuotazioniVincitein.IsvalutaNull() ? "" : valuta;
             }
-            public Struct_Joing_AllTable(LottoDs.LottoRow tablotto,  LottoDs.QuotazioniVinciteRow tabQuotazioniVincitein)
+            public Struct_Joing_AllTable(LottoDs.LottoRow tablotto, LottoDs.QuotazioniVinciteRow tabQuotazioniVincitein)
             {
                 this.id = tablotto.Id;
                 this.anno = tablotto.anno;
@@ -134,6 +149,19 @@ namespace libraryLotto.dlm
                 this.anno = tablotto.anno;
                 this.data = tablotto.data;
                 this.hrfQuotazioni = tablotto.hrfQuotazioni;
+                SetStatistics(tablotto);
+            }
+
+            private void SetStatistics(LottoDs.LottoRow tablotto)
+            {
+                nVincitori = tablotto.GetQuotazioniVinciteRows()
+                    .Where(r => r.premio == "6 punti")
+                    .Select(r => r.vincitori)
+                    .First();
+                premio6Punti = tablotto.GetQuotazioniVinciteRows()
+                    .Where(r => r.premio == "6 punti")
+                    .Select(r => r.valore)
+                    .First();
             }
         }
 

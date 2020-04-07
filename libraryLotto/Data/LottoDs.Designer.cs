@@ -30,6 +30,8 @@ namespace libraryLotto.Data {
         
         private LottoPalleDataTable tableLottoPalle;
         
+        private global::System.Data.DataRelation relationFK_Lotto_QuotazioniVincite;
+        
         private global::System.Data.DataRelation relationFK_Lotto_LottoPalle;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
@@ -244,6 +246,7 @@ namespace libraryLotto.Data {
                     this.tableLottoPalle.InitVars();
                 }
             }
+            this.relationFK_Lotto_QuotazioniVincite = this.Relations["FK_Lotto_QuotazioniVincite"];
             this.relationFK_Lotto_LottoPalle = this.Relations["FK_Lotto_LottoPalle"];
         }
         
@@ -276,6 +279,10 @@ namespace libraryLotto.Data {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            this.relationFK_Lotto_QuotazioniVincite = new global::System.Data.DataRelation("FK_Lotto_QuotazioniVincite", new global::System.Data.DataColumn[] {
+                        this.tableLotto.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableQuotazioniVincite.IdColumn}, false);
+            this.Relations.Add(this.relationFK_Lotto_QuotazioniVincite);
             this.relationFK_Lotto_LottoPalle = new global::System.Data.DataRelation("FK_Lotto_LottoPalle", new global::System.Data.DataColumn[] {
                         this.tableLotto.IdColumn}, new global::System.Data.DataColumn[] {
                         this.tableLottoPalle.IdColumn}, false);
@@ -502,15 +509,18 @@ namespace libraryLotto.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public QuotazioniVinciteRow AddQuotazioniVinciteRow(int Id, string enumTipoVincita, long valore, int vincitori, string premio, string valuta) {
+            public QuotazioniVinciteRow AddQuotazioniVinciteRow(LottoRow parentLottoRowByFK_Lotto_QuotazioniVincite, string enumTipoVincita, string valore, int vincitori, string premio, string valuta) {
                 QuotazioniVinciteRow rowQuotazioniVinciteRow = ((QuotazioniVinciteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
+                        null,
                         enumTipoVincita,
                         valore,
                         vincitori,
                         premio,
                         valuta};
+                if ((parentLottoRowByFK_Lotto_QuotazioniVincite != null)) {
+                    columnValuesArray[0] = parentLottoRowByFK_Lotto_QuotazioniVincite[0];
+                }
                 rowQuotazioniVinciteRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowQuotazioniVinciteRow);
                 return rowQuotazioniVinciteRow;
@@ -557,7 +567,7 @@ namespace libraryLotto.Data {
                 base.Columns.Add(this.columnId);
                 this.columnenumTipoVincita = new global::System.Data.DataColumn("enumTipoVincita", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnenumTipoVincita);
-                this.columnvalore = new global::System.Data.DataColumn("valore", typeof(long), null, global::System.Data.MappingType.Element);
+                this.columnvalore = new global::System.Data.DataColumn("valore", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnvalore);
                 this.columnvincitori = new global::System.Data.DataColumn("vincitori", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnvincitori);
@@ -1340,9 +1350,9 @@ namespace libraryLotto.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public long valore {
+            public string valore {
                 get {
-                    return ((long)(this[this.tableQuotazioniVincite.valoreColumn]));
+                    return ((string)(this[this.tableQuotazioniVincite.valoreColumn]));
                 }
                 set {
                     this[this.tableQuotazioniVincite.valoreColumn] = value;
@@ -1384,6 +1394,17 @@ namespace libraryLotto.Data {
                 }
                 set {
                     this[this.tableQuotazioniVincite.valutaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public LottoRow LottoRow {
+                get {
+                    return ((LottoRow)(this.GetParentRow(this.Table.ParentRelations["FK_Lotto_QuotazioniVincite"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Lotto_QuotazioniVincite"]);
                 }
             }
             
@@ -1466,6 +1487,17 @@ namespace libraryLotto.Data {
                 }
                 else {
                     return ((LottoPalleRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Lotto_LottoPalle"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public QuotazioniVinciteRow[] GetQuotazioniVinciteRows() {
+                if ((this.Table.ChildRelations["FK_Lotto_QuotazioniVincite"] == null)) {
+                    return new QuotazioniVinciteRow[0];
+                }
+                else {
+                    return ((QuotazioniVinciteRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Lotto_QuotazioniVincite"])));
                 }
             }
         }

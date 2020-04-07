@@ -41,6 +41,7 @@ namespace libraryLotto
         internal static void _DsLottoSave()
         {
             _DsLotto.WriteXml(fileDsName);//scrivo il file
+            _DsLotto.AcceptChanges();
         }
         internal static void _DsLottoLoad()
         {
@@ -103,32 +104,26 @@ namespace libraryLotto
 
 
         //ITERAZIONI TRA DATATABLE
-        private static IEnumerable<Struct_Joing_AllTable> _enumTablotto(bool ricalcola = false)
+        private static IEnumerable<Struct_Joing_AllTable> _enumTablotto()
         {
-            IEnumerable<Struct_Joing_AllTable> _Tablotto = null;
-            if (_Tablotto == null || ricalcola)
-                _Tablotto = (
+            IEnumerable<Struct_Joing_AllTable> _Tablotto = (
                     from Tablotto in _DsLotto.Lotto
                     select new Struct_Joing_AllTable(Tablotto)
                     );
             return _Tablotto;
         }
-        private static IEnumerable<Struct_Joing_AllTable> _enumTabLotto_Tabpalle(bool ricalcola = false)
+        private static IEnumerable<Struct_Joing_AllTable> _enumTabLotto_Tabpalle()
         {
-            IEnumerable<Struct_Joing_AllTable> _Lotto_Tabpalle = null;
-            if (_Lotto_Tabpalle == null || ricalcola)
-                _Lotto_Tabpalle = (
+            IEnumerable<Struct_Joing_AllTable> _Lotto_Tabpalle  = (
                     from Tablotto in _DsLotto.Lotto
                     join Tabpalle in _DsLotto.LottoPalle on Tablotto.Id equals Tabpalle.Id
                     select new Struct_Joing_AllTable(Tablotto, Tabpalle)
                     );
             return _Lotto_Tabpalle;
         }
-        private static IEnumerable<Struct_Joing_AllTable> _enumTablotto_TabQuVin(bool ricalcola = false)
+        private static IEnumerable<Struct_Joing_AllTable> _enumTablotto_TabQuVin()
         {
-            IEnumerable<Struct_Joing_AllTable> _TablottoTabQuVin = null;
-            if (_TablottoTabQuVin == null || ricalcola)
-                _TablottoTabQuVin = (
+            IEnumerable<Struct_Joing_AllTable> _TablottoTabQuVin = (
                     from Tablotto in _DsLotto.Lotto
                     join TabQuVin in _DsLotto.QuotazioniVincite on Tablotto.Id equals TabQuVin.Id
                     select new Struct_Joing_AllTable(Tablotto, TabQuVin)

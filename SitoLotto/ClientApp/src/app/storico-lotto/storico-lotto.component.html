@@ -1,4 +1,4 @@
-<h1>Gioco del Lotto</h1>
+<h1>Gioco del Super EnalottoLotto</h1>
 
 <p>Benvenuto nella pagina dove potrai vedere lo storico dell'estrazioni dell'lotto.</p>
 
@@ -6,38 +6,23 @@
 <button kendoButton (click)="onButtonClick()" [primary]="true">My Kendo UI Button</button>
 
 <div class="example-config">
-  <label class="k-form-field">
-    <input class="k-checkbox" type="checkbox" id="allowUnsort"
-           [(ngModel)]="allowUnsort" />
-    <label class="k-checkbox-label" for="allowUnsort">
-      {{ allowUnsort ? 'Disable': 'Enable' }} unsorting
+    <label class="k-form-field">
+        <input class="k-checkbox" type="checkbox" id="allowUnsort"
+               [(ngModel)]="allowUnsort" />
+        <label class="k-checkbox-label" for="allowUnsort">
+            {{ allowUnsort ? 'Disable': 'Enable' }} unsorting
+        </label>
+    </label><br />
+    <label class="k-form-field">
+        <input class="k-checkbox" type="checkbox" id="multiple"
+               [(ngModel)]="multiple" />
+        <label class="k-checkbox-label" for="multiple">
+            {{ multiple ? 'Disable': 'Enable' }} multiple columns sorting
+        </label>
     </label>
-  </label><br />
-  <label class="k-form-field">
-    <input class="k-checkbox" type="checkbox" id="multiple"
-           [(ngModel)]="multiple" />
-    <label class="k-checkbox-label" for="multiple">
-      {{ multiple ? 'Disable': 'Enable' }} multiple columns sorting
-    </label>
-  </label>
 
 </div>
-<div style="margin: 10px">
-  <div class="card">
-    <div class="card-block k-form">
-      <fieldset>
-        <legend>Binding types</legend>
-        <div class="k-form-field">
-          <span>Bind the data to:</span>
 
-          <input [(ngModel)]="bindingType" type="radio" name="mode" id="async" value="async" class="k-radio"
-                 (change)="changeBindingType($event)">
-          <label class="k-radio-label" for="async">Asynchronous source</label>
-        </div>
-      </fieldset>
-    </div>
-  </div>
-</div>
 
 <kendo-grid [data]="view | async"
             [height]="410"
@@ -46,7 +31,42 @@
             [sort]="gridState.sort"
             [pageable]="true"
             [sortable]="true"
-          (dataStateChange)="onStateChange($event)"
-            >
-  <!--<kendo-grid-column *ngFor="let col of columns" [field]="col.field"></kendo-grid-column>-->
+            (dataStateChange)="onStateChange($event)">
+    <kendo-grid-column *ngFor="let column of columns"
+                       field="{{column.field}}"
+                       title="{{column.title}}"
+                       format="{{column.format}}"
+                       filter="{{column.type}}">
+        <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex" let-columnIndex="columnIndex">
+
+            <div *ngIf="columnIndex==0; then thenBlock else elseBlock"></div>
+            <ng-template #thenBlock>
+                <ng-container *ngTemplateOutlet="estimateTemplate;context:10">
+                </ng-container>
+            </ng-template>
+            <ng-template #elseBlock>
+                <div [ngSwitch]="column.field">
+                    <div *ngSwitchCase="'premio6Punti'">
+                        <strong>{{dataItem[column.field]}}</strong>
+                    </div>
+                    <div *ngSwitchDefault>
+                        {{dataItem[column.field]}}
+                    </div>
+                </div>
+            </ng-template>
+        </ng-template>
+    </kendo-grid-column>
 </kendo-grid>
+
+<ng-template #estimateTemplate let-lessonsCounter="estimate">
+    <div class="dropdown">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Azioni
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+</ng-template>

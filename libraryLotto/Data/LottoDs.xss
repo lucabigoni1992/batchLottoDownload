@@ -11,6 +11,18 @@
     <Shape ID="DesignTable:LottoPalle" ZOrder="5" X="697" Y="204" Height="86" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="82" />
   </Shapes>
   <Connectors>
+    <Connector ID="DesignRelation:FK_Lotto_QuotazioniVincite" ZOrder="1" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>419</X>
+          <Y>162</Y>
+        </Point>
+        <Point>
+          <X>419</X>
+          <Y>226</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
     <Connector ID="DesignRelation:FK_Lotto_LottoPalle" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
@@ -24,18 +36,6 @@
         <Point>
           <X>697</X>
           <Y>221</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
-    <Connector ID="DesignRelation:FK_Lotto_QuotazioniVincite" ZOrder="1" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>419</X>
-          <Y>162</Y>
-        </Point>
-        <Point>
-          <X>419</X>
-          <Y>226</Y>
         </Point>
       </RoutePoints>
     </Connector>

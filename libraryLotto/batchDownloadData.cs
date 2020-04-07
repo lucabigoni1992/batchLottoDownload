@@ -82,6 +82,7 @@ namespace libraryLotto
                         row = Variabili._LottoDs_newRow();
                     }
                 }
+                anno = anno.AddYears(1);
                 Variabili._DsLottoSave();
             }
 
@@ -116,7 +117,7 @@ namespace libraryLotto
                         string valore = Normalize(trows[1].InnerText);
                         if (valore == "-") valore = "0";
                         string[] valuta = valore.Split(" ");//valore, valuta
-                        row.valore = long.Parse(valuta[0].Replace(".", "").Split(",")[0]);
+                        row.valore =valuta[0];
                         if (valuta.Length > 1) row.valuta = valuta[1];
                         row.vincitori = int.Parse(Normalize(trows[2].InnerText).Replace(".", ""));
                         row.premio = trows[0].InnerText;
@@ -151,7 +152,6 @@ namespace libraryLotto
             try
             {
                 string url = Variabili.urlLotto + Variabili.urlLottoRisultati + (anno.Year).ToString();
-                anno = anno.AddYears(1);
                 Console.WriteLine(url);
                 HttpResponseMessage response = await client.GetAsync(url);//++annoCoutnis è un operazione atomica ergo ogni chiamata ha un numero differente
                 response.EnsureSuccessStatusCode();

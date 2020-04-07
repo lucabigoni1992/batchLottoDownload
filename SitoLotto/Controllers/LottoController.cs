@@ -17,6 +17,7 @@ namespace LottoWeb.ClientApp
     {
 
         ApiInterface a = new ApiInterface();
+   
         // GET: api/Lotto
         [HttpGet]
         public string Get()
