@@ -2,6 +2,7 @@
   "profiles": {
     "LottoUnitTest": {
       "commandName": "Executable",
+      "remoteDebugEnabled": false,
       "sqlDebugging": false,
       "nativeDebugging": false
     }
