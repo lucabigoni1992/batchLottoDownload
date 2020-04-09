@@ -5,12 +5,21 @@ import { CallRest } from '../Access/CallRest.services';
 import { DataService } from '../storico-lotto/data.service';
 import { Observable } from 'rxjs';
 import { FormGroup } from '@angular/forms';
+import { PageAction } from '@progress/kendo-angular-grid/dist/es2015/scrolling/scroller.service';
 
 interface ColumnSetting {
     field: string;
-    title: string;    
-    format  ?: string;
+    title: string;
+    format?: string;
     type: 'text' | 'numeric' | 'boolean' | 'date';
+    width?: string;
+}
+interface pageable {
+    buttonCount: number,
+    info: boolean,
+    type:' text' | 'numeric' | 'boolean' | 'date',
+    pageSizes: boolean,
+    previousNext: boolean
 }
 
 @Component({
@@ -42,9 +51,13 @@ export class StoricoLottoComponent implements OnInit {
         this.view = this.dataService;
         this.dataService.read();
     }
-
-    culo = { $implicit: 'World', localSk: 'Svet - Svet' };
-
+    public pageable: pageable = {
+        buttonCount: 5,
+        info: true,
+        type: 'numeric' ,
+        pageSizes: true,
+        previousNext: true
+    };
 
     public gridState: State = {
         sort: [],
@@ -56,12 +69,14 @@ export class StoricoLottoComponent implements OnInit {
         {
             field: 'azioni',
             title: 'Azioni',
-            type: 'text'
+            type: 'text',
+            width: '100px'
         },
         {
             field: 'data',
             title: 'Data estrazione',
-            type: 'text'
+            type: 'text',
+            width: '100px'
         },
         {
             field: 'id',
@@ -85,6 +100,17 @@ export class StoricoLottoComponent implements OnInit {
         this.dataService.read(state);
         this.gridState = state;
     }
+
+    //funzioni
+
+    public GetOnlyNumberOfExtraction = function (id) {
+        var s_id = id.toString().substring(4);
+        for (var i = 0; i < s_id.length; i++) {
+            if (s_id.charAt(i) != '0')
+                return s_id.substring(i);
+        }
+    }
+
 }
 
 

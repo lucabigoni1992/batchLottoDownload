@@ -1,3 +1,14 @@
+<style>
+    .dropdown-item:hover, .dropdown-item:active {
+        background-color: #ff6358 !important;
+    }
+
+    .dropdown-item.active {
+        background-color: #da3428 !important;
+    }
+</style>
+
+
 <h1>Gioco del Super EnalottoLotto</h1>
 
 <p>Benvenuto nella pagina dove potrai vedere lo storico dell'estrazioni dell'lotto.</p>
@@ -29,14 +40,15 @@
             [pageSize]="gridState.take"
             [skip]="gridState.skip"
             [sort]="gridState.sort"
-            [pageable]="true"
+            [pageable]="pageable"
             [sortable]="true"
             (dataStateChange)="onStateChange($event)">
     <kendo-grid-column *ngFor="let column of columns"
                        field="{{column.field}}"
                        title="{{column.title}}"
                        format="{{column.format}}"
-                       filter="{{column.type}}" class="overflow-column">
+                       filter="{{column.type}}"
+                       width="{{column.width}}" class="overflow-column">
         <ng-template kendoGridCellTemplate let-dataItem="dataItem" let-rowIndex="rowIndex" let-columnIndex="columnIndex">
 
             <div *ngIf="columnIndex==0; then thenBlock else elseBlock"></div>
@@ -47,7 +59,10 @@
             <ng-template #elseBlock>
                 <div [ngSwitch]="column.field">
                     <div *ngSwitchCase="'premio6Punti'">
-                        <strong>{{dataItem[column.field]}}</strong>
+                        <strong>{{dataItem.premio6Punti}}</strong>
+                    </div>
+                    <div *ngSwitchCase="'id'">
+                        <strong>{{GetOnlyNumberOfExtraction(dataItem.id)}}</strong>
                     </div>
                     <div *ngSwitchDefault>
                         {{dataItem[column.field]}}
@@ -58,37 +73,28 @@
     </kendo-grid-column>
 </kendo-grid>
 
-<ng-container *ngTemplateOutlet="greet"></ng-container>
-<hr>
-<ng-container *ngTemplateOutlet="eng; context: culo"></ng-container>
-<hr>
-<ng-container *ngTemplateOutlet="svk; context: culo"></ng-container>
-<hr>
-
-<ng-template #greet><span>Hello</span></ng-template>
-<ng-template #eng let-name><span>Hello {{name}}!</span></ng-template>
-<ng-template #svk let-person="localSk"><span>Ahoj {{person}}!</span></ng-template>
-
 
 <ng-template kendoGridCellTemplate #estimateTemplate let-dataItem="dt">
     <div class="btn-group dropright position-static">
         <button kendoButton (click)="onButtonClick()" class="dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [primary]="true">
-            <span>...{{dataItem.id}}</span>
+            <span>...</span>
         </button>
         <div class="dropdown-menu" role="menu">
-            <button kendoButton (click)="onButtonClick()" class="dropdown-item">
-                <fa name="cog" animation="spin"></fa>
+            <span class="dropdown-item active border border-secondary rounded" style="    margin-top: -8px;">
+                Menu Estrazione {{GetOnlyNumberOfExtraction(dataItem.id)}}
+            </span>
+            <button (click)="onButtonClick()" class="dropdown-item">
+                <fa name="angle-right"></fa>
                 Numeri usciti
             </button>
-            <button kendoButton (click)="onButtonClick()" class="dropdown-item">
-                <fa name="cog" animation="spin"></fa>
+            <button (click)="onButtonClick()" class="dropdown-item">
+                <fa name="angle-right"></fa>
+                Dati delle Vincite
             </button>
-
-            <button kendoButton (click)="onButtonClick()" class="dropdown-item"></button>
             <div class="dropdown-divider"></div>
-            <button kendoButton (click)="onButtonClick()" class="dropdown-item">
-                <fa name="cog" animation="spin"></fa>
-                test3
+            <button (click)="onButtonClick()" class="dropdown-item">
+                <fa name="cog" animation="spin" style="    margin-left: -9px;"></fa>
+                {{GetOnlyNumberOfExtraction(dataItem.id)}} Tutti i dati
             </button>
         </div>
     </div>
