@@ -15,6 +15,7 @@ import { GridModule } from '@progress/kendo-angular-grid';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataService } from './storico-lotto/data.service'
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 
@@ -39,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
         ]),
         ButtonsModule,
         BrowserAnimationsModule,
-        GridModule
+        GridModule,
+        AngularFontAwesomeModule
         
     ],
     providers: [DataService],

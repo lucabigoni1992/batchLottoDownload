@@ -37,11 +37,11 @@
                        title="{{column.title}}"
                        format="{{column.format}}"
                        filter="{{column.type}}" class="overflow-column">
-        <ng-template kendoGridCellTemplate  let-dataItem let-rowIndex="rowIndex" let-columnIndex="columnIndex">
+        <ng-template kendoGridCellTemplate let-dataItem="dataItem" let-rowIndex="rowIndex" let-columnIndex="columnIndex">
 
             <div *ngIf="columnIndex==0; then thenBlock else elseBlock"></div>
             <ng-template #thenBlock>
-                <ng-container  *ngTemplateOutlet="estimateTemplate;context:10">
+                <ng-container *ngTemplateOutlet="estimateTemplate; context: { dt: dataItem}">
                 </ng-container>
             </ng-template>
             <ng-template #elseBlock>
@@ -58,17 +58,38 @@
     </kendo-grid-column>
 </kendo-grid>
 
-<ng-template kendoGridCellTemplate #estimateTemplate let-lessonsCounter="estimate">
-    <div class="btn-group position-static">
-        <button type="button" class="btn btn-danger dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Action
+<ng-container *ngTemplateOutlet="greet"></ng-container>
+<hr>
+<ng-container *ngTemplateOutlet="eng; context: culo"></ng-container>
+<hr>
+<ng-container *ngTemplateOutlet="svk; context: culo"></ng-container>
+<hr>
+
+<ng-template #greet><span>Hello</span></ng-template>
+<ng-template #eng let-name><span>Hello {{name}}!</span></ng-template>
+<ng-template #svk let-person="localSk"><span>Ahoj {{person}}!</span></ng-template>
+
+
+<ng-template kendoGridCellTemplate #estimateTemplate let-dataItem="dt">
+    <div class="btn-group dropright position-static">
+        <button kendoButton (click)="onButtonClick()" class="dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [primary]="true">
+            <span>...{{dataItem.id}}</span>
         </button>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-menu" role="menu">
+            <button kendoButton (click)="onButtonClick()" class="dropdown-item">
+                <fa name="cog" animation="spin"></fa>
+                Numeri usciti
+            </button>
+            <button kendoButton (click)="onButtonClick()" class="dropdown-item">
+                <fa name="cog" animation="spin"></fa>
+            </button>
+
+            <button kendoButton (click)="onButtonClick()" class="dropdown-item"></button>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
+            <button kendoButton (click)="onButtonClick()" class="dropdown-item">
+                <fa name="cog" animation="spin"></fa>
+                test3
+            </button>
         </div>
     </div>
 </ng-template>

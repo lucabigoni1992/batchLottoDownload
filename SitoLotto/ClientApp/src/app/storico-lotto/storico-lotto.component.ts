@@ -43,6 +43,7 @@ export class StoricoLottoComponent implements OnInit {
         this.dataService.read();
     }
 
+    culo = { $implicit: 'World', localSk: 'Svet - Svet' };
 
 
     public gridState: State = {
