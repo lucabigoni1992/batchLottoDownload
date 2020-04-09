@@ -13,6 +13,7 @@ using Newtonsoft.Json;
 using static libraryLotto.dlm.KendoDataLogicMapping;
 using libraryLotto.dlm;
 using static libraryLotto.dlm.KendoResultDtaLogicMapping;
+using System.IO;
 
 namespace libraryLotto
 {
@@ -40,6 +41,9 @@ namespace libraryLotto
 
         internal static void _DsLottoSave()
         {
+            string dir = (Path.GetDirectoryName( fileDsName));
+            if (!Directory.Exists(dir))
+                System.IO.Directory.CreateDirectory(dir);
             _DsLotto.WriteXml(fileDsName);//scrivo il file
             _DsLotto.AcceptChanges();
         }

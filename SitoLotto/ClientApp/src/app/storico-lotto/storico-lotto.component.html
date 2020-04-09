@@ -36,12 +36,12 @@
                        field="{{column.field}}"
                        title="{{column.title}}"
                        format="{{column.format}}"
-                       filter="{{column.type}}">
-        <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex" let-columnIndex="columnIndex">
+                       filter="{{column.type}}" class="overflow-column">
+        <ng-template kendoGridCellTemplate  let-dataItem let-rowIndex="rowIndex" let-columnIndex="columnIndex">
 
             <div *ngIf="columnIndex==0; then thenBlock else elseBlock"></div>
             <ng-template #thenBlock>
-                <ng-container *ngTemplateOutlet="estimateTemplate;context:10">
+                <ng-container  *ngTemplateOutlet="estimateTemplate;context:10">
                 </ng-container>
             </ng-template>
             <ng-template #elseBlock>
@@ -58,15 +58,17 @@
     </kendo-grid-column>
 </kendo-grid>
 
-<ng-template #estimateTemplate let-lessonsCounter="estimate">
-    <div class="dropdown">
-        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Azioni
+<ng-template kendoGridCellTemplate #estimateTemplate let-lessonsCounter="estimate">
+    <div class="btn-group position-static">
+        <button type="button" class="btn btn-danger dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Action
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div class="dropdown-menu">
             <a class="dropdown-item" href="#">Action</a>
             <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
         </div>
     </div>
 </ng-template>
