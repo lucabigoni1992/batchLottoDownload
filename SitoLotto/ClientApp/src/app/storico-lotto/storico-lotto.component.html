@@ -90,7 +90,7 @@
 <div *ngIf="view.loading" class="k-i-loading"></div>
 
 
-<ng-template kendoGridCellTemplate #estimateTemplate let-dataItem="dt">
+<ng-template kendoGridCellTemplate #estimateTemplate id="estimateTemplate" let-dataItem="dt">
     <div class="btn-group dropright position-static">
         <button kendoButton (click)="onButtonClick()" class="dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [primary]="true">
             <span>...</span>
@@ -99,7 +99,7 @@
             <span class="dropdown-item active border border-secondary rounded" style="    margin-top: -8px;">
                 Menu Estrazione {{GetOnlyNumberOfExtraction(dataItem.id)}}
             </span>
-            <button (click)="modaleNumeri(content)" class="dropdown-item">
+            <button (click)="modaleNumeri(dataItem,'ciao mondo',content)" class="dropdown-item">
                 <fa name="angle-right"></fa>
                 Numeri usciti
             </button>
@@ -125,9 +125,17 @@
         </button>
     </div>
     <div class="modal-body">
-        <p>One fine body&hellip;</p>
+        <p>One fine body&hellip;{{ataItem.id}}</p>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
     </div>
 </ng-template>
+
+
+<script type="text/ng-template" id="estimateTemplate2.html">
+    <div class="btn-group dropright position-static">
+        sss
+    </div>
+</script>
+

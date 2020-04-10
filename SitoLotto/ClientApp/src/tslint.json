@@ -14,8 +14,8 @@
       "kebab-case"
     ],
     "compilerOptions": {
-      "experimentalDecorators": true,
-      "allowJs": true
+        "experimentalDecorators": true,
+        "allowJs": true
     }
   }
 }

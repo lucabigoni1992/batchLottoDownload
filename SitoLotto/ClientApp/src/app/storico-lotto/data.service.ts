@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { GridDataResult } from '@progress/kendo-angular-grid/dist/es2015/data/data.collection';
 
 import { Observable, BehaviorSubject } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
 
-import { GridDataResult } from '@progress/kendo-angular-grid';
 import {
     State,
     toDataSourceRequestString,

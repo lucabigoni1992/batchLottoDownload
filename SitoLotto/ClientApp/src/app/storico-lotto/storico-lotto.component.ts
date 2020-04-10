@@ -1,10 +1,12 @@
 
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { State, process } from '@progress/kendo-data-query';
 import { DataService } from '../storico-lotto/data.service';
 import { FormGroup } from '@angular/forms';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModalRef, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { GridDataResult } from '@progress/kendo-angular-grid/dist/es2015/data/data.collection';
+import { Container } from '@angular/compiler/src/i18n/i18n_ast';
+import { MyBootstrapModalComponent } from './component/directive/storico-lotto.component';
 
 interface ColumnSetting {
     field: string;
@@ -38,7 +40,7 @@ export class StoricoLottoComponent implements OnInit {
     public onButtonClick() {
         this.title = 'Hello from Kendo UI!';
     }
-    constructor(private dataService: DataService, modalService: NgbModal) {
+    constructor(private dataService: DataService, private modalService: NgbModal) {
 
     }
     public view: DataService;
@@ -124,9 +126,21 @@ export class StoricoLottoComponent implements OnInit {
 
 
     //modali
-    public modaleVincite = function (content) {
-        this.modalService.open(content, { size: 'lg' });
+    public modaleNumeri(dataitem, str, content) {
+        var modalRef: NgbModalRef = this.modalService.open(MyBootstrapModalComponent,
+            {
+                scrollable: false,
+                size: 'lg'
+            });
+        modalRef.componentInstance.fromParent = {
+            dataitem: dataitem,
+            str1: str,
+            str2: 'This Can be anything'
+        };
+        modalRef.result.then((result) => {
+            console.log(result);
+        }, (reason) => {
+        });
+
     }
 }
-
-

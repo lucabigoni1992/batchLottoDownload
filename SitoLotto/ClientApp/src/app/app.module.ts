@@ -8,7 +8,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { StoricoLottoComponent } from './storico-lotto/storico-lotto.component'
+import { StoricoLottoComponent,  } from './storico-lotto/storico-lotto.component'
 import { CallRest } from './Access/CallRest.services'
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { GridModule } from '@progress/kendo-angular-grid';
@@ -17,6 +17,7 @@ import { DataService } from './storico-lotto/data.service'
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MyBootstrapModalComponent } from './storico-lotto/component/directive/storico-lotto.component';
 
 
 
@@ -27,7 +28,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         HomeComponent,
         CounterComponent,
         FetchDataComponent,
-        StoricoLottoComponent
+        StoricoLottoComponent, MyBootstrapModalComponent
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -43,9 +44,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         BrowserAnimationsModule,
         GridModule,
         AngularFontAwesomeModule,
-        NgbModule
+        NgbModule,
         
     ],
+    entryComponents:[MyBootstrapModalComponent],
     providers: [DataService],
     bootstrap: [AppComponent]
 })
