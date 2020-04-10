@@ -1,12 +1,33 @@
-<style>
+<style type="text/css">
+
+    /**mi sono divertito a sovrascrivere i colori del bootstrap per questo ho fatto così
+        la soluzione migliore era mettere le variabili e le parti usate in tutto il sito in un file e metterlo nella root cosa che farà nelle prossime pagine
+    */
     /*bootstrap*/
-    .dropdown-item:hover, .dropdown-item:active {
-        background-color: #ff6358 !important;
+
+
+    * {
+        --primary-color-kendo-lotto: #ff6358 !important;
+        --event-color-kendo-lotto: #ff6358 !important;
+        --active-color-kendo-lotto: #c32727 !important;
     }
 
-    .dropdown-item.active {
-        background-color: #da3428 !important;
+    .dropdown-item-primary {
+        background-color: var(--primary-color-kendo-lotto);
+        border-color: var(--primary-color-kendo-lotto);
     }
+
+        .dropdown-item:hover, .dropdown-item:active {
+            background-color: var(--event-color-kendo-lotto);
+            border-color: var(--event-color-kendo-lotto);
+        }
+
+   .dropdown-item.active {
+        background-color: var(--active-color-kendo-lotto);
+        border-color: var(--active-color-kendo-lotto);
+    }
+
+
     /*kendo*/
     .grid-wrapper {
         position: relative;
@@ -76,8 +97,8 @@
                     <div *ngSwitchCase="'premio6Punti'">
                         <strong>{{dataItem.premio6Punti}}</strong>
                     </div>
-                    <div *ngSwitchCase="'id'">
-                        <strong>{{GetOnlyNumberOfExtraction(dataItem.id)}}</strong>
+                    <div *ngSwitchCase="'nEstrazione'">
+                        <strong>{{dataItem.nEstrazione}}</strong>
                     </div>
                     <div *ngSwitchDefault>
                         {{dataItem[column.field]}}
@@ -96,10 +117,10 @@
             <span>...</span>
         </button>
         <div class="dropdown-menu" role="menu">
-            <span class="dropdown-item active border border-secondary rounded" style="    margin-top: -8px;">
-                Menu Estrazione {{GetOnlyNumberOfExtraction(dataItem.id)}}
+            <span class="dropdown-item active border border-secondary rounded" style="margin-top: -8px;">
+                Menu Estrazione {{dataItem.nEstrazione}}
             </span>
-            <button (click)="modaleNumeri(dataItem,'ciao mondo',content)" class="dropdown-item">
+            <button (click)="modaleNumeri(dataItem)" class="dropdown-item">
                 <fa name="angle-right"></fa>
                 Numeri usciti
             </button>
@@ -110,7 +131,7 @@
             <div class="dropdown-divider"></div>
             <button (click)="onButtonClick()" class="dropdown-item">
                 <fa name="cog" animation="spin" style="    margin-left: -9px;"></fa>
-                {{GetOnlyNumberOfExtraction(dataItem.id)}} Tutti i dati
+                {{dataItem.nEstrazione}} Tutti i dati
             </button>
         </div>
     </div>
@@ -133,9 +154,4 @@
 </ng-template>
 
 
-<script type="text/ng-template" id="estimateTemplate2.html">
-    <div class="btn-group dropright position-static">
-        sss
-    </div>
-</script>
 

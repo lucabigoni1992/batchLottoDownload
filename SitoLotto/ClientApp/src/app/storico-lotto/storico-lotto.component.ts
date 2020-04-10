@@ -86,9 +86,10 @@ export class StoricoLottoComponent implements OnInit {
             width: '150px'
         },
         {
-            field: 'id',
+            field: 'nEstrazione',
+            format: '{0:0}',
             title: 'Estrazione n°',
-            type: 'text',
+            type: 'numeric',
             width: '120px'
         },
         {
@@ -109,33 +110,21 @@ export class StoricoLottoComponent implements OnInit {
     public onStateChange(state: State) {
         this.dataService.read(state);
         this.gridState = state;
-        //this.view = this.dataService;
-        //this.view.loading = true;
-        //this.view.read();
     }
 
     //funzioni
 
-    public GetOnlyNumberOfExtraction = function (id) {
-        var s_id = id.toString().substring(4);
-        for (var i = 0; i < s_id.length; i++) {
-            if (s_id.charAt(i) != '0')
-                return s_id.substring(i);
-        }
-    }
 
 
     //modali
-    public modaleNumeri(dataitem, str, content) {
+    public modaleNumeri(dataitem) {
         var modalRef: NgbModalRef = this.modalService.open(MyBootstrapModalComponent,
             {
                 scrollable: false,
                 size: 'lg'
             });
         modalRef.componentInstance.fromParent = {
-            dataitem: dataitem,
-            str1: str,
-            str2: 'This Can be anything'
+            dataitem: dataitem
         };
         modalRef.result.then((result) => {
             console.log(result);

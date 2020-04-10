@@ -728,6 +728,8 @@ namespace libraryLotto.Data {
             
             private global::System.Data.DataColumn columnhrfQuotazioni;
             
+            private global::System.Data.DataColumn columnnEstrazione;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public LottoDataTable() {
@@ -795,6 +797,14 @@ namespace libraryLotto.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn nEstrazioneColumn {
+                get {
+                    return this.columnnEstrazione;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -830,13 +840,14 @@ namespace libraryLotto.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LottoRow AddLottoRow(int Id, int anno, System.DateTime data, string hrfQuotazioni) {
+            public LottoRow AddLottoRow(int Id, int anno, System.DateTime data, string hrfQuotazioni, int nEstrazione) {
                 LottoRow rowLottoRow = ((LottoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
                         anno,
                         data,
-                        hrfQuotazioni};
+                        hrfQuotazioni,
+                        nEstrazione};
                 rowLottoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLottoRow);
                 return rowLottoRow;
@@ -870,6 +881,7 @@ namespace libraryLotto.Data {
                 this.columnanno = base.Columns["anno"];
                 this.columndata = base.Columns["data"];
                 this.columnhrfQuotazioni = base.Columns["hrfQuotazioni"];
+                this.columnnEstrazione = base.Columns["nEstrazione"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -883,6 +895,8 @@ namespace libraryLotto.Data {
                 base.Columns.Add(this.columndata);
                 this.columnhrfQuotazioni = new global::System.Data.DataColumn("hrfQuotazioni", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnhrfQuotazioni);
+                this.columnnEstrazione = new global::System.Data.DataColumn("nEstrazione", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnEstrazione);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AllowDBNull = false;
@@ -891,6 +905,7 @@ namespace libraryLotto.Data {
                 this.columndata.AllowDBNull = false;
                 this.columnhrfQuotazioni.AllowDBNull = false;
                 this.columnhrfQuotazioni.MaxLength = 100;
+                this.columnnEstrazione.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1476,6 +1491,17 @@ namespace libraryLotto.Data {
                 }
                 set {
                     this[this.tableLotto.hrfQuotazioniColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int nEstrazione {
+                get {
+                    return ((int)(this[this.tableLotto.nEstrazioneColumn]));
+                }
+                set {
+                    this[this.tableLotto.nEstrazioneColumn] = value;
                 }
             }
             

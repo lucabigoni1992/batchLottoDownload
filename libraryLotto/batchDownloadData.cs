@@ -70,7 +70,8 @@ namespace libraryLotto
 
 
                         int countEstrazione = dettagliEstrazione(taskDetailes.Result);
-                        row.Id = countEstrazione;
+                        row.Id = creaIndice(countEstrazione);
+                        row.nEstrazione = countEstrazione;
                         Variabili._LottoDs_addRow(row);
                         inserisciDettagli(row.Id);
                         foreach (LottoPalleRow rowPalla in palle)
@@ -93,7 +94,7 @@ namespace libraryLotto
             docDetailes.LoadHtml(result);
             HtmlNodeCollection nodesid = docDetailes.DocumentNode.SelectNodes(@"(//p[@itemprop='description'])");
             int.TryParse(nodesid[0].InnerHtml.Split("<strong>")[1].Split("<sup>")[0], out int id);
-            return creaIndice(id);
+            return id;
         }
         private void inserisciDettagli(int id)
         {

@@ -77,8 +77,9 @@ namespace libraryLotto.dlm
         {
 
             public int id { get; set; }//id che le tre tabelle hanno in comune
+            public int nEstrazione { get; set; }//id che le tre tabelle hanno in comune
             public int anno { get; set; }
-            [JsonConverter(typeof(DateFormatConverter), "yyyy-MM-dd")]
+            [JsonConverter(typeof(DateFormatConverter), "dd-MM-yyyy")]
             public DateTime data { get; set; }
             public string hrfQuotazioni { get; set; }
             public int nPalla { get; set; }
@@ -93,9 +94,10 @@ namespace libraryLotto.dlm
             public int nVincitori{ get; set; }
             public string premio6Punti { get; set; }
 
-            public Struct_Joing_AllTable(int id, int anno, DateTime data, string hrfQuotazioni, int nPalla, string tipoPalla, string enumTipoVincita, string valore, int vincitori, string premio, string valuta)
+            public Struct_Joing_AllTable(int id, int nEstrazione, int anno, DateTime data, string hrfQuotazioni, int nPalla, string tipoPalla, string enumTipoVincita, string valore, int vincitori, string premio, string valuta)
             {
                 this.id = id;
+                this.nEstrazione = nEstrazione;
                 this.anno = anno;
                 this.data = data;
                 this.hrfQuotazioni = hrfQuotazioni;
@@ -111,6 +113,7 @@ namespace libraryLotto.dlm
             public Struct_Joing_AllTable(LottoDs.LottoRow tablotto, LottoDs.LottoPalleRow tabpalle, LottoDs.QuotazioniVinciteRow tabQuotazioniVincitein)
             {
                 this.id = tablotto.Id;
+                this.nEstrazione = tablotto.nEstrazione;
                 this.anno = tablotto.anno;
                 this.data = tablotto.data;
                 this.hrfQuotazioni = tablotto.hrfQuotazioni;
@@ -125,6 +128,7 @@ namespace libraryLotto.dlm
             public Struct_Joing_AllTable(LottoDs.LottoRow tablotto, LottoDs.QuotazioniVinciteRow tabQuotazioniVincitein)
             {
                 this.id = tablotto.Id;
+                this.nEstrazione = tablotto.nEstrazione;
                 this.anno = tablotto.anno;
                 this.data = tablotto.data;
                 this.hrfQuotazioni = tablotto.hrfQuotazioni;
@@ -137,6 +141,7 @@ namespace libraryLotto.dlm
             public Struct_Joing_AllTable(LottoDs.LottoRow tablotto, LottoDs.LottoPalleRow tabpalle)
             {
                 this.id = tablotto.Id;
+                this.nEstrazione = tablotto.nEstrazione;
                 this.anno = tablotto.anno;
                 this.data = tablotto.data;
                 this.hrfQuotazioni = tablotto.hrfQuotazioni;
@@ -146,6 +151,7 @@ namespace libraryLotto.dlm
             public Struct_Joing_AllTable(LottoDs.LottoRow tablotto)
             {
                 this.id = tablotto.Id;
+                this.nEstrazione = tablotto.nEstrazione;
                 this.anno = tablotto.anno;
                 this.data = tablotto.data;
                 this.hrfQuotazioni = tablotto.hrfQuotazioni;
