@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataService } from './storico-lotto/data.service'
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -41,7 +42,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
         ButtonsModule,
         BrowserAnimationsModule,
         GridModule,
-        AngularFontAwesomeModule
+        AngularFontAwesomeModule,
+        NgbModule
         
     ],
     providers: [DataService],

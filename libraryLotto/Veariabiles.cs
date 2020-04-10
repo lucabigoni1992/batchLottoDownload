@@ -68,10 +68,6 @@ namespace libraryLotto
         internal static LottoRow _LottoDs_newRow() { return _DsLotto.Lotto.NewLottoRow(); }
         internal static void _LottoDs_addRow(LottoRow row)
         {
-            if (row.Id == 0)
-            {
-                string stop = "" + "dd";
-            }
             if (_DsLotto.Lotto.FindById(row.Id) == null)
                 _DsLotto.Lotto.AddLottoRow(row);
 

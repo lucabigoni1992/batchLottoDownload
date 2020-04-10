@@ -13,20 +13,20 @@ import {
 } from '@progress/kendo-data-query';
 
 @Injectable()
-export class DataService extends BehaviorSubject<any[]> {
-
+export class DataService extends BehaviorSubject<GridDataResult> {
+    public loading: boolean;
     constructor(private http: HttpClient) {
-        super([]);
+        super(null);
     }
 
     private BASE_URL = 'api/Lotto/';
-    private data: any[] = [];
+    private data: GridDataResult = null;
 
 
     public read(state?: any) {
-        if (this.data.length) {
-            return super.next(this.data);
-        }
+        //if (this.data) {
+        //    return super.next(this.data);
+        //}
 
         this.fetch(state)
             .pipe(
@@ -40,19 +40,19 @@ export class DataService extends BehaviorSubject<any[]> {
     }
 
     public fetch(state?:any, dataItem?: any,action: string = ''): Observable<any> {
-
+        this.loading = true;
         switch (action) {
             case '': {
                 //  const queryStr = `${toDataSourceRequestString(this.state)}`;
                 //  const hasGroups = this.state.group && this.state.group.length;
            //     var test =  `${toDataSourceRequestString(state)}`;
-                return this.http.get(this.BASE_URL + (state? JSON.stringify(state):'')).pipe(
-                    // Process the response.
-                    map(response => (<GridDataResult>{
-                        data: response['results'],
-                        total: parseInt(response['count'], 10)
-                    }))//,
-                    //          tap(() => this.loading = false)
+                return this.http.get(this.BASE_URL + (state ? JSON.stringify(state) : ''))
+                    .pipe(                    //
+                        map(response => (<GridDataResult>{
+                            data: response['results'],
+                            total: parseInt(response['count'], 10)
+                        })),
+                        tap(() => this.loading = false)
                 );
             }
             case 'create': {

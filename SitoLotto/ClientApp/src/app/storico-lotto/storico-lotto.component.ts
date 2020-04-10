@@ -1,11 +1,10 @@
 
 import { Component, Inject, OnInit } from '@angular/core';
 import { State, process } from '@progress/kendo-data-query';
-import { CallRest } from '../Access/CallRest.services';
 import { DataService } from '../storico-lotto/data.service';
-import { Observable } from 'rxjs';
 import { FormGroup } from '@angular/forms';
-import { PageAction } from '@progress/kendo-angular-grid/dist/es2015/scrolling/scroller.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { GridDataResult } from '@progress/kendo-angular-grid/dist/es2015/data/data.collection';
 
 interface ColumnSetting {
     field: string;
@@ -17,7 +16,7 @@ interface ColumnSetting {
 interface pageable {
     buttonCount: number,
     info: boolean,
-    type:' text' | 'numeric' | 'boolean' | 'date',
+    type: ' text' | 'numeric' | 'boolean' | 'date',
     pageSizes: boolean,
     previousNext: boolean
 }
@@ -39,30 +38,36 @@ export class StoricoLottoComponent implements OnInit {
     public onButtonClick() {
         this.title = 'Hello from Kendo UI!';
     }
-    constructor(private dataService: DataService) {
+    constructor(private dataService: DataService, modalService: NgbModal) {
 
     }
-    public view: Observable<any>;
+    public view: DataService;
     public formGroup: FormGroup;
     public Lotto: Object;
-    public gridData: any;
+    public gridData: GridDataResult;
 
     public ngOnInit(): void {
         this.view = this.dataService;
-        this.dataService.read();
+        this.view.loading = true;
+        this.view.read();
     }
     public pageable: pageable = {
         buttonCount: 5,
         info: true,
-        type: 'numeric' ,
+        type: 'numeric',
         pageSizes: true,
         previousNext: true
     };
 
     public gridState: State = {
-        sort: [],
+        sort: [{ dir: "desc", field: "data" }],
         skip: 0,
-        take: 10
+        take: 10,
+        filter: {
+            logic: 'and',
+            filters: []
+        },
+        group: []
     };
     public columns: ColumnSetting[] = [
 
@@ -70,35 +75,41 @@ export class StoricoLottoComponent implements OnInit {
             field: 'azioni',
             title: 'Azioni',
             type: 'text',
-            width: '100px'
+            width: '75px'
         },
         {
             field: 'data',
             title: 'Data estrazione',
             type: 'text',
-            width: '100px'
+            width: '150px'
         },
         {
             field: 'id',
             title: 'Estrazione n°',
-            type: 'text'
+            type: 'text',
+            width: '120px'
         },
         {
             field: 'nVincitori',
             title: 'N°vincitori Montepremi',
             format: '{0:0}',
-            type: 'numeric'
+            type: 'numeric',
+            width: '175px'
         },
         {
             field: 'premio6Punti',
             title: 'Montepremi',
-            type: 'text'
+            type: 'text',
+            width: '200px'
         }
     ];
 
     public onStateChange(state: State) {
         this.dataService.read(state);
         this.gridState = state;
+        //this.view = this.dataService;
+        //this.view.loading = true;
+        //this.view.read();
     }
 
     //funzioni
@@ -111,6 +122,11 @@ export class StoricoLottoComponent implements OnInit {
         }
     }
 
+
+    //modali
+    public modaleVincite = function (content) {
+        this.modalService.open(content, { size: 'lg' });
+    }
 }
 
 
