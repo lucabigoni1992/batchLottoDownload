@@ -5,15 +5,9 @@ import { GridDataResult } from '@progress/kendo-angular-grid/dist/es2015/data/da
 import { Observable, BehaviorSubject } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
 
-import {
-    State,
-    toDataSourceRequestString,
-    translateDataSourceResultGroups,
-    DataSourceRequestState,
-} from '@progress/kendo-data-query';
 
 @Injectable()
-export class DataService extends BehaviorSubject<GridDataResult> {
+export class GenericLottoData extends BehaviorSubject<GridDataResult> {
     public loading: boolean;
     constructor(private http: HttpClient) {
         super(null);
@@ -24,10 +18,6 @@ export class DataService extends BehaviorSubject<GridDataResult> {
 
 
     public read(state?: any) {
-        //if (this.data) {
-        //    return super.next(this.data);
-        //}
-
         this.fetch(state)
             .pipe(
                 tap(data => {
@@ -39,21 +29,18 @@ export class DataService extends BehaviorSubject<GridDataResult> {
             });
     }
 
-    public fetch(state?:any, dataItem?: any,action: string = ''): Observable<any> {
+    public fetch(state?: any, dataItem?: any, action: string = ''): Observable<any> {
         this.loading = true;
         switch (action) {
             case '': {
-                //  const queryStr = `${toDataSourceRequestString(this.state)}`;
-                //  const hasGroups = this.state.group && this.state.group.length;
-           //     var test =  `${toDataSourceRequestString(state)}`;
                 return this.http.get(this.BASE_URL + (state ? JSON.stringify(state) : ''))
-                    .pipe(                    //
+                    .pipe(
                         map(response => (<GridDataResult>{
                             data: response['results'],
                             total: parseInt(response['count'], 10)
                         })),
                         tap(() => this.loading = false)
-                );
+                    );
             }
             case 'create': {
                 return this.http.post(`${this.BASE_URL}`, dataItem);

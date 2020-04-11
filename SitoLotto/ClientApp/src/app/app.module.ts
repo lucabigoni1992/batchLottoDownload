@@ -9,11 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { StoricoLottoComponent,  } from './storico-lotto/storico-lotto.component'
-import { CallRest } from './Access/CallRest.services'
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DataService } from './storico-lotto/data.service'
+import { kendoGridDataService } from './storico-lotto/component/service/KendoGriddata.service'
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -48,7 +47,7 @@ import { MyBootstrapModalComponent } from './storico-lotto/component/directive/s
         
     ],
     entryComponents:[MyBootstrapModalComponent],
-    providers: [DataService],
+    providers: [kendoGridDataService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

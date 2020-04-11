@@ -1,7 +1,7 @@
 
 import { Component, Inject, OnInit, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { State, process } from '@progress/kendo-data-query';
-import { DataService } from '../storico-lotto/data.service';
+import { State } from '@progress/kendo-data-query';
+import { kendoGridDataService } from './component/service/KendoGriddata.service'
 import { FormGroup } from '@angular/forms';
 import { NgbModal, NgbModalRef, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { GridDataResult } from '@progress/kendo-angular-grid/dist/es2015/data/data.collection';
@@ -40,10 +40,10 @@ export class StoricoLottoComponent implements OnInit {
     public onButtonClick() {
         this.title = 'Hello from Kendo UI!';
     }
-    constructor(private dataService: DataService, private modalService: NgbModal) {
+    constructor(private dataService: kendoGridDataService, private modalService: NgbModal) {
 
     }
-    public view: DataService;
+    public view: kendoGridDataService;
     public formGroup: FormGroup;
     public Lotto: Object;
     public gridData: GridDataResult;

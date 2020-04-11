@@ -26,14 +26,17 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\src\app\storico-lotto\component\service\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\src\app\storico-lotto\component\service\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\storico-lotto\component\service\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\src\app\storico-lotto\component\service\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\CallRest.ts" />
-    <None Remove="ClientApp\src\app\storico-lotto\data.service.ts" />
     <None Remove="ClientApp\src\LottoController.cs" />
   </ItemGroup>
 
@@ -42,8 +45,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\src\app\Access\CallRest.services.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\storico-lotto\data.service.ts" />
+    <Folder Include="ClientApp\src\assets\Images\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
