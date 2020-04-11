@@ -21,6 +21,8 @@ namespace libraryLotto
     {
         internal static string urlLotto = @"https://www.superenalotto.com/";
         internal static string urlLottoRisultati = @"risultati/";
+
+
         internal static string extractData = @"/risultati/estrazione-";
         internal static string fileDsName = Properties.Resources.bkDbXml.Replace("|DataDirectory|", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)).Replace("file:\\", "");
         internal static DateTime annoDiInizio = new DateTime(1997, 1, 1);
@@ -136,7 +138,7 @@ namespace libraryLotto
             return _enumTabLotto_Tabpalle().ToList();
         }
 
-        public static KendoData _LottoFromKendo(string KendoQuery)
+        internal static KendoData _LottoFromKendo(string KendoQuery)
         {
             try
             {
@@ -162,6 +164,13 @@ namespace libraryLotto
             return null;
         }
 
+        internal static LottoPalleRow[] _LottoPallefromId(int id)
+        {
+            if (id <= 0)            
+                throw new Exception("errore id negativo");
+            return _DsLotto.Lotto.FindById(id).GetLottoPalleRows();
+        }
+
         private static KendoData GettableByKendofilter(IEnumerable<Struct_Joing_AllTable> enumerable, string kendoQuery)
         {
             //applichiamo where
@@ -175,6 +184,7 @@ namespace libraryLotto
                           .ToList()
                           );
         }
+
     }
 
 }

@@ -6,6 +6,7 @@ using System.Data;
 using static libraryLotto.dlm.queryDataLogicMapping;
 using libraryLotto.dlm;
 using static libraryLotto.dlm.KendoResultDtaLogicMapping;
+using static libraryLotto.Data.LottoDs;
 
 namespace libraryLotto
 {
@@ -19,7 +20,11 @@ namespace libraryLotto
 
         public KendoData GetLottoKendoQuery(string KendoQuery)
         {
-            return  Variabili._LottoFromKendo(KendoQuery);
+            return Variabili._LottoFromKendo(KendoQuery);
+        }
+        public LottoPalleRow[] GetLottoDetailesFromId(int id)
+        {
+            return Variabili._LottoPallefromId(id);
         }
     }
 }

@@ -29,7 +29,7 @@ export class GenericLottoData extends BehaviorSubject<GridDataResult> {
             });
     }
 
-    public fetch(state?: any, dataItem?: any, action: string = ''): Observable<any> {
+    private fetch(state?: any, dataItem?: any, action: string = ''): Observable<any> {
         this.loading = true;
         switch (action) {
             case '': {

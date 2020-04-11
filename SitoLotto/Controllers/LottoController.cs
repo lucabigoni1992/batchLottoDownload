@@ -17,19 +17,27 @@ namespace LottoWeb.ClientApp
     {
 
         ApiInterface a = new ApiInterface();
-   
+
         // GET: api/Lotto
         [HttpGet]
+        [ActionName("")]
         public string Get()
         {
             return JsonConvert.SerializeObject(a.GetLottoKendoQuery(""));
         }
-        
-        // GET: api/Lotto/5
+
+        // GET: api/Lotto/ParamKendo
+
         [HttpGet("{ParamKendo}", Name = "Get")]
         public string Get(string ParamKendo)
         {
             return JsonConvert.SerializeObject(a.GetLottoKendoQuery(ParamKendo)); ;
+        } // GET: api/Lotto/5
+
+        [HttpGet("detailes/{id}", Name = "Get")]
+        public string Getdetailes(int id)
+        {
+            return JsonConvert.SerializeObject(a.GetLottoDetailesFromId(id)); ;
         }
 
         // POST: api/Lotto
