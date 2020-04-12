@@ -1,7 +1,8 @@
 
-import { Component,  OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { GenericLottoDataService, lottoDetailes } from '../service/GenericLottoData.service';
+import { GenericLottoDataService, lottoDetailes, lottoDetailesArr } from '../service/GenericLottoData.service';
+import { tap } from 'rxjs/operators';
 
 @Component({
     selector: 'app-mybootstrap-modal-component',
@@ -18,19 +19,29 @@ export class MyBootstrapModalComponent implements OnInit {
         public dataService: GenericLottoDataService) { }
 
     private loading = false;
-    private dataDetailes: lottoDetailes;
+    private dataDetailes: lottoDetailesArr;
+
 
     ngAfterViewInit(): void {
-        console.log("ngAfterViewInit" +this.fromParent);
+        console.log("ngAfterViewInit" + this.fromParent);
     }
 
     ngOnInit() {
+        this.dataDetailes = new lottoDetailesArr();
         console.log("ngOnInit" + this.fromParent);
         this.loading = true
-        this.dataService.readDetailes(this.fromParent.dataitem.id, this.dataDetailes);
-           
+        this.dataService.readDetailesCall(this.fromParent.dataitem.id)
+            .pipe(
+                tap(data => data)
+            )
+            .subscribe(data => {
+                this.dataDetailes = data;
+                this.loading = false;
+            });
     }
-
+    public trackByFn(index, item) {
+        return item.nPalla;
+    }
     closeModal(sendData) {
         console.log("closeModal" + this.fromParent);
     }

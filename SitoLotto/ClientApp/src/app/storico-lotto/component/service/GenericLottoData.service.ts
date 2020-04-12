@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
-import { BehaviorSubject, throwError } from 'rxjs';
+import { BehaviorSubject, throwError, Observable } from 'rxjs';
 import { conSolution } from '../../../../main';
 import { map, tap, catchError, retry } from 'rxjs/operators';
 
-export interface lottoDetailes {
+
+export class lottoDetailes {
     id: number;
     nPalla: number;
     tipoPalla: number;
+}
+export class lottoDetailesArr {
+    Palle: lottoDetailes[] ;
 }
 
 @Injectable()
@@ -19,26 +23,31 @@ export class GenericLottoDataService extends BehaviorSubject<any> {
     }
 
     private BASE_URL = conSolution.BASE_URL_API_Lotto_Detailes;
+    private data: lottoDetailesArr = null;
 
 
-    public readDetailes(id: number, dataIn: lottoDetailes) {
+    public readDetailes(id: number, dataIn: lottoDetailesArr) {
         this.loading = true;
-        return this.http.get(this.BASE_URL.replace('{id}', (id ? id.toString() : '')))
-
+        this.readDetailesCall(id)
             .pipe(
-                map(response =>
-                    (<lottoDetailes>{
-                        id: response[0].id,
-                        nPalla: response[0].nPalla,
-                        tipoPalla: response[0].tipoPalla
-                    })),
-                map(response => response),
-                retry(3), // retry a failed request up to 3 times
-                catchError(this.handleError))
+                tap(data => {
+                    dataIn = data;
+                })
+            )
             .subscribe(data => {
-                dataIn = data;
+                super.next(data);
                 this.loading = false;
             });
+    }
+    public readDetailesCall(id: number): Observable<lottoDetailesArr> {
+        return this.http.get(this.BASE_URL.replace('{id}', (id ? id.toString() : '')))
+            .pipe(
+                map(response =>
+                    (<lottoDetailesArr>{
+                        Palle: response
+                    })),
+                retry(3), // retry a failed request up to 3 times
+                catchError(this.handleError));
     };
     private handleError(error: HttpErrorResponse) {
         if (error.error instanceof ErrorEvent) {

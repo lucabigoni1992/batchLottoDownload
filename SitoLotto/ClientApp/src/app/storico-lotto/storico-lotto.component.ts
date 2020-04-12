@@ -120,7 +120,7 @@ export class StoricoLottoComponent implements OnInit {
         var modalRef: NgbModalRef = this.modalService.open(MyBootstrapModalComponent,
             {
                 scrollable: false,
-                size: 'lg'
+                size: 'xl'
             });
         modalRef.componentInstance.fromParent = {
             dataitem: dataitem

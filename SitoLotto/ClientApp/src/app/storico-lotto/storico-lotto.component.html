@@ -35,28 +35,6 @@
 
 <p>Benvenuto nella pagina dove potrai vedere lo storico dell'estrazioni dell'lotto.</p>
 
-<h1>{{title}}</h1>
-<button kendoButton (click)="onButtonClick()" [primary]="true">My Kendo UI Button</button>
-
-<div class="example-config">
-    <label class="k-form-field">
-        <input class="k-checkbox" type="checkbox" id="allowUnsort"
-               [(ngModel)]="allowUnsort" />
-        <label class="k-checkbox-label" for="allowUnsort">
-            {{ allowUnsort ? 'Disable': 'Enable' }} unsorting
-        </label>
-    </label><br />
-    <label class="k-form-field">
-        <input class="k-checkbox" type="checkbox" id="multiple"
-               [(ngModel)]="multiple" />
-        <label class="k-checkbox-label" for="multiple">
-            {{ multiple ? 'Disable': 'Enable' }} multiple columns sorting
-        </label>
-    </label>
-
-</div>
-
-
 <kendo-grid [data]="view | async"
             [pageSize]="gridState.take"
             [skip]="gridState.skip"

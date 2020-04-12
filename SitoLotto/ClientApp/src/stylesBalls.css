@@ -7,39 +7,56 @@
 .ball-Green {
     background: radial-gradient(circle at 55% 55%, #97d59e 20px, #97d59e 3%, #2b7d10 50%, #4e9e5f 100%);
 }
+
 .ball-Jolly {
-    background: radial-gradient(circle at 55% 55%, #00441c 30px, #00441c 3%, #279205 60%, #000000 100%);
-}
-.ball-Superstar {
-    background: radial-gradient(circle at 55% 55%, #00441c 30px, #00441c 3%, #279205 60%, #000000 100%);
+    background: radial-gradient(circle at 55% 55%, #a7b62c 30px, #a7b62c 3%, #846a22 60%, #ffd100 100%);
 }
 
-.text {
+.ball-Superstar {
+    background: radial-gradient(circle at 55% 55%, #df2727 30px, #df2727 3%, #713325 60%, #ffae00 100%);
+}
+
+.text .text2 {
     background: white;
     border-radius: 50%;
 }
 
-    .text:before {
-        content: attr(data-content);
-        display: block;
-        position: absolute;
-        text-align: center;
-        height: 25px;
-        /* width: 40px; */
-        left: -30px;
-        top: 75px;
-        color: black;
-        font-family: Arial;
-        font-size: 55px;
-        transform: translateX(58px) translateY(-60px) skewX(-2deg) skewY(9deg);
-    }
+.text:before {
+    content: attr(data-lottonPalla);
+    display: block;
+    position: absolute;
+    text-align: center;
+    height: 25px;
+    /* width: 40px; */
+    left: -30px;
+    top: 75px;
+    color: black;
+    font-family: Arial;
+    font-size: 55px;
+    transform: translateX(58px) translateY(-60px) skewX(-2deg) skewY(9deg);
+}
+
+.text2:before {
+    content: attr(data-lottoTipoPalla);
+    display: block;
+    position: absolute;
+    text-align: left;
+    /* height: 25px; */
+    /* width: 50px; */
+    left: -20px;
+    top: -30px;
+    color: black;
+    font-family: cursive;
+    font-size: 20px;
+    -webkit-transform: translateX(50px) translateY(-2px) skewX(2deg) skewY(-9deg);
+    /* transform: translateX(50px) translateY(-2px) skewX(-2deg) skewY(9deg);*/
+}
 
 .stage {
     width: 50px;
     height: 100px;
     display: inline-block;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin: 20px 30px 10px 30px;
     -webkit-perspective: 1200px;
     -moz-perspective: 1200px;
     -ms-perspective: 1200px;
@@ -57,6 +74,7 @@
     width: 100px;
     height: 150px;
     top: -120px;
+    left: 0px;
     background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
     -webkit-transform: rotateX(90deg) translateZ(-150px);
     -moz-transform: rotateX(90deg) translateZ(-150px);
