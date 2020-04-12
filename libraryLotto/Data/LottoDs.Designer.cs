@@ -266,26 +266,26 @@ namespace libraryLotto.Data {
             base.Tables.Add(this.tableLottoPalle);
             global::System.Data.ForeignKeyConstraint fkc;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_Lotto_QuotazioniVincite", new global::System.Data.DataColumn[] {
-                        this.tableLotto.IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableQuotazioniVincite.IdColumn});
+                        this.tableLotto.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableQuotazioniVincite.idColumn});
             this.tableQuotazioniVincite.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_Lotto_LottoPalle", new global::System.Data.DataColumn[] {
-                        this.tableLotto.IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableLottoPalle.IdColumn});
+                        this.tableLotto.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableLottoPalle.idColumn});
             this.tableLottoPalle.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
             this.relationFK_Lotto_QuotazioniVincite = new global::System.Data.DataRelation("FK_Lotto_QuotazioniVincite", new global::System.Data.DataColumn[] {
-                        this.tableLotto.IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableQuotazioniVincite.IdColumn}, false);
+                        this.tableLotto.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableQuotazioniVincite.idColumn}, false);
             this.Relations.Add(this.relationFK_Lotto_QuotazioniVincite);
             this.relationFK_Lotto_LottoPalle = new global::System.Data.DataRelation("FK_Lotto_LottoPalle", new global::System.Data.DataColumn[] {
-                        this.tableLotto.IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableLottoPalle.IdColumn}, false);
+                        this.tableLotto.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableLottoPalle.idColumn}, false);
             this.relationFK_Lotto_LottoPalle.Nested = true;
             this.Relations.Add(this.relationFK_Lotto_LottoPalle);
         }
@@ -379,7 +379,7 @@ namespace libraryLotto.Data {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class QuotazioniVinciteDataTable : global::System.Data.TypedTableBase<QuotazioniVinciteRow> {
             
-            private global::System.Data.DataColumn columnId;
+            private global::System.Data.DataColumn columnid;
             
             private global::System.Data.DataColumn columnenumTipoVincita;
             
@@ -426,9 +426,9 @@ namespace libraryLotto.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columnId;
+                    return this.columnid;
                 }
             }
             
@@ -528,9 +528,9 @@ namespace libraryLotto.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public QuotazioniVinciteRow FindByIdenumTipoVincitapremio(int Id, string enumTipoVincita, string premio) {
+            public QuotazioniVinciteRow FindByidenumTipoVincitapremio(int id, string enumTipoVincita, string premio) {
                 return ((QuotazioniVinciteRow)(this.Rows.Find(new object[] {
-                            Id,
+                            id,
                             enumTipoVincita,
                             premio})));
             }
@@ -552,7 +552,7 @@ namespace libraryLotto.Data {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
+                this.columnid = base.Columns["id"];
                 this.columnenumTipoVincita = base.Columns["enumTipoVincita"];
                 this.columnvalore = base.Columns["valore"];
                 this.columnvincitori = base.Columns["vincitori"];
@@ -563,8 +563,8 @@ namespace libraryLotto.Data {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
                 this.columnenumTipoVincita = new global::System.Data.DataColumn("enumTipoVincita", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnenumTipoVincita);
                 this.columnvalore = new global::System.Data.DataColumn("valore", typeof(string), null, global::System.Data.MappingType.Element);
@@ -576,10 +576,10 @@ namespace libraryLotto.Data {
                 this.columnvaluta = new global::System.Data.DataColumn("valuta", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnvaluta);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId,
+                                this.columnid,
                                 this.columnenumTipoVincita,
                                 this.columnpremio}, true));
-                this.columnId.AllowDBNull = false;
+                this.columnid.AllowDBNull = false;
                 this.columnenumTipoVincita.AllowDBNull = false;
                 this.columnenumTipoVincita.MaxLength = 100;
                 this.columnvalore.AllowDBNull = false;
@@ -720,7 +720,7 @@ namespace libraryLotto.Data {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class LottoDataTable : global::System.Data.TypedTableBase<LottoRow> {
             
-            private global::System.Data.DataColumn columnId;
+            private global::System.Data.DataColumn columnid;
             
             private global::System.Data.DataColumn columnanno;
             
@@ -765,9 +765,9 @@ namespace libraryLotto.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columnId;
+                    return this.columnid;
                 }
             }
             
@@ -840,10 +840,10 @@ namespace libraryLotto.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LottoRow AddLottoRow(int Id, int anno, System.DateTime data, string hrfQuotazioni, int nEstrazione) {
+            public LottoRow AddLottoRow(int id, int anno, System.DateTime data, string hrfQuotazioni, int nEstrazione) {
                 LottoRow rowLottoRow = ((LottoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
+                        id,
                         anno,
                         data,
                         hrfQuotazioni,
@@ -855,9 +855,9 @@ namespace libraryLotto.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LottoRow FindById(int Id) {
+            public LottoRow FindByid(int id) {
                 return ((LottoRow)(this.Rows.Find(new object[] {
-                            Id})));
+                            id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -877,7 +877,7 @@ namespace libraryLotto.Data {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
+                this.columnid = base.Columns["id"];
                 this.columnanno = base.Columns["anno"];
                 this.columndata = base.Columns["data"];
                 this.columnhrfQuotazioni = base.Columns["hrfQuotazioni"];
@@ -887,8 +887,8 @@ namespace libraryLotto.Data {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
                 this.columnanno = new global::System.Data.DataColumn("anno", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnanno);
                 this.columndata = new global::System.Data.DataColumn("data", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -898,9 +898,9 @@ namespace libraryLotto.Data {
                 this.columnnEstrazione = new global::System.Data.DataColumn("nEstrazione", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnEstrazione);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AllowDBNull = false;
-                this.columnId.Unique = true;
+                                this.columnid}, true));
+                this.columnid.AllowDBNull = false;
+                this.columnid.Unique = true;
                 this.columnanno.AllowDBNull = false;
                 this.columndata.AllowDBNull = false;
                 this.columnhrfQuotazioni.AllowDBNull = false;
@@ -1039,7 +1039,7 @@ namespace libraryLotto.Data {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class LottoPalleDataTable : global::System.Data.TypedTableBase<LottoPalleRow> {
             
-            private global::System.Data.DataColumn columnId;
+            private global::System.Data.DataColumn columnid;
             
             private global::System.Data.DataColumn columnnPalla;
             
@@ -1080,9 +1080,9 @@ namespace libraryLotto.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columnId;
+                    return this.columnid;
                 }
             }
             
@@ -1155,9 +1155,9 @@ namespace libraryLotto.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LottoPalleRow FindByIdnPallatipoPalla(int Id, int nPalla, string tipoPalla) {
+            public LottoPalleRow FindByidnPallatipoPalla(int id, int nPalla, string tipoPalla) {
                 return ((LottoPalleRow)(this.Rows.Find(new object[] {
-                            Id,
+                            id,
                             nPalla,
                             tipoPalla})));
             }
@@ -1179,7 +1179,7 @@ namespace libraryLotto.Data {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
+                this.columnid = base.Columns["id"];
                 this.columnnPalla = base.Columns["nPalla"];
                 this.columntipoPalla = base.Columns["tipoPalla"];
             }
@@ -1187,17 +1187,17 @@ namespace libraryLotto.Data {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
                 this.columnnPalla = new global::System.Data.DataColumn("nPalla", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnPalla);
                 this.columntipoPalla = new global::System.Data.DataColumn("tipoPalla", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntipoPalla);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId,
+                                this.columnid,
                                 this.columnnPalla,
                                 this.columntipoPalla}, true));
-                this.columnId.AllowDBNull = false;
+                this.columnid.AllowDBNull = false;
                 this.columnnPalla.AllowDBNull = false;
                 this.columntipoPalla.AllowDBNull = false;
                 this.columntipoPalla.MaxLength = 100;
@@ -1343,12 +1343,12 @@ namespace libraryLotto.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Id {
+            public int id {
                 get {
-                    return ((int)(this[this.tableQuotazioniVincite.IdColumn]));
+                    return ((int)(this[this.tableQuotazioniVincite.idColumn]));
                 }
                 set {
-                    this[this.tableQuotazioniVincite.IdColumn] = value;
+                    this[this.tableQuotazioniVincite.idColumn] = value;
                 }
             }
             
@@ -1452,12 +1452,12 @@ namespace libraryLotto.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Id {
+            public int id {
                 get {
-                    return ((int)(this[this.tableLotto.IdColumn]));
+                    return ((int)(this[this.tableLotto.idColumn]));
                 }
                 set {
-                    this[this.tableLotto.IdColumn] = value;
+                    this[this.tableLotto.idColumn] = value;
                 }
             }
             
@@ -1544,12 +1544,12 @@ namespace libraryLotto.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Id {
+            public int id {
                 get {
-                    return ((int)(this[this.tableLottoPalle.IdColumn]));
+                    return ((int)(this[this.tableLottoPalle.idColumn]));
                 }
                 set {
-                    this[this.tableLottoPalle.IdColumn] = value;
+                    this[this.tableLottoPalle.idColumn] = value;
                 }
             }
             

@@ -14,7 +14,7 @@
     }
     </style>
 <!-- Modal: modalPoll -->
-<div  kendoButton class="modal-content border border-secondary border-2">
+<div kendoButton class="modal-content border border-secondary border-2">
     <!--Header-->
     <div class="modal-header">
         <p class="h1 col-xs-1 center-block">Riasunti estrazione</p>
@@ -93,6 +93,7 @@
 
     </div>
 
+    <div *ngIf="dataService.loading" class="k-i-loading"></div>
 
     <div class="modal-footer justify-content-rigth">
 

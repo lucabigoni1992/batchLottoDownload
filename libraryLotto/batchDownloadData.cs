@@ -70,13 +70,13 @@ namespace libraryLotto
 
 
                         int countEstrazione = dettagliEstrazione(taskDetailes.Result);
-                        row.Id = creaIndice(countEstrazione);
+                        row.id = creaIndice(countEstrazione);
                         row.nEstrazione = countEstrazione;
                         Variabili._LottoDs_addRow(row);
-                        inserisciDettagli(row.Id);
+                        inserisciDettagli(row.id);
                         foreach (LottoPalleRow rowPalla in palle)
                         {
-                            rowPalla.Id = row.Id;
+                            rowPalla.id = row.id;
                             Variabili._LottoPalleDs_addRow(rowPalla);
                         }
                         palle = new List<LottoPalleRow>();
@@ -112,7 +112,7 @@ namespace libraryLotto
                         doctempRow.LoadHtml(noderow.InnerHtml);
                         HtmlNodeCollection trows = doctempRow.DocumentNode.SelectNodes(@"(//td)");
                         QuotazioniVinciteRow row = Variabili._QuatazioniVinciteRow_newRow();
-                        row.Id = id;
+                        row.id = id;
                         row.enumTipoVincita = "";
                         if (trows[0].InnerText == "") continue;
                         string valore = Normalize(trows[1].InnerText);

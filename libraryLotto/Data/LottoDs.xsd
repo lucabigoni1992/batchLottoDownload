@@ -12,10 +12,10 @@
   <xs:element name="LottoDs" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="LottoDs" msprop:Generator_UserDSName="LottoDs">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="QuotazioniVincite" msprop:Generator_TableClassName="QuotazioniVinciteDataTable" msprop:Generator_TableVarName="tableQuotazioniVincite" msprop:Generator_RowChangedName="QuotazioniVinciteRowChanged" msprop:Generator_TablePropName="QuotazioniVincite" msprop:Generator_RowDeletingName="QuotazioniVinciteRowDeleting" msprop:Generator_RowChangingName="QuotazioniVinciteRowChanging" msprop:Generator_RowEvHandlerName="QuotazioniVinciteRowChangeEventHandler" msprop:Generator_RowDeletedName="QuotazioniVinciteRowDeleted" msprop:Generator_RowClassName="QuotazioniVinciteRow" msprop:Generator_UserTableName="QuotazioniVincite" msprop:Generator_RowEvArgName="QuotazioniVinciteRowChangeEvent">
+        <xs:element name="QuotazioniVincite" msprop:Generator_TableClassName="QuotazioniVinciteDataTable" msprop:Generator_TableVarName="tableQuotazioniVincite" msprop:Generator_TablePropName="QuotazioniVincite" msprop:Generator_RowDeletingName="QuotazioniVinciteRowDeleting" msprop:Generator_RowChangingName="QuotazioniVinciteRowChanging" msprop:Generator_RowEvHandlerName="QuotazioniVinciteRowChangeEventHandler" msprop:Generator_RowDeletedName="QuotazioniVinciteRowDeleted" msprop:Generator_UserTableName="QuotazioniVincite" msprop:Generator_RowChangedName="QuotazioniVinciteRowChanged" msprop:Generator_RowEvArgName="QuotazioniVinciteRowChangeEvent" msprop:Generator_RowClassName="QuotazioniVinciteRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
               <xs:element name="enumTipoVincita" msprop:Generator_ColumnVarNameInTable="columnenumTipoVincita" msprop:Generator_ColumnPropNameInRow="enumTipoVincita" msprop:Generator_ColumnPropNameInTable="enumTipoVincitaColumn" msprop:Generator_UserColumnName="enumTipoVincita">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -42,10 +42,10 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Lotto" msprop:Generator_TableClassName="LottoDataTable" msprop:Generator_TableVarName="tableLotto" msprop:Generator_RowChangedName="LottoRowChanged" msprop:Generator_TablePropName="Lotto" msprop:Generator_RowDeletingName="LottoRowDeleting" msprop:Generator_RowChangingName="LottoRowChanging" msprop:Generator_RowEvHandlerName="LottoRowChangeEventHandler" msprop:Generator_RowDeletedName="LottoRowDeleted" msprop:Generator_RowClassName="LottoRow" msprop:Generator_UserTableName="Lotto" msprop:Generator_RowEvArgName="LottoRowChangeEvent">
+        <xs:element name="Lotto" msprop:Generator_TableClassName="LottoDataTable" msprop:Generator_TableVarName="tableLotto" msprop:Generator_TablePropName="Lotto" msprop:Generator_RowDeletingName="LottoRowDeleting" msprop:Generator_RowChangingName="LottoRowChanging" msprop:Generator_RowEvHandlerName="LottoRowChangeEventHandler" msprop:Generator_RowDeletedName="LottoRowDeleted" msprop:Generator_UserTableName="Lotto" msprop:Generator_RowChangedName="LottoRowChanged" msprop:Generator_RowEvArgName="LottoRowChangeEvent" msprop:Generator_RowClassName="LottoRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
               <xs:element name="anno" msprop:Generator_ColumnVarNameInTable="columnanno" msprop:Generator_ColumnPropNameInRow="anno" msprop:Generator_ColumnPropNameInTable="annoColumn" msprop:Generator_UserColumnName="anno" type="xs:int" />
               <xs:element name="data" msprop:Generator_ColumnVarNameInTable="columndata" msprop:Generator_ColumnPropNameInRow="data" msprop:Generator_ColumnPropNameInTable="dataColumn" msprop:Generator_UserColumnName="data" type="xs:dateTime" />
               <xs:element name="hrfQuotazioni" msprop:Generator_ColumnVarNameInTable="columnhrfQuotazioni" msprop:Generator_ColumnPropNameInRow="hrfQuotazioni" msprop:Generator_ColumnPropNameInTable="hrfQuotazioniColumn" msprop:Generator_UserColumnName="hrfQuotazioni">
@@ -56,10 +56,10 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="nEstrazione" msprop:Generator_ColumnVarNameInTable="columnnEstrazione" msprop:Generator_ColumnPropNameInRow="nEstrazione" msprop:Generator_ColumnPropNameInTable="nEstrazioneColumn" msprop:Generator_UserColumnName="nEstrazione" type="xs:int" />
-              <xs:element name="LottoPalle" msprop:Generator_TableClassName="LottoPalleDataTable" msprop:Generator_TableVarName="tableLottoPalle" msprop:Generator_RowChangedName="LottoPalleRowChanged" msprop:Generator_TablePropName="LottoPalle" msprop:Generator_RowDeletingName="LottoPalleRowDeleting" msprop:Generator_RowChangingName="LottoPalleRowChanging" msprop:Generator_RowEvHandlerName="LottoPalleRowChangeEventHandler" msprop:Generator_RowDeletedName="LottoPalleRowDeleted" msprop:Generator_RowClassName="LottoPalleRow" msprop:Generator_UserTableName="LottoPalle" msprop:Generator_RowEvArgName="LottoPalleRowChangeEvent" minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="LottoPalle" msprop:Generator_TableClassName="LottoPalleDataTable" msprop:Generator_TableVarName="tableLottoPalle" msprop:Generator_TablePropName="LottoPalle" msprop:Generator_RowDeletingName="LottoPalleRowDeleting" msprop:Generator_RowChangingName="LottoPalleRowChanging" msprop:Generator_RowEvHandlerName="LottoPalleRowChangeEventHandler" msprop:Generator_RowDeletedName="LottoPalleRowDeleted" msprop:Generator_UserTableName="LottoPalle" msprop:Generator_RowChangedName="LottoPalleRowChanged" msprop:Generator_RowEvArgName="LottoPalleRowChangeEvent" msprop:Generator_RowClassName="LottoPalleRow" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+                    <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
                     <xs:element name="nPalla" msprop:Generator_ColumnVarNameInTable="columnnPalla" msprop:Generator_ColumnPropNameInRow="nPalla" msprop:Generator_ColumnPropNameInTable="nPallaColumn" msprop:Generator_UserColumnName="nPalla" type="xs:int" />
                     <xs:element name="tipoPalla" msprop:Generator_ColumnVarNameInTable="columntipoPalla" msprop:Generator_ColumnPropNameInRow="tipoPalla" msprop:Generator_ColumnPropNameInTable="tipoPallaColumn" msprop:Generator_UserColumnName="tipoPalla">
                       <xs:simpleType>
@@ -78,27 +78,27 @@
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:QuotazioniVincite" />
-      <xs:field xpath="mstns:Id" />
+      <xs:field xpath="mstns:id" />
       <xs:field xpath="mstns:enumTipoVincita" />
       <xs:field xpath="mstns:premio" />
     </xs:unique>
     <xs:unique name="LottoPalle_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:LottoPalle" />
-      <xs:field xpath="mstns:Id" />
+      <xs:field xpath="mstns:id" />
       <xs:field xpath="mstns:nPalla" />
       <xs:field xpath="mstns:tipoPalla" />
     </xs:unique>
     <xs:unique name="Lotto_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Lotto" />
-      <xs:field xpath="mstns:Id" />
+      <xs:field xpath="mstns:id" />
     </xs:unique>
-    <xs:keyref name="FK_Lotto_LottoPalle" refer="Lotto_Constraint1" msdata:IsNested="true" msprop:rel_Generator_UserChildTable="LottoPalle" msprop:rel_Generator_ChildPropName="GetLottoPalleRows" msprop:rel_Generator_UserRelationName="FK_Lotto_LottoPalle" msprop:rel_Generator_RelationVarName="relationFK_Lotto_LottoPalle" msprop:rel_Generator_UserParentTable="Lotto" msprop:rel_Generator_ParentPropName="LottoRow">
+    <xs:keyref name="FK_Lotto_LottoPalle" refer="Lotto_Constraint1" msdata:IsNested="true" msprop:rel_Generator_UserChildTable="LottoPalle" msprop:rel_Generator_ChildPropName="GetLottoPalleRows" msprop:rel_Generator_UserRelationName="FK_Lotto_LottoPalle" msprop:rel_Generator_ParentPropName="LottoRow" msprop:rel_Generator_RelationVarName="relationFK_Lotto_LottoPalle" msprop:rel_Generator_UserParentTable="Lotto">
       <xs:selector xpath=".//mstns:LottoPalle" />
-      <xs:field xpath="mstns:Id" />
+      <xs:field xpath="mstns:id" />
     </xs:keyref>
-    <xs:keyref name="FK_Lotto_QuotazioniVincite" refer="Lotto_Constraint1" msprop:rel_Generator_UserChildTable="QuotazioniVincite" msprop:rel_Generator_ChildPropName="GetQuotazioniVinciteRows" msprop:rel_Generator_UserRelationName="FK_Lotto_QuotazioniVincite" msprop:rel_Generator_RelationVarName="relationFK_Lotto_QuotazioniVincite" msprop:rel_Generator_UserParentTable="Lotto" msprop:rel_Generator_ParentPropName="LottoRow">
+    <xs:keyref name="FK_Lotto_QuotazioniVincite" refer="Lotto_Constraint1" msprop:rel_Generator_UserChildTable="QuotazioniVincite" msprop:rel_Generator_ChildPropName="GetQuotazioniVinciteRows" msprop:rel_Generator_UserRelationName="FK_Lotto_QuotazioniVincite" msprop:rel_Generator_ParentPropName="LottoRow" msprop:rel_Generator_RelationVarName="relationFK_Lotto_QuotazioniVincite" msprop:rel_Generator_UserParentTable="Lotto">
       <xs:selector xpath=".//mstns:QuotazioniVincite" />
-      <xs:field xpath="mstns:Id" />
+      <xs:field xpath="mstns:id" />
     </xs:keyref>
   </xs:element>
 </xs:schema>

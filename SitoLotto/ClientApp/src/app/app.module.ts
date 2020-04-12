@@ -17,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MyBootstrapModalComponent } from './storico-lotto/component/directive/storico-lotto.component';
+import { GenericLottoDataService } from './storico-lotto/component/service/GenericLottoData.service';
+
 
 
 
@@ -44,10 +46,10 @@ import { MyBootstrapModalComponent } from './storico-lotto/component/directive/s
         GridModule,
         AngularFontAwesomeModule,
         NgbModule,
-        
+
     ],
-    entryComponents:[MyBootstrapModalComponent],
-    providers: [kendoGridDataService],
+    entryComponents: [MyBootstrapModalComponent],
+    providers: [kendoGridDataService, GenericLottoDataService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,74 +1,58 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { GridDataResult } from '@progress/kendo-angular-grid/dist/es2015/data/data.collection';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
-import { Observable, BehaviorSubject } from 'rxjs';
-import { tap, map } from 'rxjs/operators';
+import { BehaviorSubject, throwError } from 'rxjs';
+import { conSolution } from '../../../../main';
+import { map, tap, catchError, retry } from 'rxjs/operators';
 
+export interface lottoDetailes {
+    id: number;
+    nPalla: number;
+    tipoPalla: number;
+}
 
 @Injectable()
-export class GenericLottoData extends BehaviorSubject<GridDataResult> {
+export class GenericLottoDataService extends BehaviorSubject<any> {
     public loading: boolean;
     constructor(private http: HttpClient) {
         super(null);
     }
 
-    private BASE_URL = 'api/Lotto/';
-    private data: GridDataResult = null;
+    private BASE_URL = conSolution.BASE_URL_API_Lotto_Detailes;
 
 
-    public read(state?: any) {
-        this.fetch(state)
-            .pipe(
-                tap(data => {
-                    this.data = data;
-                })
-            )
-            .subscribe(data => {
-                super.next(data);
-            });
-    }
-
-    private fetch(state?: any, dataItem?: any, action: string = ''): Observable<any> {
+    public readDetailes(id: number, dataIn: lottoDetailes) {
         this.loading = true;
-        switch (action) {
-            case '': {
-                return this.http.get(this.BASE_URL + (state ? JSON.stringify(state) : ''))
-                    .pipe(
-                        map(response => (<GridDataResult>{
-                            data: response['results'],
-                            total: parseInt(response['count'], 10)
-                        })),
-                        tap(() => this.loading = false)
-                    );
-            }
-            case 'create': {
-                return this.http.post(`${this.BASE_URL}`, dataItem);
-            }
-            case 'edit': {
-                return this.http.put(`${this.BASE_URL}/${dataItem.blogId}`, dataItem);
-            }
-            case 'delete': {
-                const options = {
-                    headers: {},
-                    body: dataItem,
-                };
+        return this.http.get(this.BASE_URL.replace('{id}', (id ? id.toString() : '')))
 
-                return this.http.delete(`${this.BASE_URL}/${dataItem.blogId}`, options);
-            }
-        }
-    }
-
-    public save(dataItem: any, isNew?: boolean) {
-        if (isNew) {
-            const newBlog = { Url: dataItem.url };
-            this.fetch(newBlog, 'create').subscribe(() => this.read(), () => this.read());
+            .pipe(
+                map(response =>
+                    (<lottoDetailes>{
+                        id: response[0].id,
+                        nPalla: response[0].nPalla,
+                        tipoPalla: response[0].tipoPalla
+                    })),
+                map(response => response),
+                retry(3), // retry a failed request up to 3 times
+                catchError(this.handleError))
+            .subscribe(data => {
+                dataIn = data;
+                this.loading = false;
+            });
+    };
+    private handleError(error: HttpErrorResponse) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
         } else {
-            this.fetch(dataItem, 'edit').subscribe(() => this.read(), () => this.read());
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error(
+                `Backend returned code ${error.status}, ` +
+                `body was: ${error.error}`);
         }
-    }
-
-    public delete(dataItem: any) {
-        this.fetch(dataItem, 'delete').subscribe(() => this.read(), () => this.read());
-    }
+        // return an observable with a user-facing error message
+        return throwError(
+            'Something bad happened; please try again later.');
+    };
 }

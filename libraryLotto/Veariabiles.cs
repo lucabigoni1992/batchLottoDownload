@@ -70,7 +70,7 @@ namespace libraryLotto
         internal static LottoRow _LottoDs_newRow() { return _DsLotto.Lotto.NewLottoRow(); }
         internal static void _LottoDs_addRow(LottoRow row)
         {
-            if (_DsLotto.Lotto.FindById(row.Id) == null)
+            if (_DsLotto.Lotto.FindByid(row.id) == null)
                 _DsLotto.Lotto.AddLottoRow(row);
 
         }
@@ -81,14 +81,14 @@ namespace libraryLotto
         internal static LottoPalleRow _LottoPalleDs_newRow(int id, int numeroPalla, string tipoPalla)
         {
             LottoPalleRow row = _DsLotto.LottoPalle.NewLottoPalleRow();
-            row.Id = id;
+            row.id = id;
             row.nPalla = numeroPalla;
             row.tipoPalla = tipoPalla;
             return row;
         }
         internal static void _LottoPalleDs_addRow(LottoPalleRow row)
         {
-            if (_DsLotto.LottoPalle.FindByIdnPallatipoPalla(row.Id, row.nPalla, row.tipoPalla) == null)
+            if (_DsLotto.LottoPalle.FindByidnPallatipoPalla(row.id, row.nPalla, row.tipoPalla) == null)
                 _DsLotto.LottoPalle.AddLottoPalleRow(row);
 
         }
@@ -99,7 +99,7 @@ namespace libraryLotto
         internal static void _QuatazioniVincite_addRow(QuotazioniVinciteRow row)
         {
 
-            if (_DsLotto.QuotazioniVincite.FindByIdenumTipoVincitapremio(row.Id, row.enumTipoVincita, row.premio) == null)
+            if (_DsLotto.QuotazioniVincite.FindByidenumTipoVincitapremio(row.id, row.enumTipoVincita, row.premio) == null)
                 _DsLotto.QuotazioniVincite.AddQuotazioniVinciteRow(row);
         }
         internal static QuotazioniVinciteDataTable _QuatazioniVincite() { return _DsLotto.QuotazioniVincite; }
@@ -118,7 +118,7 @@ namespace libraryLotto
         {
             IEnumerable<Struct_Joing_AllTable> _Lotto_Tabpalle  = (
                     from Tablotto in _DsLotto.Lotto
-                    join Tabpalle in _DsLotto.LottoPalle on Tablotto.Id equals Tabpalle.Id
+                    join Tabpalle in _DsLotto.LottoPalle on Tablotto.id equals Tabpalle.id
                     select new Struct_Joing_AllTable(Tablotto, Tabpalle)
                     );
             return _Lotto_Tabpalle;
@@ -127,7 +127,7 @@ namespace libraryLotto
         {
             IEnumerable<Struct_Joing_AllTable> _TablottoTabQuVin = (
                     from Tablotto in _DsLotto.Lotto
-                    join TabQuVin in _DsLotto.QuotazioniVincite on Tablotto.Id equals TabQuVin.Id
+                    join TabQuVin in _DsLotto.QuotazioniVincite on Tablotto.id equals TabQuVin.id
                     select new Struct_Joing_AllTable(Tablotto, TabQuVin)
                     );
             return _TablottoTabQuVin;
@@ -164,11 +164,14 @@ namespace libraryLotto
             return null;
         }
 
-        internal static LottoPalleRow[] _LottoPallefromId(int id)
+        internal static List<Struct_Joing_AllTable> _LottoPallefromId(int id)
         {
             if (id <= 0)            
                 throw new Exception("errore id negativo");
-            return _DsLotto.Lotto.FindById(id).GetLottoPalleRows();
+            List<Struct_Joing_AllTable> ris = new List<Struct_Joing_AllTable>();
+            foreach (LottoPalleRow row in _DsLotto.Lotto.FindByid(id).GetLottoPalleRows())
+                ris.Add(new Struct_Joing_AllTable(row));
+            return  ris;
         }
 
         private static KendoData GettableByKendofilter(IEnumerable<Struct_Joing_AllTable> enumerable, string kendoQuery)

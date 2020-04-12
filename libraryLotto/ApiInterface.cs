@@ -22,7 +22,7 @@ namespace libraryLotto
         {
             return Variabili._LottoFromKendo(KendoQuery);
         }
-        public LottoPalleRow[] GetLottoDetailesFromId(int id)
+        public List<Struct_Joing_AllTable> GetLottoDetailesFromId(int id)
         {
             return Variabili._LottoPallefromId(id);
         }

@@ -34,8 +34,8 @@ namespace LottoWeb.ClientApp
             return JsonConvert.SerializeObject(a.GetLottoKendoQuery(ParamKendo)); ;
         } // GET: api/Lotto/5
 
-        [HttpGet("detailes/{id}", Name = "Get")]
-        public string Getdetailes(int id)
+        [HttpGet("detailes/{id}", Name = "GetDetailes")]
+        public string Get(int id)
         {
             return JsonConvert.SerializeObject(a.GetLottoDetailesFromId(id)); ;
         }

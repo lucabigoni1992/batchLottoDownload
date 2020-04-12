@@ -112,7 +112,7 @@ namespace libraryLotto.dlm
 
             public Struct_Joing_AllTable(LottoDs.LottoRow tablotto, LottoDs.LottoPalleRow tabpalle, LottoDs.QuotazioniVinciteRow tabQuotazioniVincitein)
             {
-                this.id = tablotto.Id;
+                this.id = tablotto.id;
                 this.nEstrazione = tablotto.nEstrazione;
                 this.anno = tablotto.anno;
                 this.data = tablotto.data;
@@ -127,7 +127,7 @@ namespace libraryLotto.dlm
             }
             public Struct_Joing_AllTable(LottoDs.LottoRow tablotto, LottoDs.QuotazioniVinciteRow tabQuotazioniVincitein)
             {
-                this.id = tablotto.Id;
+                this.id = tablotto.id;
                 this.nEstrazione = tablotto.nEstrazione;
                 this.anno = tablotto.anno;
                 this.data = tablotto.data;
@@ -140,7 +140,7 @@ namespace libraryLotto.dlm
             }
             public Struct_Joing_AllTable(LottoDs.LottoRow tablotto, LottoDs.LottoPalleRow tabpalle)
             {
-                this.id = tablotto.Id;
+                this.id = tablotto.id;
                 this.nEstrazione = tablotto.nEstrazione;
                 this.anno = tablotto.anno;
                 this.data = tablotto.data;
@@ -150,12 +150,18 @@ namespace libraryLotto.dlm
             }
             public Struct_Joing_AllTable(LottoDs.LottoRow tablotto)
             {
-                this.id = tablotto.Id;
+                this.id = tablotto.id;
                 this.nEstrazione = tablotto.nEstrazione;
                 this.anno = tablotto.anno;
                 this.data = tablotto.data;
                 this.hrfQuotazioni = tablotto.hrfQuotazioni;
                 SetStatistics(tablotto);
+            }
+            public Struct_Joing_AllTable( LottoDs.LottoPalleRow tabpalle)
+            {
+                this.id = tabpalle.id;
+                this.nPalla = tabpalle.nPalla;
+                this.tipoPalla = tabpalle.tipoPalla;
             }
 
             private void SetStatistics(LottoDs.LottoRow tablotto)
