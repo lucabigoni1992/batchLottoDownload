@@ -33,7 +33,7 @@
     color: black;
     font-family: Arial;
     font-size: 55px;
-    transform: translateX(58px) translateY(-60px) skewX(-2deg) skewY(9deg);
+    transform: translateX(53px) translateY(-60px) skewX(-2deg) skewY(9deg);
 }
 
 .text2:before {
@@ -60,12 +60,10 @@
     -webkit-perspective: 1200px;
     -moz-perspective: 1200px;
     -ms-perspective: 1200px;
-    -o-perspective: 1200px;
     perspective: 1200px;
     -webkit-perspective-origin: 50% 50%;
     -moz-perspective-origin: 50% 50%;
     -ms-perspective-origin: 50% 50%;
-    -o-perspective-origin: 50% 50%;
     perspective-origin: 50% 50%;
 }
 

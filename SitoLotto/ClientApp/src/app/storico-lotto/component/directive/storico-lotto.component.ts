@@ -14,10 +14,12 @@ import { tap } from 'rxjs/operators';
 export class MyBootstrapModalComponent implements OnInit {
 
     @Input() fromParent: any;
+
     constructor(
         public activeModal: NgbActiveModal,
         public dataService: GenericLottoDataService) { }
 
+    private dataitem;
     private loading = false;
     private dataDetailes: lottoDetailesArr;
 
@@ -27,8 +29,9 @@ export class MyBootstrapModalComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.dataDetailes = new lottoDetailesArr();
         console.log("ngOnInit" + this.fromParent);
+        this.dataDetailes = new lottoDetailesArr();
+        this.dataitem = this.fromParent.dataitem;
         this.loading = true
         this.dataService.readDetailesCall(this.fromParent.dataitem.id)
             .pipe(
@@ -39,9 +42,7 @@ export class MyBootstrapModalComponent implements OnInit {
                 this.loading = false;
             });
     }
-    public trackByFn(index, item) {
-        return item.nPalla;
-    }
+
     closeModal(sendData) {
         console.log("closeModal" + this.fromParent);
     }
