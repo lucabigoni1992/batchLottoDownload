@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using static libExcel.Variables;
 
@@ -11,40 +12,28 @@ namespace TestLibrerie
     [TestClass]
     public class testLibExcel
     {
+        public  class provaIniezioneClasse
+        {
+       //     public  int prova1 { get; set; }
+            [StringLength(100)]
+            public  string prova2 { get; set; }
+            [StringLength(100)]
+            public  string prova3 { get; set; }
+        //    public  DateTime TestDate { get; set; }
+        }
         [TestMethod("TEST LIBRERIA EXCEL")]
         public void TestMethod1()
         {
 
-            TestModelList tmList = new TestModelList();
-            tmList.testData = new List<TestModel>();
-            TestModel tm = new TestModel();
-            tm.TestId = 1;
-            tm.TestName = "Test1";
-            tm.TestDesc = "Tested 1 time";
-            tm.TestDate = DateTime.Now.Date;
-            tmList.testData.Add(tm);
+            List<provaIniezioneClasse> tmList = new List<provaIniezioneClasse>();
 
-            TestModel tm1 = new TestModel();
-            tm1.TestId = 2;
-            tm1.TestName = "Test2";
-            tm1.TestDesc = "Tested 2 times";
-            tm1.TestDate = DateTime.Now.AddDays(-1);
-            tmList.testData.Add(tm1);
+            provaIniezioneClasse tm = new provaIniezioneClasse();
+      //      tm.prova1 = 1;
+            tm.prova2 = "prova2";
+            tm.prova3 = "prova3 1 time";
+      //      tm.TestDate = DateTime.Now.Date;
+            tmList.Add(tm);
 
-            TestModel tm2 = new TestModel();
-            tm2.TestId = 3;
-            tm2.TestName = "Test3";
-            tm2.TestDesc = "Tested 3 times";
-            tm2.TestDate = DateTime.Now.AddDays(-2);
-            tmList.testData.Add(tm2);
-
-            TestModel tm3 = new TestModel();
-            tm3.TestId = 4;
-            tm3.TestName = "Test4";
-            tm3.TestDesc = "Tested 4 times";
-            tm3.TestDate = DateTime.Now.AddDays(-3);
-            tmList.testData.Add(tm);
-            
             Variables p = new Variables();
             p.CreateExcelFile(tmList, "C:\\temp");
             //Variables E = new Variables();

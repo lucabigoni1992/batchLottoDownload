@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
+using System.Reflection;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
@@ -10,20 +12,8 @@ namespace libExcel
 {
     public class Variables
     {
-        public class TestModel
-        {
-            public int TestId { get; set; }
-            public string TestName { get; set; }
-            public string TestDesc { get; set; }
-            public DateTime TestDate { get; set; }
 
-        }
-
-        public class TestModelList
-        {
-            public List<TestModel> testData { get; set; }
-        }
-        public void CreateExcelFile(TestModelList data, string OutPutFileDirectory)
+        public void CreateExcelFile<T>(List<T> data, string OutPutFileDirectory)
         {
             var datetime = DateTime.Now.ToString().Replace("/", "_").Replace(":", "_");
 
@@ -39,7 +29,7 @@ namespace libExcel
                 CreatePartsForExcel(package, data);
             }
         }
-        private void CreatePartsForExcel(SpreadsheetDocument document, TestModelList data)
+        private void CreatePartsForExcel<T>(SpreadsheetDocument document, List<T> data)
         {
             SheetData partSheetData = GenerateSheetdataForDetails(data);
 
@@ -240,18 +230,19 @@ namespace libExcel
 
             workbookStylesPart1.Stylesheet = stylesheet1;
         }
-        private SheetData GenerateSheetdataForDetails(TestModelList data)
+        private SheetData GenerateSheetdataForDetails<T>(List<T> data)
         {
             SheetData sheetData1 = new SheetData();
             sheetData1.Append(CreateHeaderRowForExcel());
-
-            foreach (TestModel testmodel in data.testData)
+            data.ForEach(ELEM =>
             {
-                Row partsRows = GenerateRowForChildPartDetail(testmodel);
+                Row partsRows = GenerateRowForChildPartDetail(ELEM);
                 sheetData1.Append(partsRows);
-            }
+            });
+
             return sheetData1;
         }
+
         private Row CreateHeaderRowForExcel()
         {
             Row workRow = new Row();
@@ -261,13 +252,20 @@ namespace libExcel
             workRow.Append(CreateCell("Test Date", 2U));
             return workRow;
         }
-        private Row GenerateRowForChildPartDetail(TestModel testmodel)
+        private Row GenerateRowForChildPartDetail<T>(T testmodel)
         {
             Row tRow = new Row();
-            tRow.Append(CreateCell(testmodel.TestId.ToString()));
-            tRow.Append(CreateCell(testmodel.TestName));
-            tRow.Append(CreateCell(testmodel.TestDesc));
-            tRow.Append(CreateCell(testmodel.TestDate.ToShortDateString()));
+            Type t = testmodel.GetType();
+            Console.WriteLine("Type is: {0}", t.Name);
+            PropertyInfo[] props = t.GetProperties();
+            Console.WriteLine("Properties (N = {0}):",
+                              props.Length);
+            foreach (var prop in props)
+                if (prop.GetIndexParameters().Length == 0)
+                    tRow.Append(CreateCell(prop.GetValue(testmodel).ToString()));
+                else
+                    tRow.Append(CreateCell(""));
+
 
             return tRow;
         }
