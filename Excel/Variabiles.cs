@@ -233,7 +233,10 @@ namespace libExcel
         private SheetData GenerateSheetdataForDetails<T>(List<T> data)
         {
             SheetData sheetData1 = new SheetData();
-            sheetData1.Append(CreateHeaderRowForExcel());
+            if (data.Count == 0)
+                return sheetData1;
+
+            sheetData1.Append(CreateHeaderRowForExcel(data[0].GetType().GetProperties()));
             data.ForEach(ELEM =>
             {
                 Row partsRows = GenerateRowForChildPartDetail(ELEM);
@@ -243,88 +246,69 @@ namespace libExcel
             return sheetData1;
         }
 
-        private Row CreateHeaderRowForExcel()
+        private Row CreateHeaderRowForExcel(PropertyInfo[] props)
         {
             Row workRow = new Row();
-            workRow.Append(CreateCell("Test Id", 2U));
-            workRow.Append(CreateCell("Test Name", 2U));
-            workRow.Append(CreateCell("Test Description", 2U));
-            workRow.Append(CreateCell("Test Date", 2U));
+            foreach (var prop in props)
+                workRow.Append(CreateCell(prop, prop.Name.ToString(), 2U));
             return workRow;
         }
         private Row GenerateRowForChildPartDetail<T>(T testmodel)
         {
             Row tRow = new Row();
             Type t = testmodel.GetType();
-            Console.WriteLine("Type is: {0}", t.Name);
             PropertyInfo[] props = t.GetProperties();
-            Console.WriteLine("Properties (N = {0}):",
-                              props.Length);
             foreach (var prop in props)
-                if (prop.GetIndexParameters().Length == 0)
-                    tRow.Append(CreateCell(prop.GetValue(testmodel).ToString()));
-                else
-                    tRow.Append(CreateCell(""));
-
-
+                tRow.Append(CreateCell(prop, prop.GetValue(testmodel)));
             return tRow;
         }
-        private Cell CreateCell(string text)
+        private Cell CreateCell(PropertyInfo type, Object text = null, uint styleIndex = 1U)
         {
-            Cell cell = new Cell();
-            cell.StyleIndex = 1U;
-            cell.DataType = ResolveCellDataTypeOnValue(text);
-            cell.CellValue = new CellValue(text);
-            return cell;
-        }
-        private Cell CreateCell(string text, uint styleIndex)
-        {
+            if (text is null)
+                text = "";
             Cell cell = new Cell();
             cell.StyleIndex = styleIndex;
-            cell.DataType = ResolveCellDataTypeOnValue(text);
-            cell.CellValue = new CellValue(text);
+            cell.DataType = ResolveCellDataType(type);
+            cell.CellValue = ResolveCellDataValue(type, text);
             return cell;
         }
-        private EnumValue<CellValues> ResolveCellDataTypeOnValue(string text)
+        private EnumValue<CellValues> ResolveCellDataType(PropertyInfo type)
         {
-            int intVal;
-            double doubleVal;
-            if (int.TryParse(text, out intVal) || double.TryParse(text, out doubleVal))
+            if (type.PropertyType is DateTime)
+            {
+                return CellValues.Date;
+            }
+            else if (type.PropertyType is Int32 || type.PropertyType is Int64 || type.PropertyType is int)
             {
                 return CellValues.Number;
+            }
+            else if (type.PropertyType is bool)
+            {
+                return CellValues.Boolean;
             }
             else
             {
                 return CellValues.String;
             }
         }
+        private CellValue ResolveCellDataValue(PropertyInfo type, Object text)
+        {
+            if (type.PropertyType is DateTime)
+            {
+                return new CellValue((DateTime)text);
+            }
+            //else if (type.PropertyType is Int32 || type.PropertyType is Int64 || type.PropertyType is int || type.PropertyType is long)
+            //{
+            //    if ((long)text == 0)
+            //        return new CellValue("");
+            //    else
+            //        return new CellValue((string)text.ToString());
+            //}
+            else
+            {
+                return new CellValue((string)text.ToString());
+            }
 
-        //public class Account
-        //{
-        //    public int ID { get; set; }
-        //    public double Balance { get; set; }
-
-
-        //}
-
-        //public void DisplayInExcel(IEnumerable<Account> accounts, Action<Account, Excel.Range> DisplayFunc)
-        //{
-        //    var excelApp = new Excel.Application();
-        //    // Add a new Excel workbook.
-        //    excelApp.Workbooks.Add();
-        //    excelApp.Visible = true;
-        //    excelApp.Range["A1"].Value = "ID";
-        //    excelApp.Range["B1"].Value = "Balance";
-        //    excelApp.Range["A2"].Select();
-
-        //    foreach (var ac in accounts)
-        //    {
-        //        DisplayFunc(ac, excelApp.ActiveCell);
-        //        excelApp.ActiveCell.Offset[1, 0].Select();
-        //    }
-        //    // Copy the results to the Clipboard.
-        //    excelApp.Range["A1:B3"].Copy();
-        //}
-
+        }
     }
 }
