@@ -10,24 +10,19 @@ using X14 = DocumentFormat.OpenXml.Office2010.Excel;
 using X15 = DocumentFormat.OpenXml.Office2013.Excel;
 namespace libExcel
 {
-    public class Variables
+    public class WriteExcel
     {
 
-        public void CreateExcelFile<T>(List<T> data, string OutPutFileDirectory)
+        public void WriteExcelFile<T>(List<T> data, string OutPutFileDirectory, string fileName)
         {
             var datetime = DateTime.Now.ToString().Replace("/", "_").Replace(":", "_");
-
-            string fileFullname = Path.Combine(OutPutFileDirectory, "Output.xlsx");
+            string fileFullname = Path.Combine(OutPutFileDirectory, fileName + ".xlsx");
 
             if (File.Exists(fileFullname))
-            {
-                fileFullname = Path.Combine(OutPutFileDirectory, "Output_" + datetime + ".xlsx");
-            }
+                fileFullname = Path.Combine(OutPutFileDirectory, fileName + "_" + datetime + ".xlsx");
 
             using (SpreadsheetDocument package = SpreadsheetDocument.Create(fileFullname, SpreadsheetDocumentType.Workbook))
-            {
                 CreatePartsForExcel(package, data);
-            }
         }
         private void CreatePartsForExcel<T>(SpreadsheetDocument document, List<T> data)
         {
@@ -59,24 +54,31 @@ namespace libExcel
             worksheet1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             worksheet1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             worksheet1.AddNamespaceDeclaration("x14ac", "http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac");
-            SheetDimension sheetDimension1 = new SheetDimension() { Reference = "A1" };
 
             SheetViews sheetViews1 = new SheetViews();
 
             SheetView sheetView1 = new SheetView() { TabSelected = true, WorkbookViewId = (UInt32Value)0U };
             Selection selection1 = new Selection() { ActiveCell = "A1", SequenceOfReferences = new ListValue<StringValue>() { InnerText = "A1" } };
-
             sheetView1.Append(selection1);
-
             sheetViews1.Append(sheetView1);
-            SheetFormatProperties sheetFormatProperties1 = new SheetFormatProperties() { DefaultRowHeight = 15D, DyDescent = 0.25D };
 
-            PageMargins pageMargins1 = new PageMargins() { Left = 0.7D, Right = 0.7D, Top = 0.75D, Bottom = 0.75D, Header = 0.3D, Footer = 0.3D };
-            worksheet1.Append(sheetDimension1);
+            worksheet1.Append(new SheetDimension() { Reference = "A1" });
             worksheet1.Append(sheetViews1);
-            worksheet1.Append(sheetFormatProperties1);
+            worksheet1.Append(new SheetFormatProperties()
+            {
+                DefaultRowHeight = 15D,
+                DyDescent = 0.25D
+            });
             worksheet1.Append(sheetData1);
-            worksheet1.Append(pageMargins1);
+            worksheet1.Append(new PageMargins()
+            {
+                Left = 0.7D,
+                Right = 0.7D,
+                Top = 0.75D,
+                Bottom = 0.75D,
+                Header = 0.3D,
+                Footer = 0.3D
+            });
             worksheetPart1.Worksheet = worksheet1;
         }
         private void GenerateWorkbookStylesPartContent(WorkbookStylesPart workbookStylesPart1)
@@ -268,47 +270,11 @@ namespace libExcel
                 text = "";
             Cell cell = new Cell();
             cell.StyleIndex = styleIndex;
-            cell.DataType = ResolveCellDataType(type);
-            cell.CellValue = ResolveCellDataValue(type, text);
+            cell.DataType = Generic.GenericExcelFunc.ResolveCellDataType(type);
+            cell.CellValue = Generic.GenericExcelFunc.ResolveCellDataValue(type, text);/// distinguere tra header e data
             return cell;
         }
-        private EnumValue<CellValues> ResolveCellDataType(PropertyInfo type)
-        {
-            if (type.PropertyType is DateTime)
-            {
-                return CellValues.Date;
-            }
-            else if (type.PropertyType is Int32 || type.PropertyType is Int64 || type.PropertyType is int)
-            {
-                return CellValues.Number;
-            }
-            else if (type.PropertyType is bool)
-            {
-                return CellValues.Boolean;
-            }
-            else
-            {
-                return CellValues.String;
-            }
-        }
-        private CellValue ResolveCellDataValue(PropertyInfo type, Object text)
-        {
-            if (type.PropertyType is DateTime)
-            {
-                return new CellValue((DateTime)text);
-            }
-            //else if (type.PropertyType is Int32 || type.PropertyType is Int64 || type.PropertyType is int || type.PropertyType is long)
-            //{
-            //    if ((long)text == 0)
-            //        return new CellValue("");
-            //    else
-            //        return new CellValue((string)text.ToString());
-            //}
-            else
-            {
-                return new CellValue((string)text.ToString());
-            }
 
-        }
+
     }
 }
