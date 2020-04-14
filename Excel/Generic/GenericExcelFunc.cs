@@ -13,30 +13,29 @@ namespace libExcel.Generic
         {
             if (type.PropertyType.Name is "DateTime")
             {
-                DateTime.TryParse(text.ToString(), out DateTime dt);
-                if (dt == DateTime.MinValue)
-                    return new CellValue("");
+                if (DateTime.TryParse(text.ToString(), out DateTime dt))
+                    if (dt == DateTime.MinValue)
+                        return new CellValue("");
+                    else
+                        return new CellValue(dt.ToString());//in futuro da sistemare  e tipizzare con formato standard
                 else
-                    return new CellValue(dt.ToString());//in futuro da sistemare  e tipizzare con formato standard
+                    return new CellValue("");
             }
-            //if  (type.PropertyType is Int32 || type.PropertyType is Int64 || type.PropertyType is int)
-            //    {
-            //    int.TryParse(text.ToString(), out int dt);
-            //    if (dt == -1)
-            //        return new CellValue(text.ToString());
-            //    else
-            //        return new CellValue(dt);
-            //}
+            else if (type.PropertyType.Name == "Int32" || type.PropertyType.Name == "Int64" || type.PropertyType.Name == "int" || type.PropertyType.Name == "long")
+            {
+
+                if (long.TryParse(text.ToString(), out long lon))
+                    return new CellValue(lon.ToString());
+                else
+                    return new CellValue("");
+            }
             else
                 return new CellValue((string)text.ToString());
-            //else if (type.PropertyType is Int32 || type.PropertyType is Int64 || type.PropertyType is int || type.PropertyType is long)
-            //{
-            //    if ((long)text == 0)
-            //        return new CellValue("");
-            //    else
-            //        return new CellValue((string)text.ToString());
-            //}
 
+        }
+        internal static CellValue ResolveCellHeaderDataValue(Object text)
+        {
+            return new CellValue((string)text.ToString());
         }
         internal static EnumValue<CellValues> ResolveCellDataType(PropertyInfo type)
         {

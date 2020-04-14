@@ -252,7 +252,7 @@ namespace libExcel
         {
             Row workRow = new Row();
             foreach (var prop in props)
-                workRow.Append(CreateCell(prop, prop.Name.ToString(), 2U));
+                workRow.Append(CreateCell(prop, prop.Name.ToString(),true, 2U));
             return workRow;
         }
         private Row GenerateRowForChildPartDetail<T>(T testmodel)
@@ -264,14 +264,17 @@ namespace libExcel
                 tRow.Append(CreateCell(prop, prop.GetValue(testmodel)));
             return tRow;
         }
-        private Cell CreateCell(PropertyInfo type, Object text = null, uint styleIndex = 1U)
+        private Cell CreateCell(PropertyInfo type, Object text = null, bool isHeader = false, uint styleIndex = 1U)
         {
             if (text is null)
                 text = "";
             Cell cell = new Cell();
             cell.StyleIndex = styleIndex;
             cell.DataType = Generic.GenericExcelFunc.ResolveCellDataType(type);
-            cell.CellValue = Generic.GenericExcelFunc.ResolveCellDataValue(type, text);/// distinguere tra header e data
+            if(isHeader)
+                 cell.CellValue = Generic.GenericExcelFunc.ResolveCellHeaderDataValue( text);/// distinguere tra header e data
+            else
+                cell.CellValue = Generic.GenericExcelFunc.ResolveCellDataValue(type, text);/// distinguere tra header e data
             return cell;
         }
 
