@@ -8,7 +8,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { StoricoLottoComponent,  } from './storico-lotto/storico-lotto.component'
+import { StoricoLottoComponent, } from './storico-lotto/storico-lotto.component'
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,6 +18,10 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MyBootstrapModalComponent } from './storico-lotto/component/directive/storico-lotto.component';
 import { GenericLottoDataService } from './storico-lotto/component/service/GenericLottoData.service';
+import { UploadComponent } from './components/upload/upload.component';
+import { DownloadComponent } from './components/download/download.component';
+import { FileManagerComponent } from './components/file-manager/file-manager.component';
+import { UploadDownloadService } from './services/upload-download.service'
 
 
 
@@ -29,7 +33,11 @@ import { GenericLottoDataService } from './storico-lotto/component/service/Gener
         HomeComponent,
         CounterComponent,
         FetchDataComponent,
-        StoricoLottoComponent, MyBootstrapModalComponent
+        StoricoLottoComponent,
+        MyBootstrapModalComponent,
+        FileManagerComponent,
+        UploadComponent,
+        DownloadComponent
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -49,7 +57,7 @@ import { GenericLottoDataService } from './storico-lotto/component/service/Gener
 
     ],
     entryComponents: [MyBootstrapModalComponent],
-    providers: [kendoGridDataService, GenericLottoDataService],
+    providers: [kendoGridDataService, GenericLottoDataService, UploadDownloadService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

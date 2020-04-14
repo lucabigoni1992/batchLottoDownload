@@ -8,7 +8,9 @@ export const conSolution = {
     BASE_URL: getBaseUrl(),
     BASE_URL_API: getBaseUrl() + 'api/',
     BASE_URL_API_Lotto: getBaseUrl() + 'api/lotto/{KendoData}',
-    BASE_URL_API_Lotto_Detailes: getBaseUrl() + 'api/lotto/detailes/{id}'
+    BASE_URL_API_Lotto_Detailes: getBaseUrl() + 'api/lotto/detailes/{id}',
+    BASE_URL_API_FileDispenser_Download: getBaseUrl() + 'api/FileDispenser/download',
+    BASE_URL_API_FileDispenser_Upload: getBaseUrl() + 'api/FileDispenser/Upload'
 };
 function getBaseUrl() {
     return document.getElementsByTagName('base')[0].href;

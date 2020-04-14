@@ -26,7 +26,7 @@
     <!--Body-->
     <div class="modal-body">
         <div class="container">
-            <img [src]="'assets/Images/superenaredribbon.png'"  alt="SuperEnalotto" style="width:100%;">
+            <img [src]="'assets/Images/superenaredribbon.png'" alt="SuperEnalotto" style="width:100%;">
             <div class="centered">Estrazione del Superenalotto n°{{dataitem.nEstrazione}} del {{dataitem.data}}</div>
         </div>
         <hr>
@@ -50,9 +50,25 @@
             </section>
         </div>
     </div>
+
+    <app-upload [disabled]="showProgress" (uploadStatus)="uploadStatus($event)"></app-upload>
+    <h2>File List</h2>
+    <p *ngIf="showProgress"> progress <strong>{{percentage}}%</strong></p>
+    <hr>
+    <div class="container">
+        <ul>
+            <li *ngFor="let file of files">
+                <a>
+                    {{file}}
+                    <app-download [disabled]="showProgress" [fileName]="file" (downloadStatus)="downloadStatus($event)"></app-download>
+                </a>
+            </li>
+        </ul>
+    </div>
+
     <div class="modal-footer justify-content-rigth">
 
-        <span type="button b" class="btn btn-success" data-dismiss="modal">
+        <span type="button b" class="btn btn-success" (click)="downloadLottoExcel()" data-dismiss="modal">
             <span class="fa fa-download"></span>
             Download
         </span>

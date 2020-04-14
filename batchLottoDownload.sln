@@ -15,11 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LottoUnitTest", "LottoUnitT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Librerie generiche", "Librerie generiche", "{2D7C6FA0-7600-4FDE-8B88-02C00290D7EB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "libExcel", "Excel\libExcel.csproj", "{E2F49458-8B29-4E48-A6E9-752D4ED2B811}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libExcel", "Excel\libExcel.csproj", "{E2F49458-8B29-4E48-A6E9-752D4ED2B811}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestLibrerie", "TestLibrerie\TestLibrerie.csproj", "{50717EA0-43D8-49F8-BF46-800B232C9B2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibrerie", "TestLibrerie\TestLibrerie.csproj", "{50717EA0-43D8-49F8-BF46-800B232C9B2B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BD490736-E8E3-4BF6-9527-0DE722404BB4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C40CE180-B8C8-47F5-9554-D8D14C3F3546}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
