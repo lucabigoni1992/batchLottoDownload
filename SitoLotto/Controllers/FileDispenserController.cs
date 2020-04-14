@@ -71,7 +71,7 @@ namespace LottoWeb.ClientApp
         {
             var result = new List<string>();
 
-            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
+            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, @"File\Excel\Creati");
             if (Directory.Exists(uploads))
             {
                 var provider = _hostingEnvironment.ContentRootFileProvider;

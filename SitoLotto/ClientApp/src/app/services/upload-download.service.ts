@@ -5,15 +5,15 @@ import { conSolution } from '../../main';
 
 @Injectable()
 export class UploadDownloadService {
-  private baseApiUrl: string;
   private apiDownloadUrl: string;
   private apiUploadUrl: string;
   private apiFileUrl: string;
 
   constructor(private httpClient: HttpClient) {
-    this.baseApiUrl = 'http://localhost:5001/api/';
       this.apiDownloadUrl = conSolution.BASE_URL_API_FileDispenser_Download;
       this.apiUploadUrl = conSolution.BASE_URL_API_FileDispenser_Upload;
+      this.apiFileUrl = conSolution.BASE_URL_API_FileDispenser_Files;
+
   }
 
   public downloadFile(file: string): Observable<HttpEvent<Blob>> {
