@@ -12,16 +12,17 @@ import { StoricoLottoComponent, } from './storico-lotto/storico-lotto.component'
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { kendoGridDataService } from './storico-lotto/component/service/KendoGriddata.service'
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MyBootstrapModalComponent } from './storico-lotto/component/directive/storico-lotto.component';
-import { GenericLottoDataService } from './storico-lotto/component/service/GenericLottoData.service';
-import { UploadComponent } from './components/upload/upload.component';
-import { DownloadComponent } from './components/download/download.component';
-import { FileManagerComponent } from './components/file-manager/file-manager.component';
 import { UploadDownloadService } from './services/upload-download.service'
+import { MyBootstrapModalComponent } from './storico-lotto/modali/directive/storico-lotto.component';
+import { FileManagerComponent } from './Components/gestioneFile/file-manager/file-manager.component';
+import { UploadComponent } from './Components/gestioneFile/upload/upload.component';
+import { DownloadComponent } from './Components/gestioneFile/download/download.component';
+import { DownloadAndMadeExcel } from './Components/gestioneFile/downloadAndMadeExcel/downloadAndMadeExcel.component';
+import { kendoGridDataService } from './storico-lotto/service/kendoGridData.service';
+import { GenericLottoDataService } from './storico-lotto/service/GenericLottoData.service';
 
 
 
@@ -37,7 +38,8 @@ import { UploadDownloadService } from './services/upload-download.service'
         MyBootstrapModalComponent,
         FileManagerComponent,
         UploadComponent,
-        DownloadComponent
+        DownloadComponent,
+        DownloadAndMadeExcel
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

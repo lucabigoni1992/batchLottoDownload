@@ -16,7 +16,11 @@ namespace libExcel
         public void WriteExcelFile<T>(List<T> data, string OutPutFileDirectory, string fileName)
         {
             var datetime = DateTime.Now.ToString().Replace("/", "_").Replace(":", "_");
-            string fileFullname = Path.Combine(OutPutFileDirectory, fileName + ".xlsx");
+            string fileFullname = "";
+            if (Path.GetExtension(fileName) == "")
+                fileFullname = Path.Combine(OutPutFileDirectory, fileName + ".xlsx");
+            else
+                fileFullname = Path.Combine(OutPutFileDirectory, fileName);
 
             if (File.Exists(fileFullname))
                 fileFullname = Path.Combine(OutPutFileDirectory, fileName + "_" + datetime + ".xlsx");
@@ -252,7 +256,7 @@ namespace libExcel
         {
             Row workRow = new Row();
             foreach (var prop in props)
-                workRow.Append(CreateCell(prop, prop.Name.ToString(),true, 2U));
+                workRow.Append(CreateCell(prop, prop.Name.ToString(), true, 2U));
             return workRow;
         }
         private Row GenerateRowForChildPartDetail<T>(T testmodel)
@@ -271,8 +275,8 @@ namespace libExcel
             Cell cell = new Cell();
             cell.StyleIndex = styleIndex;
             cell.DataType = Generic.GenericExcelFunc.ResolveCellDataType(type);
-            if(isHeader)
-                 cell.CellValue = Generic.GenericExcelFunc.ResolveCellHeaderDataValue( text);/// distinguere tra header e data
+            if (isHeader)
+                cell.CellValue = Generic.GenericExcelFunc.ResolveCellHeaderDataValue(text);/// distinguere tra header e data
             else
                 cell.CellValue = Generic.GenericExcelFunc.ResolveCellDataValue(type, text);/// distinguere tra header e data
             return cell;

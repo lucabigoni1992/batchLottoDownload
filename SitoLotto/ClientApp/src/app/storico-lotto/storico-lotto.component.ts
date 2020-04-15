@@ -1,11 +1,11 @@
 
 import { Component,  OnInit } from '@angular/core';
 import { State } from '@progress/kendo-data-query';
-import { kendoGridDataService } from './component/service/KendoGriddata.service'
 import { FormGroup } from '@angular/forms';
 import { NgbModal, NgbModalRef, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { GridDataResult } from '@progress/kendo-angular-grid/dist/es2015/data/data.collection';
-import { MyBootstrapModalComponent } from './component/directive/storico-lotto.component';
+import { MyBootstrapModalComponent } from './modali/directive/storico-lotto.component';
+import { kendoGridDataService } from './service/kendoGridData.service';
 
 interface ColumnSetting {
     field: string,

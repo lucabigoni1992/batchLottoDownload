@@ -31,7 +31,7 @@ code {
 }
 
 /* Container holding the image and the text */
-.container {
+.containerImg {
     position: relative;
     text-align: center;
     color: white;

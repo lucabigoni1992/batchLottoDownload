@@ -1,0 +1,73 @@
+<style type="text/css">
+    * {
+        --primary-color-kendo-lotto: #ff6358 !important;
+    }
+
+    .modal-header, .close {
+        background-color: var(--primary-color-kendo-lotto);
+        border-color: var(--primary-color-kendo-lotto);
+        text-shadow: none;
+    }
+
+    .border-2 {
+        border-width: 2px !important;
+        border-color: black;
+    }
+</style>
+<!-- Modal: modalPoll -->
+<div kendoButton class="modal-content border border-secondary border-2">
+    <!--Header-->
+    <div class="modal-header">
+        <p class="h1 col-xs-1 center-block">Riasunti estrazione</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="fa fa-times-circle"></span>
+        </button>
+    </div>
+    <!--Body-->
+    <div class="modal-body">
+        <div class="containerImg">
+            <img [src]="'assets/Images/superenaredribbon.png'" alt="SuperEnalotto" style="width:100%;">
+            <div class="centered">Estrazione del Superenalotto n°{{dataitem.nEstrazione}} del {{dataitem.data}}</div>
+        </div>
+        <hr>
+        <!-- Radio -->
+        <p class="text-center">
+            <strong>Numeri Usciti</strong>
+        </p>
+
+
+        <div class="text-center" style="margin-left: -30px;">
+            <section *ngFor="let item of dataDetailes.Palle; let i = index" class="stage">
+                <div class="ball " [ngClass]="{
+                                'ball-Superstar':item.tipoPalla==='superstar',
+                                'ball-Jolly'    :item.tipoPalla==='jolly',
+                                'ball-Green'    :item.tipoPalla.includes('palla')==true
+                              }">
+                    <span class="shadow"></span>
+                    <span class="text" [attr.data-lottonPalla]="item.nPalla.toString().length==1?'0'+item.nPalla.toString():item.nPalla.toString()"></span>
+                    <span class="text2" [attr.data-lottoTipoPalla]="item.tipoPalla"></span>
+                </div>
+            </section>
+        </div>
+    </div>
+    <app-downloadAndMadeExcel [urlApi]="urlApi" [fileName]="'dati_estrazione N'+dataitem.nEstrazione+' del '+dataitem.data" [id]="dataitem.id" (downloadStatus)="downloadStatus($event)"></app-downloadAndMadeExcel>
+
+    <p *ngIf="showProgress"> progress <strong>{{percentage}}%</strong></p>
+    <label class="error" [hidden]="!showDownloadError">ci sono stati errori durante il download</label>
+    <label class="error" [hidden]="!showUploadError">ci sono stati errori durante l'upload</label>
+
+
+
+    <div class="modal-footer justify-content-rigth">
+
+        <span type="button b" class="btn btn-success" (click)="downloadLottoExcel()" data-dismiss="modal">
+            <span class="fa fa-download"></span>
+            Download
+        </span>
+        <span type="button" class="btn btn-secondary " data-dismiss="modal">
+            <span class="fa fa-times"></span>
+            Chiudi
+        </span>
+    </div>
+</div>
+<div *ngIf="dataService.loading" class="k-i-loading"></div>

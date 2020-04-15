@@ -28,7 +28,6 @@ namespace SitoLotto
 
         public Task StartAsync(CancellationToken stoppingToken)
         {
-            _logger.LogInformation("Timed Hosted Service is running.");
             _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromSeconds(60 * 1000));
             return Task.CompletedTask;
         }
@@ -39,20 +38,26 @@ namespace SitoLotto
             {
                 lastDay = DateTime.Now.Day;
                 lottoData.downloadAllLotto();
-                _logger.LogInformation("Db Updated");
             }
 
         }
 
         public Task StopAsync(CancellationToken stoppingToken)
         {
-            _logger.LogInformation("Timed Hosted Service is stopping.");
             return Task.CompletedTask;
         }
 
         public void Dispose()
         {
-            _timer?.Dispose();
+            Dispose(true);
+            GC.SuppressFinalize(this); 
+        }
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                _timer.Dispose();
+            }
         }
 
         public override bool Equals(object obj)

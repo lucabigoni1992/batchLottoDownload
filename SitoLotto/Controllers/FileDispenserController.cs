@@ -11,6 +11,8 @@ using Newtonsoft.Json;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using Microsoft.AspNetCore.StaticFiles;
+using libExcel;
+using System.Collections;
 
 namespace LottoWeb.ClientApp
 {
@@ -19,9 +21,9 @@ namespace LottoWeb.ClientApp
     public class FileDispenserController : ControllerBase
     {
 
-        private IHostingEnvironment _hostingEnvironment;
+        private IWebHostEnvironment _hostingEnvironment;
 
-        public FileDispenserController(IHostingEnvironment environment)
+        public FileDispenserController(IWebHostEnvironment environment)
         {
             _hostingEnvironment = environment;
         }
@@ -30,7 +32,11 @@ namespace LottoWeb.ClientApp
         [Route("upload")]
         public async Task<IActionResult> Upload(IFormFile file)
         {
-            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "File/Excel/Creati");
+            if (file is null)
+            {
+                return NotFound();
+            }
+            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "File");
             if (!Directory.Exists(uploads))
             {
                 Directory.CreateDirectory(uploads);
@@ -39,9 +45,8 @@ namespace LottoWeb.ClientApp
             {
                 var filePath = Path.Combine(uploads, file.FileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    await file.CopyToAsync(fileStream);
-                }
+                    await file.CopyToAsync(fileStream).ConfigureAwait(true);
+
             }
             return Ok();
         }
@@ -50,19 +55,49 @@ namespace LottoWeb.ClientApp
         [Route("download")]
         public async Task<IActionResult> Download([FromQuery] string file)
         {
-            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, @"File\Excel\Creati");
+            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, @"File");
             var filePath = Path.Combine(uploads, file);
             if (!System.IO.File.Exists(filePath))
                 return NotFound();
-
             var memory = new MemoryStream();
+
             using (var stream = new FileStream(filePath, FileMode.Open))
-            {
-                await stream.CopyToAsync(memory);
-            }
+                await stream.CopyToAsync(memory).ConfigureAwait(true);
             memory.Position = 0;
 
+
             return File(memory, GetContentType(filePath), file);
+        }
+
+
+        [HttpGet("MadeAndDownloadExcelLottoPalle")]
+        public async Task<IActionResult> MadeAndDownloadExcelLottoPalle(string file, int idLotto)
+        {
+            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, @"File\Excel\Creati");
+            var filePath = Path.Combine(uploads, file + ".xlsx");
+
+            if (System.IO.File.Exists(filePath))
+                return await FileDownload(filePath).ConfigureAwait(true);
+
+            new WriteExcel().WriteExcelFile(
+                new ApiInterface()
+                   .GetLottoDetailesFromId(idLotto)
+                   , uploads
+                   , file
+                   );
+            if (!System.IO.File.Exists(filePath))
+                return NotFound();
+            return await FileDownload(filePath).ConfigureAwait(true);
+
+        }
+
+        private async Task<IActionResult> FileDownload(string filePath)
+        {
+            var memory = new MemoryStream();
+            using (var stream = new FileStream(filePath, FileMode.Open))
+                await stream.CopyToAsync(memory).ConfigureAwait(true);
+            memory.Position = 0;
+            return File(memory, GetContentType(filePath), filePath);
         }
 
         [HttpGet]
@@ -71,7 +106,7 @@ namespace LottoWeb.ClientApp
         {
             var result = new List<string>();
 
-            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, @"File\Excel\Creati");
+            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, @"File");
             if (Directory.Exists(uploads))
             {
                 var provider = _hostingEnvironment.ContentRootFileProvider;
@@ -85,7 +120,7 @@ namespace LottoWeb.ClientApp
         }
 
 
-        private string GetContentType(string path)
+        private static string GetContentType(string path)
         {
             var provider = new FileExtensionContentTypeProvider();
             string contentType;

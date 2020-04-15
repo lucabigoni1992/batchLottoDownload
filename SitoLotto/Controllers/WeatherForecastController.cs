@@ -24,7 +24,7 @@ namespace SitoLotto.Controllers
         }
 
         [HttpGet]
-        public List<WeatherForecast> Get()
+        public static List<WeatherForecast> Get()
         {
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast

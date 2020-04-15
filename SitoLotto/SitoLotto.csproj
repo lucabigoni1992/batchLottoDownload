@@ -23,16 +23,17 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="System.Collections" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
-    <Compile Remove="ClientApp\src\app\storico-lotto\component\service\**" />
+    <Compile Remove="ClientApp\src\app\storico-lotto\service\**" />
     <Content Remove="$(SpaRoot)**" />
-    <Content Remove="ClientApp\src\app\storico-lotto\component\service\**" />
-    <EmbeddedResource Remove="ClientApp\src\app\storico-lotto\component\service\**" />
+    <Content Remove="ClientApp\src\app\storico-lotto\service\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\storico-lotto\service\**" />
     <None Remove="$(SpaRoot)**" />
-    <None Remove="ClientApp\src\app\storico-lotto\component\service\**" />
+    <None Remove="ClientApp\src\app\storico-lotto\service\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
@@ -42,11 +43,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Excel\libExcel.csproj" />
     <ProjectReference Include="..\libraryLotto\libraryLotto.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\app\Components\" />
+    <Folder Include="ClientApp\src\app\services\gestioneFile\" />
     <Folder Include="ClientApp\src\assets\Images\" />
   </ItemGroup>
 
