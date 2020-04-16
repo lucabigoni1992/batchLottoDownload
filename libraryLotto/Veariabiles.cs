@@ -166,12 +166,22 @@ namespace libraryLotto
 
         internal static List<Struct_Joing_AllTable> _LottoPallefromId(int id)
         {
-            if (id <= 0)            
+            if (id <= 0)
                 throw new Exception("errore id negativo");
             List<Struct_Joing_AllTable> ris = new List<Struct_Joing_AllTable>();
             foreach (LottoPalleRow row in _DsLotto.Lotto.FindByid(id).GetLottoPalleRows())
                 ris.Add(new Struct_Joing_AllTable(row));
-            return  ris;
+            return ris;
+        }
+        internal static KendoData _LottoDetailesFromId(int id)
+        {
+            if (id <= 0)            
+                throw new Exception("errore id negativo");
+            var enumerable = _enumTablotto_TabQuVin().Where(r => r.id == id);
+            return new KendoData(
+            enumerable.Count(),
+            enumerable.ToList()
+                    );
         }
 
         private static KendoData GettableByKendofilter(IEnumerable<Struct_Joing_AllTable> enumerable, string kendoQuery)

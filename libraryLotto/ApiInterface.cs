@@ -22,9 +22,13 @@ namespace libraryLotto
         {
             return Variabili._LottoFromKendo(KendoQuery);
         }
-        public List<Struct_Joing_AllTable> GetLottoDetailesFromId(int id)
+        public List<Struct_Joing_AllTable> GetLottoPallefromId(int id)
         {
             return Variabili._LottoPallefromId(id);
+        }
+        public KendoData GetLottoDetailesFromId(int id)
+        {
+            return Variabili._LottoDetailesFromId(id);
         }
     }
 }

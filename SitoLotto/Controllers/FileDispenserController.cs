@@ -1,18 +1,15 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using libraryLotto;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json.Serialization;
-using System.Text.Json;
-using Newtonsoft.Json;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using Microsoft.AspNetCore.StaticFiles;
 using libExcel;
-using System.Collections;
+using System.Collections.Generic;
+using System.Data;
 
 namespace LottoWeb.ClientApp
 {
@@ -81,7 +78,7 @@ namespace LottoWeb.ClientApp
 
             new WriteExcel().WriteExcelFile(
                 new ApiInterface()
-                   .GetLottoDetailesFromId(idLotto)
+                   .GetLottoPallefromId(idLotto)
                         .Select(i => new { i.tipoPalla, i.nPalla })
                         .ToList()
                    , uploads

@@ -157,11 +157,20 @@ namespace libraryLotto.dlm
                 this.hrfQuotazioni = tablotto.hrfQuotazioni;
                 SetStatistics(tablotto);
             }
-            public Struct_Joing_AllTable( LottoDs.LottoPalleRow tabpalle)
+            public Struct_Joing_AllTable(LottoDs.LottoPalleRow tabpalle)
             {
                 this.id = tabpalle.id;
                 this.nPalla = tabpalle.nPalla;
                 this.tipoPalla = tabpalle.tipoPalla;
+            }
+            public Struct_Joing_AllTable(LottoDs.QuotazioniVinciteRow tabpalle)
+            {
+                this.id = tabpalle.id;
+                this.enumTipoVincita = tabpalle.enumTipoVincita;
+                this.premio = tabpalle.premio;
+                this.valore = tabpalle.valore;
+                this.valuta = tabpalle.valuta;
+                this.vincitori = tabpalle.vincitori;
             }
 
             private void SetStatistics(LottoDs.LottoRow tablotto)
