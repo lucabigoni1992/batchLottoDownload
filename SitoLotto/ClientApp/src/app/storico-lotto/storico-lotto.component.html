@@ -35,7 +35,7 @@
 
 <p>Benvenuto nella pagina dove potrai vedere lo storico dell'estrazioni dell'lotto.</p>
 
-<kendo-grid [data]="view | async"
+<kendo-grid [data]="view"
             [pageSize]="gridState.take"
             [skip]="gridState.skip"
             [sort]="gridState.sort"
@@ -71,12 +71,12 @@
         </ng-template>
     </kendo-grid-column>
 </kendo-grid>
-<div *ngIf="view.loading" class="k-i-loading"></div>
+<div *ngIf="loading" class="k-i-loading"></div>
 
 
 <ng-template kendoGridCellTemplate #estimateTemplate id="estimateTemplate" let-dataItem="dt">
     <div class="btn-group dropright position-static">
-        <button kendoButton (click)="onButtonClick()" class="dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [primary]="true">
+        <button kendoButton class="dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [primary]="true">
             <span>...</span>
         </button>
         <div class="dropdown-menu" role="menu">
@@ -99,22 +99,3 @@
         </div>
     </div>
 </ng-template>
-
-
-<ng-template #content let-modal>
-    <div class="modal-header">
-        <h4 class="modal-title">Modal title</h4>
-        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <div class="modal-body">
-        <p>One fine body&hellip;{{ataItem.id}}</p>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
-    </div>
-</ng-template>
-
-
-

@@ -1,5 +1,5 @@
 
-import { Component,  OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { State } from '@progress/kendo-data-query';
 import { FormGroup } from '@angular/forms';
 import { NgbModal, NgbModalRef, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
@@ -7,6 +7,8 @@ import { GridDataResult } from '@progress/kendo-angular-grid/dist/es2015/data/da
 import { kendoGridDataService } from './service/kendoGridData.service';
 import { LottoDatiEstrazioneComponent } from './modali/directive/LottoDatiEstrazione.component';
 import { LottoDatiVinciteComponent } from './modali/directive/LottoDatiVincite.component';
+import { tap } from 'rxjs/internal/operators/tap';
+import { BehaviorSubject } from 'rxjs';
 
 interface ColumnSetting {
     field: string,
@@ -29,29 +31,18 @@ interface pageable {
 })
 
 
-export class StoricoLottoComponent implements OnInit {
-    public currentCount = 0;
+export class StoricoLottoComponent extends BehaviorSubject<any> implements OnInit {
 
-    public incrementCounter() {
-        this.currentCount++;
-    };
-    public title = 'Hello World!';
-
-    public onButtonClick() {
-        this.title = 'Hello from Kendo UI!';
-    }
     constructor(private dataService: kendoGridDataService, private modalService: NgbModal) {
-
+        super(null);
     }
-    public view: kendoGridDataService;
+    public loading: boolean;
+    private view: GridDataResult = null;
     public formGroup: FormGroup;
-    public Lotto: Object;
-    public gridData: GridDataResult;
 
     public ngOnInit(): void {
-        this.view = this.dataService;
-        this.view.loading = true;
-        this.view.read();
+        this.loading = true;
+        this.ricarica();
     }
     public pageable: pageable = {
         buttonCount: 5,
@@ -108,13 +99,24 @@ export class StoricoLottoComponent implements OnInit {
     ];
 
     public onStateChange(state: State) {
-        this.dataService.read(state);
+        this.ricarica(state);
         this.gridState = state;
     }
 
     //funzioni
 
-
+    private ricarica = function (state?: State) {
+        this.loading = true;
+        this.dataService.read(state)
+            .pipe(
+                tap(data => {
+                    this.view = data;
+                })
+            )
+            .subscribe(data => {
+                this.loading = false;
+            });
+    }
 
     //modali
     public modaleNumeri(dataitem) {
@@ -139,7 +141,7 @@ export class StoricoLottoComponent implements OnInit {
                 size: 'xl'
             });
         modalRef.componentInstance.fromParent = {
-            id: dataitem.id
+            dataitem: dataitem
         };
         modalRef.result.then((result) => {
             console.log(result);
