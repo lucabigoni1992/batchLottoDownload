@@ -39,6 +39,7 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\CallRest.ts" />
+    <None Remove="ClientApp\src\app\services\ServiceConst.ts" />
     <None Remove="ClientApp\src\LottoController.cs" />
   </ItemGroup>
 
@@ -48,8 +49,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\app\services\gestioneFile\" />
     <Folder Include="ClientApp\src\assets\Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\services\ServiceConst.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

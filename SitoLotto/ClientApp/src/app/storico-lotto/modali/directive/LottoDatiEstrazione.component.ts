@@ -4,17 +4,17 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { GenericLottoDataService,  lottoDetailesArr } from '../../service/GenericLottoData.service';
 import { tap } from 'rxjs/operators';
 import { ProgressStatus, ProgressStatusEnum } from '../../../models/progress-status.model';
-import { UploadDownloadService } from '../../../services/upload-download.service';
-import { conSolution } from '../../../../main';
+import { UploadDownloadService } from '../../../services/gestioneFile/upload-download.service';
+import { ServiceSettings } from '../../../services/ServiceConst';
 
 @Component({
-    selector: 'app-mybootstrap-modal-component',
-    templateUrl: '../template/Estrazione-template.html'
+    selector: 'app-LottoDatiEstrazione-component',
+    templateUrl: '../template/LottoDatiEstrazione-template.html'
 })
 
 
 
-export class MyBootstrapModalComponent implements OnInit {
+export class LottoDatiEstrazioneComponent implements OnInit {
 
     @Input() fromParent: any;
 
@@ -26,7 +26,7 @@ export class MyBootstrapModalComponent implements OnInit {
     private dataitem;
     private loading = false;
     private dataDetailes: lottoDetailesArr;
-    public urlApi = conSolution.BASE_URL_API_FileDispense_MadeAndDownloadExcelLottoPalle;
+    public urlApi = ServiceSettings.BASE_URL_API_FileDispense_MadeAndDownloadExcelLottoPalle;
 
     ngAfterViewInit(): void {
         console.log("ngAfterViewInit" + this.fromParent);
@@ -49,8 +49,9 @@ export class MyBootstrapModalComponent implements OnInit {
 
 
 
-    closeModal(sendData) {
-        console.log("closeModal" + this.fromParent);
+    closeModal() {
+        this.activeModal.close();
+
     }
 
 

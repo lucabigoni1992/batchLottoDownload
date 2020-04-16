@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest, HttpEvent, HttpResponse, HttpParams } from '@angular/common/http';
 import { of, Observable } from 'rxjs';
-import { conSolution } from '../../main';
+import { ServiceSettings } from '../ServiceConst';
 
 @Injectable()
 export class UploadDownloadService {
@@ -10,9 +10,9 @@ export class UploadDownloadService {
     private apiFileUrl: string;
 
     constructor(private httpClient: HttpClient) {
-        this.apiDownloadUrl = conSolution.BASE_URL_API_FileDispenser_Download;
-        this.apiUploadUrl = conSolution.BASE_URL_API_FileDispenser_Upload;
-        this.apiFileUrl = conSolution.BASE_URL_API_FileDispenser_Files;
+        this.apiDownloadUrl = ServiceSettings.BASE_URL_API_FileDispenser_Download;
+        this.apiUploadUrl = ServiceSettings.BASE_URL_API_FileDispenser_Upload;
+        this.apiFileUrl = ServiceSettings.BASE_URL_API_FileDispenser_Files;
 
     }
     public madeAndDownloadExcelFile(apiMadeAndDownloadExcel: string, file:string, id:number): Observable<HttpEvent<Blob>> {

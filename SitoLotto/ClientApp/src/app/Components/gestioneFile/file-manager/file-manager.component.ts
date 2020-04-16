@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProgressStatusEnum, ProgressStatus } from 'src/app/models/progress-status.model';
-import { UploadDownloadService } from '../../../services/upload-download.service';
+import { UploadDownloadService } from '../../../services/gestioneFile/upload-download.service';
 
 @Component({
   selector: 'app-filemanager',

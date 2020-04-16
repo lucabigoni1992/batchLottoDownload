@@ -15,14 +15,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { UploadDownloadService } from './services/upload-download.service'
-import { MyBootstrapModalComponent } from './storico-lotto/modali/directive/storico-lotto.component';
+import { UploadDownloadService } from './services/gestioneFile/upload-download.service'
+import { LottoDatiEstrazioneComponent } from './storico-lotto/modali/directive/LottoDatiEstrazione.component';
 import { FileManagerComponent } from './Components/gestioneFile/file-manager/file-manager.component';
 import { UploadComponent } from './Components/gestioneFile/upload/upload.component';
 import { DownloadComponent } from './Components/gestioneFile/download/download.component';
 import { DownloadAndMadeExcel } from './Components/gestioneFile/downloadAndMadeExcel/downloadAndMadeExcel.component';
 import { kendoGridDataService } from './storico-lotto/service/kendoGridData.service';
 import { GenericLottoDataService } from './storico-lotto/service/GenericLottoData.service';
+import { LottoDatiVinciteComponent } from './storico-lotto/modali/directive/LottoDatiVincite.component';
+
 
 
 
@@ -35,7 +37,8 @@ import { GenericLottoDataService } from './storico-lotto/service/GenericLottoDat
         CounterComponent,
         FetchDataComponent,
         StoricoLottoComponent,
-        MyBootstrapModalComponent,
+        LottoDatiEstrazioneComponent,
+        LottoDatiVinciteComponent,
         FileManagerComponent,
         UploadComponent,
         DownloadComponent,
@@ -55,10 +58,9 @@ import { GenericLottoDataService } from './storico-lotto/service/GenericLottoDat
         BrowserAnimationsModule,
         GridModule,
         AngularFontAwesomeModule,
-        NgbModule,
-
+        NgbModule
     ],
-    entryComponents: [MyBootstrapModalComponent],
+    entryComponents: [LottoDatiEstrazioneComponent, LottoDatiVinciteComponent],
     providers: [kendoGridDataService, GenericLottoDataService, UploadDownloadService],
     bootstrap: [AppComponent]
 })

@@ -3,7 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { BehaviorSubject, throwError, Observable } from 'rxjs';
 import { map, tap, catchError, retry } from 'rxjs/operators';
-import { conSolution } from '../../../main';
+import { ServiceSettings } from '../../services/ServiceConst';
 
 
 export class lottoDetailes {
@@ -22,7 +22,7 @@ export class GenericLottoDataService extends BehaviorSubject<any> {
         super(null);
     }
 
-    private BASE_URL = conSolution.BASE_URL_API_Lotto_Detailes;
+    private BASE_URL = ServiceSettings.BASE_URL_API_Lotto_Detailes;
     private data: lottoDetailesArr = null;
 
 

@@ -4,7 +4,7 @@ import { GridDataResult } from '@progress/kendo-angular-grid/dist/es2015/data/da
 
 import { Observable, BehaviorSubject } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
-import { conSolution } from '../../../main';
+import { ServiceSettings } from '../../services/ServiceConst';
 
 
 @Injectable()
@@ -12,9 +12,8 @@ export class kendoGridDataService extends BehaviorSubject<any> {
     public loading: boolean;
     constructor(private http: HttpClient) {
         super(null);
-    } 
+    }
 
-    private BASE_URL = conSolution.BASE_URL_API_Lotto;
     private data: GridDataResult = null;
 
 
@@ -29,12 +28,33 @@ export class kendoGridDataService extends BehaviorSubject<any> {
                 super.next(data);
             });
     }
+    public readDetailes(id?: any) {
+        this.fetch(id, "Detailes")
+            .pipe(
+                tap(data => {
+                    this.data = data;
+                })
+            )
+            .subscribe(data => {
+                super.next(data);
+            });
+    }
 
-    public fetch(state?: any, action: string = ''): Observable<any> {
+    private fetch(value?: any, action: string = ''): Observable<any> {
         this.loading = true;
         switch (action) {
             case '': {
-                return this.http.get(this.BASE_URL.replace('{KendoData}', (state ? JSON.stringify(state) : '')))
+                return this.http.get(ServiceSettings.BASE_URL_API_Lotto.replace('{KendoData}', (value ? JSON.stringify(value) : '')))
+                    .pipe(
+                        map(response => (<GridDataResult>{
+                            data: response['results'],
+                            total: parseInt(response['count'], 10)
+                        })),
+                        tap(() => this.loading = false)
+                    );
+            }
+            case 'Detailes': {
+                return this.http.get(ServiceSettings.BASE_URL_API_Lotto_Detailes_Quote.replace('{id}', (value ? JSON.stringify(value) : '')))
                     .pipe(
                         map(response => (<GridDataResult>{
                             data: response['results'],

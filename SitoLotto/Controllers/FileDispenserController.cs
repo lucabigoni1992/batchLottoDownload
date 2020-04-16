@@ -70,7 +70,7 @@ namespace LottoWeb.ClientApp
         }
 
 
-        [HttpGet("MadeAndDownloadExcelLottoPalle")]
+        [HttpGet("Made/excel/lotto")]
         public async Task<IActionResult> MadeAndDownloadExcelLottoPalle(string file, int idLotto)
         {
             var uploads = Path.Combine(_hostingEnvironment.WebRootPath, @"File\Excel\Creati");
@@ -82,6 +82,8 @@ namespace LottoWeb.ClientApp
             new WriteExcel().WriteExcelFile(
                 new ApiInterface()
                    .GetLottoDetailesFromId(idLotto)
+                        .Select(i => new { i.tipoPalla, i.nPalla })
+                        .ToList()
                    , uploads
                    , file
                    );

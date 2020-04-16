@@ -9,7 +9,7 @@ namespace LottoUnitTest
 {
     public class Tests
     {
-        ApiInterface api = new ApiInterface();
+        readonly ApiInterface api = new ApiInterface();
         batchDownloadData lottoData = new batchDownloadData();
         [SetUp]
         public void Setup()

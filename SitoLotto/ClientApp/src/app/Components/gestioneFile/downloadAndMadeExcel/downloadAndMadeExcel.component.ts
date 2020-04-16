@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { HttpEventType } from '@angular/common/http';
 import { ProgressStatus, ProgressStatusEnum } from 'src/app/models/progress-status.model';
-import { UploadDownloadService } from '../../../services/upload-download.service';
+import { UploadDownloadService } from '../../../services/gestioneFile/upload-download.service';
 
 @Component({
     selector: 'app-downloadAndMadeExcel',

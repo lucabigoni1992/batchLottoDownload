@@ -4,8 +4,9 @@ import { State } from '@progress/kendo-data-query';
 import { FormGroup } from '@angular/forms';
 import { NgbModal, NgbModalRef, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { GridDataResult } from '@progress/kendo-angular-grid/dist/es2015/data/data.collection';
-import { MyBootstrapModalComponent } from './modali/directive/storico-lotto.component';
 import { kendoGridDataService } from './service/kendoGridData.service';
+import { LottoDatiEstrazioneComponent } from './modali/directive/LottoDatiEstrazione.component';
+import { LottoDatiVinciteComponent } from './modali/directive/LottoDatiVincite.component';
 
 interface ColumnSetting {
     field: string,
@@ -117,7 +118,7 @@ export class StoricoLottoComponent implements OnInit {
 
     //modali
     public modaleNumeri(dataitem) {
-        var modalRef: NgbModalRef = this.modalService.open(MyBootstrapModalComponent,
+        var modalRef: NgbModalRef = this.modalService.open(LottoDatiEstrazioneComponent,
             {
                 scrollable: false,
                 size: 'xl'
@@ -129,6 +130,20 @@ export class StoricoLottoComponent implements OnInit {
             console.log(result);
         }, (reason) => {
         });
+    }
 
+    public modaleVincite(dataitem) {
+        var modalRef: NgbModalRef = this.modalService.open(LottoDatiVinciteComponent,
+            {
+                scrollable: false,
+                size: 'xl'
+            });
+        modalRef.componentInstance.fromParent = {
+            id: dataitem.id
+        };
+        modalRef.result.then((result) => {
+            console.log(result);
+        }, (reason) => {
+        });
     }
 }

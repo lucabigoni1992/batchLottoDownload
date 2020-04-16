@@ -19,14 +19,14 @@
     <!--Header-->
     <div class="modal-header">
         <p class="h1 col-xs-1 center-block">Riasunti estrazione</p>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"  (click)="closeModal()">
             <span class="fa fa-times-circle"></span>
         </button>
     </div>
     <!--Body-->
     <div class="modal-body">
         <div class="containerImg">
-            <img [src]="'assets/Images/superenaredribbon.png'" alt="SuperEnalotto" style="width:100%;">
+            <img [src]="'assets/Images/superenaredribbon.png'" alt="SuperEnalotto" style="width:100%; height:100px">
             <div class="centered">Estrazione del Superenalotto n°{{dataitem.nEstrazione}} del {{dataitem.data}}</div>
         </div>
         <hr>
@@ -50,7 +50,6 @@
             </section>
         </div>
     </div>
-    <app-downloadAndMadeExcel [urlApi]="urlApi" [fileName]="'dati_estrazione N'+dataitem.nEstrazione+' del '+dataitem.data" [id]="dataitem.id" (downloadStatus)="downloadStatus($event)"></app-downloadAndMadeExcel>
 
     <p *ngIf="showProgress"> progress <strong>{{percentage}}%</strong></p>
     <label class="error" [hidden]="!showDownloadError">ci sono stati errori durante il download</label>
@@ -60,11 +59,9 @@
 
     <div class="modal-footer justify-content-rigth">
 
-        <span type="button b" class="btn btn-success" (click)="downloadLottoExcel()" data-dismiss="modal">
-            <span class="fa fa-download"></span>
-            Download
-        </span>
-        <span type="button" class="btn btn-secondary " data-dismiss="modal">
+        <app-downloadAndMadeExcel [urlApi]="urlApi" [fileName]="'dati_estrazione N'+dataitem.nEstrazione+' del '+dataitem.data" [id]="dataitem.id" (downloadStatus)="downloadStatus($event)"></app-downloadAndMadeExcel>
+
+        <span type="button" class="btn btn-secondary " data-dismiss="modal" (click)="closeModal()">
             <span class="fa fa-times"></span>
             Chiudi
         </span>
