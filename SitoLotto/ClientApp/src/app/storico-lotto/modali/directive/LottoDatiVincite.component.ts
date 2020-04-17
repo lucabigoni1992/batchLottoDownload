@@ -7,6 +7,7 @@ import { ServiceSettings } from '../../../services/ServiceConst';
 import { GridDataResult } from '@progress/kendo-angular-grid';
 import { State } from '@progress/kendo-data-query';
 import { kendoGridDataService } from '../../service/kendoGridData.service';
+import { interval, Subscription } from 'rxjs';
 
 
 interface ColumnSetting {
