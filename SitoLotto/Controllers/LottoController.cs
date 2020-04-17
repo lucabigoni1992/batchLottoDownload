@@ -34,10 +34,15 @@ namespace LottoWeb.ClientApp
             return JsonConvert.SerializeObject(a.GetLottoKendoQuery(ParamKendo)); ;
         } // GET: api/Lotto/5
 
-        [HttpGet("detailes/{id}", Name = "GetDetailes")]
-        public string Get(int id)
+        [HttpGet("detailes/{id}", Name = "GetPalle")]
+        public string GetPalle(int id)
         {
-            return JsonConvert.SerializeObject(a.GetLottoDetailesFromId(id)); ;
+            return JsonConvert.SerializeObject(a.GetLottoPallefromId(id)); ;
+        }
+        [HttpGet("quote/{id}", Name = "GetDetailes")]
+        public string GetDetailes(int id)
+        {
+            return JsonConvert.SerializeObject(a.GetLottoDetailesFromId(id)); 
         }
 
         //// POST: api/Lotto

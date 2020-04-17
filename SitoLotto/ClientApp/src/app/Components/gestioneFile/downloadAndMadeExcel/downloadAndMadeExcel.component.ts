@@ -13,9 +13,10 @@ export class DownloadAndMadeExcel {
     @Input() public fileName: string;
     @Input() public id: number;
     @Output() public downloadStatus: EventEmitter<ProgressStatus>;
-
+    @Output() public currStatus: ProgressStatus;
     constructor(private service: UploadDownloadService) {
         this.downloadStatus = new EventEmitter<ProgressStatus>();
+        this.currStatus = { status: ProgressStatusEnum.ERROR, percentage: 0 };
     }
 
     public download() {
@@ -24,10 +25,12 @@ export class DownloadAndMadeExcel {
             data => {
                 switch (data.type) {
                     case HttpEventType.DownloadProgress:
-                        this.downloadStatus.emit({ status: ProgressStatusEnum.IN_PROGRESS, percentage: Math.round((data.loaded / data.total) * 100) });
+                        this.currStatus = { status: ProgressStatusEnum.IN_PROGRESS, percentage: Math.round((data.loaded / data.total) * 100) };                    
+                        this.downloadStatus.emit(this.currStatus );
                         break;
                     case HttpEventType.Response:
-                        this.downloadStatus.emit({ status: ProgressStatusEnum.COMPLETE });
+                        this.currStatus = { status: ProgressStatusEnum.COMPLETE };
+                        this.downloadStatus.emit(this.currStatus);
                         const downloadedFile = new Blob([data.body], { type: data.body.type });
                         const a = document.createElement('a');
                         a.setAttribute('style', 'display:none;');
@@ -41,7 +44,8 @@ export class DownloadAndMadeExcel {
                 }
             },
             error => {
-                this.downloadStatus.emit({ status: ProgressStatusEnum.ERROR });
+                this.currStatus = { status: ProgressStatusEnum.ERROR };
+                this.downloadStatus.emit(this.currStatus);
             }
         );
     }

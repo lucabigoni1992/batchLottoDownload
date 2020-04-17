@@ -1,10 +1,8 @@
 
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { GenericLottoDataService,  lottoDetailesArr } from '../../service/GenericLottoData.service';
 import { tap } from 'rxjs/operators';
 import { ProgressStatus, ProgressStatusEnum } from '../../../models/progress-status.model';
-import { UploadDownloadService } from '../../../services/gestioneFile/upload-download.service';
 import { ServiceSettings } from '../../../services/ServiceConst';
 import { GridDataResult } from '@progress/kendo-angular-grid';
 import { State } from '@progress/kendo-data-query';
@@ -28,7 +26,7 @@ interface pageable {
 
 
 @Component({
-    selector: 'app-LottoDatiVincite-component',
+    selector: 'app-LottoDatiVincite',
     templateUrl: '../template/LottoDatiVincite-template.html'
 })
 
@@ -37,15 +35,15 @@ interface pageable {
 export class LottoDatiVinciteComponent implements OnInit {
 
     @Input() fromParent: any;
-
+    private inDataItem: any;
+    public LottoVincite: Object;
+    public loading: boolean;
+    private view: GridDataResult = null;
+    public urlApi: string = ServiceSettings.BASE_URL_API_FileDispense_MadeAndDownloadExcelLottoPalleDetailes;
     constructor(
         public activeModal: NgbActiveModal,
-        public id: GenericLottoDataService,
         private dataService: kendoGridDataService) { }
 
-    private loading = false;
-    private dataDetailes: lottoDetailesArr;
-    public urlApi = ServiceSettings.BASE_URL_API_FileDispense_MadeAndDownloadExcelLottoPalle;
 
     ngAfterViewInit(): void {
         console.log("ngAfterViewInit" + this.fromParent);
@@ -53,36 +51,30 @@ export class LottoDatiVinciteComponent implements OnInit {
 
     ngOnInit() {
         console.log("ngOnInit" + this.fromParent);
-        this.dataDetailes = new lottoDetailesArr();
-        this.loading = true
-        this.dataService.readDetailes(this.fromParent.id);
+        this.loading = true;
+        this. inDataItem = this.fromParent.dataitem; 
+        this.caricaDettagliLotto(this.inDataItem.id);
     }
 
 
 
     closeModal() {
         this.activeModal.close();
-
     }
     //griglia
-    public LottoVincite: Object;
-    public gridData: GridDataResult;
-    public onStateChange(state: State) {
-        this.dataService.read(state);
-        this.gridState = state;
-    }
+
     public pageable: pageable = {
-        buttonCount: 5,
-        info: true,
+        buttonCount: 10,
+        info: false,
         type: 'numeric',
-        pageSizes: true,
-        previousNext: true
+        pageSizes: false,
+        previousNext: false
     };
 
     public gridState: State = {
-        sort: [{ dir: "desc", field: "data" }],
+        sort: [],
         skip: 0,
-        take: 10,
+        take: 20,
         filter: {
             logic: 'and',
             filters: []
@@ -91,44 +83,66 @@ export class LottoDatiVinciteComponent implements OnInit {
     };
     public columns: ColumnSetting[] = [
 
+        
         {
-            field: 'azioni',
-            title: 'Azioni',
-            type: 'text',
-            width: '75px'
-        },
-        {
-            field: 'data',
-            title: 'Data estrazione',
+            field: 'nEstrazione',
+            title: 'nEstrazione',
             type: 'text',
             width: '150px'
         },
         {
-            field: 'nEstrazione',
+            field: 'anno',
             format: '{0:0}',
-            title: 'Estrazione n°',
+            title: 'anno',
             type: 'numeric',
             width: '120px'
         },
         {
-            field: 'nVincitori',
-            title: 'N°vincitori Montepremi',
+            field: 'enumTipoVincita',
+            title: 'enumTipoVincita',
             format: '{0:0}',
             type: 'numeric',
             width: '175px'
         },
         {
-            field: 'premio6Punti',
-            title: 'Montepremi',
+            field: 'valore',
+            title: 'valore',
+            type: 'text',
+            width: '200px'
+        },
+        {
+            field: 'vincitori',
+            title: 'vincitori',
+            type: 'text',
+            width: '200px'
+        },
+        {
+            field: 'premio',
+            title: 'premio',
             type: 'text',
             width: '200px'
         }
     ];
 
+    //funzioni
 
+    caricaDettagliLotto(id: number) {
+        this.loading = true;
+        this.dataService.readDetailes(id)
+            .pipe(
+                tap(data => {
+                    this.view = data;
+                })
+            )
+            .subscribe(data => {
+                this.loading = false;
+                this.view = data;
+            });
+    }
+    //componenti
     //Download button
 
-    public percentage: number;
+    public percentage: number=0;
     public showProgress: boolean;
     public showDownloadError: boolean;
 

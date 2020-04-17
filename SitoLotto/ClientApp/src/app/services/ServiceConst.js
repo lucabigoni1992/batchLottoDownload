@@ -15,6 +15,7 @@ var ServiceSettings = /** @class */ (function () {
     ServiceSettings.BASE_URL_API_FileDispenser_Upload = ServiceSettings.getBaseUrl() + 'api/FileDispenser/Upload';
     ServiceSettings.BASE_URL_API_FileDispenser_Files = ServiceSettings.getBaseUrl() + 'api/FileDispenser/Files';
     ServiceSettings.BASE_URL_API_FileDispense_MadeAndDownloadExcelLottoPalle = ServiceSettings.getBaseUrl() + 'api/FileDispenser/Made/excel/lotto';
+    ServiceSettings.BASE_URL_API_FileDispense_MadeAndDownloadExcelLottoPalleDetailes = ServiceSettings.getBaseUrl() + 'api/FileDispenser/Made/excel/lotto/Detailes';
     return ServiceSettings;
 }());
 exports.ServiceSettings = ServiceSettings;

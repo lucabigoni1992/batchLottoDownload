@@ -89,6 +89,36 @@ namespace LottoWeb.ClientApp
             return await FileDownload(filePath).ConfigureAwait(true);
 
         }
+        [HttpGet("Made/excel/lotto/detailes")]
+        public async Task<IActionResult> MadeAndDownloadExcelLottoPalleDetailes(string file, int idLotto)
+        {
+            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, @"File\Excel\Creati");
+            var filePath = Path.Combine(uploads, file + ".xlsx");
+
+            if (System.IO.File.Exists(filePath))
+                return await FileDownload(filePath).ConfigureAwait(true);
+
+            new WriteExcel().WriteExcelFile(
+                new ApiInterface()
+                   .GetLottoDetailesFromId(idLotto).results
+                        .Select(i => new
+                        {
+                            i.nEstrazione,
+                            i.anno,
+                            i.enumTipoVincita,
+                            i.valore,
+                            i.vincitori,
+                            i.premio
+                        })
+                        .ToList()
+                   , uploads
+                   , file
+                   );
+            if (!System.IO.File.Exists(filePath))
+                return NotFound();
+            return await FileDownload(filePath).ConfigureAwait(true);
+
+        }
 
         private async Task<IActionResult> FileDownload(string filePath)
         {

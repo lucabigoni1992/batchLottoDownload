@@ -24,7 +24,8 @@ import { DownloadAndMadeExcel } from './Components/gestioneFile/downloadAndMadeE
 import { kendoGridDataService } from './storico-lotto/service/kendoGridData.service';
 import { GenericLottoDataService } from './storico-lotto/service/GenericLottoData.service';
 import { LottoDatiVinciteComponent } from './storico-lotto/modali/directive/LottoDatiVincite.component';
-
+import { ProgressBarConfigurable } from './Components/ProgressBarr/progressBarConfigurable.component';
+import { MaterialModule } from './material-module';
 
 
 
@@ -42,7 +43,9 @@ import { LottoDatiVinciteComponent } from './storico-lotto/modali/directive/Lott
         FileManagerComponent,
         UploadComponent,
         DownloadComponent,
-        DownloadAndMadeExcel
+        DownloadAndMadeExcel,
+        ProgressBarConfigurable
+
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -58,10 +61,12 @@ import { LottoDatiVinciteComponent } from './storico-lotto/modali/directive/Lott
         BrowserAnimationsModule,
         GridModule,
         AngularFontAwesomeModule,
-        NgbModule
+        NgbModule,
+        MaterialModule
     ],
     entryComponents: [LottoDatiEstrazioneComponent, LottoDatiVinciteComponent],
     providers: [kendoGridDataService, GenericLottoDataService, UploadDownloadService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
+

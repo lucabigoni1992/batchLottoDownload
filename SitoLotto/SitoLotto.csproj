@@ -39,6 +39,8 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\CallRest.ts" />
+    <None Remove="ClientApp\src\app\Components\ProgressBarr\progressBarConfigurable.component.css" />
+    <None Remove="ClientApp\src\app\Components\ProgressBarr\progressBarConfigurable.component.html" />
     <None Remove="ClientApp\src\app\services\ServiceConst.ts" />
     <None Remove="ClientApp\src\LottoController.cs" />
   </ItemGroup>
@@ -53,6 +55,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\Components\ProgressBarr\progressBarConfigurable.component.css">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\Components\ProgressBarr\progressBarConfigurable.component.html">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\services\ServiceConst.ts" />
   </ItemGroup>
 

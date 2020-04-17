@@ -27,7 +27,7 @@
     <div class="modal-body">
         <div class="containerImg">
             <img [src]="'assets/Images/superenaredribbon.png'" alt="SuperEnalotto" style="width:100%; height:100px">
-            <div class="centered">Estrazione del Superenalotto n°{{dataitem.nEstrazione}} del {{dataitem.data}}</div>
+            <div class="centered">Quotazioni del Superenalotto n°{{inDataItem.nEstrazione}} del {{inDataItem.data}}</div>
         </div>
         <hr>
         <!-- Radio -->
@@ -35,12 +35,12 @@
             <strong>Dati Vincite</strong>
         </p>
 
-        <kendo-grid [data]="dataService | async"
+        <kendo-grid [data]="view"
                     [pageSize]="gridState.take"
                     [skip]="gridState.skip"
                     [sort]="gridState.sort"
                     [pageable]="pageable"
-                    [sortable]="true"
+                    [sortable]="false"
                     (dataStateChange)="onStateChange($event)">
             <kendo-grid-column *ngFor="let column of columns"
                                field="{{column.field}}"
@@ -49,27 +49,33 @@
                                filter="{{column.type}}"
                                width="{{column.width}}" class="overflow-column">
                 <ng-template kendoGridCellTemplate let-dataItem="dataItem" let-rowIndex="rowIndex" let-columnIndex="columnIndex">
-
-                    <!--<div *ngIf="columnIndex==0; then thenBlock else elseBlock"></div>
-                    <ng-template #thenBlock>
-                    </ng-template>
-                    <ng-template #elseBlock>-->
-                    <ng-template>
-                        <div [ngSwitch]="column.field">
-                            <!--<div *ngSwitchCase="'nEstrazione'">
-                                <strong>{{dataItem.nEstrazione}}</strong>
-                            </div>-->
-                            <div *ngSwitchDefault>
-                                {{dataItem[column.field]}}
-                            </div>
+                    <div>
+                        {{dataItem[column.field]}}
+                    </div>
+                    <!--
+                    <div *ngIf="columnIndex==0; then thenBlock else elseBlock"></div>
+                <ng-template #thenBlock>
+                </ng-template>
+                <ng-template #elseBlock>
+                    <div [ngSwitch]="column.field">
+                        <div *ngSwitchCase="'nEstrazione'">
+                            <strong>{{dataItem.nEstrazione}}</strong>
                         </div>
-                    </ng-template>
+                        <div *ngSwitchDefault>
+                            {{dataItem[column.field]}}
+                        </div>
+                    </div>
+                </ng-template>
+                    -->
                 </ng-template>
             </kendo-grid-column>
         </kendo-grid>
-        <div *ngIf="view.loading" class="k-i-loading"></div>
 
-        <p *ngIf="showProgress"> progress <strong>{{percentage}}%</strong></p>
+        <div *ngIf="showProgress" class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 25%;" [attr.aria-valuenow]="percentage"   aria-valuemin="0" aria-valuemax="100">
+                <span class="sr-only">{{percentage}}% Complete</span>
+            </div>
+        </div>
         <label class="error" [hidden]="!showDownloadError">ci sono stati errori durante il download</label>
         <label class="error" [hidden]="!showUploadError">ci sono stati errori durante l'upload</label>
     </div>
@@ -78,7 +84,7 @@
 
     <div class="modal-footer justify-content-rigth">
 
-        <app-downloadAndMadeExcel [urlApi]="urlApi" [fileName]="'dati_estrazione N'+dataitem.nEstrazione+' del '+dataitem.data" [id]="dataitem.id" (downloadStatus)="downloadStatus($event)"></app-downloadAndMadeExcel>
+        <app-downloadAndMadeExcel [urlApi]="urlApi" [fileName]="'dati_Quotazioni N'+inDataItem.nEstrazione+' del '+inDataItem.data" [id]="inDataItem.id" (downloadStatus)="downloadStatus($event)"></app-downloadAndMadeExcel>
 
         <span type="button" class="btn btn-secondary " data-dismiss="modal" (click)="closeModal()">
             <span class="fa fa-times"></span>
@@ -86,4 +92,4 @@
         </span>
     </div>
 </div>
-<div *ngIf="dataService.loading" class="k-i-loading"></div>
+<div *ngIf="loading" class="k-i-loading"></div>

@@ -14,5 +14,6 @@ export class ServiceSettings {
     public static BASE_URL_API_FileDispenser_Upload = ServiceSettings.getBaseUrl() + 'api/FileDispenser/Upload';
     public static BASE_URL_API_FileDispenser_Files = ServiceSettings.getBaseUrl() + 'api/FileDispenser/Files';
     public static BASE_URL_API_FileDispense_MadeAndDownloadExcelLottoPalle = ServiceSettings.getBaseUrl() + 'api/FileDispenser/Made/excel/lotto';
+    public static BASE_URL_API_FileDispense_MadeAndDownloadExcelLottoPalleDetailes = ServiceSettings.getBaseUrl() + 'api/FileDispenser/Made/excel/lotto/Detailes';
     
 }
