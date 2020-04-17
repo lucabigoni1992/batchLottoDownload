@@ -71,13 +71,7 @@
             </kendo-grid-column>
         </kendo-grid>
 
-        <div *ngIf="showProgress" class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 25%;" [attr.aria-valuenow]="percentage"   aria-valuemin="0" aria-valuemax="100">
-                <span class="sr-only">{{percentage}}% Complete</span>
-            </div>
-        </div>
-        <label class="error" [hidden]="!showDownloadError">ci sono stati errori durante il download</label>
-        <label class="error" [hidden]="!showUploadError">ci sono stati errori durante l'upload</label>
+      
     </div>
 
 

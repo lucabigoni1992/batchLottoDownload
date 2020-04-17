@@ -29,7 +29,42 @@ code {
     background-color: rgba(255,255,255,.3);
     color: #ff6757;
 }
+/*generic*/
+.cover-spin {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1000;
+}
 
+
+
+    .cover-spin::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 48%;
+        top: 40%;
+        width: 40px;
+        height: 40px;
+    }
+
+
+.decorateProgressBar {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
 /* Container holding the image and the text */
 .containerDef {
     position: relative;

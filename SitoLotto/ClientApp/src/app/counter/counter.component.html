@@ -4,29 +4,23 @@
 
 <p aria-live="polite">Current count: <strong>{{ currentCount }}</strong></p>
 
-<button class="btn btn-primary" (click)="incrementCounter()">Increment</button>
+<button class="btn btn-primary" (click)="incrementCounter(1)">prgress barr 1</button>
+<button class="btn btn-primary" (click)="incrementCounter(2)">prgress barr 2</button>
+<button class="btn btn-primary" (click)="incrementCounter(3)">prgress barr 3</button>
 
 <br />
 <br />
 <br />
 <br />
-<!--> si testa un pò di robetta </!-->
-<app-progressBarConfigurable [type]="1"
-                             [debugmode]="false"
-                             [color]="'primary'"
-                             [mode]="'buffer'"
-                             [value]="currentCount"
-                             [bufferValue]="currentCount+10"></app-progressBarConfigurable>
 
-<app-progressBarConfigurable [type]="2"
-                             [debugmode]="false"
-                             [color]="'primary'"
-                             [value]="currentCount"
-                             [bufferValue]="currentCount+10"></app-progressBarConfigurable>
+<div *ngIf="loading">
+    <!--> si testa un pò di robetta </!-->
+    <app-progressBarConfigurable
+                                 [type]="typeProgress"
+                                 [debugmode]="false"
+                                 [color]="'primary'"
+                                 [mode]="'buffer'"
+                                 [value]="currentCount"
+                                 [bufferValue]="currentCount+10"></app-progressBarConfigurable>
+</div>
 
-<app-progressBarConfigurable [type]="3"
-                             [debugmode]="false"
-                             [color]="'primary'"
-                             [mode]="'buffer'"
-                             [value]="currentCount"
-                             [bufferValue]="currentCount+10"></app-progressBarConfigurable>

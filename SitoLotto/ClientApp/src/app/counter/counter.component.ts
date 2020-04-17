@@ -1,13 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
-  selector: 'app-counter-component',
-  templateUrl: './counter.component.html'
+    selector: 'app-counter-component',
+    templateUrl: './counter.component.html'
 })
-export class CounterComponent {
-  public currentCount = 0;
+export class CounterComponent implements AfterViewInit {
+    public currentCount = 0;
+    public loading = false;
+    public typeProgress = 1;
 
-  public incrementCounter() {
-    this.currentCount++;
-  }
+    ngAfterViewInit() {
+
+    }
+
+    public incrementCounter(type:number) {
+        this.currentCount = 1;
+        this.typeProgress = type;
+        this.partiCaricamento();
+    }
+
+    public partiCaricamento() {
+        this.loading = true;
+        setTimeout(() => {
+            if (this.currentCount == 100) {
+                this.loading = false;
+                return;
+            }
+            this.currentCount++;
+            this.partiCaricamento();
+        }, 100)
+    }
 }

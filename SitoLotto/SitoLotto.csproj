@@ -52,6 +52,7 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\src\assets\Images\" />
+    <Folder Include="wwwroot\File\Excel\Creati\" />
   </ItemGroup>
 
   <ItemGroup>
