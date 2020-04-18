@@ -119,7 +119,8 @@ namespace libraryLotto
                         if (valore == "-") valore = "0";
                         string[] valuta = valore.Split(" ");//valore, valuta
                         row.valore =valuta[0];
-                        if (valuta.Length > 1) row.valuta = valuta[1];
+                        if (valuta.Length > 1) 
+                            row.valuta = valuta[1];
                         row.vincitori = int.Parse(Normalize(trows[2].InnerText).Replace(".", ""));
                         row.premio = trows[0].InnerText;
                         row.enumTipoVincita = nodesAll[nc - 1].InnerText;

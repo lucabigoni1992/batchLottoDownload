@@ -5,7 +5,8 @@ import { tap } from 'rxjs/operators';
 import { ProgressStatus, ProgressStatusEnum } from '../../../models/progress-status.model';
 import { ServiceSettings } from '../../../services/ServiceConst';
 import { GridDataResult } from '@progress/kendo-angular-grid';
-import { State } from '@progress/kendo-data-query';
+import { State, GroupDescriptor, process } from '@progress/kendo-data-query';
+
 import { kendoGridDataService } from '../../service/kendoGridData.service';
 import { interval, Subscription } from 'rxjs';
 
@@ -53,17 +54,16 @@ export class LottoDatiVinciteComponent implements OnInit {
     ngOnInit() {
         console.log("ngOnInit" + this.fromParent);
         this.loading = true;
-        this. inDataItem = this.fromParent.dataitem; 
+        this.inDataItem = this.fromParent.dataitem;
         this.caricaDettagliLotto(this.inDataItem.id);
     }
-
-
 
     closeModal() {
         this.activeModal.close();
     }
     //griglia
-
+    public groupable = true;
+    public groups: GroupDescriptor[] = [{ field: 'enumTipoVincita' }];
     public pageable: pageable = {
         buttonCount: 10,
         info: false,
@@ -80,51 +80,52 @@ export class LottoDatiVinciteComponent implements OnInit {
             logic: 'and',
             filters: []
         },
-        group: []
+        group: this.groups
     };
     public columns: ColumnSetting[] = [
-
-        
-        {
-            field: 'nEstrazione',
-            title: 'nEstrazione',
-            type: 'text',
-            width: '150px'
-        },
-        {
-            field: 'anno',
-            format: '{0:0}',
-            title: 'anno',
-            type: 'numeric',
-            width: '120px'
-        },
         {
             field: 'enumTipoVincita',
-            title: 'enumTipoVincita',
+            title: 'Tipo Estrazione',
             format: '{0:0}',
             type: 'numeric',
             width: '175px'
         },
         {
             field: 'valore',
-            title: 'valore',
+            title: 'Valore',
             type: 'text',
             width: '200px'
         },
         {
             field: 'vincitori',
-            title: 'vincitori',
+            title: 'N° Vincitori',
             type: 'text',
             width: '200px'
         },
         {
             field: 'premio',
-            title: 'premio',
+            title: 'Premio',
             type: 'text',
             width: '200px'
         }
     ];
 
+    public groupChange(groups: GroupDescriptor[]): void {
+        this.groups = groups;
+        console.log("groupChange" + groups);
+        this.caricaDettagliLotto(this.inDataItem.id);
+    }
+    public valueChange(value: any): void {
+        console.log('valueChange', value);
+        if (!value) {
+            this.groupable = false;
+            this.groupChange(<GroupDescriptor[]>[{}]);
+        }
+        else {
+            this.groupable = true;
+            this.groupChange(<GroupDescriptor[]>[{ field: value.field }]);
+        }
+    }
     //funzioni
 
     caricaDettagliLotto(id: number) {
@@ -137,9 +138,11 @@ export class LottoDatiVinciteComponent implements OnInit {
             )
             .subscribe(data => {
                 this.loading = false;
-                this.view = data;
+                //     this.view = data;
+                this.view = process(this.view.data, { group: this.groups });
+
             });
     }
 
-  
+
 }

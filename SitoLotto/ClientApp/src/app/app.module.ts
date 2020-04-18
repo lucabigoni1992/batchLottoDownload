@@ -11,6 +11,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { StoricoLottoComponent, } from './storico-lotto/storico-lotto.component'
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { GridModule } from '@progress/kendo-angular-grid';
+import { DropDownListModule,ComboBoxModule} from '@progress/kendo-angular-dropdowns';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -62,6 +63,8 @@ import { AlertErrorComponent } from './Components/Alert/Error/alertError.compone
         ButtonsModule,
         BrowserAnimationsModule,
         GridModule,
+        DropDownListModule,
+        ComboBoxModule,
         AngularFontAwesomeModule,
         NgbModule,
         MaterialModule
