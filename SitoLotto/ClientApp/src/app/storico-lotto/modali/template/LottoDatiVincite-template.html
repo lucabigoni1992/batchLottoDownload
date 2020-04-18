@@ -78,7 +78,7 @@
 
     <div class="modal-footer justify-content-rigth">
 
-        <app-downloadAndMadeExcel [urlApi]="urlApi" [fileName]="'dati_Quotazioni N'+inDataItem.nEstrazione+' del '+inDataItem.data" [id]="inDataItem.id" (downloadStatus)="downloadStatus($event)"></app-downloadAndMadeExcel>
+        <app-downloadAndMadeExcel [urlApi]="urlApi" [fileName]="'dati_Quotazioni N'+inDataItem.nEstrazione+' del '+inDataItem.data" [id]="inDataItem.id" ></app-downloadAndMadeExcel>
 
         <span type="button" class="btn btn-secondary " data-dismiss="modal" (click)="closeModal()">
             <span class="fa fa-times"></span>

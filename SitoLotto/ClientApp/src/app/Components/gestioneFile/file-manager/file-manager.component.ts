@@ -4,7 +4,7 @@ import { UploadDownloadService } from '../../../services/gestioneFile/upload-dow
 
 @Component({
   selector: 'app-filemanager',
-  templateUrl: './file-manager.component.html'
+    templateUrl: './file-manager.template.html'
 })
 export class FileManagerComponent implements OnInit {
 

@@ -2,14 +2,12 @@
     <button class="btn btn-success"
             (click)="download()">
         <span class="fa fa-download"></span>
-        Download {{currStatus.percentage}}%
+        Download {{currStatus || currStatus.percentage || currStatus.percentage==-1 ? '' : (currStatus.percentage+'%')}}
     </button>
 <app-progressBarConfigurable *ngIf="currStatus.status==2"
                              [type]="2"
                              [debugmode]="false"
                              [color]="'determinate'"
-                             [value]="currStatus.percentage"></app-progressBarConfigurable>
+                             [value]="currStatus.percentage" ></app-progressBarConfigurable>
 
 
-<label class="error" [hidden]="!showDownloadError">ci sono stati errori durante il download</label>
-<label class="error" [hidden]="!showUploadError">ci sono stati errori durante l'upload</label>

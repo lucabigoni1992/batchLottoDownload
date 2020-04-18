@@ -55,26 +55,5 @@ export class LottoDatiEstrazioneComponent implements OnInit {
     }
 
 
-    public percentage: number;
-    public showProgress: boolean;
-    public showDownloadError: boolean;
-
-    public downloadStatus(event: ProgressStatus) {
-        switch (event.status) {
-            case ProgressStatusEnum.START:
-                this.showDownloadError = false;
-                break;
-            case ProgressStatusEnum.IN_PROGRESS:
-                this.showProgress = true;
-                this.percentage = event.percentage;
-                break;
-            case ProgressStatusEnum.COMPLETE:
-                this.showProgress = false;
-                break;
-            case ProgressStatusEnum.ERROR:
-                this.showProgress = false;
-                this.showDownloadError = true;
-                break;
-        }
-    }
+ 
 }

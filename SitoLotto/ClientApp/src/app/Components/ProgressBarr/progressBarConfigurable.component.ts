@@ -3,10 +3,10 @@ import { MatSliderChange } from '@angular/material';
 
 @Component({
     selector: 'app-progressBarConfigurable',
-    templateUrl: './progressBarConfigurable.component.html'
+    templateUrl: './progressBarConfigurable.template.html'
 })
 
-export class ProgressBarConfigurable {
+export class ProgressBarConfigurableModule {
   
     onSliderChange(event: MatSliderChange) {
         this.value = event.value;

@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
+import { testModaliComponent } from './testModali/testModali.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { StoricoLottoComponent, } from './storico-lotto/storico-lotto.component'
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
@@ -20,12 +20,13 @@ import { LottoDatiEstrazioneComponent } from './storico-lotto/modali/directive/L
 import { FileManagerComponent } from './Components/gestioneFile/file-manager/file-manager.component';
 import { UploadComponent } from './Components/gestioneFile/upload/upload.component';
 import { DownloadComponent } from './Components/gestioneFile/download/download.component';
-import { DownloadAndMadeExcel } from './Components/gestioneFile/downloadAndMadeExcel/downloadAndMadeExcel.component';
+import { DownloadAndMadeExcelModule } from './Components/gestioneFile/downloadAndMadeExcel/downloadAndMadeExcel.component';
 import { kendoGridDataService } from './storico-lotto/service/kendoGridData.service';
 import { GenericLottoDataService } from './storico-lotto/service/GenericLottoData.service';
 import { LottoDatiVinciteComponent } from './storico-lotto/modali/directive/LottoDatiVincite.component';
-import { ProgressBarConfigurable } from './Components/ProgressBarr/progressBarConfigurable.component';
+import { ProgressBarConfigurableModule } from './Components/ProgressBarr/progressBarConfigurable.component';
 import { MaterialModule } from './material-module';
+import { AlertErrorComponent } from './Components/Alert/Error/alertError.component';
 
 
 
@@ -35,7 +36,7 @@ import { MaterialModule } from './material-module';
         AppComponent,
         NavMenuComponent,
         HomeComponent,
-        CounterComponent,
+        testModaliComponent,
         FetchDataComponent,
         StoricoLottoComponent,
         LottoDatiEstrazioneComponent,
@@ -43,8 +44,9 @@ import { MaterialModule } from './material-module';
         FileManagerComponent,
         UploadComponent,
         DownloadComponent,
-        DownloadAndMadeExcel,
-        ProgressBarConfigurable
+        DownloadAndMadeExcelModule,
+        ProgressBarConfigurableModule,
+        AlertErrorComponent
 
     ],
     imports: [
@@ -53,7 +55,7 @@ import { MaterialModule } from './material-module';
         FormsModule,
         RouterModule.forRoot([
             { path: '', component: HomeComponent, pathMatch: 'full' },
-            { path: 'counter', component: CounterComponent },
+            { path: 'testModali', component: testModaliComponent },
             { path: 'fetch-data', component: FetchDataComponent },
             { path: 'storico-lotto', component: StoricoLottoComponent }
         ]),
@@ -64,7 +66,7 @@ import { MaterialModule } from './material-module';
         NgbModule,
         MaterialModule
     ],
-    entryComponents: [LottoDatiEstrazioneComponent, LottoDatiVinciteComponent],
+    entryComponents: [LottoDatiEstrazioneComponent, LottoDatiVinciteComponent, AlertErrorComponent],
     providers: [kendoGridDataService, GenericLottoDataService, UploadDownloadService],
     bootstrap: [AppComponent]
 })

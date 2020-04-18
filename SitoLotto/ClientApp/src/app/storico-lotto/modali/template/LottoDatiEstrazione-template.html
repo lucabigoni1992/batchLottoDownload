@@ -51,15 +51,12 @@
         </div>
     </div>
 
-    <p *ngIf="showProgress"> progress <strong>{{percentage}}%</strong></p>
-    <label class="error" [hidden]="!showDownloadError">ci sono stati errori durante il download</label>
-    <label class="error" [hidden]="!showUploadError">ci sono stati errori durante l'upload</label>
 
 
 
     <div class="modal-footer justify-content-rigth">
 
-        <app-downloadAndMadeExcel [urlApi]="urlApi" [fileName]="'dati_estrazione N'+dataitem.nEstrazione+' del '+dataitem.data" [id]="dataitem.id" (downloadStatus)="downloadStatus($event)"></app-downloadAndMadeExcel>
+        <app-downloadAndMadeExcel [urlApi]="urlApi" [fileName]="'dati_estrazione N'+dataitem.nEstrazione+' del '+dataitem.data" [id]="dataitem.id"></app-downloadAndMadeExcel>
 
         <span type="button" class="btn btn-secondary " data-dismiss="modal" (click)="closeModal()">
             <span class="fa fa-times"></span>
