@@ -138,11 +138,7 @@ export class LottoDatiVinciteComponent implements OnInit {
             )
             .subscribe(data => {
                 this.loading = false;
-                //     this.view = data;
                 this.view = process(this.view.data, { group: this.groups });
-
             });
     }
-
-
 }

@@ -10,6 +10,8 @@ export class ServiceSettings {
     public static BASE_URL_API_Lotto = ServiceSettings.getBaseUrl() + 'api/lotto/{KendoData}';
     public static BASE_URL_API_Lotto_Detailes = ServiceSettings.getBaseUrl() + 'api/lotto/detailes/{id}';
     public static BASE_URL_API_Lotto_Detailes_Quote = ServiceSettings.getBaseUrl() + 'api/lotto/quote/{id}';
+    public static BASE_URL_API_Lotto_Detailes_Statistics_Quote = ServiceSettings.getBaseUrl() + 'api/lotto/statistics/Quote';
+    public static BASE_URL_API_Lotto_Detailes_Statistics_Balls = ServiceSettings.getBaseUrl() + 'api/lotto/statistics/Balls';
     public static BASE_URL_API_FileDispenser_Download = ServiceSettings.getBaseUrl() + 'api/FileDispenser/download';
     public static BASE_URL_API_FileDispenser_Upload = ServiceSettings.getBaseUrl() + 'api/FileDispenser/Upload';
     public static BASE_URL_API_FileDispenser_Files = ServiceSettings.getBaseUrl() + 'api/FileDispenser/Files';

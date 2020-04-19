@@ -39,10 +39,25 @@ namespace LottoWeb.ClientApp
         {
             return JsonConvert.SerializeObject(a.GetLottoPallefromId(id)); ;
         }
+
         [HttpGet("quote/{id}", Name = "GetDetailes")]
         public string GetDetailes(int id)
         {
             return JsonConvert.SerializeObject(a.GetLottoDetailesFromId(id)); 
+        }
+
+
+
+        [HttpGet("statistics/Quote", Name = "GetDetailes")]
+        public string GetStatisticsQuote()
+        {
+            return JsonConvert.SerializeObject(a.GetLottoStatisticsQuote());
+        }
+
+        [HttpGet("statistics/Balls", Name = "GetDetailes")]
+        public string GetStatisticsBalls()
+        {
+            return JsonConvert.SerializeObject(a.GetLottoStatisticsBalls());
         }
 
         //// POST: api/Lotto

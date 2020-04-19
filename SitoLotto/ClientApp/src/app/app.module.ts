@@ -28,6 +28,7 @@ import { LottoDatiVinciteComponent } from './storico-lotto/modali/directive/Lott
 import { ProgressBarConfigurableModule } from './Components/ProgressBarr/progressBarConfigurable.component';
 import { MaterialModule } from './material-module';
 import { AlertErrorComponent } from './Components/Alert/Error/alertError.component';
+import { LottoDatiStatisticsComponent } from './storico-lotto/modali/directive/LottoDatiStatistics.component';
 
 
 
@@ -42,6 +43,7 @@ import { AlertErrorComponent } from './Components/Alert/Error/alertError.compone
         StoricoLottoComponent,
         LottoDatiEstrazioneComponent,
         LottoDatiVinciteComponent,
+        LottoDatiStatisticsComponent,
         FileManagerComponent,
         UploadComponent,
         DownloadComponent,
@@ -69,7 +71,7 @@ import { AlertErrorComponent } from './Components/Alert/Error/alertError.compone
         NgbModule,
         MaterialModule
     ],
-    entryComponents: [LottoDatiEstrazioneComponent, LottoDatiVinciteComponent, AlertErrorComponent],
+    entryComponents: [LottoDatiEstrazioneComponent, LottoDatiVinciteComponent, LottoDatiStatisticsComponent, AlertErrorComponent],
     providers: [kendoGridDataService, GenericLottoDataService, UploadDownloadService],
     bootstrap: [AppComponent]
 })

@@ -1,0 +1,97 @@
+<style type="text/css">
+    * {
+        --primary-color-kendo-lotto: #ff6358 !important;
+    }
+
+    .modal-header, .close {
+        background-color: var(--primary-color-kendo-lotto);
+        border-color: var(--primary-color-kendo-lotto);
+        text-shadow: none;
+    }
+
+    .border-2 {
+        border-width: 2px !important;
+        border-color: black;
+    }
+</style>
+<!-- Modal: modalPoll -->
+<div kendoButton class="modal-content border border-secondary border-2">
+    <!--Header-->
+    <div class="modal-header">
+        <p class="h1 col-xs-1 center-block">Riasunti estrazione</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal()">
+            <span class="fa fa-times-circle"></span>
+        </button>
+    </div>
+    <!--Body-->
+    <div class="modal-body">
+        <div class="containerImg">
+            <img [src]="'assets/Images/superenaredribbon.png'" alt="SuperEnalotto" style="width:100%; height:75px">
+            <div class="centered">Quotazioni del Superenalotto n°{{inDataItem.nEstrazione}} del {{inDataItem.data}}</div>
+        </div>
+        <hr>
+        <!-- Radio -->
+        <p class="text-center">
+            <strong>Dati Vincite</strong>
+        </p>
+        <div class="col-xs-12 col-sm-6 example-col">
+            Raggruppa per 
+            <kendo-combobox [data]="columns"
+                            [textField]="'title'"
+                            [valueField]="'field'"
+                            (valueChange)="valueChange($event)">
+            </kendo-combobox>
+        </div>
+        <br />
+        <kendo-grid [data]="view"
+                    [groupable]="groupable"
+                    [pageSize]="gridState.take"
+                    [skip]="gridState.skip"
+                    [sort]="gridState.sort"
+                    [sortable]="false"
+                    [group]="groups"
+                    (groupChange)="groupChange($event)"
+                    (dataStateChange)="onStateChange($event)">
+            <kendo-grid-column *ngFor="let column of columns"
+                               field="{{column.field}}"
+                               title="{{column.title}}"
+                               format="{{column.format}}"
+                               filter="{{column.type}}"
+                               width="{{column.width}}" class="overflow-column">
+
+                <ng-template kendoGridCellTemplate let-dataItem="dataItem" let-rowIndex="rowIndex" let-columnIndex="columnIndex">
+
+                    <div [ngSwitch]="column.field">
+                        <div *ngSwitchCase="'premio'">
+                            <ng-template kendoGridGroupHeaderTemplate let-value="value">
+                                {{dataItem[column.field]}}
+                            </ng-template>
+                            {{dataItem[column.field]}}
+                        </div>
+                        <div *ngSwitchCase="'valore'">
+                            {{dataItem.valore}} {{inDataItem.anno > 2001?'€':'L'}}
+                        </div>
+                        <div *ngSwitchDefault>
+                            {{dataItem[column.field]}}
+                        </div>
+                    </div>
+                </ng-template>
+            </kendo-grid-column>
+        </kendo-grid>
+
+
+    </div>
+
+
+
+    <div class="modal-footer justify-content-rigth">
+
+        <app-downloadAndMadeExcel [urlApi]="urlApi" [fileName]="'dati_Quotazioni N'+inDataItem.nEstrazione+' del '+inDataItem.data" [id]="inDataItem.id"></app-downloadAndMadeExcel>
+
+        <span type="button" class="btn btn-secondary " data-dismiss="modal" (click)="closeModal()">
+            <span class="fa fa-times"></span>
+            Chiudi
+        </span>
+    </div>
+</div>
+<div *ngIf="loading" class="k-i-loading"></div>
