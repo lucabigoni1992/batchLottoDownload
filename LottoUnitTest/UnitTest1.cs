@@ -2,7 +2,7 @@ using libraryLotto;
 using libraryLotto.dlm;
 using NUnit.Framework;
 using System.Collections.Generic;
-using static libraryLotto.dlm.KendoResultDtaLogicMapping;
+using static libraryLotto.dlm.KendoResultDataLogicMapping;
 using static libraryLotto.dlm.queryDataLogicMapping;
 using static libraryLotto.dlm.queryDataStatisticsLogicMapping;
 

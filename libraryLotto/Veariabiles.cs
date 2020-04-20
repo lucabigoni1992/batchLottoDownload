@@ -12,9 +12,10 @@ using static libraryLotto.bl.BuisnessLogicUtilities;
 using Newtonsoft.Json;
 using static libraryLotto.dlm.KendoDataLogicMapping;
 using libraryLotto.dlm;
-using static libraryLotto.dlm.KendoResultDtaLogicMapping;
+using static libraryLotto.dlm.KendoResultDataLogicMapping;
 using System.IO;
 using static libraryLotto.dlm.queryDataStatisticsLogicMapping;
+using static libraryLotto.dlm.KendoResultDataStatisticsLogicMapping;
 
 namespace libraryLotto
 {
@@ -184,15 +185,25 @@ namespace libraryLotto
             enumerable.ToList()
                     );
         }
-        internal static List<Struct_lotto_Statistics> _LottoStatisticsBalls()
+        internal static KendoStatisticsData _LottoStatisticsBalls()
         {
-            var enumerable = _enumTabLotto_Tabpalle();
-            return provalista();
+            var enumerable = _enumTabLotto_Tabpalle()
+                .GroupBy(r => r.nPalla)
+                .Select(group => new Struct_lotto_Statistics(
+                   group.Key.ToString(),
+                  group.Count()
+                ));
+            return new KendoStatisticsData(enumerable);// provalista();
         }
-        internal static List<Struct_lotto_Statistics> _LottoStatisticsQuote()
+        internal static KendoStatisticsData _LottoStatisticsQuote()
         {
-            var enumerable = _enumTablotto_TabQuVin();
-            return provalista();
+            var enumerable = _enumTablotto_TabQuVin()
+                    .GroupBy(r => r.anno)
+                    .Select(group => new Struct_lotto_Statistics(
+                       group.Key.ToString(),
+                      group.GroupBy(r => r.enumTipoVincita)
+                    ));
+            return new KendoStatisticsData(enumerable);
         }
 
         private static KendoData GettableByKendofilter(IEnumerable<Struct_Joing_AllTable> enumerable, string kendoQuery)

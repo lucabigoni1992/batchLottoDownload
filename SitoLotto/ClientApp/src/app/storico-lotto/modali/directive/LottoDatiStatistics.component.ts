@@ -13,7 +13,7 @@ import { interval, Subscription } from 'rxjs';
 
 @Component({
     selector: 'app-LottoDatiStatistics',
-    templateUrl: '../template/LottoDatiVincite-template.html'
+    templateUrl: '../template/LottoDatiStatistics.template.html'
 })
 
 
@@ -57,7 +57,9 @@ export class LottoDatiStatisticsComponent implements OnInit {
             )
             .subscribe(data => {
                 this.loading = this.loading + 1;
-                this.viewBalls = data;
+                this.viewBalls.data = data.data;
+                this.viewBalls.Min = data.min;
+                this.viewBalls.Max = data.max;
             });
         this.dataService.readStatisticsQuote()
             .pipe(
@@ -67,7 +69,7 @@ export class LottoDatiStatisticsComponent implements OnInit {
             )
             .subscribe(data => {
                 this.loading = this.loading + 1;
-                this.viewQuote = data;
+                this.viewQuote = data.data;
             });
     }
 

@@ -21,28 +21,27 @@ namespace libraryLotto.dlm
         public class Struct_lotto_Statistics
         {
             public string field { get; set; }
-            public string value { get; set; }
+            public object value1 { get; set; }
+            public object value2 { get; set; }
 
-            public Struct_lotto_Statistics(string field, string value)
+            public Struct_lotto_Statistics(string field, object value)
             {
                 this.field = field;
-                this.value = value;
+                this.value1 = value.ToString();
+                this.value2 = "";
             }
-            public Struct_lotto_Statistics(string field, int value)
+            public Struct_lotto_Statistics(string field, object value1, object value2)
             {
                 this.field = field;
-                this.value = value.ToString();
+                this.value1 = value1.ToString();
+                this.value2 = value2;
             }
             public Struct_lotto_Statistics()
             {
                 this.field = "";
-                this.value = "";
+                this.value1 = "";
+                this.value2 = "";
             }
-        }
-
-        private void SetStatistics(LottoDs.LottoRow tablotto)
-        {
-           
         }
     }
 }

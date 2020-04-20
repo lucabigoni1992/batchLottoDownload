@@ -34,30 +34,27 @@
         <h5 class="text-center">
             <strong>Statistiche Vincite</strong>
         </h5>
-        <kendo-chart [title]="{ text: 'Market Value of Major Banks /bln/' }">
+        <kendo-chart [title]="{ text: 'n° uscite per palla' }">
             <kendo-chart-series>
                 <kendo-chart-series-item type="radarLine"
-                                         name="Market value as of 2009"
-                                         [data]="banksData" field="post" categoryField="name">
+                                         name="Market value as of 2007"
+                                         [data]="viewBalls.data" field="value" categoryField="field">
                 </kendo-chart-series-item>
             </kendo-chart-series>
             <kendo-chart-value-axis>
-                <kendo-chart-value-axis-item [labels]="{ format: 'C0' }">
+                <kendo-chart-value-axis-item [labels]="{ format: 'C0' }" [min]="viewBallsMin" [max]="viewBallsMax">
                 </kendo-chart-value-axis-item>
             </kendo-chart-value-axis>
             <kendo-chart-legend position="bottom"></kendo-chart-legend>
         </kendo-chart>
         <br />
-
-
-
     </div>
 
 
 
     <div class="modal-footer justify-content-rigth">
 
-        <app-downloadAndMadeExcel [urlApi]="urlApi" [fileName]="'dati_Quotazioni N'+inDataItem.nEstrazione+' del '+inDataItem.data" [id]="inDataItem.id"></app-downloadAndMadeExcel>
+        <app-downloadAndMadeExcel [urlApi]="urlApi" [fileName]="'dati Statistici'"></app-downloadAndMadeExcel>
 
         <span type="button" class="btn btn-secondary " data-dismiss="modal" (click)="closeModal()">
             <span class="fa fa-times"></span>
@@ -65,4 +62,4 @@
         </span>
     </div>
 </div>
-<div *ngIf="loading" class="k-i-loading"></div>
+<div *ngIf="loading!=2" class="k-i-loading"></div>

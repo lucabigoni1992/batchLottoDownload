@@ -4,10 +4,11 @@ using HtmlAgilityPack;
 using System.Text;
 using System.Data;
 using libraryLotto.dlm;
-using static libraryLotto.dlm.KendoResultDtaLogicMapping;
+using static libraryLotto.dlm.KendoResultDataLogicMapping;
 using static libraryLotto.Data.LottoDs;
 using static libraryLotto.dlm.queryDataLogicMapping;
 using static libraryLotto.dlm.queryDataStatisticsLogicMapping;
+using static libraryLotto.dlm.KendoResultDataStatisticsLogicMapping;
 
 namespace libraryLotto
 {
@@ -31,11 +32,11 @@ namespace libraryLotto
         {
             return Variabili._LottoDetailesFromId(id);
         }
-        public List<Struct_lotto_Statistics> GetLottoStatisticsBalls()
+        public KendoStatisticsData GetLottoStatisticsBalls()
         {
             return Variabili._LottoStatisticsBalls();
         }
-        public List<Struct_lotto_Statistics> GetLottoStatisticsQuote()
+        public KendoStatisticsData GetLottoStatisticsQuote()
         {
             return Variabili._LottoStatisticsQuote();
         }
