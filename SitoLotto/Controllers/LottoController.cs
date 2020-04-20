@@ -28,19 +28,19 @@ namespace LottoWeb.ClientApp
 
         // GET: api/Lotto/ParamKendo
 
-        [HttpGet("{ParamKendo}", Name = "Get")]
+        [HttpGet("{ParamKendo}", Name = "Get All")]
         public string Get(string ParamKendo)
         {
             return JsonConvert.SerializeObject(a.GetLottoKendoQuery(ParamKendo)); ;
         } // GET: api/Lotto/5
 
-        [HttpGet("detailes/{id}", Name = "GetPalle")]
+        [HttpGet("detailes/{id}", Name = "Palle")]
         public string GetPalle(int id)
         {
             return JsonConvert.SerializeObject(a.GetLottoPallefromId(id)); ;
         }
 
-        [HttpGet("quote/{id}", Name = "GetDetailes")]
+        [HttpGet("quote/{id}", Name = "Detailes")]
         public string GetDetailes(int id)
         {
             return JsonConvert.SerializeObject(a.GetLottoDetailesFromId(id)); 
@@ -48,13 +48,13 @@ namespace LottoWeb.ClientApp
 
 
 
-        [HttpGet("statistics/Quote", Name = "GetDetailes")]
+        [HttpGet("statistics/Quote", Name = "Statistics Quote")]
         public string GetStatisticsQuote()
         {
             return JsonConvert.SerializeObject(a.GetLottoStatisticsQuote());
         }
 
-        [HttpGet("statistics/Balls", Name = "GetDetailes")]
+        [HttpGet("statistics/Balls", Name = "Statistics Balls")]
         public string GetStatisticsBalls()
         {
             return JsonConvert.SerializeObject(a.GetLottoStatisticsBalls());
