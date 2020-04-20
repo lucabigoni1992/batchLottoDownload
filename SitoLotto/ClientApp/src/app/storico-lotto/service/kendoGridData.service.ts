@@ -8,6 +8,7 @@ import { ServiceSettings } from '../../services/ServiceConst';
 import { State } from '@progress/kendo-data-query';
 
 
+
 @Injectable()
 export class kendoGridDataService extends BehaviorSubject<any> {
 

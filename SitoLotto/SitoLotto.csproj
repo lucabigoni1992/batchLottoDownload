@@ -41,6 +41,7 @@
     <None Remove="ClientApp\src\app\CallRest.ts" />
     <None Remove="ClientApp\src\app\Components\ProgressBarr\progressBarConfigurable.template.html" />
     <None Remove="ClientApp\src\app\services\ServiceConst.ts" />
+    <None Remove="ClientApp\src\app\storico-lotto\modali\modelData\LottoModelData.ts" />
     <None Remove="ClientApp\src\LottoController.cs" />
   </ItemGroup>
 
@@ -59,6 +60,7 @@
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\services\ServiceConst.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\storico-lotto\modali\modelData\LottoModelData.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

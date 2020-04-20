@@ -32,17 +32,26 @@
         <hr>
         <!-- Radio -->
         <h5 class="text-center">
-            <strong>Statistiche Vincite</strong>
+            <strong>Statistiche Vincite Papporto palle numero uscite </strong>
         </h5>
-        <kendo-chart [title]="{ text: 'n° uscite per palla' }">
+        <button (click)="exportSvgChart(graficoPalleNumeroUscite,'palleTotaleUscite')">
+            Export as SVG
+        </button>
+        <button (click)="exportPdfChart(graficoPalleNumeroUscite,'palleTotaleUscite')">
+            Export as PDF
+        </button>
+        <button (click)="exportImgChart(graficoPalleNumeroUscite,'palleTotaleUscite')">
+            Export as IMG
+        </button>
+        <kendo-chart #graficoPalleNumeroUscite [title]="{ text: 'Per ogni palla, il numero di volte che è uscita' }">
             <kendo-chart-series>
                 <kendo-chart-series-item type="radarLine"
-                                         name="Market value as of 2007"
-                                         [data]="viewBalls.data" field="value" categoryField="field">
+                                         name="Per ogni palla, il numero di volte che è uscita"
+                                         [data]="viewBalls.Data" field="value1" categoryField="field">
                 </kendo-chart-series-item>
             </kendo-chart-series>
             <kendo-chart-value-axis>
-                <kendo-chart-value-axis-item [labels]="{ format: 'C0' }" [min]="viewBallsMin" [max]="viewBallsMax">
+                <kendo-chart-value-axis-item [labels]="{ format: 'n0' }" [min]="+viewBalls.Min" [max]="+viewBalls.Max">
                 </kendo-chart-value-axis-item>
             </kendo-chart-value-axis>
             <kendo-chart-legend position="bottom"></kendo-chart-legend>

@@ -1,14 +1,13 @@
 
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { tap } from 'rxjs/operators';
-import { ProgressStatus, ProgressStatusEnum } from '../../../models/progress-status.model';
-import { ServiceSettings } from '../../../services/ServiceConst';
-import { GridDataResult } from '@progress/kendo-angular-grid';
-import { State, GroupDescriptor, process } from '@progress/kendo-data-query';
-
 import { kendoGridDataService } from '../../service/kendoGridData.service';
-import { interval, Subscription } from 'rxjs';
+import { CDataStatistics } from '../modelData/LottoModelData';
+import { ChartComponent } from '@progress/kendo-angular-charts';
+import { saveAs } from '@progress/kendo-file-saver';
+import { exportPDF } from '@progress/kendo-drawing';
+
 
 
 @Component({
@@ -17,15 +16,18 @@ import { interval, Subscription } from 'rxjs';
 })
 
 
-
 export class LottoDatiStatisticsComponent implements OnInit {
+    @ViewChild('graficoPalleNumeroUscite', { static: false })
 
     @Input() fromParent: any;
+
     public loading: number;
-    public viewQuote: any;
-    public viewBalls: any;
+    private graficoPalleNumeroUscite: ChartComponent;
+
     constructor(
         public activeModal: NgbActiveModal,
+        public viewBalls: CDataStatistics,
+        public viewQuote: CDataStatistics,
         private dataService: kendoGridDataService) { }
 
 
@@ -43,7 +45,7 @@ export class LottoDatiStatisticsComponent implements OnInit {
         this.activeModal.close();
     }
     //componenti visivi griglia
-   
+
 
     //funzioni
 
@@ -55,11 +57,13 @@ export class LottoDatiStatisticsComponent implements OnInit {
                     //  this.view = data;
                 })
             )
-            .subscribe(data => {
+            .subscribe(ris => {
                 this.loading = this.loading + 1;
-                this.viewBalls.data = data.data;
-                this.viewBalls.Min = data.min;
-                this.viewBalls.Max = data.max;
+                var data = ris.data;
+                this.viewBalls.Data = data.data;
+                this.viewBalls.Min = data.Min;
+                this.viewBalls.Max = data.Max;
+                this.viewBalls.Average = data.Average;
             });
         this.dataService.readStatisticsQuote()
             .pipe(
@@ -67,32 +71,34 @@ export class LottoDatiStatisticsComponent implements OnInit {
                     //  this.view = data;
                 })
             )
-            .subscribe(data => {
+            .subscribe(ris => {
                 this.loading = this.loading + 1;
-                this.viewQuote = data.data;
+                var data = ris.data;
+                this.viewQuote.Data = data.data;
+                this.viewQuote.Min = data.Min;
+                this.viewQuote.Max = data.Max;
+                this.viewQuote.Average = data.Average;
             });
     }
 
-    public banksData = [
-        { name: "JP Morgan", pre: 116, post: 64 },
-        { name: "HSBC", pre: 165, post: 85 },
-        { name: "Credit Suisse", pre: 215, post: 97 },
-        { name: "Goldman Sachs", pre: 75, post: 27 },
-        { name: "Morgan Stanley", pre: 100, post: 16 },
-        { name: "Societe Generale", pre: 49, post: 26 },
-        { name: "UBS", pre: 80, post: 35 },
-        { name: "BNP Paribas", pre: 116, post: 32 },
-        { name: "Unicredit", pre: 108, post: 26 },
-        { name: "Credit Agricole", pre: 90, post: 17 },
-        { name: "Deutsche Bank", pre: 67, post: 10 },
-        { name: "Barclays", pre: 76, post: 7 },
-        { name: "Citigroup", pre: 91, post: 19 },
-        { name: "RBS", pre: 255, post: 5 },
-        { name: "RBS1", pre: 255, post: 5 },
-        { name: "RBS2", pre: 255, post: 55 },
-        { name: "RBS3", pre: 255, post: 5 },
-        { name: "RBS4", pre: 255, post: 5 },
-        { name: "RBS5", pre: 255, post: 5 },
-        { name: "RBS6", pre: 255, post: 5 }
-    ];
+    public exportSvgChart(grafico: ChartComponent, nomeFile: string): void {
+        grafico.exportSVG().then(
+            (dataURI) => {
+                saveAs(dataURI, nomeFile + '.svg');
+            });
+    }
+    public exportPdfChart(grafico: ChartComponent, nomeFile: string): void {
+        const visual = grafico.exportVisual();
+        exportPDF(visual, {
+            paperSize: "A4",
+            landscape: true
+        }).then((dataURI) => {
+            saveAs(dataURI, nomeFile + '.pdf');
+        });
+    }
+    public exportImgChart(grafico: ChartComponent, nomeFile: string): void {
+        grafico.exportImage().then((dataURI) => {
+            saveAs(dataURI, nomeFile + '.png');
+        });
+    }
 }

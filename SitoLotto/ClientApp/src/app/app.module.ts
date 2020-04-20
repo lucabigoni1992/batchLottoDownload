@@ -27,10 +27,11 @@ import { DownloadAndMadeExcelModule } from './Components/gestioneFile/downloadAn
 import { kendoGridDataService } from './storico-lotto/service/kendoGridData.service';
 import { GenericLottoDataService } from './storico-lotto/service/GenericLottoData.service';
 import { LottoDatiVinciteComponent } from './storico-lotto/modali/directive/LottoDatiVincite.component';
-import { ProgressBarConfigurableModule } from './Components/ProgressBarr/progressBarConfigurable.component';
-import { MaterialModule } from './material-module';
 import { AlertErrorComponent } from './Components/Alert/Error/alertError.component';
 import { LottoDatiStatisticsComponent } from './storico-lotto/modali/directive/LottoDatiStatistics.component';
+import { ProgressBarConfigurableModule } from './Components/ProgressBarr/progressBarConfigurable.component';
+import { InternalClassModule } from './app.module.class';
+import { MaterialModule } from './app.module.material';
 
 
 
@@ -73,7 +74,8 @@ import { LottoDatiStatisticsComponent } from './storico-lotto/modali/directive/L
         LabelModule,
         AngularFontAwesomeModule,
         NgbModule,
-        MaterialModule
+        MaterialModule,
+        InternalClassModule
     ],
     entryComponents: [LottoDatiEstrazioneComponent, LottoDatiVinciteComponent, LottoDatiStatisticsComponent, AlertErrorComponent],
     providers: [kendoGridDataService, GenericLottoDataService, UploadDownloadService],

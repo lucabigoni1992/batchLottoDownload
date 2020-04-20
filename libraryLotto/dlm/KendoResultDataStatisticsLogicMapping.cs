@@ -17,30 +17,35 @@ namespace libraryLotto.dlm
         }
         public class KendoStatisticsData
         {
-            public List<Struct_lotto_Statistics> results = new List<Struct_lotto_Statistics>();
-            public int count;
-            public object min;
-            public object max;
+            public List<Struct_lotto_Statistics> data = new List<Struct_lotto_Statistics>();
+            public int Count;
+            public object Min;
+            public object Max;
+            public double Average;
 
-            public KendoStatisticsData() 
+            public KendoStatisticsData()
             {
             }
-            public KendoStatisticsData(IEnumerable<Struct_lotto_Statistics> results)
+            public KendoStatisticsData(IEnumerable<Struct_lotto_Statistics> data, bool withSatistics = false)
             {
-                this.count = results.Count();
-                this.results = results.ToList();
-                this.min = results.Min().value1;
-                this.max = results.Max().value1;
+                this.Count = data.Count();
+                this.data = data.ToList();
+                if (withSatistics)
+                    computeSatistics(data);
             }
 
-            public KendoStatisticsData( List<Struct_lotto_Statistics> results)
+            public KendoStatisticsData(List<Struct_lotto_Statistics> results)
             {
-                this.count = results.Count;
-                this.results = results;
-                this.min = results.Min().value1;
-                this.max = results.Max().value1;
+                this.Count = results.Count;
+                this.data = results;
             }
-
+            private void computeSatistics(IEnumerable<Struct_lotto_Statistics> data)
+            {
+                data = data.OrderBy(r => r.field);
+                this.Min = data.Min(r => r.value1);// data.Min().value1;
+                this.Max = data.Max(r => r.value1);
+                this.Average = data.Average(r => double.TryParse(r.value1.ToString(), out double val) ? val : 0);
+            }
         }
     }
 }

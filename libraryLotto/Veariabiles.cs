@@ -193,7 +193,7 @@ namespace libraryLotto
                    group.Key.ToString(),
                   group.Count()
                 ));
-            return new KendoStatisticsData(enumerable);// provalista();
+            return new KendoStatisticsData(enumerable,true);// provalista();
         }
         internal static KendoStatisticsData _LottoStatisticsQuote()
         {
@@ -201,7 +201,7 @@ namespace libraryLotto
                     .GroupBy(r => r.anno)
                     .Select(group => new Struct_lotto_Statistics(
                        group.Key.ToString(),
-                      group.GroupBy(r => r.enumTipoVincita)
+                      group.GroupBy(r => r.enumTipoVincita).ToList()
                     ));
             return new KendoStatisticsData(enumerable);
         }
