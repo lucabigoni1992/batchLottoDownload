@@ -38,7 +38,7 @@ export class StoricoLottoComponent extends BehaviorSubject<any> implements OnIni
         super(null);
     }
     public loading: boolean;
-    private view: GridDataResult = null;
+    public view: GridDataResult = null;
     public formGroup: FormGroup;
 
     public ngOnInit(): void {
