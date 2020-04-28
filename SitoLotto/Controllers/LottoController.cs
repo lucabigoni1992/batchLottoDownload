@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 using Newtonsoft.Json;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Hosting;
 
 namespace LottoWeb.ClientApp
 {
@@ -15,6 +17,12 @@ namespace LottoWeb.ClientApp
     [ApiController]
     public class LottoController : ControllerBase
     {
+        private readonly ILogger<FileDispenserController> logger;
+
+        public LottoController( ILogger<FileDispenserController> logger)
+        {
+            this.logger = logger;
+        }
 
         ApiInterface a = new ApiInterface();
 
@@ -23,7 +31,15 @@ namespace LottoWeb.ClientApp
         [ActionName("")]
         public string Get()
         {
-            return JsonConvert.SerializeObject(a.GetLottoKendoQuery(""));
+            try
+            {
+                return JsonConvert.SerializeObject(a.GetLottoKendoQuery(""));
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.ToString());
+                return "";
+            };//in un ambiante professionale si deve gestire meglio
         }
 
         // GET: api/Lotto/ParamKendo
@@ -31,19 +47,43 @@ namespace LottoWeb.ClientApp
         [HttpGet("{ParamKendo}", Name = "Get All")]
         public string Get(string ParamKendo)
         {
-            return JsonConvert.SerializeObject(a.GetLottoKendoQuery(ParamKendo)); ;
+            try
+            {
+                return JsonConvert.SerializeObject(a.GetLottoKendoQuery(ParamKendo)); 
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.ToString());
+                return "";
+            };//in un ambiante professionale si deve gestire meglio
         } // GET: api/Lotto/5
 
         [HttpGet("detailes/{id}", Name = "Palle")]
         public string GetPalle(int id)
         {
-            return JsonConvert.SerializeObject(a.GetLottoPallefromId(id)); ;
+            try
+            {
+                return JsonConvert.SerializeObject(a.GetLottoPallefromId(id)); 
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.ToString());
+                return "";
+            };//in un ambiante professionale si deve gestire meglio
         }
 
         [HttpGet("quote/{id}", Name = "Detailes")]
         public string GetDetailes(int id)
         {
-            return JsonConvert.SerializeObject(a.GetLottoDetailesFromId(id)); 
+            try
+            {
+                return JsonConvert.SerializeObject(a.GetLottoDetailesFromId(id));
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.ToString());
+                return "";
+            };//in un ambiante professionale si deve gestire meglio
         }
 
 
@@ -51,13 +91,29 @@ namespace LottoWeb.ClientApp
         [HttpGet("statistics/Quote", Name = "Statistics Quote")]
         public string GetStatisticsQuote()
         {
-            return JsonConvert.SerializeObject(a.GetLottoStatisticsQuote());
+            try
+            {
+                return JsonConvert.SerializeObject(a.GetLottoStatisticsQuote());
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.ToString());
+                return "";
+            };//in un ambiante professionale si deve gestire meglio
         }
 
         [HttpGet("statistics/Balls", Name = "Statistics Balls")]
         public string GetStatisticsBalls()
         {
-            return JsonConvert.SerializeObject(a.GetLottoStatisticsBalls());
+            try
+            {
+                return JsonConvert.SerializeObject(a.GetLottoStatisticsBalls());
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.ToString());
+                return "";
+            };//in un ambiante professionale si deve gestire meglio
         }
 
         //// POST: api/Lotto
