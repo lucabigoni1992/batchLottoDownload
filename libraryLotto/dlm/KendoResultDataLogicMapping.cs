@@ -5,11 +5,11 @@ using static libraryLotto.dlm.queryDataLogicMapping;
 
 namespace libraryLotto.dlm
 {
-    public class KendoResultDtaLogicMapping
+    public class KendoResultDataLogicMapping
     {
         public KendoData q = new KendoData();//struttura di kendo
 
-        public KendoResultDtaLogicMapping(KendoData q)
+        public KendoResultDataLogicMapping(KendoData q)
         {
             this.q = q;
         }

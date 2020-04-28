@@ -8,6 +8,7 @@ import { ServiceSettings } from '../../services/ServiceConst';
 import { State } from '@progress/kendo-data-query';
 
 
+
 @Injectable()
 export class kendoGridDataService extends BehaviorSubject<any> {
 
@@ -31,6 +32,24 @@ export class kendoGridDataService extends BehaviorSubject<any> {
                 map(response => (<GridDataResult>{
                     data: response['results'],
                     total: parseInt(response['count'], 10)
+                })),
+                tap(() => { })
+            );
+    }
+    public readStatisticsQuote(): Observable<any> {
+        return this.http.get(ServiceSettings.BASE_URL_API_Lotto_Detailes_Statistics_Quote)
+            .pipe(
+                map(response => (<any>{
+                    data: response
+                })),
+                tap(() => { })
+            );
+    }
+    public readStatisticsBalls(): Observable<any> {
+        return this.http.get(ServiceSettings.BASE_URL_API_Lotto_Detailes_Statistics_Balls)
+            .pipe(
+                map(response => (<any>{
+                    data: response
                 })),
                 tap(() => { })
             );

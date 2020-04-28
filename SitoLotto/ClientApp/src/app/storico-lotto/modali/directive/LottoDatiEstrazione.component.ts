@@ -23,9 +23,9 @@ export class LottoDatiEstrazioneComponent implements OnInit {
         public dataService: GenericLottoDataService,
         private service: UploadDownloadService) { }
 
-    private dataitem;
+    public dataitem;
     private loading = false;
-    private dataDetailes: lottoDetailesArr;
+    public dataDetailes: lottoDetailesArr;
     public urlApi = ServiceSettings.BASE_URL_API_FileDispense_MadeAndDownloadExcelLottoPalle;
 
     ngAfterViewInit(): void {

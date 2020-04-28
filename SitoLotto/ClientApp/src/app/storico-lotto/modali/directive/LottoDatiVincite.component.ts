@@ -37,10 +37,10 @@ interface pageable {
 export class LottoDatiVinciteComponent implements OnInit {
 
     @Input() fromParent: any;
-    private inDataItem: any;
+    public inDataItem: any;
     public LottoVincite: Object;
     public loading: boolean;
-    private view: GridDataResult = null;
+    public view: GridDataResult = null;
     public urlApi: string = ServiceSettings.BASE_URL_API_FileDispense_MadeAndDownloadExcelLottoPalleDetailes;
     constructor(
         public activeModal: NgbActiveModal,
@@ -138,11 +138,7 @@ export class LottoDatiVinciteComponent implements OnInit {
             )
             .subscribe(data => {
                 this.loading = false;
-                //     this.view = data;
                 this.view = process(this.view.data, { group: this.groups });
-
             });
     }
-
-
 }

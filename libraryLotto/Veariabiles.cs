@@ -12,8 +12,10 @@ using static libraryLotto.bl.BuisnessLogicUtilities;
 using Newtonsoft.Json;
 using static libraryLotto.dlm.KendoDataLogicMapping;
 using libraryLotto.dlm;
-using static libraryLotto.dlm.KendoResultDtaLogicMapping;
+using static libraryLotto.dlm.KendoResultDataLogicMapping;
 using System.IO;
+using static libraryLotto.dlm.queryDataStatisticsLogicMapping;
+using static libraryLotto.dlm.KendoResultDataStatisticsLogicMapping;
 
 namespace libraryLotto
 {
@@ -43,7 +45,7 @@ namespace libraryLotto
 
         internal static void _DsLottoSave()
         {
-            string dir = (Path.GetDirectoryName( fileDsName));
+            string dir = (Path.GetDirectoryName(fileDsName));
             if (!Directory.Exists(dir))
                 System.IO.Directory.CreateDirectory(dir);
             _DsLotto.WriteXml(fileDsName);//scrivo il file
@@ -116,7 +118,7 @@ namespace libraryLotto
         }
         private static IEnumerable<Struct_Joing_AllTable> _enumTabLotto_Tabpalle()
         {
-            IEnumerable<Struct_Joing_AllTable> _Lotto_Tabpalle  = (
+            IEnumerable<Struct_Joing_AllTable> _Lotto_Tabpalle = (
                     from Tablotto in _DsLotto.Lotto
                     join Tabpalle in _DsLotto.LottoPalle on Tablotto.id equals Tabpalle.id
                     select new Struct_Joing_AllTable(Tablotto, Tabpalle)
@@ -153,9 +155,9 @@ namespace libraryLotto
                                 .ToList()
                                 .GetRange(0, 10)
                                   );
-                        }
+                }
                 else
-                    return GettableByKendofilter(enumerable, KendoQuery.Replace(@"""","'"));
+                    return GettableByKendofilter(enumerable, KendoQuery.Replace(@"""", "'"));
             }
             catch (Exception e)
             {
@@ -175,13 +177,33 @@ namespace libraryLotto
         }
         internal static KendoData _LottoDetailesFromId(int id)
         {
-            if (id <= 0)            
+            if (id <= 0)
                 throw new Exception("errore id negativo");
             var enumerable = _enumTablotto_TabQuVin().Where(r => r.id == id);
             return new KendoData(
             enumerable.Count(),
             enumerable.ToList()
                     );
+        }
+        internal static KendoStatisticsData _LottoStatisticsBalls()
+        {
+            var enumerable = _enumTabLotto_Tabpalle()
+                .GroupBy(r => r.nPalla)
+                .Select(group => new Struct_lotto_Statistics(
+                   group.Key.ToString(),
+                  group.Count()
+                ));
+            return new KendoStatisticsData(enumerable,true);// provalista();
+        }
+        internal static KendoStatisticsData _LottoStatisticsQuote()
+        {
+            var enumerable = _enumTablotto_TabQuVin()
+                    .GroupBy(r => r.anno)
+                    .Select(group => new Struct_lotto_Statistics(
+                       group.Key.ToString(),
+                      group.GroupBy(r => r.enumTipoVincita).ToList()
+                    ));
+            return new KendoStatisticsData(enumerable);
         }
 
         private static KendoData GettableByKendofilter(IEnumerable<Struct_Joing_AllTable> enumerable, string kendoQuery)
@@ -196,6 +218,27 @@ namespace libraryLotto
                           .Range(Qd)
                           .ToList()
                           );
+        }
+
+        private static List<Struct_lotto_Statistics> provalista()
+        {
+            List<Struct_lotto_Statistics> list = new List<Struct_lotto_Statistics>();
+            list.Add(new Struct_lotto_Statistics());
+            list.Add(new Struct_lotto_Statistics("JP Morgan", 116));
+            list.Add(new Struct_lotto_Statistics("HSBC", 165));
+            list.Add(new Struct_lotto_Statistics("Credit Suisse", 12));
+            list.Add(new Struct_lotto_Statistics("Goldman Sachs", 22));
+            list.Add(new Struct_lotto_Statistics("Morgan Stanley", 47));
+            list.Add(new Struct_lotto_Statistics("Societe Generale", 263));
+            list.Add(new Struct_lotto_Statistics("UBS", 80));
+            list.Add(new Struct_lotto_Statistics("BNP Paribas", 15));
+            list.Add(new Struct_lotto_Statistics("Unicredit", 86778));
+            list.Add(new Struct_lotto_Statistics("Credit Agricole", 56756));
+            list.Add(new Struct_lotto_Statistics("Deutsche Bank", 77));
+            list.Add(new Struct_lotto_Statistics("Barclays", 75));
+            list.Add(new Struct_lotto_Statistics("Citigroup", 75));
+            list.Add(new Struct_lotto_Statistics("RBS", 255));
+            return list;
         }
 
     }

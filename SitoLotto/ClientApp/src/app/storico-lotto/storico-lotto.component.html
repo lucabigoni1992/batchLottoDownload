@@ -26,14 +26,16 @@
         background-color: var(--active-color-kendo-lotto);
         border-color: var(--active-color-kendo-lotto);
     }
-
-
-   
 </style>
 
 <h1>Gioco del Super EnalottoLotto</h1>
 
 <p>Benvenuto nella pagina dove potrai vedere lo storico dell'estrazioni dell'lotto.</p>
+
+<button (click)="showStatistics()" class="dropdown-item">
+    <fa name="cog" animation="spin" style="margin-left: -9px;"></fa>
+   Statistiche
+</button>
 
 <kendo-grid [data]="view"
             [pageSize]="gridState.take"
@@ -80,6 +82,7 @@
             <span>...</span>
         </button>
         <div class="dropdown-menu" role="menu">
+            <div class="dropdown-divider"></div>
             <span class="dropdown-item active border border-secondary rounded" style="margin-top: -8px;">
                 Menu Estrazione {{dataItem.nEstrazione}}
             </span>
@@ -91,11 +94,7 @@
                 <fa name="angle-right"></fa>
                 Dati delle Vincite
             </button>
-            <div class="dropdown-divider"></div>
-            <button (click)="onButtonClick()" class="dropdown-item">
-                <fa name="cog" animation="spin" style="    margin-left: -9px;"></fa>
-                {{dataItem.nEstrazione}} Tutti i dati
-            </button>
+
         </div>
     </div>
 </ng-template>

@@ -23,6 +23,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="3.1.0" />
     <PackageReference Include="System.Collections" Version="4.3.0" />
   </ItemGroup>
 
@@ -41,6 +42,7 @@
     <None Remove="ClientApp\src\app\CallRest.ts" />
     <None Remove="ClientApp\src\app\Components\ProgressBarr\progressBarConfigurable.template.html" />
     <None Remove="ClientApp\src\app\services\ServiceConst.ts" />
+    <None Remove="ClientApp\src\app\storico-lotto\modali\modelData\LottoModelData.ts" />
     <None Remove="ClientApp\src\LottoController.cs" />
   </ItemGroup>
 
@@ -51,7 +53,7 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\src\assets\Images\" />
-    <Folder Include="wwwroot\File\Excel\Creati\" />
+    <Folder Include="wwwroot\File\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -59,6 +61,7 @@
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\services\ServiceConst.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\storico-lotto\modali\modelData\LottoModelData.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

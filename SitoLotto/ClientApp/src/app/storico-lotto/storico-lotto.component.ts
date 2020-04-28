@@ -9,6 +9,7 @@ import { LottoDatiEstrazioneComponent } from './modali/directive/LottoDatiEstraz
 import { LottoDatiVinciteComponent } from './modali/directive/LottoDatiVincite.component';
 import { tap } from 'rxjs/internal/operators/tap';
 import { BehaviorSubject } from 'rxjs';
+import { LottoDatiStatisticsComponent } from './modali/directive/LottoDatiStatistics.component';
 
 interface ColumnSetting {
     field: string,
@@ -37,7 +38,7 @@ export class StoricoLottoComponent extends BehaviorSubject<any> implements OnIni
         super(null);
     }
     public loading: boolean;
-    private view: GridDataResult = null;
+    public view: GridDataResult = null;
     public formGroup: FormGroup;
 
     public ngOnInit(): void {
@@ -146,6 +147,19 @@ export class StoricoLottoComponent extends BehaviorSubject<any> implements OnIni
         modalRef.result.then((result) => {
             console.log(result);
         }, (reason) => {
+        });
+    }
+
+    public showStatistics() {
+        var modalRef: NgbModalRef = this.modalService.open(LottoDatiStatisticsComponent,
+            {
+                scrollable: true,
+                size: 'xl'
+            });
+        modalRef.componentInstance.fromParent = {
+        };
+        modalRef.result.then((result) => {
+            console.log(result);
         });
     }
 }
