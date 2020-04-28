@@ -11,19 +11,23 @@ using libExcel;
 using System.Collections.Generic;
 using System.Data;
 using System;
+using System.Runtime.CompilerServices;
+using Microsoft.Extensions.Logging;
 
 namespace LottoWeb.ClientApp
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class FileDispenserController : ControllerBase
+    public class FileDispenserController : Controller
     {
 
         private IWebHostEnvironment _hostingEnvironment;
+        private readonly ILogger<FileDispenserController> logger;
 
-        public FileDispenserController(IWebHostEnvironment environment)
+        public FileDispenserController(IWebHostEnvironment environment, ILogger<FileDispenserController> logger)
         {
             _hostingEnvironment = environment;
+            this.logger = logger;
         }
 
         [HttpPost]
@@ -52,6 +56,7 @@ namespace LottoWeb.ClientApp
             }
             catch (Exception ex)
             {
+                logger.LogError(ex.ToString());
                 return BadRequest(ex.ToString());
             };//in un ambiante professionale si deve gestire meglio
         }
@@ -75,7 +80,11 @@ namespace LottoWeb.ClientApp
 
                 return File(memory, GetContentType(filePath), file);
             }
-            catch (Exception ex) { return BadRequest(ex.ToString()); };//in un ambiante professionale si deve gestire meglio
+            catch (Exception ex)
+            {
+                logger.LogError(ex.ToString());
+                return BadRequest(ex.ToString());
+            };//in un ambiante professionale si deve gestire meglio
         }
 
 
@@ -102,7 +111,10 @@ namespace LottoWeb.ClientApp
                     return NotFound();
                 return await FileDownload(filePath).ConfigureAwait(true);
             }
-            catch (Exception ex) { return BadRequest(ex.ToString()); };//in un ambiante professionale si deve gestire meglio
+            catch (Exception ex)
+            {
+                logger.LogError(ex.ToString()); return BadRequest(ex.ToString());
+            };//in un ambiante professionale si deve gestire meglio
         }
         [HttpGet("Made/excel/lotto/detailes")]
         public async Task<IActionResult> MadeAndDownloadExcelLottoPalleDetailes(string file, int idLotto)
@@ -135,7 +147,9 @@ namespace LottoWeb.ClientApp
                     return NotFound();
                 return await FileDownload(filePath).ConfigureAwait(true);
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
+                logger.LogError(ex.ToString());
                 return BadRequest();// ex.ToString()); 
             };//in un ambiante professionale si deve gestire meglio
 
@@ -162,7 +176,10 @@ namespace LottoWeb.ClientApp
                 }
                 return Ok(result);
             }
-            catch (Exception ex) { return BadRequest(ex.ToString()); };//in un ambiante professionale si deve gestire meglio
+            catch (Exception ex)
+            {
+                logger.LogError(ex.ToString()); return BadRequest(ex.ToString());
+            };//in un ambiante professionale si deve gestire meglio
 
         }
 
