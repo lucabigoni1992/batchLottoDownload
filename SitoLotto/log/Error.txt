@@ -1,0 +1,22 @@
+ERROR [28 Apr 23:02:28][?]-     WARNING: Zone.js does not support native async/await in ES2017.
+
+ERROR [28 Apr 23:02:28][?]-     These blocks are not intercepted by zone.js and will not triggering change detection.
+    See: https://github.com/angular/zone.js/pull/1140 for more information.
+
+ERROR [28 Apr 23:04:53][?]- System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\DEV\batchLottoDownload\SitoLotto\wwwroot\File\Excel\Creati\dati_Quotazioni N32 del 14-03-2020.xlsx'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.Packaging.ZipPackage..ctor(String path, FileMode packageFileMode, FileAccess packageFileAccess, FileShare share)
+   at System.IO.Packaging.Package.Open(String path, FileMode packageMode, FileAccess packageAccess, FileShare packageShare)
+   at DocumentFormat.OpenXml.Packaging.OpenXmlPackage.CreateCore(String path)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Create(String path, SpreadsheetDocumentType type, Boolean autoSave)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Create(String path, SpreadsheetDocumentType type)
+   at libExcel.WriteExcel.WriteExcelFile[T](List`1 data, String OutPutFileDirectory, String fileName) in C:\DEV\batchLottoDownload\Excel\WriteExcel.cs:line 28
+   at LottoWeb.ClientApp.FileDispenserController.MadeAndDownloadExcelLottoPalleDetailes(String file, Int32 idLotto) in C:\DEV\batchLottoDownload\SitoLotto\Controllers\FileDispenserController.cs:line 130
+ERROR [30 Apr 21:55:59][?]-     WARNING: Zone.js does not support native async/await in ES2017.
+
+ERROR [30 Apr 21:55:59][?]-     These blocks are not intercepted by zone.js and will not triggering change detection.
+    See: https://github.com/angular/zone.js/pull/1140 for more information.
+
