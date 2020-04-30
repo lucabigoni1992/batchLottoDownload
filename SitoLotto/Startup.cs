@@ -23,6 +23,8 @@ namespace SitoLotto
         {
             services.AddHostedService<DbBuilder>();
             services.AddControllersWithViews();
+            services.AddSwaggerDocument();
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -61,7 +63,10 @@ namespace SitoLotto
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
-            });
+            });   
+            // Register the Swagger generator and the Swagger UI middlewares
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
 
             app.UseSpa(spa =>
             {
