@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29318.209
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "batchLottoDownload", "batchLottoDownload\batchLottoDownload.csproj", "{0413D870-AE03-4D62-A196-F7099763594D}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "libraryLotto", "libraryLotto\libraryLotto.csproj", "{ED24860F-163E-40FF-A788-39A6FF0313A1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lotto", "Lotto", "{DF57FDB2-3B1B-4B5F-A774-5B4FD577B6B6}"
@@ -15,9 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LottoUnitTest", "LottoUnitT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Librerie generiche", "Librerie generiche", "{2D7C6FA0-7600-4FDE-8B88-02C00290D7EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libExcel", "Excel\libExcel.csproj", "{E2F49458-8B29-4E48-A6E9-752D4ED2B811}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "libExcel", "Excel\libExcel.csproj", "{E2F49458-8B29-4E48-A6E9-752D4ED2B811}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibrerie", "TestLibrerie\TestLibrerie.csproj", "{50717EA0-43D8-49F8-BF46-800B232C9B2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestLibrerie", "TestLibrerie\TestLibrerie.csproj", "{50717EA0-43D8-49F8-BF46-800B232C9B2B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C40CE180-B8C8-47F5-9554-D8D14C3F3546}"
 	ProjectSection(SolutionItems) = preProject
@@ -38,26 +36,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0413D870-AE03-4D62-A196-F7099763594D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Debug|ARM.Build.0 = Debug|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Debug|ARM64.ActiveCfg = Debug|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Debug|ARM64.Build.0 = Debug|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Debug|x64.Build.0 = Debug|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Debug|x86.Build.0 = Debug|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Release|ARM.ActiveCfg = Release|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Release|ARM.Build.0 = Release|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Release|ARM64.ActiveCfg = Release|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Release|ARM64.Build.0 = Release|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Release|x64.ActiveCfg = Release|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Release|x64.Build.0 = Release|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Release|x86.ActiveCfg = Release|Any CPU
-		{0413D870-AE03-4D62-A196-F7099763594D}.Release|x86.Build.0 = Release|Any CPU
 		{ED24860F-163E-40FF-A788-39A6FF0313A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ED24860F-163E-40FF-A788-39A6FF0313A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED24860F-163E-40FF-A788-39A6FF0313A1}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -163,7 +141,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{0413D870-AE03-4D62-A196-F7099763594D} = {DF57FDB2-3B1B-4B5F-A774-5B4FD577B6B6}
 		{ED24860F-163E-40FF-A788-39A6FF0313A1} = {DF57FDB2-3B1B-4B5F-A774-5B4FD577B6B6}
 		{F756F02C-70CC-4F84-A0F1-C21FC32FC7F0} = {DF57FDB2-3B1B-4B5F-A774-5B4FD577B6B6}
 		{FD09AFFB-1CE8-4461-BF38-9BD1EC4A49DB} = {DF57FDB2-3B1B-4B5F-A774-5B4FD577B6B6}
