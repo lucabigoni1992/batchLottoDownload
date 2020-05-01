@@ -35,6 +35,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Data\LottoDb.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Data\LottoDs.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>LottoDs.Designer.cs</LastGenOutput>
