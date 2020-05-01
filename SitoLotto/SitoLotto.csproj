@@ -19,7 +19,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.3" />
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -45,6 +45,8 @@
     <None Remove="ClientApp\src\app\services\ServiceConst.ts" />
     <None Remove="ClientApp\src\app\storico-lotto\modali\modelData\LottoModelData.ts" />
     <None Remove="ClientApp\src\LottoController.cs" />
+    <None Remove="log\Error.txt" />
+    <None Remove="log\Info.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -54,6 +56,7 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\src\assets\Images\" />
+    <Folder Include="log\" />
     <Folder Include="wwwroot\File\Excel\Creati\" />
   </ItemGroup>
 
