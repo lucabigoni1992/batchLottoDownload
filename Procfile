@@ -1,1 +1,1 @@
-worker: cd $HOME/heroku_output && ./batchLottoDownload
+worker : cd $HOME/heroku_output && ./batchLottoDownload
