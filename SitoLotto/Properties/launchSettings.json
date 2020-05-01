@@ -12,7 +12,10 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "PROJECT_NAME": "Valore",
+        "PROJECT_FILE": "Valore",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "Chiave": "Valore"
       },
       "nativeDebugging": false
     },
