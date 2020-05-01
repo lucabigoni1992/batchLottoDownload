@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using Microsoft.AspNetCore.StaticFiles;
-using libExcel;
 using System.Collections.Generic;
 using System.Data;
 using System;
@@ -99,14 +98,14 @@ namespace LottoWeb.ClientApp
                 if (System.IO.File.Exists(filePath))
                     return await FileDownload(filePath).ConfigureAwait(true);
 
-                new WriteExcel().WriteExcelFile(
-                    new ApiInterface()
-                       .GetLottoPallefromId(idLotto)
-                            .Select(i => new { i.tipoPalla, i.nPalla })
-                            .ToList()
-                       , uploads
-                       , file
-                       );
+                //new WriteExcel().WriteExcelFile(
+                //    new ApiInterface()
+                //       .GetLottoPallefromId(idLotto)
+                //            .Select(i => new { i.tipoPalla, i.nPalla })
+                //            .ToList()
+                //       , uploads
+                //       , file
+                //       );
                 if (!System.IO.File.Exists(filePath))
                     return NotFound();
                 return await FileDownload(filePath).ConfigureAwait(true);
@@ -127,22 +126,22 @@ namespace LottoWeb.ClientApp
                 if (System.IO.File.Exists(filePath))
                     return await FileDownload(filePath).ConfigureAwait(true);
 
-                new WriteExcel().WriteExcelFile(
-                    new ApiInterface()
-                       .GetLottoDetailesFromId(idLotto).results
-                            .Select(i => new
-                            {
-                                i.nEstrazione,
-                                i.anno,
-                                i.enumTipoVincita,
-                                i.valore,
-                                i.vincitori,
-                                i.premio
-                            })
-                            .ToList()
-                       , uploads
-                       , file
-                       );
+                //new WriteExcel().WriteExcelFile(
+                //    new ApiInterface()
+                //       .GetLottoDetailesFromId(idLotto).results
+                //            .Select(i => new
+                //            {
+                //                i.nEstrazione,
+                //                i.anno,
+                //                i.enumTipoVincita,
+                //                i.valore,
+                //                i.vincitori,
+                //                i.premio
+                //            })
+                //            .ToList()
+                //       , uploads
+                //       , file
+                //       );
                 if (!System.IO.File.Exists(filePath))
                     return NotFound();
                 return await FileDownload(filePath).ConfigureAwait(true);

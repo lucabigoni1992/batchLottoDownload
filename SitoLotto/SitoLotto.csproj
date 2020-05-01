@@ -50,7 +50,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Excel\libExcel.csproj" />
     <ProjectReference Include="..\libraryLotto\libraryLotto.csproj" />
   </ItemGroup>
 
