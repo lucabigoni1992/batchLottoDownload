@@ -1,2 +1,2 @@
-worker : cd $HOME/heroku_output && ./SitoLotto
-web: cd $HOME/heroku_output && ./SitoLotto 
+worker : cd $HOME/heroku_output && ./batchLottoDownload
+web: cd $HOME/heroku_output && ./batchLottoDownload 
