@@ -117,10 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="bkDbXml" xml:space="preserve">
-    <value>|DataDirectory|\Data\LottoDb.xml</value>
+  <data name="bkDbXml_folder" xml:space="preserve">
+    <value>Data</value>
   </data>
-  <data name="MyConnectionString" xml:space="preserve">
-    <value>Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\LottoDb.mdf;Integrated Security=True;User ID=sa;Password=pippo92</value>
+  <data name="bkDbXml_lottoDb" xml:space="preserve">
+    <value>LottoDb.xml</value>
   </data>
 </root>

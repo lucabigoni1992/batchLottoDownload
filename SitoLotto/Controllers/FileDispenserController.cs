@@ -7,12 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using Microsoft.AspNetCore.StaticFiles;
-using libExcel;
-using System.Collections.Generic;
 using System.Data;
 using System;
 using System.Runtime.CompilerServices;
 using Microsoft.Extensions.Logging;
+using libExcel;
 
 namespace LottoWeb.ClientApp
 {
@@ -24,10 +23,16 @@ namespace LottoWeb.ClientApp
         private IWebHostEnvironment _hostingEnvironment;
         private readonly ILogger<FileDispenserController> logger;
 
-        public FileDispenserController(IWebHostEnvironment environment, ILogger<FileDispenserController> logger)
+        public FileDispenserController( IWebHostEnvironment environment, ILogger<FileDispenserController> logger)
         {
             _hostingEnvironment = environment;
-            this.logger = logger;
+             this.logger = logger;
+            Console.WriteLine(_hostingEnvironment.WebRootPath);
+            Console.WriteLine(_hostingEnvironment.WebRootFileProvider);
+            Console.WriteLine(_hostingEnvironment.ContentRootPath);
+           var  directories = CustomSearcher.GetDirectories(_hostingEnvironment.ContentRootPath);
+            directories.ForEach(r => Console.WriteLine(r));
+
         }
 
         [HttpPost]
@@ -93,7 +98,7 @@ namespace LottoWeb.ClientApp
         {
             try
             {
-                var uploads = Path.Combine(_hostingEnvironment.WebRootPath, @"File\Excel\Creati");
+                var uploads = Path.Combine(_hostingEnvironment.WebRootPath, @"File/Excel/Creati");
                 var filePath = Path.Combine(uploads, file + ".xlsx");
 
                 if (System.IO.File.Exists(filePath))
@@ -121,7 +126,7 @@ namespace LottoWeb.ClientApp
         {
             try
             {
-                var uploads = Path.Combine(_hostingEnvironment.WebRootPath, @"File\Excel\Creati");
+                var uploads = Path.Combine(_hostingEnvironment.WebRootPath, @"File/Excel/Creati");
                 var filePath = Path.Combine(uploads, file + ".xlsx");
 
                 if (System.IO.File.Exists(filePath))
@@ -202,6 +207,34 @@ namespace LottoWeb.ClientApp
                 contentType = "application/octet-stream";
             }
             return contentType;
+        }
+        public class CustomSearcher
+        {
+            public static List<string> GetDirectories(string path, string searchPattern = "*",
+                SearchOption searchOption = SearchOption.AllDirectories)
+            {
+                if (searchOption == SearchOption.TopDirectoryOnly)
+                    return Directory.GetDirectories(path, searchPattern).ToList();
+
+                var directories = new List<string>(GetDirectories(path, searchPattern));
+
+                for (var i = 0; i < directories.Count; i++)
+                    directories.AddRange(GetDirectories(directories[i], searchPattern));
+
+                return directories;
+            }
+
+            private static List<string> GetDirectories(string path, string searchPattern)
+            {
+                try
+                {
+                    return Directory.GetDirectories(path, searchPattern).ToList();
+                }
+                catch (UnauthorizedAccessException)
+                {
+                    return new List<string>();
+                }
+            }
         }
     }
 }

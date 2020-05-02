@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Excel\libExcel.csproj" />
+    <ProjectReference Include="..\LbExcel\LbExcel.csproj" />
   </ItemGroup>
 
 </Project>

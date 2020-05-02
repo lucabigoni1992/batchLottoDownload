@@ -16,6 +16,7 @@ using static libraryLotto.dlm.KendoResultDataLogicMapping;
 using System.IO;
 using static libraryLotto.dlm.queryDataStatisticsLogicMapping;
 using static libraryLotto.dlm.KendoResultDataStatisticsLogicMapping;
+using System.Text.RegularExpressions;
 
 namespace libraryLotto
 {
@@ -26,7 +27,9 @@ namespace libraryLotto
 
 
         internal static string extractData = @"/risultati/estrazione-";
-        internal static string fileDsName = Properties.Resources.bkDbXml.Replace("|DataDirectory|", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)).Replace("file:\\", "");
+
+        internal static string fileDsName = Path.Combine(GetApplicationRoot(), Properties.Resources.bkDbXml_folder, Properties.Resources.bkDbXml_lottoDb);//.Replace("|DataDirectory|", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)).Replace("file:\\", "");
+
         internal static DateTime annoDiInizio = new DateTime(1997, 1, 1);
 
         //   internal static int annoDiInizio = 1997;
@@ -42,10 +45,18 @@ namespace libraryLotto
 
         internal static LottoDs _DsLotto = new LottoDs();
 
-
+        internal static string GetApplicationRoot()
+        {
+            var exePath = Path.GetDirectoryName(System.Reflection
+                              .Assembly.GetExecutingAssembly().CodeBase);
+            Regex appPathMatcher = new Regex(@"(?<!fil)[A-Za-z]:\\+[\S\s]*?(?=\\+bin)");
+            var appRoot = appPathMatcher.Match(exePath).Value;
+            return appRoot;
+        }
         internal static void _DsLottoSave()
         {
             string dir = (Path.GetDirectoryName(fileDsName));
+            Console.WriteLine("file-> " + fileDsName);
             if (!Directory.Exists(dir))
                 System.IO.Directory.CreateDirectory(dir);
             _DsLotto.WriteXml(fileDsName);//scrivo il file

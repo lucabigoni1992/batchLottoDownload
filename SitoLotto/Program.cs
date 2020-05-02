@@ -13,6 +13,7 @@ namespace SitoLotto
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("SitoLotto --- ConfigureServices");
             CreateHostBuilder(args).Build().Run();
         }
 

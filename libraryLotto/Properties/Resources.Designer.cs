@@ -61,20 +61,20 @@ namespace libraryLotto.Properties {
         }
         
         /// <summary>
-        ///   Cerca una stringa localizzata simile a |DataDirectory|\Data\LottoDb.xml.
+        ///   Cerca una stringa localizzata simile a Data.
         /// </summary>
-        internal static string bkDbXml {
+        internal static string bkDbXml_folder {
             get {
-                return ResourceManager.GetString("bkDbXml", resourceCulture);
+                return ResourceManager.GetString("bkDbXml_folder", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Cerca una stringa localizzata simile a Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\LottoDb.mdf;Integrated Security=True;User ID=sa;Password=pippo92.
+        ///   Cerca una stringa localizzata simile a LottoDb.xml.
         /// </summary>
-        internal static string MyConnectionString {
+        internal static string bkDbXml_lottoDb {
             get {
-                return ResourceManager.GetString("MyConnectionString", resourceCulture);
+                return ResourceManager.GetString("bkDbXml_lottoDb", resourceCulture);
             }
         }
     }

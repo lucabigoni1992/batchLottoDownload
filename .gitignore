@@ -338,4 +338,7 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
-SitoLotto/wwwroot/File/Excel/Creati/
+
+SitoLotto/log/Error.txt
+
+Procfile-dell

@@ -2,3 +2,18 @@
 
 # CS0184: 'is' expression's given expression is never of the provided type
 dotnet_diagnostic.CS0184.severity = none
+
+# CA1031: Non rilevare tipi di eccezione generali
+dotnet_diagnostic.CA1031.severity = none
+
+# CA2000: Elimina gli oggetti prima che siano esterni all'ambito
+dotnet_diagnostic.CA2000.severity = none
+
+# IDE0060: Rimuovere il parametro inutilizzato
+dotnet_code_quality_unused_parameters = all:none
+
+# CA1303: Non passare valori letterali come parametri localizzati
+dotnet_diagnostic.CA1303.severity = none
+
+# IDE0005: La direttiva using non è necessaria.
+dotnet_diagnostic.IDE0005.severity = none

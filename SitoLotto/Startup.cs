@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
+
 namespace SitoLotto
 {
     public class Startup
@@ -50,7 +52,6 @@ namespace SitoLotto
             app.UseStaticFiles();
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
             if (!env.IsDevelopment())
             {
                 app.UseSpaStaticFiles();
@@ -74,6 +75,8 @@ namespace SitoLotto
                 // see https://go.microsoft.com/fwlink/?linkid=864501
 
                 spa.Options.SourcePath = "ClientApp";
+            
+                Console.WriteLine("SitoLotto --- npmScript");
 
                 if (env.IsDevelopment())
                 {

@@ -1,13 +1,12 @@
-﻿using libExcel;
+﻿
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
-using static libExcel.WriteExcel;
-using static libExcel.ReadEcxel;
 using System.Data;
+using libExcel;
 
 namespace TestLibrerie
 {
