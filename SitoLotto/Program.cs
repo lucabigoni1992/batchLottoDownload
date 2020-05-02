@@ -21,6 +21,7 @@ namespace SitoLotto
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseSetting("https_port", "5001");
                     webBuilder.UseStartup<Startup>();
                 });
     }
