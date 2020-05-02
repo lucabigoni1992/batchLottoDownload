@@ -56,7 +56,7 @@ namespace libraryLotto
             if (System.IO.File.Exists(fileDsName))
                 _DsLotto.ReadXml(fileDsName);//scrivo il file
             DateTime LastLottoLoad = _DsLottoGetLastDate();
-            annoDiInizio = LastLottoLoad.Year < 1997 ? new DateTime(2020, 1, 1) : LastLottoLoad;
+            annoDiInizio = LastLottoLoad.Year < 1997 ? new DateTime(1997, 1, 1) : LastLottoLoad;
 
         }
 

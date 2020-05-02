@@ -1,0 +1,11 @@
+﻿heroku login
+
+heroku container:login
+
+docker build -t luca-site-test C:\inetpub\wwwroot\core3.00
+
+docker tag luca-site-test registry.heroku.com/luca-site-test/web
+
+docker push registry.heroku.com/luca-site-test/web
+
+heroku container:release web --app luca-site-test
