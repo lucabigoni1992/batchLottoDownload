@@ -1,0 +1,5065 @@
+<?xml version="1.0" standalone="yes"?>
+<LottoDs xmlns="http://tempuri.org/DataSet1.xsd">
+  <QuotazioniVincite>
+    <id>20200001</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>12771</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200001</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>54.683.179,66</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200001</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200001</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>43.376,79</valore>
+    <vincitori>4</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200001</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>475,95</valore>
+    <vincitori>373</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200001</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>32,20</valore>
+    <vincitori>16545</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200001</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,86</valore>
+    <vincitori>281806</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200001</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200001</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>47.595,00</valore>
+    <vincitori>3</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200001</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>3.220,00</valore>
+    <vincitori>58</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200001</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1174</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200001</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>8640</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200001</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>19817</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200002</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>16909</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200002</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>55.914.018,08</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200002</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200002</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>77.427,68</valore>
+    <vincitori>3</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200002</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>426,54</valore>
+    <vincitori>554</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200002</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>33,83</valore>
+    <vincitori>21043</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200002</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,88</valore>
+    <vincitori>376073</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200002</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200002</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>4 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200002</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>3.383,00</valore>
+    <vincitori>98</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200002</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1912</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200002</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>13149</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200002</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>31189</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200003</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>13328</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200003</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>57.015.857,06</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200003</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200003</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>89.594,37</valore>
+    <vincitori>2</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200003</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>454,62</valore>
+    <vincitori>403</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200003</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>30,36</valore>
+    <vincitori>18117</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200003</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,54</valore>
+    <vincitori>307909</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200003</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200003</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>45.462,00</valore>
+    <vincitori>3</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200003</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>3.036,00</valore>
+    <vincitori>94</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200003</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1644</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200003</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>10487</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200003</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>23209</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200004</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>13519</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200004</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>58.054.246,77</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200004</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200004</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>30.617,92</valore>
+    <vincitori>6</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200004</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>378,49</valore>
+    <vincitori>496</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200004</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>27,49</valore>
+    <vincitori>20512</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200004</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,20</valore>
+    <vincitori>336128</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200004</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200004</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>37.849,00</valore>
+    <vincitori>4</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200004</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.749,00</valore>
+    <vincitori>80</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200004</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1504</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200004</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>9793</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200004</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>21188</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200005</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>16787</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200005</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>59.289.524,07</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200005</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200005</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>28.693,01</valore>
+    <vincitori>8</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200005</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>340,97</valore>
+    <vincitori>685</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200005</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>29,61</valore>
+    <vincitori>23758</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200005</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>6,26</valore>
+    <vincitori>348669</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200005</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200005</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>34.097,00</valore>
+    <vincitori>7</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200005</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.961,00</valore>
+    <vincitori>136</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200005</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1679</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200005</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>10642</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200005</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>24137</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200006</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>13856</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200006</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>60.423.325,01</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200006</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200006</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>62.642,30</valore>
+    <vincitori>3</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200006</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>213,99</valore>
+    <vincitori>897</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200006</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>17,06</valore>
+    <vincitori>33790</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200006</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>451990</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200006</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200006</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>21.399,00</valore>
+    <vincitori>1</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200006</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>1.706,00</valore>
+    <vincitori>123</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200006</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1536</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200006</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>8808</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200006</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>17705</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200007</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>13502</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200007</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>61.478.338,62</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200007</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200007</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>26.350,85</valore>
+    <vincitori>7</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200007</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>318,91</valore>
+    <vincitori>591</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200007</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>28,89</valore>
+    <vincitori>19592</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200007</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,63</valore>
+    <vincitori>311544</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200007</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200007</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>31.891,00</valore>
+    <vincitori>2</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200007</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.889,00</valore>
+    <vincitori>116</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200007</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1296</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200007</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>8796</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200007</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>19929</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200008</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>16699</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200008</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>62.711.951,20</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200008</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200008</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>114.431,31</valore>
+    <vincitori>2</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200008</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>468,58</valore>
+    <vincitori>497</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200008</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>34,62</valore>
+    <vincitori>20260</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200008</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>6,28</valore>
+    <vincitori>346642</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200008</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200008</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>4 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200008</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>3.462,00</valore>
+    <vincitori>86</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200008</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1558</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200008</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>12603</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200008</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>29245</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200009</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>13660</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200009</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>63.836.733,84</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200009</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200009</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>46.501,15</valore>
+    <vincitori>4</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200009</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>451,37</valore>
+    <vincitori>421</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200009</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>32,34</valore>
+    <vincitori>17648</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200009</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,95</valore>
+    <vincitori>297426</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200009</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200009</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>45.137,00</valore>
+    <vincitori>7</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200009</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>3.234,00</valore>
+    <vincitori>95</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200009</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1577</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200009</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>11711</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200009</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>28101</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200010</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>13342</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200010</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>64.878.386,05</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200010</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200010</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>30.324,81</valore>
+    <vincitori>6</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200010</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>293,79</valore>
+    <vincitori>633</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200010</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>23,25</valore>
+    <vincitori>24013</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200010</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>372439</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200010</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200010</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>29.379,00</valore>
+    <vincitori>4</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200010</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.325,00</valore>
+    <vincitori>93</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200010</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1537</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200010</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>9224</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200010</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>19221</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200011</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>16597</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200011</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>66.100.218,48</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200011</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200011</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>37.825,95</valore>
+    <vincitori>6</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200011</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>245,46</valore>
+    <vincitori>941</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200011</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>18,49</valore>
+    <vincitori>37618</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200011</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>518800</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200011</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200011</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>24.546,00</valore>
+    <vincitori>13</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200011</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>1.849,00</valore>
+    <vincitori>206</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200011</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>2677</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200011</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>15233</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200011</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>27522</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200012</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>13575</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200012</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>67.218.272,10</valore>
+    <vincitori>1</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200012</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200012</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>61.697,57</valore>
+    <vincitori>3</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200012</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>420,26</valore>
+    <vincitori>450</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200012</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>29,76</valore>
+    <vincitori>19089</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200012</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,70</valore>
+    <vincitori>309130</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200012</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200012</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>42.026,00</valore>
+    <vincitori>3</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200012</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.976,00</valore>
+    <vincitori>88</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200012</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1435</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200012</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>10241</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200012</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>23285</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200013</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>12836</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200013</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>14.467.514,68</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200013</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200013</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>57.559,52</valore>
+    <vincitori>3</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200013</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>445,09</valore>
+    <vincitori>397</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200013</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>31,37</valore>
+    <vincitori>16901</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200013</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,74</valore>
+    <vincitori>286202</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200013</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200013</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>44.509,00</valore>
+    <vincitori>3</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200013</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>3.137,00</valore>
+    <vincitori>66</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200013</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1363</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200013</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>9266</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200013</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>21124</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200014</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>16397</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200014</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>15.655.820,94</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200014</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200014</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>74.108,73</valore>
+    <vincitori>3</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200014</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>415,47</valore>
+    <vincitori>552</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200014</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>29,64</valore>
+    <vincitori>23095</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200014</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,66</valore>
+    <vincitori>373668</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200014</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200014</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>41.547,00</valore>
+    <vincitori>5</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200014</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.964,00</valore>
+    <vincitori>115</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200014</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1656</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200014</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>11489</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200014</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>26681</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200015</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>13563</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200015</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>16.759.014,33</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200015</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200015</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>22.904,40</valore>
+    <vincitori>8</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200015</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>407,39</valore>
+    <vincitori>467</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200015</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>30,06</valore>
+    <vincitori>18809</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200015</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,95</valore>
+    <vincitori>292991</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200015</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200015</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>40.739,00</valore>
+    <vincitori>2</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200015</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>3.006,00</valore>
+    <vincitori>74</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200015</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1281</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200015</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>8632</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200015</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>21058</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200016</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>13220</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200016</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>17.777.947,34</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200016</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200016</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>59.166,48</valore>
+    <vincitori>3</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200016</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>326,57</valore>
+    <vincitori>565</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200016</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>24,02</valore>
+    <vincitori>22808</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200016</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>358447</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200016</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200016</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>32.657,00</valore>
+    <vincitori>3</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200016</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.402,00</valore>
+    <vincitori>95</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200016</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1476</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200016</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>9574</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200016</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>20042</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200017</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>16453</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200017</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>18.979.926,18</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200017</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200017</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>55.956,40</valore>
+    <vincitori>4</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200017</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>476,94</valore>
+    <vincitori>484</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200017</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>32,92</valore>
+    <vincitori>20934</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200017</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>6,25</valore>
+    <vincitori>340971</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200017</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200017</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>47.694,00</valore>
+    <vincitori>1</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200017</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>3.292,00</valore>
+    <vincitori>115</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200017</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1670</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200017</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>10702</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200017</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>24395</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200018</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>13475</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200018</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>20.079.318,65</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200018</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200018</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>45.439,40</valore>
+    <vincitori>4</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200018</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>350,88</valore>
+    <vincitori>538</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200018</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>29,45</valore>
+    <vincitori>19046</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200018</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,71</valore>
+    <vincitori>302636</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200018</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200018</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>35.088,00</valore>
+    <vincitori>5</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200018</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.945,00</valore>
+    <vincitori>91</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200018</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1324</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200018</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>9411</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200018</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>22880</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200019</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>13148</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200019</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>21.100.537,97</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200019</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>552.819,62</valore>
+    <vincitori>1</vincitori>
+    <premio>5 punti + Jolly</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200019</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>29.767,21</valore>
+    <vincitori>6</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200019</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>361,12</valore>
+    <vincitori>514</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200019</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>28,00</valore>
+    <vincitori>19686</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200019</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,28</valore>
+    <vincitori>321759</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200019</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200019</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>36.112,00</valore>
+    <vincitori>1</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200019</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.800,00</valore>
+    <vincitori>74</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200019</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1453</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200019</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>9113</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200019</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>20603</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200020</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>16344</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200020</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>22.023.483,04</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200020</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200020</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>37.129,98</valore>
+    <vincitori>6</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200020</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>376,09</valore>
+    <vincitori>611</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200020</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>29,37</valore>
+    <vincitori>23354</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200020</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,59</valore>
+    <vincitori>379319</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200020</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200020</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>37.609,00</valore>
+    <vincitori>3</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200020</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.937,00</valore>
+    <vincitori>153</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200020</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>2376</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200020</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>16273</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200020</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>37316</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200021</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>13391</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200021</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>23.116.066,77</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200021</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200021</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>90.252,38</valore>
+    <vincitori>2</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200021</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>472,34</valore>
+    <vincitori>397</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200021</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>33,63</valore>
+    <vincitori>16565</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200021</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>6,11</valore>
+    <vincitori>281307</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200021</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200021</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>4 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200021</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>3.363,00</valore>
+    <vincitori>102</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200021</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1883</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200021</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>13740</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200021</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>33425</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200022</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>13050</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200022</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>24.128.624,85</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200022</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200022</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>35.396,13</valore>
+    <vincitori>5</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200022</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>305,13</valore>
+    <vincitori>603</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200022</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>28,98</valore>
+    <vincitori>18851</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200022</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,56</valore>
+    <vincitori>302763</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200022</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200022</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>30.513,00</valore>
+    <vincitori>3</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200022</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.898,00</valore>
+    <vincitori>109</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200022</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1569</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200022</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>11072</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200022</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>25486</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200023</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>16085</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200023</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>25.307.793,91</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200023</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200023</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>36.418,93</valore>
+    <vincitori>6</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200023</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>355,72</valore>
+    <vincitori>634</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200023</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>30,19</valore>
+    <vincitori>22287</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200023</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,72</valore>
+    <vincitori>363703</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200023</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200023</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>35.572,00</valore>
+    <vincitori>2</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200023</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>3.019,00</valore>
+    <vincitori>113</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200023</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1595</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200023</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>11212</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200023</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>25490</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200024</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>12813</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200024</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>26.361.044,31</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200024</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200024</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>21.575,53</valore>
+    <vincitori>8</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200024</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>325,39</valore>
+    <vincitori>552</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200024</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>23,76</valore>
+    <vincitori>22426</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200024</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>346335</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200024</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200024</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>4 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200024</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.376,00</valore>
+    <vincitori>112</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200024</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1542</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200024</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>9799</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200024</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>20162</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200025</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>12595</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200025</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>27.336.425,76</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200025</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200025</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>34.191,67</valore>
+    <vincitori>5</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200025</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>370,78</valore>
+    <vincitori>480</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200025</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>30,58</valore>
+    <vincitori>17263</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200025</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,82</valore>
+    <vincitori>279542</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200025</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200025</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>4 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200025</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>3.058,00</valore>
+    <vincitori>63</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200025</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1111</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200025</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>7755</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200025</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>18269</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200026</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>15926</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200026</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>28.501.153,95</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200026</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200026</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>54.319,39</valore>
+    <vincitori>4</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200026</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>398,39</valore>
+    <vincitori>563</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200026</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>30,59</valore>
+    <vincitori>21872</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200026</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,68</valore>
+    <vincitori>363870</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200026</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200026</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>4 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200026</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>3.059,00</valore>
+    <vincitori>85</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200026</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1701</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200026</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>11968</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200026</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>27452</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200027</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>13341</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200027</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>28.501.153,95</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200027</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>553.596,42</valore>
+    <vincitori>1</vincitori>
+    <premio>5 punti + Jolly</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200027</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>13.758,02</valore>
+    <vincitori>13</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200027</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>148,47</valore>
+    <vincitori>1229</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200027</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>15,15</valore>
+    <vincitori>36201</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200027</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>448967</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200027</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200027</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>14.847,00</valore>
+    <vincitori>6</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200027</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>1.515,00</valore>
+    <vincitori>160</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200027</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1884</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200027</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>10216</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200027</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>19696</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200028</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>12898</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200028</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>30.302.931,10</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200028</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200028</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>87.445,30</valore>
+    <vincitori>2</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200028</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>402,96</valore>
+    <vincitori>443</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200028</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>29,22</valore>
+    <vincitori>18360</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200028</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,65</valore>
+    <vincitori>294634</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200028</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200028</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>40.296,00</valore>
+    <vincitori>4</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200028</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.922,00</valore>
+    <vincitori>86</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200028</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1287</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200028</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>8075</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200028</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>18987</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200029</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>15928</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200029</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>31.470.784,71</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200029</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>670.314,06</valore>
+    <vincitori>1</vincitori>
+    <premio>5 punti + Jolly</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200029</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>36.093,84</valore>
+    <vincitori>6</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200029</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>358,02</valore>
+    <vincitori>615</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200029</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>26,68</valore>
+    <vincitori>24865</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200029</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,16</valore>
+    <vincitori>399413</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200029</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200029</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>35.802,00</valore>
+    <vincitori>2</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200029</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.668,00</valore>
+    <vincitori>108</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200029</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1886</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200029</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>12441</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200029</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>27017</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200030</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>11545</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200030</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>32.118.208,36</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200030</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200030</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>52.091,56</valore>
+    <vincitori>3</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200030</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>455,54</valore>
+    <vincitori>351</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200030</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>33,22</valore>
+    <vincitori>14445</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200030</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,96</valore>
+    <vincitori>249440</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200030</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200030</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>4 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200030</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>3.322,00</valore>
+    <vincitori>85</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200030</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1815</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200030</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>13988</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200030</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>35090</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200031</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>9524</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200031</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>32.891.481,62</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200031</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200031</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>64.136,85</valore>
+    <vincitori>2</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200031</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>409,61</valore>
+    <vincitori>322</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200031</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>28,45</valore>
+    <vincitori>13864</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200031</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,49</valore>
+    <vincitori>222168</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200031</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200031</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>40.961,00</valore>
+    <vincitori>3</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200031</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.845,00</valore>
+    <vincitori>78</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200031</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1243</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200031</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>7479</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200031</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>14256</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200032</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>10557</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200032</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>33.678.660,47</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200032</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200032</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>23.681,73</valore>
+    <vincitori>6</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200032</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>256,08</valore>
+    <vincitori>569</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200032</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>21,68</valore>
+    <vincitori>20136</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200032</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>299428</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200032</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200032</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>25.608,00</valore>
+    <vincitori>1</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200032</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.168,00</valore>
+    <vincitori>70</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200032</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1059</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200032</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>6475</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200032</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>13577</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200033</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>8876</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200033</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>34.388.562,57</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200033</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200033</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>29.568,99</valore>
+    <vincitori>4</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200033</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>416,03</valore>
+    <vincitori>293</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200033</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>28,01</valore>
+    <vincitori>12994</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200033</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,37</valore>
+    <vincitori>209495</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200033</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200033</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>41.603,00</valore>
+    <vincitori>3</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200033</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>2.801,00</valore>
+    <vincitori>66</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200033</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1055</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200033</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>7728</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200033</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>17703</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200034</id>
+    <enumTipoVincita>Vincite immediate</enumTipoVincita>
+    <valore>25,00</valore>
+    <vincitori>8336</vincitori>
+    <premio>Vincite immediate</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200034</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>35.029.616,49</valore>
+    <vincitori>0</vincitori>
+    <premio>6 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200034</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + Jolly</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200034</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>22.110,73</valore>
+    <vincitori>5</vincitori>
+    <premio>5 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200034</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>117,22</valore>
+    <vincitori>974</vincitori>
+    <premio>4 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200034</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>12,19</valore>
+    <vincitori>27925</vincitori>
+    <premio>3 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200034</id>
+    <enumTipoVincita>Quote SuperEnalotto</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>301569</vincitori>
+    <premio>2 punti</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200034</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>0</valore>
+    <vincitori>0</vincitori>
+    <premio>5 punti + SuperStar</premio>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200034</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>11.722,00</valore>
+    <vincitori>1</vincitori>
+    <premio>4 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200034</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>1.219,00</valore>
+    <vincitori>88</vincitori>
+    <premio>3 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200034</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>100,00</valore>
+    <vincitori>1020</vincitori>
+    <premio>2 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200034</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>10,00</valore>
+    <vincitori>6145</vincitori>
+    <premio>1 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <QuotazioniVincite>
+    <id>20200034</id>
+    <enumTipoVincita>Quote SuperStar</enumTipoVincita>
+    <valore>5,00</valore>
+    <vincitori>11020</vincitori>
+    <premio>0 punti + SuperStar</premio>
+    <valuta>€</valuta>
+  </QuotazioniVincite>
+  <Lotto>
+    <id>20200001</id>
+    <anno>2020</anno>
+    <data>2020-01-02T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-02-01-2020</hrfQuotazioni>
+    <nEstrazione>1</nEstrazione>
+    <LottoPalle>
+      <id>20200001</id>
+      <nPalla>89</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200001</id>
+      <nPalla>4</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200001</id>
+      <nPalla>85</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200001</id>
+      <nPalla>78</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200001</id>
+      <nPalla>64</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200001</id>
+      <nPalla>63</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200001</id>
+      <nPalla>45</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200001</id>
+      <nPalla>5</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200002</id>
+    <anno>2020</anno>
+    <data>2020-01-04T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-04-01-2020</hrfQuotazioni>
+    <nEstrazione>2</nEstrazione>
+    <LottoPalle>
+      <id>20200002</id>
+      <nPalla>56</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200002</id>
+      <nPalla>26</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200002</id>
+      <nPalla>80</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200002</id>
+      <nPalla>57</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200002</id>
+      <nPalla>44</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200002</id>
+      <nPalla>37</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200002</id>
+      <nPalla>30</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200002</id>
+      <nPalla>23</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200003</id>
+    <anno>2020</anno>
+    <data>2020-01-07T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-07-01-2020</hrfQuotazioni>
+    <nEstrazione>3</nEstrazione>
+    <LottoPalle>
+      <id>20200003</id>
+      <nPalla>53</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200003</id>
+      <nPalla>19</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200003</id>
+      <nPalla>78</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200003</id>
+      <nPalla>72</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200003</id>
+      <nPalla>66</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200003</id>
+      <nPalla>60</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200003</id>
+      <nPalla>23</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200003</id>
+      <nPalla>2</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200004</id>
+    <anno>2020</anno>
+    <data>2020-01-09T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-09-01-2020</hrfQuotazioni>
+    <nEstrazione>4</nEstrazione>
+    <LottoPalle>
+      <id>20200004</id>
+      <nPalla>45</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200004</id>
+      <nPalla>52</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200004</id>
+      <nPalla>78</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200004</id>
+      <nPalla>66</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200004</id>
+      <nPalla>55</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200004</id>
+      <nPalla>54</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200004</id>
+      <nPalla>14</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200004</id>
+      <nPalla>5</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200005</id>
+    <anno>2020</anno>
+    <data>2020-01-11T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-11-01-2020</hrfQuotazioni>
+    <nEstrazione>5</nEstrazione>
+    <LottoPalle>
+      <id>20200005</id>
+      <nPalla>63</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200005</id>
+      <nPalla>18</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200005</id>
+      <nPalla>81</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200005</id>
+      <nPalla>72</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200005</id>
+      <nPalla>63</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200005</id>
+      <nPalla>38</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200005</id>
+      <nPalla>36</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200005</id>
+      <nPalla>34</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200006</id>
+    <anno>2020</anno>
+    <data>2020-01-14T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-14-01-2020</hrfQuotazioni>
+    <nEstrazione>6</nEstrazione>
+    <LottoPalle>
+      <id>20200006</id>
+      <nPalla>62</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200006</id>
+      <nPalla>79</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200006</id>
+      <nPalla>85</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200006</id>
+      <nPalla>68</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200006</id>
+      <nPalla>32</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200006</id>
+      <nPalla>9</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200006</id>
+      <nPalla>6</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200006</id>
+      <nPalla>1</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200007</id>
+    <anno>2020</anno>
+    <data>2020-01-16T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-16-01-2020</hrfQuotazioni>
+    <nEstrazione>7</nEstrazione>
+    <LottoPalle>
+      <id>20200007</id>
+      <nPalla>85</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200007</id>
+      <nPalla>77</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200007</id>
+      <nPalla>83</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200007</id>
+      <nPalla>72</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200007</id>
+      <nPalla>53</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200007</id>
+      <nPalla>50</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200007</id>
+      <nPalla>29</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200007</id>
+      <nPalla>22</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200008</id>
+    <anno>2020</anno>
+    <data>2020-01-18T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-18-01-2020</hrfQuotazioni>
+    <nEstrazione>8</nEstrazione>
+    <LottoPalle>
+      <id>20200008</id>
+      <nPalla>72</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200008</id>
+      <nPalla>1</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200008</id>
+      <nPalla>87</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200008</id>
+      <nPalla>79</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200008</id>
+      <nPalla>50</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200008</id>
+      <nPalla>32</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200008</id>
+      <nPalla>28</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200008</id>
+      <nPalla>26</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200009</id>
+    <anno>2020</anno>
+    <data>2020-01-21T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-21-01-2020</hrfQuotazioni>
+    <nEstrazione>9</nEstrazione>
+    <LottoPalle>
+      <id>20200009</id>
+      <nPalla>9</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200009</id>
+      <nPalla>62</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200009</id>
+      <nPalla>75</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200009</id>
+      <nPalla>70</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200009</id>
+      <nPalla>53</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200009</id>
+      <nPalla>46</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200009</id>
+      <nPalla>32</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200009</id>
+      <nPalla>6</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200010</id>
+    <anno>2020</anno>
+    <data>2020-01-23T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-23-01-2020</hrfQuotazioni>
+    <nEstrazione>10</nEstrazione>
+    <LottoPalle>
+      <id>20200010</id>
+      <nPalla>79</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200010</id>
+      <nPalla>87</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200010</id>
+      <nPalla>81</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200010</id>
+      <nPalla>72</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200010</id>
+      <nPalla>69</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200010</id>
+      <nPalla>23</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200010</id>
+      <nPalla>20</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200010</id>
+      <nPalla>15</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200011</id>
+    <anno>2020</anno>
+    <data>2020-01-25T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-25-01-2020</hrfQuotazioni>
+    <nEstrazione>11</nEstrazione>
+    <LottoPalle>
+      <id>20200011</id>
+      <nPalla>47</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200011</id>
+      <nPalla>76</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200011</id>
+      <nPalla>90</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200011</id>
+      <nPalla>68</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200011</id>
+      <nPalla>35</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200011</id>
+      <nPalla>17</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200011</id>
+      <nPalla>16</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200011</id>
+      <nPalla>11</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200012</id>
+    <anno>2020</anno>
+    <data>2020-01-28T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-28-01-2020</hrfQuotazioni>
+    <nEstrazione>12</nEstrazione>
+    <LottoPalle>
+      <id>20200012</id>
+      <nPalla>26</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200012</id>
+      <nPalla>52</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200012</id>
+      <nPalla>89</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200012</id>
+      <nPalla>57</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200012</id>
+      <nPalla>50</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200012</id>
+      <nPalla>33</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200012</id>
+      <nPalla>21</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200012</id>
+      <nPalla>16</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200013</id>
+    <anno>2020</anno>
+    <data>2020-01-30T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-30-01-2020</hrfQuotazioni>
+    <nEstrazione>13</nEstrazione>
+    <LottoPalle>
+      <id>20200013</id>
+      <nPalla>38</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200013</id>
+      <nPalla>51</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200013</id>
+      <nPalla>84</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200013</id>
+      <nPalla>77</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200013</id>
+      <nPalla>62</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200013</id>
+      <nPalla>53</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200013</id>
+      <nPalla>46</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200013</id>
+      <nPalla>8</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200014</id>
+    <anno>2020</anno>
+    <data>2020-02-01T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-01-02-2020</hrfQuotazioni>
+    <nEstrazione>14</nEstrazione>
+    <LottoPalle>
+      <id>20200014</id>
+      <nPalla>56</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200014</id>
+      <nPalla>24</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200014</id>
+      <nPalla>88</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200014</id>
+      <nPalla>48</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200014</id>
+      <nPalla>46</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200014</id>
+      <nPalla>45</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200014</id>
+      <nPalla>25</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200014</id>
+      <nPalla>22</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200015</id>
+    <anno>2020</anno>
+    <data>2020-02-04T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-04-02-2020</hrfQuotazioni>
+    <nEstrazione>15</nEstrazione>
+    <LottoPalle>
+      <id>20200015</id>
+      <nPalla>82</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200015</id>
+      <nPalla>14</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200015</id>
+      <nPalla>79</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200015</id>
+      <nPalla>72</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200015</id>
+      <nPalla>64</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200015</id>
+      <nPalla>34</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200015</id>
+      <nPalla>29</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200015</id>
+      <nPalla>21</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200016</id>
+    <anno>2020</anno>
+    <data>2020-02-06T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-06-02-2020</hrfQuotazioni>
+    <nEstrazione>16</nEstrazione>
+    <LottoPalle>
+      <id>20200016</id>
+      <nPalla>70</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200016</id>
+      <nPalla>31</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200016</id>
+      <nPalla>82</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200016</id>
+      <nPalla>65</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200016</id>
+      <nPalla>49</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200016</id>
+      <nPalla>29</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200016</id>
+      <nPalla>20</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200016</id>
+      <nPalla>3</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200017</id>
+    <anno>2020</anno>
+    <data>2020-02-08T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-08-02-2020</hrfQuotazioni>
+    <nEstrazione>17</nEstrazione>
+    <LottoPalle>
+      <id>20200017</id>
+      <nPalla>63</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200017</id>
+      <nPalla>10</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200017</id>
+      <nPalla>85</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200017</id>
+      <nPalla>61</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200017</id>
+      <nPalla>56</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200017</id>
+      <nPalla>54</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200017</id>
+      <nPalla>32</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200017</id>
+      <nPalla>15</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200018</id>
+    <anno>2020</anno>
+    <data>2020-02-11T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-11-02-2020</hrfQuotazioni>
+    <nEstrazione>18</nEstrazione>
+    <LottoPalle>
+      <id>20200018</id>
+      <nPalla>2</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200018</id>
+      <nPalla>20</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200018</id>
+      <nPalla>81</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200018</id>
+      <nPalla>72</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200018</id>
+      <nPalla>68</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200018</id>
+      <nPalla>45</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200018</id>
+      <nPalla>24</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200018</id>
+      <nPalla>16</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200019</id>
+    <anno>2020</anno>
+    <data>2020-02-13T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-13-02-2020</hrfQuotazioni>
+    <nEstrazione>19</nEstrazione>
+    <LottoPalle>
+      <id>20200019</id>
+      <nPalla>36</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200019</id>
+      <nPalla>49</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200019</id>
+      <nPalla>84</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200019</id>
+      <nPalla>74</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200019</id>
+      <nPalla>69</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200019</id>
+      <nPalla>43</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200019</id>
+      <nPalla>15</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200019</id>
+      <nPalla>4</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200020</id>
+    <anno>2020</anno>
+    <data>2020-02-15T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-15-02-2020</hrfQuotazioni>
+    <nEstrazione>20</nEstrazione>
+    <LottoPalle>
+      <id>20200020</id>
+      <nPalla>48</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200020</id>
+      <nPalla>9</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200020</id>
+      <nPalla>86</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200020</id>
+      <nPalla>65</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200020</id>
+      <nPalla>55</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200020</id>
+      <nPalla>40</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200020</id>
+      <nPalla>26</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200020</id>
+      <nPalla>13</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200021</id>
+    <anno>2020</anno>
+    <data>2020-02-18T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-18-02-2020</hrfQuotazioni>
+    <nEstrazione>21</nEstrazione>
+    <LottoPalle>
+      <id>20200021</id>
+      <nPalla>49</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200021</id>
+      <nPalla>9</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200021</id>
+      <nPalla>82</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200021</id>
+      <nPalla>72</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200021</id>
+      <nPalla>69</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200021</id>
+      <nPalla>58</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200021</id>
+      <nPalla>45</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200021</id>
+      <nPalla>26</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200022</id>
+    <anno>2020</anno>
+    <data>2020-02-20T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-20-02-2020</hrfQuotazioni>
+    <nEstrazione>22</nEstrazione>
+    <LottoPalle>
+      <id>20200022</id>
+      <nPalla>3</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200022</id>
+      <nPalla>58</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200022</id>
+      <nPalla>85</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200022</id>
+      <nPalla>80</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200022</id>
+      <nPalla>69</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200022</id>
+      <nPalla>55</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200022</id>
+      <nPalla>36</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200022</id>
+      <nPalla>20</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200023</id>
+    <anno>2020</anno>
+    <data>2020-02-22T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-22-02-2020</hrfQuotazioni>
+    <nEstrazione>23</nEstrazione>
+    <LottoPalle>
+      <id>20200023</id>
+      <nPalla>31</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200023</id>
+      <nPalla>50</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200023</id>
+      <nPalla>68</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200023</id>
+      <nPalla>60</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200023</id>
+      <nPalla>58</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200023</id>
+      <nPalla>57</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200023</id>
+      <nPalla>28</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200023</id>
+      <nPalla>1</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200024</id>
+    <anno>2020</anno>
+    <data>2020-02-25T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-25-02-2020</hrfQuotazioni>
+    <nEstrazione>24</nEstrazione>
+    <LottoPalle>
+      <id>20200024</id>
+      <nPalla>26</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200024</id>
+      <nPalla>63</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200024</id>
+      <nPalla>74</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200024</id>
+      <nPalla>73</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200024</id>
+      <nPalla>54</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200024</id>
+      <nPalla>23</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200024</id>
+      <nPalla>15</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200024</id>
+      <nPalla>10</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200025</id>
+    <anno>2020</anno>
+    <data>2020-02-27T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-27-02-2020</hrfQuotazioni>
+    <nEstrazione>25</nEstrazione>
+    <LottoPalle>
+      <id>20200025</id>
+      <nPalla>85</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200025</id>
+      <nPalla>58</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200025</id>
+      <nPalla>79</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200025</id>
+      <nPalla>75</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200025</id>
+      <nPalla>71</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200025</id>
+      <nPalla>60</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200025</id>
+      <nPalla>51</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200025</id>
+      <nPalla>17</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200026</id>
+    <anno>2020</anno>
+    <data>2020-02-29T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-29-02-2020</hrfQuotazioni>
+    <nEstrazione>26</nEstrazione>
+    <LottoPalle>
+      <id>20200026</id>
+      <nPalla>6</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200026</id>
+      <nPalla>85</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200026</id>
+      <nPalla>78</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200026</id>
+      <nPalla>73</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200026</id>
+      <nPalla>50</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200026</id>
+      <nPalla>44</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200026</id>
+      <nPalla>35</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200026</id>
+      <nPalla>9</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200027</id>
+    <anno>2020</anno>
+    <data>2020-03-03T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-03-03-2020</hrfQuotazioni>
+    <nEstrazione>27</nEstrazione>
+    <LottoPalle>
+      <id>20200027</id>
+      <nPalla>78</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200027</id>
+      <nPalla>1</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200027</id>
+      <nPalla>64</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200027</id>
+      <nPalla>36</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200027</id>
+      <nPalla>26</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200027</id>
+      <nPalla>19</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200027</id>
+      <nPalla>11</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200027</id>
+      <nPalla>5</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200028</id>
+    <anno>2020</anno>
+    <data>2020-03-05T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-05-03-2020</hrfQuotazioni>
+    <nEstrazione>28</nEstrazione>
+    <LottoPalle>
+      <id>20200028</id>
+      <nPalla>43</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200028</id>
+      <nPalla>65</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200028</id>
+      <nPalla>85</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200028</id>
+      <nPalla>69</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200028</id>
+      <nPalla>67</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200028</id>
+      <nPalla>48</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200028</id>
+      <nPalla>40</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200028</id>
+      <nPalla>13</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200029</id>
+    <anno>2020</anno>
+    <data>2020-03-07T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-07-03-2020</hrfQuotazioni>
+    <nEstrazione>29</nEstrazione>
+    <LottoPalle>
+      <id>20200029</id>
+      <nPalla>37</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200029</id>
+      <nPalla>12</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200029</id>
+      <nPalla>87</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200029</id>
+      <nPalla>85</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200029</id>
+      <nPalla>41</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200029</id>
+      <nPalla>31</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200029</id>
+      <nPalla>13</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200029</id>
+      <nPalla>11</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200030</id>
+    <anno>2020</anno>
+    <data>2020-03-10T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-10-03-2020</hrfQuotazioni>
+    <nEstrazione>30</nEstrazione>
+    <LottoPalle>
+      <id>20200030</id>
+      <nPalla>17</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200030</id>
+      <nPalla>42</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200030</id>
+      <nPalla>80</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200030</id>
+      <nPalla>57</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200030</id>
+      <nPalla>43</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200030</id>
+      <nPalla>41</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200030</id>
+      <nPalla>35</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200030</id>
+      <nPalla>8</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200031</id>
+    <anno>2020</anno>
+    <data>2020-03-12T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-12-03-2020</hrfQuotazioni>
+    <nEstrazione>31</nEstrazione>
+    <LottoPalle>
+      <id>20200031</id>
+      <nPalla>56</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200031</id>
+      <nPalla>13</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200031</id>
+      <nPalla>86</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200031</id>
+      <nPalla>56</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200031</id>
+      <nPalla>46</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200031</id>
+      <nPalla>41</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200031</id>
+      <nPalla>22</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200031</id>
+      <nPalla>19</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200032</id>
+    <anno>2020</anno>
+    <data>2020-03-14T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-14-03-2020</hrfQuotazioni>
+    <nEstrazione>32</nEstrazione>
+    <LottoPalle>
+      <id>20200032</id>
+      <nPalla>84</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200032</id>
+      <nPalla>46</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200032</id>
+      <nPalla>75</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200032</id>
+      <nPalla>68</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200032</id>
+      <nPalla>47</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200032</id>
+      <nPalla>18</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200032</id>
+      <nPalla>13</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200032</id>
+      <nPalla>1</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200033</id>
+    <anno>2020</anno>
+    <data>2020-03-17T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-17-03-2020</hrfQuotazioni>
+    <nEstrazione>33</nEstrazione>
+    <LottoPalle>
+      <id>20200033</id>
+      <nPalla>27</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200033</id>
+      <nPalla>15</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200033</id>
+      <nPalla>65</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200033</id>
+      <nPalla>63</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200033</id>
+      <nPalla>49</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200033</id>
+      <nPalla>30</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200033</id>
+      <nPalla>29</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200033</id>
+      <nPalla>17</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+  <Lotto>
+    <id>20200034</id>
+    <anno>2020</anno>
+    <data>2020-03-19T00:00:00+01:00</data>
+    <hrfQuotazioni>/risultati/estrazione-19-03-2020</hrfQuotazioni>
+    <nEstrazione>34</nEstrazione>
+    <LottoPalle>
+      <id>20200034</id>
+      <nPalla>59</nPalla>
+      <tipoPalla>superstar</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200034</id>
+      <nPalla>41</nPalla>
+      <tipoPalla>jolly</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200034</id>
+      <nPalla>50</nPalla>
+      <tipoPalla>palla1</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200034</id>
+      <nPalla>29</nPalla>
+      <tipoPalla>palla2</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200034</id>
+      <nPalla>28</nPalla>
+      <tipoPalla>palla3</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200034</id>
+      <nPalla>17</nPalla>
+      <tipoPalla>palla4</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200034</id>
+      <nPalla>11</nPalla>
+      <tipoPalla>palla5</tipoPalla>
+    </LottoPalle>
+    <LottoPalle>
+      <id>20200034</id>
+      <nPalla>7</nPalla>
+      <tipoPalla>palla6</tipoPalla>
+    </LottoPalle>
+  </Lotto>
+</LottoDs>

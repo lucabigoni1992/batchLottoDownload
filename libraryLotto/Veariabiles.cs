@@ -26,7 +26,7 @@ namespace libraryLotto
 
 
         internal static string extractData = @"/risultati/estrazione-";
-        internal static string fileDsName = Properties.Resources.bkDbXml.Replace("|DataDirectory|", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)).Replace("file:\\", "");
+        internal static string fileDsName = Properties.Resources.bkDbXml.Replace("|DataDirectory|", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)).Replace(":\\", "").Replace(":", "").Replace("file", "");
         internal static DateTime annoDiInizio = new DateTime(1997, 1, 1);
 
         //   internal static int annoDiInizio = 1997;
@@ -46,6 +46,7 @@ namespace libraryLotto
         internal static void _DsLottoSave()
         {
             string dir = (Path.GetDirectoryName(fileDsName));
+            Console.WriteLine("file-> " + fileDsName);
             if (!Directory.Exists(dir))
                 System.IO.Directory.CreateDirectory(dir);
             _DsLotto.WriteXml(fileDsName);//scrivo il file
@@ -56,7 +57,7 @@ namespace libraryLotto
             if (System.IO.File.Exists(fileDsName))
                 _DsLotto.ReadXml(fileDsName);//scrivo il file
             DateTime LastLottoLoad = _DsLottoGetLastDate();
-            annoDiInizio = LastLottoLoad.Year < 1997 ? new DateTime(1997, 1, 1) : LastLottoLoad;
+            annoDiInizio = LastLottoLoad.Year < 1997 ? new DateTime(2020, 1, 1) : LastLottoLoad;
 
         }
 
