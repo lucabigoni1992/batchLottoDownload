@@ -27,7 +27,7 @@ namespace libraryLotto
 
         internal static string extractData = @"/risultati/estrazione-";
         internal static string fileDsName = Properties.Resources.bkDbXml.Replace("|DataDirectory|", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)).Replace("file:\\", "");
-        internal static DateTime annoDiInizio = new DateTime(1997, 1, 1);
+        internal static DateTime annoDiInizio = new DateTime(2018, 1, 1); //new DateTime(1997, 1, 1);
 
         //   internal static int annoDiInizio = 1997;
         //      internal static int annoDiInizio = 2006;
