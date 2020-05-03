@@ -31,10 +31,22 @@
 <h1>Gioco del Super EnalottoLotto</h1>
 
 <p>Benvenuto nella pagina dove potrai vedere lo storico dell'estrazioni dell'lotto.</p>
-
-<button (click)="showStatistics()" class="dropdown-item">
+<p>
+    Questa pagina è <strong>ottimizzata Server Side </strong> il server passa al client solamente i dati che si visualizzano e il numero totale di record.
+    Inoltre i dati elaborati sono in Cache sul server e tramite funzioni Link Q quangono estrapolati e passati tramite Json al Client.
+    La cache del server viene aggiornata in 2 momenti
+</p>
+<ul>
+    <li>
+        <p>All'avvio del sito</p>
+    </li>
+    <li>
+        <p>Ogni 24 ore caricando i dati mancanti</p>
+    </li>
+</ul>
+<button kendoButton class="dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [primary]="true" (click)="showStatistics()">
     <fa name="cog" animation="spin" style="margin-left: -9px;"></fa>
-   Statistiche
+    Statistiche
 </button>
 
 <kendo-grid [data]="view"
