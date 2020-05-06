@@ -33,7 +33,7 @@ namespace libraryLotto
         internal static DateTime annoDiInizio = new DateTime(1997, 1, 1);
 
         //   internal static int annoDiInizio = 1997;
-        //      internal static int annoDiInizio = 2006;
+        //   internal static int annoDiInizio = 2006;
 
         static Variabili()
         {

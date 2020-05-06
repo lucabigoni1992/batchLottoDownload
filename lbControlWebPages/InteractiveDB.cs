@@ -8,11 +8,15 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using static lbControlWebPages.webPagesData.SiteData;
+using FluentScheduler;
+using System.Threading;
 
 namespace lbControlWebPages
 {
     public class InteractiveDB
     {
+        static Registry Scheduler = new Registry();
+
 
         public async System.Threading.Tasks.Task<bool> addUpdateSiteAsync(string url, int Htime)
         {
@@ -26,16 +30,21 @@ namespace lbControlWebPages
                 if (row.Site.ToLower().CompareTo(@"https://acpol2.army.mil/vacancy/vacancy_list.asp") == 0)
                 {
                     var ris = await SendRequestAsync(url, "POST", new Dictionary<string, string> { { "FormAction2", "2" } });
-                    if (row.PreHTML==String.Empty)
-                        row.PreHTML = ElaboraCampDearby(ris);
+                    if (row.PeHTML == String.Empty)
+                        row.PeHTML = ElaboraCampDearby(ris);
                     else
-                        row.PostHTML = ElaboraCampDearby(ris);
+                        row.PeHTML = ElaboraCampDearby(ris);
                 }
                 DbManagement._LottoDs_addRow(row);
-
+                Scheduler.Schedule(
+                           () =>
+                                 Console.WriteLine(" now is  ->", DateTime.Now.ToShortTimeString())
+                           ).ToRunNow().AndEvery(10).Seconds();
+                Thread.Sleep(60 * 1000);
                 return true;
             }
-            catch (Exception EX) {
+            catch (Exception EX)
+            {
                 return false;
             }
         }
@@ -49,7 +58,7 @@ namespace lbControlWebPages
 
         private static readonly HttpClient client = new HttpClient();
 
-        private  async Task<string> SendRequestAsync(string url, string Method, Dictionary<string, string> Data)
+        private async Task<string> SendRequestAsync(string url, string Method, Dictionary<string, string> Data)
         {
             try
             {

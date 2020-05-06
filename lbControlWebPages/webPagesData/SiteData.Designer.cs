@@ -629,7 +629,7 @@ namespace lbControlWebPages.webPagesData {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string PreHTML {
+            public string PeHTML {
                 get {
                     try {
                         return ((string)(this[this.tableSite.PeHTMLColumn]));
