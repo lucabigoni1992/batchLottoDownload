@@ -17,8 +17,7 @@ namespace TestLibrerie
         [TestMethod("TEST LIBRERIA CONTROL WEB PAGES-addRecord")]
         public void addRecord()
         {
-            InteractiveDB Site = new InteractiveDB();
-            _ = Site.addUpdateSiteAsync(@"https://acpol2.army.mil/vacancy/vacancy_list.asp", 12);
+            InteractiveDB.addUpdateSiteAsync(@"https://acpol2.army.mil/vacancy/vacancy_list.asp", 12);
 
 
 

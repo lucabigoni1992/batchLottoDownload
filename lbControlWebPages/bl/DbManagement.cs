@@ -10,12 +10,15 @@ using lbControlWebPages;
 using lbControlWebPages.Properties;
 using lbControlWebPages.webPagesData;
 using static lbControlWebPages.webPagesData.SiteData;
+using FluentScheduler;
 
 namespace libraryLotto
 {
     internal static class DbManagement
     {
+        internal static List<Registry> Scheduler = new List<Registry>();
         internal static string fileDsName = Path.Combine(GetApplicationRoot(), Resources.bkDbXml_folder, Resources.bkDbXml_SiteDb);
+        private static SiteData _DSSiteData = new SiteData();
 
         static DbManagement()
         {
@@ -23,7 +26,6 @@ namespace libraryLotto
         }
 
         //struttura Dati 
-        internal static SiteData _DSSiteData = new SiteData();
 
         internal static string GetApplicationRoot()
         {
@@ -45,7 +47,11 @@ namespace libraryLotto
         {
             if (System.IO.File.Exists(fileDsName))
                 _DSSiteData.ReadXml(fileDsName);
+            foreach (SiteRow row in _DSSiteData.Site.Rows)
+                addSchedule(row);
+
         }
+
 
         //Site
         internal static SiteRow _dsSiteData_newRow(string Url)
@@ -63,8 +69,28 @@ namespace libraryLotto
             {
                 _DSSiteData.Site.AddSiteRow(row);
                 _DsSiteSave();
+                addSchedule(row);
             }
         }
         internal static SiteDataTable _Site() { return _DSSiteData.Site; }
+
+
+        //gestione job
+        private static void addSchedule(SiteRow row)
+        {
+            var r = new Registry();
+            _ = r.Schedule(async () =>
+                              await InteractiveDB.addUpdateSiteAsync(row.Site, row.CadAggiornamento)
+                            ).ToRunNow()
+                            .AndEvery(row.CadAggiornamento)
+#if DEBUG
+                            .Minutes();
+# else
+                            .Hours();
+#endif
+            Scheduler.Add(r);
+            JobManager.Initialize(Scheduler.ToArray<Registry>());
+
+        }
     }
 }

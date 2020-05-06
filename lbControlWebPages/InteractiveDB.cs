@@ -8,17 +8,13 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using static lbControlWebPages.webPagesData.SiteData;
-using FluentScheduler;
 using System.Threading;
 
 namespace lbControlWebPages
 {
-    public class InteractiveDB
+    public static class InteractiveDB
     {
-        static Registry Scheduler = new Registry();
-
-
-        public async System.Threading.Tasks.Task<bool> addUpdateSiteAsync(string url, int Htime)
+        public static async Task<bool> addUpdateSiteAsync(string url, int Htime)
         {
             try
             {
@@ -29,18 +25,19 @@ namespace lbControlWebPages
                 row.CadAggiornamento = Htime;
                 if (row.Site.ToLower().CompareTo(@"https://acpol2.army.mil/vacancy/vacancy_list.asp") == 0)
                 {
+                    Console.WriteLine("CARICO " + row.Site);
                     var ris = await SendRequestAsync(url, "POST", new Dictionary<string, string> { { "FormAction2", "2" } });
                     if (row.PeHTML == String.Empty)
                         row.PeHTML = ElaboraCampDearby(ris);
                     else
+                    {
+                        row.PostHTML = row.PeHTML;
                         row.PeHTML = ElaboraCampDearby(ris);
+                    }
+                    row.State = (row.PostHTML == row.PeHTML || row.PostHTML != string.Empty) ? true : false;
                 }
                 DbManagement._LottoDs_addRow(row);
-                Scheduler.Schedule(
-                           () =>
-                                 Console.WriteLine(" now is  ->", DateTime.Now.ToShortTimeString())
-                           ).ToRunNow().AndEvery(10).Seconds();
-                Thread.Sleep(60 * 1000);
+
                 return true;
             }
             catch (Exception EX)
@@ -49,7 +46,7 @@ namespace lbControlWebPages
             }
         }
 
-        private string ElaboraCampDearby(string ris)
+        private static string ElaboraCampDearby(string ris)
         {
             HtmlDocument doc = new HtmlDocument();
             doc.LoadHtml(ris);
@@ -58,19 +55,14 @@ namespace lbControlWebPages
 
         private static readonly HttpClient client = new HttpClient();
 
-        private async Task<string> SendRequestAsync(string url, string Method, Dictionary<string, string> Data)
+        private static async Task<string> SendRequestAsync(string url, string Method, Dictionary<string, string> Data)
         {
             try
             {
-
-
                 var content = new FormUrlEncodedContent(Data);
-
                 var response = client.PostAsync(url, content).Result;
 
-                var responseString = await response.Content.ReadAsStringAsync();
-
-                return responseString;
+                return await response.Content.ReadAsStringAsync();
             }
             catch (Exception ex)
             {
