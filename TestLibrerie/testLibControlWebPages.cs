@@ -18,7 +18,7 @@ namespace TestLibrerie
         public void addRecord()
         {
             InteractiveDB Site = new InteractiveDB();
-            Site.addSite(@"https://acpol2.army.mil/vacancy/vacancy_list.asp", 12);
+            _ = Site.addUpdateSiteAsync(@"https://acpol2.army.mil/vacancy/vacancy_list.asp", 12);
 
 
 

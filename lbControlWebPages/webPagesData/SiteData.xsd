@@ -15,8 +15,7 @@
         <xs:element name="Site" msprop:Generator_TableClassName="SiteDataTable" msprop:Generator_TableVarName="tableSite" msprop:Generator_TablePropName="Site" msprop:Generator_RowDeletingName="SiteRowDeleting" msprop:Generator_RowChangingName="SiteRowChanging" msprop:Generator_RowEvHandlerName="SiteRowChangeEventHandler" msprop:Generator_RowDeletedName="SiteRowDeleted" msprop:Generator_UserTableName="Site" msprop:Generator_RowChangedName="SiteRowChanged" msprop:Generator_RowEvArgName="SiteRowChangeEvent" msprop:Generator_RowClassName="SiteRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="Site" msprop:Generator_ColumnVarNameInTable="columnSite" msprop:Generator_ColumnPropNameInRow="Site" msprop:Generator_ColumnPropNameInTable="SiteColumn" msprop:Generator_UserColumnName="Site" type="xs:string" minOccurs="0" />
+              <xs:element name="Site" msprop:Generator_ColumnVarNameInTable="columnSite" msprop:Generator_ColumnPropNameInRow="Site" msprop:Generator_ColumnPropNameInTable="SiteColumn" msprop:Generator_UserColumnName="Site" type="xs:string" />
               <xs:element name="State" msprop:Generator_ColumnVarNameInTable="columnState" msprop:Generator_ColumnPropNameInRow="State" msprop:Generator_ColumnPropNameInTable="StateColumn" msprop:Generator_UserColumnName="State" type="xs:unsignedByte" minOccurs="0" />
               <xs:element name="PeHTML" msprop:Generator_ColumnVarNameInTable="columnPeHTML" msprop:Generator_ColumnPropNameInRow="PeHTML" msprop:Generator_ColumnPropNameInTable="PeHTMLColumn" msprop:Generator_UserColumnName="PeHTML" type="xs:string" minOccurs="0" />
               <xs:element name="PostHTML" msprop:Generator_ColumnVarNameInTable="columnPostHTML" msprop:Generator_ColumnPropNameInRow="PostHTML" msprop:Generator_ColumnPropNameInTable="PostHTMLColumn" msprop:Generator_UserColumnName="PostHTML" type="xs:string" minOccurs="0" />
@@ -26,9 +25,9 @@
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+    <xs:unique name="Constraint2" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Site" />
-      <xs:field xpath="mstns:id" />
+      <xs:field xpath="mstns:Site" />
     </xs:unique>
   </xs:element>
 </xs:schema>

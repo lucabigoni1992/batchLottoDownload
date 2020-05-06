@@ -27,9 +27,8 @@ namespace libraryLotto
 
         internal static string GetApplicationRoot()
         {
-            var exePath = Path.GetDirectoryName(System.Reflection
-                              .Assembly.GetExecutingAssembly().CodeBase);
-            Regex appPathMatcher = new Regex(@"(?<!fil)[A-Za-z]:\\+[\S\s]*?(?=\\+bin)");
+            var exePath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase);
+            Regex appPathMatcher = new Regex(@"(?<!fil)[A-Za-z]:\\+[\S\s]*");
             var appRoot = appPathMatcher.Match(exePath).Value;
             return appRoot;
         }
@@ -49,10 +48,18 @@ namespace libraryLotto
         }
 
         //Site
+        internal static SiteRow _dsSiteData_newRow(string Url)
+        {
+            SiteRow rows = _DSSiteData.Site.FindBySite(Url);
+            if (rows != null)
+                return rows;
+            else
+                return _dsSiteData_newRow();
+        }
         internal static SiteRow _dsSiteData_newRow() { return _DSSiteData.Site.NewSiteRow(); }
         internal static void _LottoDs_addRow(SiteRow row)
         {
-            if (_DSSiteData.Site.FindByid(row.id) == null)
+            if (_DSSiteData.Site.FindBySite(row.Site) == null)
             {
                 _DSSiteData.Site.AddSiteRow(row);
                 _DsSiteSave();
