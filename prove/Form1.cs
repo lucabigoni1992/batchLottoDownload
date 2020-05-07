@@ -18,7 +18,7 @@ namespace prove
         public Form1()
         {
             InitializeComponent();
-            _ =  InteractiveDB.addUpdateSiteAsync(@"https://acpol2.army.mil/vacancy/vacancy_list.asp", 12);
+            _ =  InteractiveDB.AddUpdateSiteAsync(@"https://acpol2.army.mil/vacancy/vacancy_list.asp", 12);
 
         }
 

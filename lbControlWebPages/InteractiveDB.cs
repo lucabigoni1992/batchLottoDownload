@@ -9,12 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using static lbControlWebPages.webPagesData.SiteData;
 using System.Threading;
+using libraryLotto.dlm;
 
 namespace lbControlWebPages
 {
     public static class InteractiveDB
     {
-        public static async Task<bool> addUpdateSiteAsync(string url, int Htime)
+        public static IEnumerable<SiteMapping> GetAllSite() {
+            return DbManagement._SiteAllRow();
+        }
+        public static async Task<bool> AddUpdateSiteAsync(string url, int Htime)
         {
             try
             {
@@ -27,14 +31,14 @@ namespace lbControlWebPages
                 {
                     Console.WriteLine("CARICO " + row.Site);
                     var ris = await SendRequestAsync(url, "POST", new Dictionary<string, string> { { "FormAction2", "2" } });
-                    if (row.PeHTML == String.Empty)
-                        row.PeHTML = ElaboraCampDearby(ris);
+                    if (row.PreHtml == String.Empty)
+                        row.PreHtml = ElaboraCampDearby(ris);
                     else
                     {
-                        row.PostHTML = row.PeHTML;
-                        row.PeHTML = ElaboraCampDearby(ris);
+                        row.PostHTML = row.PreHtml;
+                        row.PreHtml = ElaboraCampDearby(ris);
                     }
-                    row.State = (row.PostHTML == row.PeHTML || row.PostHTML != string.Empty) ? true : false;
+                    row.State = (row.PostHTML == row.PreHtml || row.PostHTML != string.Empty) ? true : false;
                 }
                 DbManagement._LottoDs_addRow(row);
 

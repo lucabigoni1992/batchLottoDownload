@@ -11,6 +11,8 @@ using lbControlWebPages.Properties;
 using lbControlWebPages.webPagesData;
 using static lbControlWebPages.webPagesData.SiteData;
 using FluentScheduler;
+using libraryLotto.dlm;
+using static libraryLotto.dlm.SiteMapping;
 
 namespace libraryLotto
 {
@@ -80,7 +82,7 @@ namespace libraryLotto
         {
             var r = new Registry();
             _ = r.Schedule(async () =>
-                              await InteractiveDB.addUpdateSiteAsync(row.Site, row.CadAggiornamento)
+                              await InteractiveDB.AddUpdateSiteAsync(row.Site, row.CadAggiornamento)
                             ).ToRunNow()
                             .AndEvery(row.CadAggiornamento)
 #if DEBUG
@@ -90,7 +92,26 @@ namespace libraryLotto
 #endif
             Scheduler.Add(r);
             JobManager.Initialize(Scheduler.ToArray<Registry>());
-
         }
+
+        internal static IEnumerable<SiteMapping> _SiteAllRow()
+        {
+            try
+            {
+                IEnumerable<SiteMapping> _Tablotto = (
+                     from Tablotto in _DSSiteData.Site
+                     select new SiteMapping(Tablotto)
+                     );
+                return _Tablotto;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            return null;
+        }
+
+
     }
 }

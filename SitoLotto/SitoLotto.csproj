@@ -59,6 +59,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\lbControlWebPages\lbControlWebPages.csproj" />
     <ProjectReference Include="..\LbExcel\LbExcel.csproj" />
     <ProjectReference Include="..\libraryLotto\libraryLotto.csproj" />
   </ItemGroup>
