@@ -31,7 +31,7 @@ namespace LottoWeb.ClientApp
              this.logger = logger;
         }
 
-        [HttpPost]
+        [HttpGet]
         [Route("GetAllSite")]
         public async Task<IActionResult> GetAllSite()
         {

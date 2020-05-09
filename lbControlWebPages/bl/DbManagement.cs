@@ -98,11 +98,11 @@ namespace libraryLotto
         {
             try
             {
-                IEnumerable<SiteMapping> _Tablotto = (
+                IEnumerable<SiteMapping> _SiteData = (
                      from Tablotto in _DSSiteData.Site
                      select new SiteMapping(Tablotto)
                      );
-                return _Tablotto;
+                return _SiteData;
 
             }
             catch (Exception e)

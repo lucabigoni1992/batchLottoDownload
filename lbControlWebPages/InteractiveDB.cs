@@ -16,6 +16,7 @@ namespace lbControlWebPages
     public static class InteractiveDB
     {
         public static IEnumerable<SiteMapping> GetAllSite() {
+   //         AddUpdateSiteAsync("https://acpol2.army.mil/vacancy/vacancy_list.asp", 24);
             return DbManagement._SiteAllRow();
         }
         public static async Task<bool> AddUpdateSiteAsync(string url, int Htime)

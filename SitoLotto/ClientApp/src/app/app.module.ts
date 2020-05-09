@@ -32,6 +32,8 @@ import { LottoDatiStatisticsComponent } from './storico-lotto/modali/directive/L
 import { ProgressBarConfigurableModule } from './Components/ProgressBarr/progressBarConfigurable.component';
 import { InternalClassModule } from './app.module.class';
 import { MaterialModule } from './app.module.material';
+import { ConfrontositiGridData } from './confronto-siti/service/confronto-siti-GridData.service';
+import { ConfrontoSitiComponent } from './confronto-siti/confronto-siti.component';
 
 
 
@@ -52,7 +54,8 @@ import { MaterialModule } from './app.module.material';
         DownloadComponent,
         DownloadAndMadeExcelModule,
         ProgressBarConfigurableModule,
-        AlertErrorComponent
+        AlertErrorComponent,
+        ConfrontoSitiComponent
 
     ],
     imports: [
@@ -63,6 +66,7 @@ import { MaterialModule } from './app.module.material';
             { path: '', component: HomeComponent, pathMatch: 'full' },
             { path: 'testModali', component: testModaliComponent },
             { path: 'fetch-data', component: FetchDataComponent },
+            { path: 'confronto-siti', component: ConfrontoSitiComponent },
             { path: 'storico-lotto', component: StoricoLottoComponent }
         ]),
         ButtonsModule,
@@ -77,8 +81,8 @@ import { MaterialModule } from './app.module.material';
         MaterialModule,
         InternalClassModule
     ],
-    entryComponents: [LottoDatiEstrazioneComponent, LottoDatiVinciteComponent, LottoDatiStatisticsComponent, AlertErrorComponent],
-    providers: [kendoGridDataService, GenericLottoDataService, UploadDownloadService],
+    entryComponents: [LottoDatiEstrazioneComponent, LottoDatiVinciteComponent, LottoDatiStatisticsComponent,  AlertErrorComponent],
+    providers: [kendoGridDataService, GenericLottoDataService, UploadDownloadService, ConfrontositiGridData],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

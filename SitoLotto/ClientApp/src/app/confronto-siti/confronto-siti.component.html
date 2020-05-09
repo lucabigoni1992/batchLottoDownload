@@ -1,0 +1,104 @@
+<style type="text/css">
+
+    /**mi sono divertito a sovrascrivere i colori del bootstrap per questo ho fatto così
+        la soluzione migliore era mettere le variabili e le parti usate in tutto il sito in un file e metterlo nella root cosa che farà nelle prossime pagine
+    */
+    /*bootstrap*/
+
+
+    * {
+        --primary-color-kendo-lotto: #ff6358 !important;
+        --event-color-kendo-lotto: #ff6358 !important;
+        --active-color-kendo-lotto: #c32727 !important;
+    }
+
+    .dropdown-item-primary {
+        background-color: var(--primary-color-kendo-lotto);
+        border-color: var(--primary-color-kendo-lotto);
+    }
+
+    .dropdown-item:hover, .dropdown-item:active {
+        background-color: var(--event-color-kendo-lotto);
+        border-color: var(--event-color-kendo-lotto);
+    }
+
+    .dropdown-item.active {
+        background-color: var(--active-color-kendo-lotto);
+        border-color: var(--active-color-kendo-lotto);
+    }
+</style>
+
+<h1>NOTIFICHE Web</h1>
+
+<p>Benvenuto nella pagina di gestione NOTIFICHE Web</p>
+<p>
+    Questa pagina mi serve per avere degli aggiornamenti su quando una pagina Web subisce modifiche.
+    Vengono schaduleti dei BGW che ogni Xore controllano una parte di una pagina Web e mi inviano notifiche
+</p>
+
+<button kendoButton class="dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [primary]="true" (click)="showStatistics()">
+    <fa name="cog" animation="spin" style="margin-left: -9px;"></fa>
+    Aggiungi sito
+</button>
+
+<kendo-grid [data]="view"
+            [pageSize]="gridState.take"
+            [skip]="gridState.skip"
+            [sort]="gridState.sort"
+            [pageable]="pageable"
+            [sortable]="true"
+            (dataStateChange)="onStateChange($event)">
+    <kendo-grid-column *ngFor="let column of columns"
+                       field="{{column.field}}"
+                       title="{{column.title}}"
+                       format="{{column.format}}"
+                       filter="{{column.type}}"
+                       width="{{column.width}}" class="overflow-column">
+        <ng-template kendoGridCellTemplate let-dataItem="dataItem" let-rowIndex="rowIndex" let-columnIndex="columnIndex">
+
+            <!--<div *ngIf="columnIndex==0; then thenBlock else elseBlock"></div>
+            <ng-template #thenBlock>
+                <ng-container *ngTemplateOutlet="estimateTemplate; context: { dt: dataItem}">
+                </ng-container>
+            </ng-template>
+            <ng-template #elseBlock>-->
+                <div [ngSwitch]="column.field">
+                    <!--<div *ngSwitchCase="'premio6Punti'">
+                        <strong>{{dataItem.premio6Punti}}</strong>
+                    </div>
+                    <div *ngSwitchCase="'nEstrazione'">
+                        <strong>{{dataItem.nEstrazione}}</strong>
+                    </div>-->
+                    <div *ngSwitchDefault>
+                        {{dataItem[column.field]}}
+                    </div>
+                </div>
+            </ng-template>
+        <!--</ng-template>-->
+    </kendo-grid-column>
+</kendo-grid>
+<div *ngIf="loading" class="k-i-loading"></div>
+
+
+<!--<ng-template kendoGridCellTemplate #estimateTemplate id="estimateTemplate" let-dataItem="dt">
+    <div class="btn-group dropright position-static">
+        <button kendoButton class="dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [primary]="true">
+            <span>...</span>
+        </button>
+        <div class="dropdown-menu" role="menu">
+            <div class="dropdown-divider"></div>
+            <span class="dropdown-item active border border-secondary rounded" style="margin-top: -8px;">
+                Menu Estrazione {{dataItem.nEstrazione}}
+            </span>
+            <button (click)="modaleNumeri(dataItem)" class="dropdown-item">
+                <fa name="angle-right"></fa>
+                Numeri usciti
+            </button>
+            <button (click)="modaleVincite(dataItem)" class="dropdown-item">
+                <fa name="angle-right"></fa>
+                Dati delle Vincite
+            </button>
+
+        </div>
+    </div>
+</ng-template>-->
