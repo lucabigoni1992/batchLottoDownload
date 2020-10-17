@@ -6,7 +6,8 @@ import { NgbModal, NgbModalRef, NgbActiveModal } from '@ng-bootstrap/ng-bootstra
 import { GridDataResult } from '@progress/kendo-angular-grid/dist/es2015/data/data.collection';
 import { tap } from 'rxjs/internal/operators/tap';
 import { BehaviorSubject } from 'rxjs';
-import { ConfrontositiGridData } from './service/confronto-siti-GridData.service';
+import { ConfrontositiGridDataService } from './service/confronto-siti-GridData.service';
+import { ConfrontoSitiAddRecordComponent } from './modali/directive/confrontoSitiAddRecord.component';
 
 interface ColumnSetting {
     field: string,
@@ -31,7 +32,7 @@ interface pageable {
 
 export class ConfrontoSitiComponent extends BehaviorSubject<any> implements OnInit {
 
-    constructor(private dataService: ConfrontositiGridData, private modalService: NgbModal) {
+    constructor(private dataService: ConfrontositiGridDataService, private modalService: NgbModal) {
         super(null);
     }
     public loading: boolean;
@@ -118,6 +119,17 @@ export class ConfrontoSitiComponent extends BehaviorSubject<any> implements OnIn
 
     //modali
 
-
+    public showAddSite() {
+        var modalRef: NgbModalRef = this.modalService.open(ConfrontoSitiAddRecordComponent,
+            {
+                scrollable: true,
+                size: 'xl'
+            });
+        modalRef.componentInstance.fromParent = {
+        };
+        modalRef.result.then((result) => {
+            console.log(result);
+        });
+    }
 
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net.Http;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
@@ -15,6 +16,8 @@ namespace libraryLotto
         private HtmlDocument doctempRow;
         private HtmlDocument doctemp;
         private DateTime anno = Variabili.annoDiInizio;
+
+        private static CultureInfo enUS = new CultureInfo("en-US");
 
         public batchDownloadData()
         {
@@ -47,7 +50,7 @@ namespace libraryLotto
                     if (node.Attributes.Count == 1 && node.Attributes[0].Value == "ball-24px")// dovrebbe esserci solamnente una classe ball-24px
                     {
                         int.TryParse(node.InnerText, out int value);
-                        palle.Add(Variabili._LottoPalleDs_newRow(-1, value, "palla"+(++countPalla)));// non ho ancora l' id metto -1 come id temporaneo         
+                        palle.Add(Variabili._LottoPalleDs_newRow(-1, value, "palla" + (++countPalla)));// non ho ancora l' id metto -1 come id temporaneo         
                     }
                     else if (node.Attributes.Count == 1 && node.Attributes[0].Value == "superstar-24px")
                     {
@@ -62,10 +65,13 @@ namespace libraryLotto
                     else if (node.Attributes.Count == 2 && node.Attributes[0].Name == "href")
                     {//primo campo che si legge
                         countPalla = 0;
-                        DateTime.TryParse(node.Attributes[0].Value.Substring(Variabili.extractData.Length), out DateTime Data);
+                        var data = node.Attributes[0].Value.Substring(Variabili.extractData.Length);
+                        DateTime.TryParseExact(data, "dd-MM-yyyy", enUS, DateTimeStyles.None, out DateTime Data);
                         row.hrfQuotazioni = node.Attributes[0].Value;
                         row.data = Data;
                         row.anno = Data.Year;
+                        if (Data <= Variabili.annoDiInizio)
+                            continue;
                         Task<string> taskDetailes = Task.Run(async () => await downloadDataEstrazioniLottoDetailes(row.hrfQuotazioni));
 
 
@@ -118,8 +124,8 @@ namespace libraryLotto
                         string valore = Normalize(trows[1].InnerText);
                         if (valore == "-") valore = "0";
                         string[] valuta = valore.Split(" ");//valore, valuta
-                        row.valore =valuta[0];
-                        if (valuta.Length > 1) 
+                        row.valore = valuta[0];
+                        if (valuta.Length > 1)
                             row.valuta = valuta[1];
                         row.vincitori = int.Parse(Normalize(trows[2].InnerText).Replace(".", ""));
                         row.premio = trows[0].InnerText;

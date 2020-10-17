@@ -12,6 +12,7 @@
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
     <AssemblyName>SitoLotto</AssemblyName>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <UserSecretsId>b2e8d148-e1c8-4761-91fa-86011b30f56f</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -66,6 +67,7 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\src\assets\Images\" />
+    <Folder Include="DOCUMENTAZIONE !!!!!\NewFolder\" />
     <Folder Include="log\" />
     <Folder Include="wwwroot\File\Excel\Creati\" />
   </ItemGroup>

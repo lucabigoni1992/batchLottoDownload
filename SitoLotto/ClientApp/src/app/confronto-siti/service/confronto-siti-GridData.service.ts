@@ -9,7 +9,7 @@ import { Data } from 'popper.js';
 
 
 @Injectable()
-export class ConfrontositiGridData extends BehaviorSubject<any> {
+export class ConfrontositiGridDataService extends BehaviorSubject<any> {
 
     constructor(private http: HttpClient) {
         super(null);

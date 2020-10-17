@@ -32,10 +32,10 @@ import { LottoDatiStatisticsComponent } from './storico-lotto/modali/directive/L
 import { ProgressBarConfigurableModule } from './Components/ProgressBarr/progressBarConfigurable.component';
 import { InternalClassModule } from './app.module.class';
 import { MaterialModule } from './app.module.material';
-import { ConfrontositiGridData } from './confronto-siti/service/confronto-siti-GridData.service';
+import { ConfrontositiGridDataService } from './confronto-siti/service/confronto-siti-GridData.service';
 import { ConfrontoSitiComponent } from './confronto-siti/confronto-siti.component';
-
-
+import { ConfrontoSitiAddRecordComponent } from './confronto-siti/modali/directive/confrontoSitiAddRecord.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -55,10 +55,12 @@ import { ConfrontoSitiComponent } from './confronto-siti/confronto-siti.componen
         DownloadAndMadeExcelModule,
         ProgressBarConfigurableModule,
         AlertErrorComponent,
-        ConfrontoSitiComponent
+        ConfrontoSitiComponent,
+        ConfrontoSitiAddRecordComponent
 
     ],
     imports: [
+        ReactiveFormsModule,
         BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
         HttpClientModule,
         FormsModule,
@@ -81,8 +83,8 @@ import { ConfrontoSitiComponent } from './confronto-siti/confronto-siti.componen
         MaterialModule,
         InternalClassModule
     ],
-    entryComponents: [LottoDatiEstrazioneComponent, LottoDatiVinciteComponent, LottoDatiStatisticsComponent,  AlertErrorComponent],
-    providers: [kendoGridDataService, GenericLottoDataService, UploadDownloadService, ConfrontositiGridData],
+    entryComponents: [LottoDatiEstrazioneComponent, LottoDatiVinciteComponent, LottoDatiStatisticsComponent, AlertErrorComponent, ConfrontoSitiAddRecordComponent],
+    providers: [kendoGridDataService, GenericLottoDataService, UploadDownloadService, ConfrontositiGridDataService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
