@@ -39,14 +39,13 @@ export class ConfrontoSitiAddRecordComponent implements OnInit {
         console.log("ngOnInit" + this.fromParent);
         this.loading = 2;
         this.registerForm = this.formBuilder.group({
-            url: ['', Validators.required],
+            Url: ['', Validators.required],
             //Validators.pattern("^\d{1,4}$") // wrong
-            email: ['luca.bigoni@live.it', [Validators.required, Validators.pattern("^[\\w-\.]+@([\\w-]+\\.)+[\\w-]{2,4}$")]],
-            ore: ['24', Validators.min(12)],
-            tag: ['', Validators.required]
-            //password: ['', [Validators.required, Validators.minLength(6)]],
-            //confirmPassword: ['', Validators.required],
-            //acceptTerms: [false, Validators.requiredTrue]
+            Email: ['luca.bigoni@live.it', [Validators.required, Validators.pattern("^[\\w-\.]+@([\\w-]+\\.)+[\\w-]{2,4}$")]],
+            Ore: ['24', Validators.min(12)],
+            Tag: [''],
+            Active: [this.fromParent.isNew ? true: this.fromParent.dataitem.acceptTerms, Validators.requiredTrue]
+           
         }, /*{
             validator: MustMatch('password', 'confirmPassword')
         }*/);
@@ -64,19 +63,26 @@ export class ConfrontoSitiAddRecordComponent implements OnInit {
     //    });
     //}
     public saveData(): void {
-        this.submitted = true;
 
         // stop here if form is invalid
         if (this.registerForm.invalid) {
             return;
         }
+        this.loading = 1;
+        this.dataService.add(this.registerForm)
+            .pipe(
+                tap(data => {
+                })
+            )
+            .subscribe(data => {
+                this.loading = 2;
+            });
 
         // display form values on success
         alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
     }
 
     onReset() {
-        this.submitted = false;
         this.registerForm.reset();
     }
 

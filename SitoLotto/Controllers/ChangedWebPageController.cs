@@ -14,6 +14,9 @@ using Microsoft.Extensions.Logging;
 using libExcel;
 using Newtonsoft.Json;
 using lbControlWebPages;
+using Newtonsoft.Json.Linq;
+using libraryLotto.dlm;
+using static libraryLotto.dlm.KendoResultDataSiteInputMapping;
 
 namespace LottoWeb.ClientApp
 {
@@ -33,12 +36,29 @@ namespace LottoWeb.ClientApp
 
         [HttpGet]
         [Route("GetAllSite")]
-        public async Task<IActionResult> GetAllSite()
+        public string GetAllSite()
+        {
+            try
+            {
+                Response.StatusCode = 200;
+                return JsonConvert.SerializeObject(InteractiveDB.GetAllSite());
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.ToString());
+                Response.StatusCode = 500;
+                return "";
+            };//in un ambiante professionale si deve gestire meglio
+        }
+        [HttpGet]
+        [Route("AddSite/{SiteData}")]
+        public IActionResult AddSite(string SiteData)
         {
             try
             {
                 // return JsonConvert.SerializeObject(InteractiveDB.GetAllSite());
-                return Ok(InteractiveDB.GetAllSite());
+                SiteInputMapping newElem = JsonConvert.DeserializeObject<SiteInputMapping>(SiteData);
+                return Ok(InteractiveDB.AddSite(newElem));
             }
             catch (Exception ex)
             {

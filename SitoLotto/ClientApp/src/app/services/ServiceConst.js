@@ -1,6 +1,7 @@
 define(["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
+    exports.ServiceSettings = void 0;
     class ServiceSettings {
         static getBaseUrl() {
             return document.getElementsByTagName('base')[0].href;
@@ -15,6 +16,7 @@ define(["require", "exports"], function (require, exports) {
     ServiceSettings.BASE_URL_API_Lotto_Detailes_Statistics_Quote = ServiceSettings.getBaseUrl() + 'api/lotto/statistics/Quote';
     ServiceSettings.BASE_URL_API_Lotto_Detailes_Statistics_Balls = ServiceSettings.getBaseUrl() + 'api/lotto/statistics/Balls';
     ServiceSettings.BASE_URL_API_Changed_WebPage_GetAllSite = ServiceSettings.getBaseUrl() + 'api/ChangedWebPage/GetAllSite';
+    ServiceSettings.BASE_URL_API_Changed_WebPage_AddSite = ServiceSettings.getBaseUrl() + 'api/ChangedWebPage/AddSite/{SiteData}';
     ServiceSettings.BASE_URL_API_FileDispenser_Download = ServiceSettings.getBaseUrl() + 'api/FileDispenser/download';
     ServiceSettings.BASE_URL_API_FileDispenser_Upload = ServiceSettings.getBaseUrl() + 'api/FileDispenser/Upload';
     ServiceSettings.BASE_URL_API_FileDispenser_Files = ServiceSettings.getBaseUrl() + 'api/FileDispenser/Files';

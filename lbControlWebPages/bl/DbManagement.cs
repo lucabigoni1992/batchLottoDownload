@@ -56,9 +56,18 @@ namespace libraryLotto
 
 
         //Site
+        internal static SiteRow _dsSiteData_newRow(SiteInputMapping elem)
+        {
+            SiteRow rows = _DSSiteData.Site.FindByUrl(elem.Url);
+            if (rows != null)
+                return rows;
+             rows= _dsSiteData_newRow();
+           FromInputSiteToRow (elem, ref rows);
+            return rows;
+        }  //Site
         internal static SiteRow _dsSiteData_newRow(string Url)
         {
-            SiteRow rows = _DSSiteData.Site.FindBySite(Url);
+            SiteRow rows = _DSSiteData.Site.FindByUrl(Url);
             if (rows != null)
                 return rows;
             else
@@ -67,7 +76,7 @@ namespace libraryLotto
         internal static SiteRow _dsSiteData_newRow() { return _DSSiteData.Site.NewSiteRow(); }
         internal static void _LottoDs_addRow(SiteRow row)
         {
-            if (_DSSiteData.Site.FindBySite(row.Site) == null)
+            if (_DSSiteData.Site.FindByUrl(row.Url) == null)
             {
                 _DSSiteData.Site.AddSiteRow(row);
                 _DsSiteSave();
@@ -82,9 +91,9 @@ namespace libraryLotto
         {
             var r = new Registry();
             _ = r.Schedule(async () =>
-                              await InteractiveDB.AddUpdateSiteAsync(row.Site, row.CadAggiornamento)
+                              await InteractiveDB.AddUpdateSiteAsync(row.Url, row.Ore)
                             ).ToRunNow()
-                            .AndEvery(row.CadAggiornamento)
+                            .AndEvery(row.Ore)
 #if DEBUG
                             .Minutes();
 # else

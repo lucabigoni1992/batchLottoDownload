@@ -1,3 +1,4 @@
+/// <reference path="../storico-lotto.component.ts" />
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GridDataResult } from '@progress/kendo-angular-grid/dist/es2015/data/data.collection';

@@ -10,14 +10,32 @@ using System.Threading.Tasks;
 using static lbControlWebPages.webPagesData.SiteData;
 using System.Threading;
 using libraryLotto.dlm;
+using static libraryLotto.dlm.KendoResultDataSiteInputMapping;
+using System.Linq;
 
 namespace lbControlWebPages
 {
     public static class InteractiveDB
     {
-        public static IEnumerable<SiteMapping> GetAllSite() {
-   //         AddUpdateSiteAsync("https://acpol2.army.mil/vacancy/vacancy_list.asp", 24);
-            return DbManagement._SiteAllRow();
+        public static KendoSiteInputMapping  GetAllSite()
+        {
+            //         AddUpdateSiteAsync("https://acpol2.army.mil/vacancy/vacancy_list.asp", 24);
+            var siteElems = DbManagement._SiteAllRow();
+            return new KendoSiteInputMapping(siteElems.ToList());
+        }
+        public static bool AddSite(SiteInputMapping elem)
+        {
+            try
+            {
+                SiteRow row = DbManagement._dsSiteData_newRow(elem);
+                DbManagement._LottoDs_addRow(row);
+                DbManagement._SiteAllRow();
+                return true;
+            }
+            catch (Exception EX)
+            {
+                throw EX;
+            }
         }
         public static async Task<bool> AddUpdateSiteAsync(string url, int Htime)
         {
@@ -26,20 +44,20 @@ namespace lbControlWebPages
                 if (String.IsNullOrEmpty(url))
                     return false;
                 SiteRow row = DbManagement._dsSiteData_newRow(url);
-                row.Site = url;
-                row.CadAggiornamento = Htime;
-                if (row.Site.ToLower().CompareTo(@"https://acpol2.army.mil/vacancy/vacancy_list.asp") == 0)
+                row.Url = url;
+                row.Ore = Htime;
+                if (row.Url.ToLower().CompareTo(@"https://acpol2.army.mil/vacancy/vacancy_list.asp") == 0)
                 {
-                    Console.WriteLine("CARICO " + row.Site);
+                    Console.WriteLine("CARICO " + row.Url);
                     var ris = await SendRequestAsync(url, "POST", new Dictionary<string, string> { { "FormAction2", "2" } });
-                    if (row.PreHtml == String.Empty)
-                        row.PreHtml = ElaboraCampDearby(ris);
+                    if (row.PreHTML == String.Empty)
+                        row.PreHTML = ElaboraCampDearby(ris);
                     else
                     {
-                        row.PostHTML = row.PreHtml;
-                        row.PreHtml = ElaboraCampDearby(ris);
+                        row.PostHTML = row.PreHTML;
+                        row.PreHTML = ElaboraCampDearby(ris);
                     }
-                    row.State = (row.PostHTML == row.PreHtml || row.PostHTML != string.Empty) ? true : false;
+                    row.State = (row.PostHTML == row.PreHTML || row.PostHTML != string.Empty) ? true : false;
                 }
                 DbManagement._LottoDs_addRow(row);
 

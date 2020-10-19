@@ -64,35 +64,33 @@ export class ConfrontoSitiComponent extends BehaviorSubject<any> implements OnIn
     public columns: ColumnSetting[] = [
 
         {
-            field: 'azioni',
-            title: 'Azioni',
+            field: 'Url',
+            title: 'Url',
             type: 'text',
             width: '75px'
         },
         {
-            field: 'data',
-            title: 'Data estrazione',
+            field: 'Email',
+            title: 'Email',
             type: 'text',
             width: '150px'
         },
         {
-            field: 'nEstrazione',
-            format: '{0:0}',
-            title: 'Estrazione n°',
+            field: 'Ore',
+            title: 'Ore',
             type: 'numeric',
             width: '120px'
         },
         {
-            field: 'nVincitori',
-            title: 'N°vincitori Montepremi',
-            format: '{0:0}',
-            type: 'numeric',
+            field: 'Tag',
+            title: 'Tag',
+            type: 'text',
             width: '175px'
         },
         {
-            field: 'premio6Punti',
-            title: 'Montepremi',
-            type: 'text',
+            field: 'Active',
+            title: 'Active',
+            type: 'boolean',
             width: '200px'
         }
     ];
@@ -119,15 +117,18 @@ export class ConfrontoSitiComponent extends BehaviorSubject<any> implements OnIn
 
     //modali
 
-    public showAddSite() {
+    public showAddSite(dataitem) {
         var modalRef: NgbModalRef = this.modalService.open(ConfrontoSitiAddRecordComponent,
             {
                 scrollable: true,
                 size: 'xl'
             });
         modalRef.componentInstance.fromParent = {
+            isNew: true,
+            dataitem: dataitem
         };
         modalRef.result.then((result) => {
+            this.ricarica(this.gridState);
             console.log(result);
         });
     }

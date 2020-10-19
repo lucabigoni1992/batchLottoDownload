@@ -27,19 +27,20 @@
     <div class="modal-body">
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <blockquote class="blockquote text-center">
-                <p class="mb-0">In questa Pagina puoi aggiungere un nuovo url da controllare e impostare la notifica </p>
+                <p class="mb-0">In questa Pagina puoi aggiungere un nuovo Url da controllare e impostare la notifica </p>
                 <br />
                 <br />
                 <dl class="row text-left">
                     <!--text-left-->
-                    <dd class="col-sm-3"><cite title="Source Title">Aggiungi l'url</cite></dd>
+                    <dd class="col-sm-3"><cite title="Source Title">Aggiungi l'Url</cite></dd>
                     <dd class="col-sm-2"></dd>
                     <dd class="col-sm-7">
                         <div class="form-group">
-                            <input type="url" formControlName="url" class="form-control" (change)="onControl()" [ngClass]="{ 'is-invalid':f.url.dirty && f.url.errors }" />
-                            <div *ngIf="submitted && f.url.errors" class="invalid-feedback">
-                                <div *ngIf="f.url.errors.required">l'url è essenziale</div>
+                            <input type="Url" formControlName="Url" class="form-control"  [ngClass]="{ 'is-invalid':f.Url.dirty && f.Url.errors }" />
+                            <div *ngIf="f.Url.dirty && f.Url.errors" class="invalid-feedback">
+                                <div *ngIf="f.Url.errors.required">l'Url è essenziale</div>
                             </div>
+                            <small id="EmailHelp" class="form-text text-muted"></small>
                         </div>
                     </dd>
 
@@ -47,39 +48,41 @@
                     <dd class="col-sm-2"></dd>
                     <dd class="col-sm-7">
                         <div class="form-group">
-                            <input type="text"  formControlName="email" class="form-control" [ngClass]="{ 'is-invalid':f.email.dirty &&  f.email.errors }" />
-                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                                <div *ngIf="f.email.errors.required">Il l'email è obligatoria</div>
-                                <div *ngIf="f.email.errors.email">Il l'email è obligatoria</div>
+                            <input type="text" formControlName="Email" class="form-control" [ngClass]="{ 'is-invalid':f.Email.dirty &&  f.Email.errors }" />
+                            <div *ngIf="f.Email.dirty && f.Email.errors" class="invalid-feedback">
+                                <div *ngIf="f.Email.errors.required">Il l'Email è obligatoria</div>
+                                <div *ngIf="f.Email.errors.Email">Il l'Email è obligatoria</div>
                             </div>
-                            <small id="emailHelp" class="form-text text-muted">Insserisci l'Email a cui notificare</small>
-
+                            <small id="EmailHelp" class="form-text text-muted">Insserisci l'Email a cui notificare</small>
                         </div>
                     </dd>
                     <dd class="col-sm-3"><cite title="Source Title">Ogni quanto controllare </cite></dd>
-                    <dd class="col-sm-2">(ore)</dd>
+                    <dd class="col-sm-2">(Ore)</dd>
                     <dd class="col-sm-7">
                         <div class="form-group">
-                            <input type="number" min="12" formControlName="ore" class="form-control" [ngClass]="{ 'is-invalid':f.ore.dirty &&  f.ore.errors }" />
-                            <div *ngIf="submitted && f.ore.errors" class="invalid-feedback">
-                                <div *ngIf="f.ore.errors.required">Il numero di ore è obligatorio</div>
+                            <input type="number" min="12" formControlName="Ore" class="form-control" [ngClass]="{ 'is-invalid':f.Ore.dirty &&  f.Ore.errors }" />
+                            <div *ngIf="f.Ore.dirty  && f.Ore.errors" class="invalid-feedback">
+                                <div *ngIf="f.Ore.errors.required">Il numero di Ore è obligatorio</div>
                             </div>
-                            <small id="HHHelp" class="form-text text-muted">Ogni quanto verrà effettuato il controllo del sito in questione (in ore)</small>
+                            <small id="HHHelp" class="form-text text-muted">Ogni quanto verrà effettuato il controllo del sito in questione (in Ore)</small>
                         </div>
                     </dd>
-                    <dd class="col-sm-3"><cite title="Source Title">effettuare il controllo nel tag </cite></dd>
+                    <dd class="col-sm-3"><cite title="Source Title">effettuare il controllo nel Tag </cite></dd>
                     <dd class="col-sm-2">(opzionale)</dd>
                     <dd class="col-sm-7">
                         <div class="form-group">
-                            <input type="text" formControlName="tag" class="form-control"  />
- 
-                            <small id="emailHelp" class="form-text text-muted">Tag da controllare (opzionale)< body > < / body > </small>
+                            <input type="text" formControlName="Tag" class="form-control" />
+                            <small id="EmailHelp" class="form-text text-muted">Tag da controllare (opzionale)< body > < / body > </small>
                         </div>
                     </dd>
-
+                    <dd class="col-sm-3"><cite title="Source Title">Attivo</cite></dd>
+                    <dd class="col-sm-2"></dd>
+                    <dd class="col-sm-7">
+                        <div class="form-group">
+                            <input type="checkbox" formControlName="Active" id="Active" class="form-check-input" />
+                        </div>
+                    </dd>
                 </dl>
-                <button class="btn btn-primary mr-1">Register</button>
-
             </blockquote>
         </form>
     </div>

@@ -12,14 +12,17 @@
   <xs:element name="SiteData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SiteData" msprop:Generator_UserDSName="SiteData">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Site" msprop:Generator_TableClassName="SiteDataTable" msprop:Generator_TableVarName="tableSite" msprop:Generator_RowChangedName="SiteRowChanged" msprop:Generator_TablePropName="Site" msprop:Generator_RowDeletingName="SiteRowDeleting" msprop:Generator_RowChangingName="SiteRowChanging" msprop:Generator_RowEvHandlerName="SiteRowChangeEventHandler" msprop:Generator_RowDeletedName="SiteRowDeleted" msprop:Generator_RowClassName="SiteRow" msprop:Generator_UserTableName="Site" msprop:Generator_RowEvArgName="SiteRowChangeEvent">
+        <xs:element name="Site" msprop:Generator_TableClassName="SiteDataTable" msprop:Generator_TableVarName="tableSite" msprop:Generator_TablePropName="Site" msprop:Generator_RowDeletingName="SiteRowDeleting" msprop:Generator_RowChangingName="SiteRowChanging" msprop:Generator_RowEvHandlerName="SiteRowChangeEventHandler" msprop:Generator_RowDeletedName="SiteRowDeleted" msprop:Generator_UserTableName="Site" msprop:Generator_RowChangedName="SiteRowChanged" msprop:Generator_RowEvArgName="SiteRowChangeEvent" msprop:Generator_RowClassName="SiteRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Site" msprop:Generator_ColumnVarNameInTable="columnSite" msprop:Generator_ColumnPropNameInRow="Site" msprop:Generator_ColumnPropNameInTable="SiteColumn" msprop:Generator_UserColumnName="Site" type="xs:string" />
+              <xs:element name="Url" msprop:Generator_ColumnVarNameInTable="columnUrl" msprop:Generator_ColumnPropNameInRow="Url" msprop:Generator_ColumnPropNameInTable="UrlColumn" msprop:Generator_UserColumnName="Url" type="xs:string" />
               <xs:element name="State" msprop:Generator_ColumnVarNameInTable="columnState" msprop:Generator_ColumnPropNameInRow="State" msprop:Generator_ColumnPropNameInTable="StateColumn" msprop:Generator_UserColumnName="State" type="xs:boolean" minOccurs="0" />
-              <xs:element name="PeHTML" msprop:Generator_ColumnVarNameInTable="columnPeHTML" msprop:Generator_ColumnPropNameInRow="PeHTML" msprop:Generator_ColumnPropNameInTable="PeHTMLColumn" msprop:Generator_UserColumnName="PeHTML" type="xs:string" minOccurs="0" />
+              <xs:element name="PreHTML" msprop:Generator_ColumnVarNameInTable="columnPreHTML" msprop:Generator_ColumnPropNameInRow="PreHTML" msprop:Generator_ColumnPropNameInTable="PreHTMLColumn" msprop:Generator_UserColumnName="PreHTML" type="xs:string" minOccurs="0" />
               <xs:element name="PostHTML" msprop:Generator_ColumnVarNameInTable="columnPostHTML" msprop:Generator_ColumnPropNameInRow="PostHTML" msprop:Generator_ColumnPropNameInTable="PostHTMLColumn" msprop:Generator_UserColumnName="PostHTML" type="xs:string" minOccurs="0" />
-              <xs:element name="CadAggiornamento" msprop:Generator_ColumnVarNameInTable="columnCadAggiornamento" msprop:Generator_ColumnPropNameInRow="CadAggiornamento" msprop:Generator_ColumnPropNameInTable="CadAggiornamentoColumn" msprop:Generator_UserColumnName="CadAggiornamento" type="xs:int" minOccurs="0" />
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" type="xs:string" minOccurs="0" />
+              <xs:element name="Ore" msprop:Generator_ColumnVarNameInTable="columnOre" msprop:Generator_ColumnPropNameInRow="Ore" msprop:Generator_ColumnPropNameInTable="OreColumn" msprop:Generator_UserColumnName="Ore" type="xs:int" minOccurs="0" />
+              <xs:element name="Tag" msprop:Generator_ColumnVarNameInTable="columnTag" msprop:Generator_ColumnPropNameInRow="Tag" msprop:Generator_ColumnPropNameInTable="TagColumn" msprop:Generator_UserColumnName="Tag" type="xs:string" minOccurs="0" />
+              <xs:element name="Active" msprop:Generator_ColumnVarNameInTable="columnActive" msprop:Generator_ColumnPropNameInRow="Active" msprop:Generator_ColumnPropNameInTable="ActiveColumn" msprop:Generator_UserColumnName="Active" type="xs:unsignedByte" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -27,7 +30,7 @@
     </xs:complexType>
     <xs:unique name="Constraint2" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Site" />
-      <xs:field xpath="mstns:Site" />
+      <xs:field xpath="mstns:Url" />
     </xs:unique>
   </xs:element>
 </xs:schema>
