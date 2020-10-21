@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, BehaviorSubject } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
@@ -8,10 +8,12 @@ import { Data } from 'popper.js';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { GridDataResult } from '@progress/kendo-angular-grid/dist/es2015/data/data.collection';
 
-
+const headers = new HttpHeaders()
+    .set("Content-Type", "application/json");
 @Injectable()
 export class ConfrontositiGridDataService extends BehaviorSubject<any> {
- 
+
+
     constructor(private http: HttpClient) {
         super(null);
     }
@@ -33,6 +35,17 @@ export class ConfrontositiGridDataService extends BehaviorSubject<any> {
                 map(response => (<any>{
                     data: response['results'],
                 })),
+                tap()
+            );
+    }
+    public azione(azione: number, url: string): Observable<any> {
+
+        return this.http.put(ServiceSettings.BASE_URL_API_Changed_WebPage_ChangeSite,
+            JSON.stringify({ Action: azione, url: url }),
+            { headers })
+            .pipe(map(response => (<any>{
+              //  data: response['results'],
+            })),
                 tap()
             );
     }

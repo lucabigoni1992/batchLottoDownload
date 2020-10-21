@@ -66,6 +66,22 @@ namespace LottoWeb.ClientApp
                 return BadRequest(ex.ToString());
             };//in un ambiante professionale si deve gestire meglio
         }
+        [HttpPut]
+        [Route("ChangeSite")]
+        public IActionResult ChangeSite([FromBody] SiteActionMapping dataAction)
+        {
+            try
+            {
+                // return JsonConvert.SerializeObject(InteractiveDB.GetAllSite());
+        //        SiteActionMapping newElem = JsonConvert.DeserializeObject<SiteActionMapping>(dataAction);
+                return Ok(InteractiveDB.ChangeSite(dataAction));
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.ToString());
+                return BadRequest(ex.ToString());
+            };//in un ambiante professionale si deve gestire meglio
+        }
 
     }
 }

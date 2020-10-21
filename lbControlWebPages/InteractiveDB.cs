@@ -37,10 +37,26 @@ namespace lbControlWebPages
                 throw EX;
             }
         }
+        public static bool ChangeSite(SiteActionMapping elem)
+        {
+            try
+            {
+                if (elem.Action == siteAction.delete)
+                     DbManagement._dsSiteData_deleteRow(elem.Url);
+                else if (elem.Action == siteAction.disable)
+                     DbManagement._dsSiteData_disableRow(elem.Url);
+                return true;
+            }
+            catch (Exception EX)
+            {
+                throw EX;
+            }
+        }
         public static async Task<bool> AddUpdateSiteAsync(string url, int Htime)
         {
             try
             {
+                return true;
                 if (String.IsNullOrEmpty(url))
                     return false;
                 SiteRow row = DbManagement._dsSiteData_newRow(url);

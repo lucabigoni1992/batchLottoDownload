@@ -56,12 +56,12 @@
                        width="{{column.width}}" class="overflow-column">
         <ng-template kendoGridCellTemplate let-dataItem="dataItem" let-rowIndex="rowIndex" let-columnIndex="columnIndex">
 
-            <!--<div *ngIf="columnIndex==0; then thenBlock else elseBlock"></div>
+            <div *ngIf="columnIndex==0; then thenBlock else elseBlock"></div>
             <ng-template #thenBlock>
                 <ng-container *ngTemplateOutlet="estimateTemplate; context: { dt: dataItem}">
                 </ng-container>
             </ng-template>
-            <ng-template #elseBlock>-->
+            <ng-template #elseBlock>
                 <div [ngSwitch]="column.field">
                     <!--<div *ngSwitchCase="'premio6Punti'">
                         <strong>{{dataItem.premio6Punti}}</strong>
@@ -74,13 +74,13 @@
                     </div>
                 </div>
             </ng-template>
-        <!--</ng-template>-->
+        </ng-template>
     </kendo-grid-column>
 </kendo-grid>
 <div *ngIf="loading" class="k-i-loading"></div>
 
 
-<!--<ng-template kendoGridCellTemplate #estimateTemplate id="estimateTemplate" let-dataItem="dt">
+<ng-template kendoGridCellTemplate #estimateTemplate id="estimateTemplate" let-dataItem="dt">
     <div class="btn-group dropright position-static">
         <button kendoButton class="dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [primary]="true">
             <span>...</span>
@@ -88,17 +88,17 @@
         <div class="dropdown-menu" role="menu">
             <div class="dropdown-divider"></div>
             <span class="dropdown-item active border border-secondary rounded" style="margin-top: -8px;">
-                Menu Estrazione {{dataItem.nEstrazione}}
+                Menu
             </span>
-            <button (click)="modaleNumeri(dataItem)" class="dropdown-item">
+            <button (click)="azioneSito(0, dataItem)" class="dropdown-item">
                 <fa name="angle-right"></fa>
-                Numeri usciti
+                Elimina
             </button>
-            <button (click)="modaleVincite(dataItem)" class="dropdown-item">
+            <button (click)="azioneSito(1, dataItem)" class="dropdown-item">
                 <fa name="angle-right"></fa>
-                Dati delle Vincite
+                Disabilita/Abilita
             </button>
 
         </div>
     </div>
-</ng-template>-->
+</ng-template>

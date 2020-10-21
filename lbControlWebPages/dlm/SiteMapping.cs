@@ -8,8 +8,19 @@ using static lbControlWebPages.webPagesData.SiteData;
 
 namespace libraryLotto.dlm
 {
-    public class SiteInputMapping{
-        
+    public enum siteAction
+    {
+        delete=0,
+        disable=1
+    }
+    public class SiteActionMapping
+    {
+        public string Url { get; set; }
+        public siteAction Action { get; set; }
+
+    }
+    public class SiteInputMapping
+    {
 
         public string Url { get; set; }
         public string Email { get; set; }
@@ -19,7 +30,7 @@ namespace libraryLotto.dlm
 
     }
 
-    public class SiteMapping: SiteInputMapping
+    public class SiteMapping : SiteInputMapping
     {
         public bool State { get; set; }
         public string PreHtml { get; set; }
@@ -28,19 +39,19 @@ namespace libraryLotto.dlm
         public SiteMapping(SiteRow tablotto)
         {
             Url = tablotto.Url;
-            State =tablotto.IsStateNull()?false: tablotto.State;
+            State = tablotto.IsStateNull() ? false : tablotto.State;
             PreHtml = tablotto.IsPreHTMLNull() ? "" : tablotto.PreHTML;
-            PostHTML = tablotto.IsPostHTMLNull() ? "" : tablotto.PostHTML; 
+            PostHTML = tablotto.IsPostHTMLNull() ? "" : tablotto.PostHTML;
             Email = tablotto.IsEmailNull() ? "luca.bigoni@live.it" : tablotto.Email;
             Ore = tablotto.Ore;
             Tag = tablotto.IsTagNull() ? "" : tablotto.Tag;
-            Active = tablotto.IsActiveNull()?false: tablotto.Active == 1;
-            
+            Active = tablotto.IsActiveNull() ? false : tablotto.Active == 1;
+
         }
-  
-        static public void  FromInputSiteToRow(SiteInputMapping elem,ref SiteRow row)
+
+        static public void FromInputSiteToRow(SiteInputMapping elem, ref SiteRow row)
         {
-            row. Url = elem.Url;
+            row.Url = elem.Url;
             row.Email = elem.Email;
             row.Ore = elem.Ore;
             row.Tag = elem.Tag;

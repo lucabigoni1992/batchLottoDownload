@@ -8,6 +8,7 @@ import { tap } from 'rxjs/internal/operators/tap';
 import { BehaviorSubject } from 'rxjs';
 import { ConfrontositiGridDataService } from './service/confronto-siti-GridData.service';
 import { ConfrontoSitiAddRecordComponent } from './modali/directive/confrontoSitiAddRecord.component';
+import { NumericFilterCellComponent } from '@progress/kendo-angular-grid';
 
 interface ColumnSetting {
     field: string,
@@ -62,7 +63,12 @@ export class ConfrontoSitiComponent extends BehaviorSubject<any> implements OnIn
         group: []
     };
     public columns: ColumnSetting[] = [
-
+        {
+            field: 'azioni',
+            title: 'Azioni',
+            type: 'text',
+            width: '75px'
+        },
         {
             field: 'Url',
             title: 'Url',
@@ -114,6 +120,21 @@ export class ConfrontoSitiComponent extends BehaviorSubject<any> implements OnIn
                 this.loading = false;
             });
     }
+
+    public azioneSito(azione: number, dataitem: any) {
+        this.loading = true;
+        this.dataService.azione(azione, dataitem.Url)
+            .pipe(
+                tap(data => {
+                  //  this.view = data;
+                })
+            )
+            .subscribe(data => {
+                this.ricarica(this.gridState);
+                this.loading = false;
+            });
+    }
+
 
     //modali
 

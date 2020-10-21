@@ -66,6 +66,11 @@ export class ConfrontoSitiAddRecordComponent implements OnInit {
 
         // stop here if form is invalid
         if (this.registerForm.invalid) {
+
+            var c = this.registerForm.controls;
+            if (c.Url.errors) c.Url.markAsDirty();
+            if (c.Email.errors) c.Email.markAsDirty();
+            if (c.Ore.errors) c.Ore.markAsDirty();
             return;
         }
         this.loading = 1;
@@ -76,10 +81,11 @@ export class ConfrontoSitiAddRecordComponent implements OnInit {
             )
             .subscribe(data => {
                 this.loading = 2;
+                this.activeModal.close();
             });
 
         // display form values on success
-        alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+    //    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
     }
 
     onReset() {

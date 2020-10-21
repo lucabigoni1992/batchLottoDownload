@@ -45,6 +45,7 @@ namespace libraryLotto
             _DSSiteData.WriteXml(fileDsName);
             _DSSiteData.AcceptChanges();
         }
+            
         internal static void _DsSiteLoad()
         {
             if (System.IO.File.Exists(fileDsName))
@@ -82,6 +83,21 @@ namespace libraryLotto
                 _DsSiteSave();
                 addSchedule(row);
             }
+        }
+        internal static void _dsSiteData_disableRow(string url)
+        {
+            if (_DSSiteData.Site.FindByUrl(url) != null)
+            {
+                var row = _DSSiteData.Site.FindByUrl(url);
+                row.Active = (byte)(row.Active == 0 ? 1 : 0);
+            }
+        }
+
+        internal static void _dsSiteData_deleteRow(string url)
+        {
+            if (_DSSiteData.Site.FindByUrl(url) != null)
+                _DSSiteData.Site.RemoveSiteRow(_DSSiteData.Site.FindByUrl(url));
+            _DSSiteData.Site.AcceptChanges();
         }
         internal static SiteDataTable _Site() { return _DSSiteData.Site; }
 
