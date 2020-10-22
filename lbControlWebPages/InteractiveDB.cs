@@ -52,21 +52,20 @@ namespace lbControlWebPages
                 throw EX;
             }
         }
-        public static async Task<bool> AddUpdateSiteAsync(string url, int Htime)
+        public static async Task<bool> AddUpdateSiteAsync(SiteRow row)
         {
             try
             {
-                return true;
-                if (String.IsNullOrEmpty(url))
+                //      return true;
+                if (row.Active==0) 
                     return false;
-                SiteRow row = DbManagement._dsSiteData_newRow(url);
-                row.Url = url;
-                row.Ore = Htime;
+                if (String.IsNullOrEmpty(row.Url))
+                    return false;
                 if (row.Url.ToLower().CompareTo(@"https://acpol2.army.mil/vacancy/vacancy_list.asp") == 0)
                 {
                     Console.WriteLine("CARICO " + row.Url);
-                    var ris = await SendRequestAsync(url, "POST", new Dictionary<string, string> { { "FormAction2", "2" } });
-                    if (row.PreHTML == String.Empty)
+                    var ris = await SendRequestAsync(row.Url, "POST", new Dictionary<string, string> { { "FormAction2", "2" } });
+                    if (row.IsPreHTMLNull() || row.PreHTML == String.Empty)
                         row.PreHTML = ElaboraCampDearby(ris);
                     else
                     {
@@ -75,7 +74,22 @@ namespace lbControlWebPages
                     }
                     row.State = (row.PostHTML == row.PreHTML || row.PostHTML != string.Empty) ? true : false;
                 }
-                DbManagement._LottoDs_addRow(row);
+                else {
+                    Console.WriteLine("CARICO " + row.Url);
+                    var ris = await SendRequestAsync(row.Url, "GET", new Dictionary<string, string> { { "FormAction2", "2" } });
+                    if (row.IsPreHTMLNull()|| row.PreHTML == String.Empty) 
+                        row.PreHTML = ElaboraByTag(ris,row.Tag);                        
+                    else
+                    {
+                        row.PostHTML = row.PreHTML;
+                        row.PreHTML = ElaboraByTag(ris, row.Tag);
+                        if (row.PostHTML != row.PreHTML) {
+                            //send mail
+                         Mail.   SendMessage( row);
+                        }
+                    }
+
+                }
 
                 return true;
             }
@@ -84,12 +98,31 @@ namespace lbControlWebPages
                 return false;
             }
         }
+       
+
+        private static string ElaboraByTag(string ris,string tag)
+        {
+            HtmlDocument doc = new HtmlDocument();
+            doc.LoadHtml(ris);
+
+            if (string.IsNullOrEmpty(tag))
+                tag = "body";
+            else
+                tag.Replace("<", "").Replace(">", "");
+            var postcd = doc.DocumentNode.SelectNodes($"//{tag}");
+            if (postcd != null)
+                return postcd[0].InnerHtml;
+            else return "";
+        }
 
         private static string ElaboraCampDearby(string ris)
         {
             HtmlDocument doc = new HtmlDocument();
             doc.LoadHtml(ris);
-            return doc.DocumentNode.SelectNodes("//form[contains(@method,'POST')]")[0].InnerHtml;
+            var postcd = doc.DocumentNode.SelectNodes("//form[contains(@method,'POST')]");
+            if (postcd!=null)
+            return postcd[0].InnerHtml;
+            else return "";
         }
 
         private static readonly HttpClient client = new HttpClient();
@@ -99,14 +132,18 @@ namespace lbControlWebPages
             try
             {
                 var content = new FormUrlEncodedContent(Data);
-                var response = client.PostAsync(url, content).Result;
+                HttpResponseMessage response=null;
+                if (Method == "POST")
+                    response = client.PostAsync(url, content).Result;
+                if (Method == "GET")
+                    response = client.GetAsync(url).Result;
 
                 return await response.Content.ReadAsStringAsync();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
-                return "";
+                throw ex;
             }
         }
     }

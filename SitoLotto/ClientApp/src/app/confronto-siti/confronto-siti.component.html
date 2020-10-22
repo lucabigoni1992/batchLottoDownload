@@ -28,17 +28,17 @@
     }
 </style>
 
-<h1>NOTIFICHE Web</h1>
+<h1>NOTIFICATIONS Web</h1>
 
-<p>Benvenuto nella pagina di gestione NOTIFICHE Web</p>
+<p>Welcome to the web NOTIFICATIONS management page</p>
 <p>
-    Questa pagina mi serve per avere degli aggiornamenti su quando una pagina Web subisce modifiche.
-    Vengono schaduleti dei BGW che ogni N° ore controllano una parte di una pagina Web e mi inviano notifiche
+    I need this page to get updates on when a web page changes.
+    BGW schaduleti come who every N ° hours check a part of a Web page and send me notifications.
 </p>
 
 <button kendoButton class="dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [primary]="true" (click)="showAddSite()">
     <fa name="cog" animation="spin" style="margin-right: 9px;"> </fa>
-    Aggiungi sito
+    Add Site
 </button>
 
 <kendo-grid [data]="view"
@@ -92,11 +92,11 @@
             </span>
             <button (click)="azioneSito(0, dataItem)" class="dropdown-item">
                 <fa name="angle-right"></fa>
-                Elimina
+                Delete
             </button>
             <button (click)="azioneSito(1, dataItem)" class="dropdown-item">
                 <fa name="angle-right"></fa>
-                Disabilita/Abilita
+                Disable/Enable
             </button>
 
         </div>

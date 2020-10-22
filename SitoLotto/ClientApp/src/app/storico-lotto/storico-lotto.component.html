@@ -28,25 +28,25 @@
     }
 </style>
 
-<h1>Gioco del Super EnalottoLotto</h1>
+<h1>Game of 'Super EnalottoLotto'</h1>
 
-<p>Benvenuto nella pagina dove potrai vedere lo storico dell'estrazioni dell'lotto.</p>
+<p>Welcome to the page where you can see the history of the 'Super EnalottoLotto'.</p>
 <p>
-    Questa pagina è <strong>ottimizzata Server Side </strong> il server passa al client solamente i dati che si visualizzano e il numero totale di record.
-    Inoltre i dati elaborati sono in Cache sul server e tramite funzioni Link Q quangono estrapolati e passati tramite Json al Client.
-    La cache del server viene aggiornata in 2 momenti
+    This page is <strong> optimized Server Side </strong> the server passes to the client only the data that is displayed and the total number of records.
+    In addition, the processed data are in Cache on the server and through Link Q functions when they are extrapolated and passed through Json to the Client.
+    The server cache is updated in 2 moments
 </p>
 <ul>
     <li>
-        <p>All'avvio del sito</p>
+        <p>At the start of the site</p>
     </li>
     <li>
-        <p>Ogni 24 ore caricando i dati mancanti</p>
+        <p>Every 24 hours by uploading missing data</p>
     </li>
 </ul>
 <button kendoButton class="dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [primary]="true" (click)="showStatistics()">
     <fa name="cog" animation="spin" style="margin-right: 9px;"> </fa>
-    Statistiche
+    Statistics
 </button>
 
 <kendo-grid [data]="view"
@@ -96,15 +96,15 @@
         <div class="dropdown-menu" role="menu">
             <div class="dropdown-divider"></div>
             <span class="dropdown-item active border border-secondary rounded" style="margin-top: -8px;">
-                Menu Estrazione {{dataItem.nEstrazione}}
+                Menu  {{dataItem.nEstrazione}}
             </span>
             <button (click)="modaleNumeri(dataItem)" class="dropdown-item">
                 <fa name="angle-right"></fa>
-                Numeri usciti
+                Exit Number
             </button>
             <button (click)="modaleVincite(dataItem)" class="dropdown-item">
                 <fa name="angle-right"></fa>
-                Dati delle Vincite
+               Data winner 
             </button>
         </div>
     </div>

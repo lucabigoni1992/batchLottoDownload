@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Data;
 using lbControlWebPages;
+using lbControlWebPages.webPagesData;
 
 namespace TestLibrerie
 {
@@ -17,8 +18,7 @@ namespace TestLibrerie
         [TestMethod("TEST LIBRERIA CONTROL WEB PAGES-addRecord")]
         public void addRecord()
         {
-            InteractiveDB.AddUpdateSiteAsync(@"https://acpol2.army.mil/vacancy/vacancy_list.asp", 12);
-
+           
 
 
         }

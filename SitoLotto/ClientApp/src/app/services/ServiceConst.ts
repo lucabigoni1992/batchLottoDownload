@@ -13,7 +13,7 @@ export class ServiceSettings {
     public static BASE_URL_API_Lotto_Detailes_Statistics_Quote = ServiceSettings.getBaseUrl() + 'api/lotto/statistics/Quote';
     public static BASE_URL_API_Lotto_Detailes_Statistics_Balls = ServiceSettings.getBaseUrl() + 'api/lotto/statistics/Balls';
     public static BASE_URL_API_Changed_WebPage_GetAllSite = ServiceSettings.getBaseUrl() + 'api/ChangedWebPage/GetAllSite';
-    public static BASE_URL_API_Changed_WebPage_AddSite = ServiceSettings.getBaseUrl() + 'api/ChangedWebPage/AddSite/{SiteData}';
+    public static BASE_URL_API_Changed_WebPage_AddSite = ServiceSettings.getBaseUrl() + 'api/ChangedWebPage/AddSite';
     public static BASE_URL_API_Changed_WebPage_ChangeSite = ServiceSettings.getBaseUrl() + 'api/ChangedWebPage/ChangeSite';
     public static BASE_URL_API_FileDispenser_Download = ServiceSettings.getBaseUrl() + 'api/FileDispenser/download';
     public static BASE_URL_API_FileDispenser_Upload = ServiceSettings.getBaseUrl() + 'api/FileDispenser/Upload';

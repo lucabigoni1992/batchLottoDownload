@@ -44,6 +44,8 @@ namespace libraryLotto
                 List<LottoPalleRow> palle = new List<LottoPalleRow>();
                 LottoRow row = Variabili._LottoDs_newRow();
                 HtmlNodeCollection nodesAll = doc.DocumentNode.SelectNodes(@"(//a[contains(@href,'/risultati/estrazione')]|//td[@class='ball-24px']|//td[@class='superstar-24px']|//td[@class='jolly-24px'])"); //dal 28 marzo 2006
+                if (nodesAll == null)
+                    continue;
                 for (int nc = nodesAll.Count - 1; nc != 0; nc--)// parto all'incontrario per un fattore d'indice
                 {
                     HtmlNode node = nodesAll[nc];

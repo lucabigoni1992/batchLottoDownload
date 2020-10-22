@@ -50,15 +50,15 @@ namespace LottoWeb.ClientApp
                 return "";
             };//in un ambiante professionale si deve gestire meglio
         }
-        [HttpGet]
-        [Route("AddSite/{SiteData}")]
-        public IActionResult AddSite(string SiteData)
+        [HttpPost]
+        [Route("AddSite")]
+        public IActionResult AddSite([FromBody] SiteInputMapping dataAction )
         {
             try
             {
                 // return JsonConvert.SerializeObject(InteractiveDB.GetAllSite());
-                SiteInputMapping newElem = JsonConvert.DeserializeObject<SiteInputMapping>(SiteData);
-                return Ok(InteractiveDB.AddSite(newElem));
+      //          SiteInputMapping newElem = JsonConvert.DeserializeObject<SiteInputMapping>(SiteData);
+                return Ok(InteractiveDB.AddSite(dataAction));
             }
             catch (Exception ex)
             {

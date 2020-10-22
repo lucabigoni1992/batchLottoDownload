@@ -42,7 +42,7 @@ export class ConfrontoSitiAddRecordComponent implements OnInit {
             Url: ['', Validators.required],
             //Validators.pattern("^\d{1,4}$") // wrong
             Email: ['luca.bigoni@live.it', [Validators.required, Validators.pattern("^[\\w-\.]+@([\\w-]+\\.)+[\\w-]{2,4}$")]],
-            Ore: ['24', Validators.min(12)],
+            Ore: [24, Validators.min(12)],
             Tag: [''],
             Active: [this.fromParent.isNew ? true: this.fromParent.dataitem.acceptTerms, Validators.requiredTrue]
            

@@ -17,9 +17,9 @@ namespace prove
         static Registry Scheduler = new Registry();
         public Form1()
         {
-            InitializeComponent();
-            _ =  InteractiveDB.AddUpdateSiteAsync(@"https://acpol2.army.mil/vacancy/vacancy_list.asp", 12);
-
+           /* InitializeComponent();
+            _ = InteractiveDB.AddUpdateSiteAsync(@"https://acpol2.army.mil/vacancy/vacancy_list.asp", 12);
+           */
         }
 
     }

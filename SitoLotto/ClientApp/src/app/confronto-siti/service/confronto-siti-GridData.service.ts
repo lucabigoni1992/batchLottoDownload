@@ -29,8 +29,10 @@ export class ConfrontositiGridDataService extends BehaviorSubject<any> {
             );
     }
     public add(data: FormGroup): Observable<any> {
-
-        return this.http.get(ServiceSettings.BASE_URL_API_Changed_WebPage_AddSite.replace("{SiteData}", JSON.stringify(data.value)))
+        var values = data.value;
+        return this.http.post(ServiceSettings.BASE_URL_API_Changed_WebPage_AddSite,
+            JSON.stringify( values ),
+            { headers })
             .pipe(
                 map(response => (<any>{
                     data: response['results'],

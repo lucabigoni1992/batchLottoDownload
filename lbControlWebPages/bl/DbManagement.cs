@@ -107,7 +107,7 @@ namespace libraryLotto
         {
             var r = new Registry();
             _ = r.Schedule(async () =>
-                              await InteractiveDB.AddUpdateSiteAsync(row.Url, row.Ore)
+                              await InteractiveDB.AddUpdateSiteAsync(row)
                             ).ToRunNow()
                             .AndEvery(row.Ore)
 #if DEBUG

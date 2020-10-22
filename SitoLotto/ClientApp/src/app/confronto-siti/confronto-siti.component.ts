@@ -67,13 +67,13 @@ export class ConfrontoSitiComponent extends BehaviorSubject<any> implements OnIn
             field: 'azioni',
             title: 'Azioni',
             type: 'text',
-            width: '75px'
+            width: '50px'
         },
         {
             field: 'Url',
             title: 'Url',
             type: 'text',
-            width: '75px'
+            width: '325px'
         },
         {
             field: 'Email',
@@ -91,13 +91,13 @@ export class ConfrontoSitiComponent extends BehaviorSubject<any> implements OnIn
             field: 'Tag',
             title: 'Tag',
             type: 'text',
-            width: '175px'
+            width: '75px'
         },
         {
             field: 'Active',
             title: 'Active',
             type: 'boolean',
-            width: '200px'
+            width: '75px'
         }
     ];
 
