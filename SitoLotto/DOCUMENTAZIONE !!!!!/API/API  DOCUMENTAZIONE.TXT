@@ -1,11 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace SitoLotto.DOCUMENTAZIONE______.API
-{
-    public class API__DOCUMENTAZIONE
-    {
-    }
-}
+﻿Run your project and then in a browser navigate to your base URL /swagger.
+For example my for my project that is https://localhost:5001/swagger.
+You should see something like the following that will let you explore your API and even execute requests against your API using the Try it out button you see in the UI.

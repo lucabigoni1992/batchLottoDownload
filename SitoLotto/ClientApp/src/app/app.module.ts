@@ -32,8 +32,10 @@ import { LottoDatiStatisticsComponent } from './storico-lotto/modali/directive/L
 import { ProgressBarConfigurableModule } from './Components/ProgressBarr/progressBarConfigurable.component';
 import { InternalClassModule } from './app.module.class';
 import { MaterialModule } from './app.module.material';
-
-
+import { ConfrontositiGridDataService } from './confronto-siti/service/confronto-siti-GridData.service';
+import { ConfrontoSitiComponent } from './confronto-siti/confronto-siti.component';
+import { ConfrontoSitiAddRecordComponent } from './confronto-siti/modali/directive/confrontoSitiAddRecord.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -52,10 +54,13 @@ import { MaterialModule } from './app.module.material';
         DownloadComponent,
         DownloadAndMadeExcelModule,
         ProgressBarConfigurableModule,
-        AlertErrorComponent
+        AlertErrorComponent,
+        ConfrontoSitiComponent,
+        ConfrontoSitiAddRecordComponent
 
     ],
     imports: [
+        ReactiveFormsModule,
         BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
         HttpClientModule,
         FormsModule,
@@ -63,6 +68,7 @@ import { MaterialModule } from './app.module.material';
             { path: '', component: HomeComponent, pathMatch: 'full' },
             { path: 'testModali', component: testModaliComponent },
             { path: 'fetch-data', component: FetchDataComponent },
+            { path: 'confronto-siti', component: ConfrontoSitiComponent },
             { path: 'storico-lotto', component: StoricoLottoComponent }
         ]),
         ButtonsModule,
@@ -77,8 +83,8 @@ import { MaterialModule } from './app.module.material';
         MaterialModule,
         InternalClassModule
     ],
-    entryComponents: [LottoDatiEstrazioneComponent, LottoDatiVinciteComponent, LottoDatiStatisticsComponent, AlertErrorComponent],
-    providers: [kendoGridDataService, GenericLottoDataService, UploadDownloadService],
+    entryComponents: [LottoDatiEstrazioneComponent, LottoDatiVinciteComponent, LottoDatiStatisticsComponent, AlertErrorComponent, ConfrontoSitiAddRecordComponent],
+    providers: [kendoGridDataService, GenericLottoDataService, UploadDownloadService, ConfrontositiGridDataService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

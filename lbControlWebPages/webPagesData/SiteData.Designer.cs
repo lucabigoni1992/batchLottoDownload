@@ -279,17 +279,21 @@ namespace lbControlWebPages.webPagesData {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class SiteDataTable : global::System.Data.TypedTableBase<SiteRow> {
             
-            private global::System.Data.DataColumn columnid;
-            
-            private global::System.Data.DataColumn columnSite;
+            private global::System.Data.DataColumn columnUrl;
             
             private global::System.Data.DataColumn columnState;
             
-            private global::System.Data.DataColumn columnPeHTML;
+            private global::System.Data.DataColumn columnPreHTML;
             
             private global::System.Data.DataColumn columnPostHTML;
             
-            private global::System.Data.DataColumn columnCadAggiornamento;
+            private global::System.Data.DataColumn columnEmail;
+            
+            private global::System.Data.DataColumn columnOre;
+            
+            private global::System.Data.DataColumn columnTag;
+            
+            private global::System.Data.DataColumn columnActive;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -326,17 +330,9 @@ namespace lbControlWebPages.webPagesData {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
+            public global::System.Data.DataColumn UrlColumn {
                 get {
-                    return this.columnid;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn SiteColumn {
-                get {
-                    return this.columnSite;
+                    return this.columnUrl;
                 }
             }
             
@@ -350,9 +346,9 @@ namespace lbControlWebPages.webPagesData {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PeHTMLColumn {
+            public global::System.Data.DataColumn PreHTMLColumn {
                 get {
-                    return this.columnPeHTML;
+                    return this.columnPreHTML;
                 }
             }
             
@@ -366,9 +362,33 @@ namespace lbControlWebPages.webPagesData {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn CadAggiornamentoColumn {
+            public global::System.Data.DataColumn EmailColumn {
                 get {
-                    return this.columnCadAggiornamento;
+                    return this.columnEmail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OreColumn {
+                get {
+                    return this.columnOre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TagColumn {
+                get {
+                    return this.columnTag;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ActiveColumn {
+                get {
+                    return this.columnActive;
                 }
             }
             
@@ -409,15 +429,17 @@ namespace lbControlWebPages.webPagesData {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SiteRow AddSiteRow(string Site, byte State, string PeHTML, string PostHTML, int CadAggiornamento) {
+            public SiteRow AddSiteRow(string Url, bool State, string PreHTML, string PostHTML, string Email, int Ore, string Tag, byte Active) {
                 SiteRow rowSiteRow = ((SiteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        Site,
+                        Url,
                         State,
-                        PeHTML,
+                        PreHTML,
                         PostHTML,
-                        CadAggiornamento};
+                        Email,
+                        Ore,
+                        Tag,
+                        Active};
                 rowSiteRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSiteRow);
                 return rowSiteRow;
@@ -425,9 +447,9 @@ namespace lbControlWebPages.webPagesData {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SiteRow FindByid(int id) {
+            public SiteRow FindByUrl(string Url) {
                 return ((SiteRow)(this.Rows.Find(new object[] {
-                            id})));
+                            Url})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -447,34 +469,39 @@ namespace lbControlWebPages.webPagesData {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
-                this.columnSite = base.Columns["Site"];
+                this.columnUrl = base.Columns["Url"];
                 this.columnState = base.Columns["State"];
-                this.columnPeHTML = base.Columns["PeHTML"];
+                this.columnPreHTML = base.Columns["PreHTML"];
                 this.columnPostHTML = base.Columns["PostHTML"];
-                this.columnCadAggiornamento = base.Columns["CadAggiornamento"];
+                this.columnEmail = base.Columns["Email"];
+                this.columnOre = base.Columns["Ore"];
+                this.columnTag = base.Columns["Tag"];
+                this.columnActive = base.Columns["Active"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columnSite = new global::System.Data.DataColumn("Site", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSite);
-                this.columnState = new global::System.Data.DataColumn("State", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnUrl = new global::System.Data.DataColumn("Url", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUrl);
+                this.columnState = new global::System.Data.DataColumn("State", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState);
-                this.columnPeHTML = new global::System.Data.DataColumn("PeHTML", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPeHTML);
+                this.columnPreHTML = new global::System.Data.DataColumn("PreHTML", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPreHTML);
                 this.columnPostHTML = new global::System.Data.DataColumn("PostHTML", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPostHTML);
-                this.columnCadAggiornamento = new global::System.Data.DataColumn("CadAggiornamento", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCadAggiornamento);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid}, true));
-                this.columnid.AutoIncrement = true;
-                this.columnid.AllowDBNull = false;
-                this.columnid.Unique = true;
+                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmail);
+                this.columnOre = new global::System.Data.DataColumn("Ore", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOre);
+                this.columnTag = new global::System.Data.DataColumn("Tag", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTag);
+                this.columnActive = new global::System.Data.DataColumn("Active", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnActive);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnUrl}, true));
+                this.columnUrl.AllowDBNull = false;
+                this.columnUrl.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -617,37 +644,21 @@ namespace lbControlWebPages.webPagesData {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int id {
+            public string Url {
                 get {
-                    return ((int)(this[this.tableSite.idColumn]));
+                    return ((string)(this[this.tableSite.UrlColumn]));
                 }
                 set {
-                    this[this.tableSite.idColumn] = value;
+                    this[this.tableSite.UrlColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Site {
+            public bool State {
                 get {
                     try {
-                        return ((string)(this[this.tableSite.SiteColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Site\' in table \'Site\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSite.SiteColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public byte State {
-                get {
-                    try {
-                        return ((byte)(this[this.tableSite.StateColumn]));
+                        return ((bool)(this[this.tableSite.StateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'State\' in table \'Site\' is DBNull.", e);
@@ -660,17 +671,17 @@ namespace lbControlWebPages.webPagesData {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string PeHTML {
+            public string PreHTML {
                 get {
                     try {
-                        return ((string)(this[this.tableSite.PeHTMLColumn]));
+                        return ((string)(this[this.tableSite.PreHTMLColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PeHTML\' in table \'Site\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PreHTML\' in table \'Site\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSite.PeHTMLColumn] = value;
+                    this[this.tableSite.PreHTMLColumn] = value;
                 }
             }
             
@@ -692,30 +703,66 @@ namespace lbControlWebPages.webPagesData {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int CadAggiornamento {
+            public string Email {
                 get {
                     try {
-                        return ((int)(this[this.tableSite.CadAggiornamentoColumn]));
+                        return ((string)(this[this.tableSite.EmailColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CadAggiornamento\' in table \'Site\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Email\' in table \'Site\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSite.CadAggiornamentoColumn] = value;
+                    this[this.tableSite.EmailColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsSiteNull() {
-                return this.IsNull(this.tableSite.SiteColumn);
+            public int Ore {
+                get {
+                    try {
+                        return ((int)(this[this.tableSite.OreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Ore\' in table \'Site\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSite.OreColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetSiteNull() {
-                this[this.tableSite.SiteColumn] = global::System.Convert.DBNull;
+            public string Tag {
+                get {
+                    try {
+                        return ((string)(this[this.tableSite.TagColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tag\' in table \'Site\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSite.TagColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte Active {
+                get {
+                    try {
+                        return ((byte)(this[this.tableSite.ActiveColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Active\' in table \'Site\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSite.ActiveColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -732,14 +779,14 @@ namespace lbControlWebPages.webPagesData {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPeHTMLNull() {
-                return this.IsNull(this.tableSite.PeHTMLColumn);
+            public bool IsPreHTMLNull() {
+                return this.IsNull(this.tableSite.PreHTMLColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPeHTMLNull() {
-                this[this.tableSite.PeHTMLColumn] = global::System.Convert.DBNull;
+            public void SetPreHTMLNull() {
+                this[this.tableSite.PreHTMLColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -756,14 +803,50 @@ namespace lbControlWebPages.webPagesData {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCadAggiornamentoNull() {
-                return this.IsNull(this.tableSite.CadAggiornamentoColumn);
+            public bool IsEmailNull() {
+                return this.IsNull(this.tableSite.EmailColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCadAggiornamentoNull() {
-                this[this.tableSite.CadAggiornamentoColumn] = global::System.Convert.DBNull;
+            public void SetEmailNull() {
+                this[this.tableSite.EmailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOreNull() {
+                return this.IsNull(this.tableSite.OreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOreNull() {
+                this[this.tableSite.OreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTagNull() {
+                return this.IsNull(this.tableSite.TagColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTagNull() {
+                this[this.tableSite.TagColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsActiveNull() {
+                return this.IsNull(this.tableSite.ActiveColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetActiveNull() {
+                this[this.tableSite.ActiveColumn] = global::System.Convert.DBNull;
             }
         }
         

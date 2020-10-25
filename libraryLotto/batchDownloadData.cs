@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net.Http;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
@@ -15,6 +16,8 @@ namespace libraryLotto
         private HtmlDocument doctempRow;
         private HtmlDocument doctemp;
         private DateTime anno = Variabili.annoDiInizio;
+
+        private static CultureInfo enUS = new CultureInfo("en-US");
 
         public batchDownloadData()
         {
@@ -41,13 +44,15 @@ namespace libraryLotto
                 List<LottoPalleRow> palle = new List<LottoPalleRow>();
                 LottoRow row = Variabili._LottoDs_newRow();
                 HtmlNodeCollection nodesAll = doc.DocumentNode.SelectNodes(@"(//a[contains(@href,'/risultati/estrazione')]|//td[@class='ball-24px']|//td[@class='superstar-24px']|//td[@class='jolly-24px'])"); //dal 28 marzo 2006
+                if (nodesAll == null)
+                    continue;
                 for (int nc = nodesAll.Count - 1; nc != 0; nc--)// parto all'incontrario per un fattore d'indice
                 {
                     HtmlNode node = nodesAll[nc];
                     if (node.Attributes.Count == 1 && node.Attributes[0].Value == "ball-24px")// dovrebbe esserci solamnente una classe ball-24px
                     {
                         int.TryParse(node.InnerText, out int value);
-                        palle.Add(Variabili._LottoPalleDs_newRow(-1, value, "palla"+(++countPalla)));// non ho ancora l' id metto -1 come id temporaneo         
+                        palle.Add(Variabili._LottoPalleDs_newRow(-1, value, "palla" + (++countPalla)));// non ho ancora l' id metto -1 come id temporaneo         
                     }
                     else if (node.Attributes.Count == 1 && node.Attributes[0].Value == "superstar-24px")
                     {
@@ -62,12 +67,15 @@ namespace libraryLotto
                     else if (node.Attributes.Count == 2 && node.Attributes[0].Name == "href")
                     {//primo campo che si legge
                         countPalla = 0;
-                        DateTime.TryParse(node.Attributes[0].Value.Substring(Variabili.extractData.Length), out DateTime Data);
+                        var data = node.Attributes[0].Value.Substring(Variabili.extractData.Length);
+                        DateTime.TryParseExact(data, "dd-MM-yyyy", enUS, DateTimeStyles.None, out DateTime Data);
                         row.hrfQuotazioni = node.Attributes[0].Value;
                         row.data = Data;
                         row.anno = Data.Year;
+                        if (Data <= Variabili.annoDiInizio)
+                            continue;
                         Task<string> taskDetailes = Task.Run(async () => await downloadDataEstrazioniLottoDetailes(row.hrfQuotazioni));
-
+                        if (taskDetailes == null) continue;
 
                         int countEstrazione = dettagliEstrazione(taskDetailes.Result);
                         row.id = creaIndice(countEstrazione);
@@ -91,10 +99,16 @@ namespace libraryLotto
 
         private int dettagliEstrazione(string result)
         {
-            docDetailes.LoadHtml(result);
-            HtmlNodeCollection nodesid = docDetailes.DocumentNode.SelectNodes(@"(//p[@itemprop='description'])");
-            int.TryParse(nodesid[0].InnerHtml.Split("<strong>")[1].Split("<sup>")[0], out int id);
-            return id;
+            try
+            {
+                docDetailes.LoadHtml(result);
+                HtmlNodeCollection nodesid = docDetailes.DocumentNode.SelectNodes(@"(//p[@itemprop='description'])");
+                int.TryParse(nodesid[0].InnerHtml.Split("<strong>")[1].Split("<sup>")[0], out int id);
+                return id;
+            }catch(Exception ex)
+            {
+                throw ex;
+            }
         }
         private void inserisciDettagli(int id)
         {
@@ -118,8 +132,8 @@ namespace libraryLotto
                         string valore = Normalize(trows[1].InnerText);
                         if (valore == "-") valore = "0";
                         string[] valuta = valore.Split(" ");//valore, valuta
-                        row.valore =valuta[0];
-                        if (valuta.Length > 1) 
+                        row.valore = valuta[0];
+                        if (valuta.Length > 1)
                             row.valuta = valuta[1];
                         row.vincitori = int.Parse(Normalize(trows[2].InnerText).Replace(".", ""));
                         row.premio = trows[0].InnerText;

@@ -1,0 +1,105 @@
+<style type="text/css">
+    * {
+        --primary-color-kendo-lotto: #ff6358 !important;
+    }
+
+    .modal-header, .close {
+        background-color: var(--primary-color-kendo-lotto);
+        border-color: var(--primary-color-kendo-lotto);
+        text-shadow: none;
+    }
+
+    .border-2 {
+        border-width: 2px !important;
+        border-color: black;
+    }
+</style>
+<!-- Modal: modalPoll -->
+<div kendoButton class="modal-content border border-secondary border-2">
+    <!--Header-->
+    <div class="modal-header ">
+        <p class="h1 col-xs-1 center-block">Aggiungi sito</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal()">
+            <span class="fa fa-times-circle"></span>
+        </button>
+    </div>
+    <!--Body-->
+    <div class="modal-body">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <blockquote class="blockquote text-center">
+                <p class="mb-0">In questa Pagina puoi aggiungere un nuovo Url da controllare e impostare la notifica </p>
+                <br />
+                <br />
+                <dl class="row text-left">
+                    <!--text-left-->
+                    <dd class="col-sm-3"><cite title="Source Title">Aggiungi l'Url</cite></dd>
+                    <dd class="col-sm-2"></dd>
+                    <dd class="col-sm-7">
+                        <div class="form-group">
+                            <input type="Url" formControlName="Url" class="form-control"  [ngClass]="{ 'is-invalid':f.Url.dirty && f.Url.errors }" />
+                            <div *ngIf="f.Url.dirty && f.Url.errors" class="invalid-feedback">
+                                <div *ngIf="f.Url.errors.required">l'Url è essenziale</div>
+                            </div>
+                            <small id="EmailHelp" class="form-text text-muted"></small>
+                        </div>
+                    </dd>
+
+                    <dd class="col-sm-3"><cite title="Source Title">Email</cite></dd>
+                    <dd class="col-sm-2"></dd>
+                    <dd class="col-sm-7">
+                        <div class="form-group">
+                            <input type="text" formControlName="Email" class="form-control" [ngClass]="{ 'is-invalid':f.Email.dirty &&  f.Email.errors }" />
+                            <div *ngIf="f.Email.dirty && f.Email.errors" class="invalid-feedback">
+                                <div *ngIf="f.Email.errors.required">Il l'Email è obligatoria</div>
+                                <div *ngIf="f.Email.errors.Email">Il l'Email è obligatoria</div>
+                            </div>
+                            <small id="EmailHelp" class="form-text text-muted">Insserisci l'Email a cui notificare</small>
+                        </div>
+                    </dd>
+                    <dd class="col-sm-3"><cite title="Source Title">Ogni quanto controllare </cite></dd>
+                    <dd class="col-sm-2">(Ore)</dd>
+                    <dd class="col-sm-7">
+                        <div class="form-group">
+                            <input type="number" min="12" formControlName="Ore" class="form-control" [ngClass]="{ 'is-invalid':f.Ore.dirty &&  f.Ore.errors }" />
+                            <div *ngIf="f.Ore.dirty  && f.Ore.errors" class="invalid-feedback">
+                                <div *ngIf="f.Ore.errors.required">Il numero di Ore è obligatorio</div>
+                            </div>
+                            <small id="HHHelp" class="form-text text-muted">Ogni quanto verrà effettuato il controllo del sito in questione (in Ore)</small>
+                        </div>
+                    </dd>
+                    <dd class="col-sm-3"><cite title="Source Title">Tag </cite></dd>
+                    <dd class="col-sm-2">(opzionale)</dd>
+                    <dd class="col-sm-7">
+                        <div class="form-group">
+                            <input type="text" formControlName="Tag" class="form-control" />
+                            <small id="EmailHelp" class="form-text text-muted">Tag da controllare (opzionale)< body > < / body > </small>
+                        </div>
+                    </dd>
+                    <dd class="col-sm-3"><cite title="Source Title">Active</cite></dd>
+                    <dd class="col-sm-2"></dd>
+                    <dd class="col-sm-7">
+                        <div class="form-group">
+                            <input type="checkbox" formControlName="Active" id="Active" class="form-check-input" />
+                        </div>
+                    </dd>
+                </dl>
+            </blockquote>
+        </form>
+    </div>
+
+    <div class="modal-footer justify-content-rigth">
+        <span type="button" class="btn btn-success " data-dismiss="modal" (click)="saveData()">
+            <span class="fa fa-save"></span>
+            Salva
+        </span>
+        <span type="button" class="btn btn-primary " data-dismiss="modal" (click)="onReset()">
+            <i class="fa fa-trash-o"></i>
+            Reset
+        </span>
+        <span type="button" class="btn btn-secondary " data-dismiss="modal" (click)="closeModal()">
+            <span class="fa fa-times"></span>
+            Chiudi
+        </span>
+    </div>
+</div>
+<div *ngIf="loading!=2" class="k-i-loading"></div>

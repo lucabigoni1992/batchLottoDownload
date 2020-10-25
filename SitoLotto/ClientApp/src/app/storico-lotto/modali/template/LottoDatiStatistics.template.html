@@ -34,13 +34,17 @@
         <h5 class="text-center">
             <strong>Statistiche Vincite Papporto palle numero uscite </strong>
         </h5>
-        <button (click)="exportSvgChart(graficoPalleNumeroUscite,'palleTotaleUscite')">
+        
+        <button kendoButton class="dropdown-toggle btn-sm" data-toggle="dropdown" style="margin-left: 10px;" aria-haspopup="true" aria-expanded="false" [primary]="true" (click)="exportSvgChart(graficoPalleNumeroUscite,'palleTotaleUscite')" >
+            <fa name="cog" animation="spin" style="margin-right: 9px;"> </fa>
             Export as SVG
         </button>
-        <button (click)="exportPdfChart(graficoPalleNumeroUscite,'palleTotaleUscite')">
+        <button kendoButton class="dropdown-toggle btn-sm" data-toggle="dropdown" style="margin-left: 10px;" aria-haspopup="true" aria-expanded="false" [primary]="true" (click)="exportPdfChart(graficoPalleNumeroUscite,'palleTotaleUscite')" >
+            <fa name="cog" animation="spin" style="margin-right: 9px;"> </fa>
             Export as PDF
         </button>
-        <button (click)="exportImgChart(graficoPalleNumeroUscite,'palleTotaleUscite')">
+        <button kendoButton class="dropdown-toggle btn-sm" data-toggle="dropdown" style="margin-left: 10px;" aria-haspopup="true" aria-expanded="false" [primary]="true" (click)="exportImgChart(graficoPalleNumeroUscite,'palleTotaleUscite')" >
+            <fa name="cog" animation="spin" style="margin-right: 9px;"> </fa>
             Export as IMG
         </button>
         <kendo-chart #graficoPalleNumeroUscite [title]="{ text: 'Per ogni palla, il numero di volte che è uscita' }">
@@ -66,7 +70,7 @@
 
         <span type="button" class="btn btn-secondary " data-dismiss="modal" (click)="closeModal()">
             <span class="fa fa-times"></span>
-            Chiudi
+            Close
         </span>
     </div>
 </div>

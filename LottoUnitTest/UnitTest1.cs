@@ -34,9 +34,9 @@ namespace LottoUnitTest
         public void ApiTest_KendoData_LottoKendoQueryt()
         {
             KendoData a = api.GetLottoKendoQuery(@" { 'group':[],'skip':500,'sort':[{'dir':'asc','field':'anno'}],'take':10}");
-            Assert.True(a.count == 3080);
+            Assert.True(a.count >= 3151);
             Assert.True(a.results.Count == 10);
-            Assert.True(a.results[0].id == 20050093);
+            Assert.True(a.results[0].id == 20020038);
             Assert.True(a.results[9].id == 20050113);
         }
         [Test]

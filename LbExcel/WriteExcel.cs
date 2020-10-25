@@ -22,8 +22,9 @@ namespace libExcel
                 fileFullname = Path.Combine(OutPutFileDirectory, fileName);
 
             if (File.Exists(fileFullname))
-                fileFullname = Path.Combine(OutPutFileDirectory, fileName + "_" + datetime + ".xlsx");
-
+                fileFullname = Path.Combine(OutPutFileDirectory, fileName + "_" + datetime + ".xlsx");            
+            else
+                Directory.CreateDirectory(OutPutFileDirectory);
             using (SpreadsheetDocument package = SpreadsheetDocument.Create(fileFullname, SpreadsheetDocumentType.Workbook))
                 CreatePartsForExcel(package, data);
         }

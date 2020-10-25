@@ -34,7 +34,8 @@ interface pageable {
 
 export class StoricoLottoComponent extends BehaviorSubject<any> implements OnInit {
 
-    constructor(private dataService: kendoGridDataService, private modalService: NgbModal) {
+    constructor(private dataService: kendoGridDataService,
+        private modalService: NgbModal) {
         super(null);
     }
     public loading: boolean;

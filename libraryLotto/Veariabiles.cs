@@ -33,7 +33,7 @@ namespace libraryLotto
         internal static DateTime annoDiInizio = new DateTime(1997, 1, 1);
 
         //   internal static int annoDiInizio = 1997;
-        //      internal static int annoDiInizio = 2006;
+        //   internal static int annoDiInizio = 2006;
 
         static Variabili()
         {
@@ -49,7 +49,7 @@ namespace libraryLotto
         {
             var exePath = Path.GetDirectoryName(System.Reflection
                               .Assembly.GetExecutingAssembly().CodeBase);
-            Regex appPathMatcher = new Regex(@"(?<!fil)[A-Za-z]:\\+[\S\s]*?(?=\\+bin)");
+            Regex appPathMatcher = new Regex(@"(?<!fil)[A-Za-z]:\\+[\S\s]*");
             var appRoot = appPathMatcher.Match(exePath).Value;
             return appRoot;
         }

@@ -1,0 +1,451 @@
+﻿
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<head>
+<meta HTTP-EQUIV="Cache-Control" CONTENT="no cache">
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Expires" CONTENT="Wed, 6 May 2020 08:23:36 CET">
+
+<link rel="stylesheet" type="text/css" href="/Vacancy/Global/scripts/asp/document.css">
+<link rel="stylesheet" type="text/css" href="/Vacancy/Global/scripts/asp/staffing.css">
+<title>Vacancy List Results</title>
+</head>
+
+<body>
+<noscript>Loads formating table and title of page for this section</noscript>
+<script type="text/javascript" language="javascript" src="/Vacancy/Global/scripts/asp/page_header.js"></script>
+<script language="javascript" type="text/javascript">
+		
+//function goJobNumber() {
+           // alert ("job number");
+			//var fd = document.basic;
+			//fd.FormAction.value = "Job Number";
+			//fd.FormAction.submit;
+		//}
+		
+		function goOne() { 
+			var fd = document.basic;
+			//alert (fd.FormAction.value);
+		   
+		       fd.SortStore.value = fd.SortActionx1.value;
+		    
+			   
+			fd.SortStore.submit;
+		}
+		
+		function goTwo() { 
+			var fd = document.basic;
+			//alert (fd.SortActionx1.value);
+		   
+		       fd.SortStore.value = fd.SortActionx2.value;
+		    
+			   
+			//fd.SortStore.submit;
+		}
+		
+		function goThree() { 
+			var fd = document.basic;
+			//alert (fd.SortActionx1.value);
+		   
+		       fd.SortStore.value = fd.SortActionx3.value;
+		    
+			   
+			//fd.SortStore.submit;
+		}
+		
+		function goFour() { 
+			var fd = document.basic;
+			//alert (fd.SortActionx1.value);
+		   
+		       fd.SortStore.value = fd.SortActionx4.value;
+		    
+			   
+			//fd.SortStore.submit;
+		}
+		
+		function goFive() { 
+			var fd = document.basic;
+			//alert (fd.SortActionx1.value);
+		   
+		       fd.SortStore.value = fd.SortActionx5.value;
+		    
+			   
+			//fd.SortStore.submit;
+		}
+		
+		function goSix() { 
+			var fd = document.basic;
+			//alert (fd.SortActionx1.value);
+		   
+		       fd.SortStore.value = fd.SortActionx6.value;
+		    
+			   
+			//fd.SortStore.submit;
+		}
+		
+		//function final() { 
+		//	var fd = document.basic;
+			
+			//fd.FormAction.value = "1";
+			//fd.FormAction2.value = "2";
+			//fd.FormAction3.value = "3";
+			//alert (fd.FormAction3.value);
+		   
+		      // fd.SortStore.value = fd.SortActionx6.value;
+		    
+			   
+		//	fd.SortStore.submit;
+		//}
+		
+		/*
+		function goOne() { 
+			var fd = document.basic;
+			//alert (fd.SortActionx.value);
+			
+			if (fd.SortActionx1.value != 'undefined')  {
+			
+			   fd.SortStore.value = fd.SortActionx1.value;
+			} else if (fd.SortActionx2.value != 'undefined') {
+			   
+			   fd.SortStore.value = fd.SortActionx2.value;
+		    } else {
+		    
+		       fd.SortStore.value = fd.SortActionx3.value;
+		    }
+			   
+			fd.SortStore.submit;
+		}
+
+*/
+</script>
+
+
+
+<h1 align="center"><font color="#0000A0">Vacancy List <small>(LN,  - Italy)</small></font></h1>
+<hr>
+
+<!-- display help text in English for all, plus help text in German for country name=DE or any of the seven German CPACs -->
+<table border="0" cellpadding="4">
+	<tr>
+		<td>
+			Click on Job Number for detailed Job and Area of Consideration Information. 
+			
+
+		</td>
+	</tr>
+	<tr><td>&nbsp;</td></tr>
+	<tr>
+		<td>
+			Click on "Duty Station" to sort the announcements by geographic locations. 
+
+		</td>
+	</tr>
+</table>
+<hr>
+
+
+		
+		<!--
+		If (vNationID = "US") And ( (vFundType = "NAF") Or (vFundType = "AF") ) And (vAnncType =  "CDS") Then '-- Check for CDS positions %>
+						<!--<p>
+						<a href ="http://cysjobs.mwr.army.mil" 
+						title="Click here for CYS Jobs information" 
+						target="_new">Click here</a> for more information about <acronym 
+						title="Child and Youth Services">CYS</acronym> Job Opportunites in Europe.
+						</p>
+	 
+		End If '-- Check for CDS positions %>
+		
+		
+		?nation=LN&amp;ppseries=&amp;sortfield=Announcement_NR&amp;cpac=&amp;annctype=&amp;fund=AF
+		
+		<a href="vacancy_list.asp" title="Click here to sort by Job Number" onclick="goJobNumber()">
+			<strong>Job Number</strong></a>
+			<strong>Job Number</strong>
+			<input type="hidden" name="SortActionx" value="Job Number" />
+		-->
+<form method="POST" action="https://acpol2.army.mil/vacancy/vacancy_list.asp" name="basic" onsubmit="return final();">    
+
+	<table border="2" width="100%" class="vacancy" summary="List of vacancy announcements" cols="6">
+	<tr>
+		<th align="center" valign="bottom" nowrap class="listheader">
+		<!--
+            <input type="submit" name="SortActionx1" value="Job Number" class="bttn" />
+            -->
+           <input type="submit" name="SortActionx1" value="Job Number" onclick="goOne();" class="bttn" />
+		</th>
+		<th align="center" valign="bottom" class="listheader">
+			<input type="submit" name="SortActionx2" value="Position" onclick="goTwo();" class="bttn" />
+		</th>
+		<th align="center" valign="bottom" class="listheader">
+		  		<input type="submit" name="SortActionx3" value="Series" onclick="goThree();" class="bttn" />
+		</th>
+		<th align="center" valign="bottom" class="listheader">
+			<input type="submit" name="SortActionx4" value="Grade" onclick="goFour();" class="bttn" />
+		</th>
+		<th align="center" valign="bottom" class="listheader">
+			<input type="submit" name="SortActionx5" value="Close" onclick="goFive();" class="bttn" />
+		</th>
+		<th align="center" valign="bottom" class="listheader">
+			<input type="submit" name="SortActionx6" value="Duty Station" onclick="goSix();" class="bttn" />
+		</th>
+	</tr>
+  
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=LI-20-15-LN">LI-20-15-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">ENVIRONMENTAL HEALTH TECH,  (FT TEMP PSN, NTE: to replace employee w/ return rights to the psn)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>U-0698</td>
+		<td align="center" valign="top" class="listdata">03&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">LIVORNO&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=LI-20-18-LN">LI-20-18-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">SUPPLY CLERK,  (FT PERM PSNS)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>U-2005</td>
+		<td align="center" valign="top" class="listdata">06&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">LIVORNO&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=LI-20-19-LN">LI-20-19-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">HEAVY MOB EQUIP REP LEADER,  (MULTIPLE FT PERM PSNS)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>UC-5803</td>
+		<td align="center" valign="top" class="listdata">05&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">LIVORNO&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=LI-20-21-LN">LI-20-21-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">SUPPLY CLERK,  (PT, 20 HOURS PER WEEK, PERM PSN)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>U-2005</td>
+		<td align="center" valign="top" class="listdata">06&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">LIVORNO&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=LI-20-22-LN">LI-20-22-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">ELECTRONICS MECHANIC,  (FT PERM PSN)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>UC-2604</td>
+		<td align="center" valign="top" class="listdata">05&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">LIVORNO&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=LI-20-23-LN">LI-20-23-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">SUPPLY TECHNICIAN,  (FT PERM PSN)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>U-2005</td>
+		<td align="center" valign="top" class="listdata">05&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">LIVORNO&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=LI-20-24-LN">LI-20-24-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">PRESERVATION SERVICER LEADER (FORKLIFT OP),  (FT PERM PSN)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>UC-7006</td>
+		<td align="center" valign="top" class="listdata">05&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">LIVORNO&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=LI-20-25-LN">LI-20-25-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">SUPPLY CLERK,  (FT, PERM PSN)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>U-2005</td>
+		<td align="center" valign="top" class="listdata">06&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">LIVORNO&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=LI-20-26-LN">LI-20-26-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">BUDGET ANALYST,  (FT, PERM PSN)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>U-0560</td>
+		<td align="center" valign="top" class="listdata">01&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">LIVORNO&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=LI-20-28-LN">LI-20-28-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">SUPPLY TECHNICIAN,  (FT, PERM PSN)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>U-2005</td>
+		<td align="center" valign="top" class="listdata">05&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">LIVORNO&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=LI-20-29-LN">LI-20-29-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">SPECIALISTA INGEGNERE (CIVILE),  (FT PERM PSN)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>Q-0810</td>
+		<td align="center" valign="top" class="listdata">Q2&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">LIVORNO&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=LI-20-30-LN">LI-20-30-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">CUSTOMS ASSISTANT (OFFICE AUTOMATION),  (FT, PERM PSN)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>U-0303</td>
+		<td align="center" valign="top" class="listdata">05&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		13-May-20 &nbsp;</td>
+		<td align="center" valign="top" class="listdata">LIVORNO&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=VI-19-70-LN">VI-19-70-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">LEAD EDUCATION TECHNICIAN (FULL-TIME TEMP PSN, NTE 1 YEAR)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>U-1702</td>
+		<td align="center" valign="top" class="listdata">05&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">VICENZA&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=VI-20-33-LN">VI-20-33-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">INDUSTRIAL EQUIPMENT MECHANIC (FULL-TIME PERM PSN)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>UC-5301</td>
+		<td align="center" valign="top" class="listdata">06&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">VICENZA&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=VI-20-43-LN">VI-20-43-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">SPECIALISTA CONTABILE (SUPERVISORE) (FULL-TIME PERM PSN)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>Q-0510</td>
+		<td align="center" valign="top" class="listdata">Q2&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">VICENZA&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=VI-20-45-LN">VI-20-45-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">FINANCIAL TECHNICIAN (FT TEMP PSN, NTE: 31 JAN 2021, to replace an empl with return rights)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>U-0503</td>
+		<td align="center" valign="top" class="listdata">04&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">VICENZA&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=VI-20-48-LN">VI-20-48-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">STRUCTURAL & FINISHING WORKER (FULL-TIME PERM PSN)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>UC-3601</td>
+		<td align="center" valign="top" class="listdata">06&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">VICENZA&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=VI-20-49-LN">VI-20-49-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">INTERPRETER (FULL-TIME PERM PSN)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>U-1040</td>
+		<td align="center" valign="top" class="listdata">02&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">VICENZA&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=VI-20-56-LN">VI-20-56-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">CUSTOMER SERVICE REPRESENTATIVE (FULL-TIME TEMP PSN, NTE 1 YEAR)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>U-0303</td>
+		<td align="center" valign="top" class="listdata">04&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">VICENZA&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=VI-20-59-LN">VI-20-59-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">CONSTRUCTION CONTROL REPRESENTATIVE (FULL-TIME PERM PSN)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>U-0809</td>
+		<td align="center" valign="top" class="listdata">01&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		Until Filled &nbsp;</td>
+		<td align="center" valign="top" class="listdata">VICENZA&nbsp;</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" valign="top" nowrap class="listdata"><a href="vacancy.asp?annc_nr=VI-20-61-LN">VI-20-61-LN</a>&nbsp;</td>
+		<td align="center" valign="top" class="listdata">PRODUCTION CONTROLLER (MAINTENANCE OPERATIONS) (FULL-TIME PERMANENT TRAINEE PSN, TARGET U-03)&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>U-1152</td>
+		<td align="center" valign="top" class="listdata">05/04/03&nbsp;</td>
+		<td align="center" valign="top" class="listdata" nowrap>
+		10-May-20 &nbsp;</td>
+		<td align="center" valign="top" class="listdata">VICENZA&nbsp;</td>
+	</tr>
+	
+	</table>
+	 <input type="hidden" name="SortStore" value="" />
+	 
+	 
+	 
+
+    <input type="hidden" name="FormAction2" value="2"/>
+
+	 
+	
+	 
+	</form>
+	
+		<p>
+			<b><small>This list was last updated May 6, 2020.</small></b>
+			</p>
+	
+
+<noscript>
+        Writes "Brought to you by CHRA (Civilian Human Resources Agency) and the date page last modified</noscript>
+<script language="javascript" src="/Vacancy/Global/scripts/asp/page_footer.js"></script>
+<p class='textbar'>Current server time is 8:03:36 AM, May 6, 2020</p>
+
+</body>
+</html>
