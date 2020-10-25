@@ -48,10 +48,17 @@ namespace libraryLotto
             
         internal static void _DsSiteLoad()
         {
+            if (_DSSiteData.Site.Rows.Count > 0)
+                _DSSiteData.Site.Rows.Clear();
             if (System.IO.File.Exists(fileDsName))
                 _DSSiteData.ReadXml(fileDsName);
+            Scheduler.Clear();
             foreach (SiteRow row in _DSSiteData.Site.Rows)
                 addSchedule(row);
+
+            JobManager.StopAndBlock();
+            JobManager.RemoveAllJobs();
+            JobManager.Initialize(Scheduler.ToArray<Registry>());
 
         }
 
@@ -81,7 +88,7 @@ namespace libraryLotto
             {
                 _DSSiteData.Site.AddSiteRow(row);
                 _DsSiteSave();
-                addSchedule(row);
+                _DsSiteLoad();
             }
         }
         internal static void _dsSiteData_disableRow(string url)
@@ -98,6 +105,8 @@ namespace libraryLotto
             if (_DSSiteData.Site.FindByUrl(url) != null)
                 _DSSiteData.Site.RemoveSiteRow(_DSSiteData.Site.FindByUrl(url));
             _DSSiteData.Site.AcceptChanges();
+            _DsSiteSave();
+            _DsSiteLoad();
         }
         internal static SiteDataTable _Site() { return _DSSiteData.Site; }
 
@@ -108,15 +117,17 @@ namespace libraryLotto
             var r = new Registry();
             _ = r.Schedule(async () =>
                               await InteractiveDB.AddUpdateSiteAsync(row)
-                            ).ToRunNow()
-                            .AndEvery(row.Ore)
+                            ).WithName(row.Url)
+                            .ToRunNow()
 #if DEBUG
+                            .AndEvery(5)
                             .Minutes();
-# else
+#else
+                            .AndEvery(row.Ore)    
                             .Hours();
 #endif
+           
             Scheduler.Add(r);
-            JobManager.Initialize(Scheduler.ToArray<Registry>());
         }
 
         internal static IEnumerable<SiteMapping> _SiteAllRow()

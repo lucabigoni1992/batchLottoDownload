@@ -47,10 +47,10 @@ namespace lbControlWebPages
                 {
                     sb.Append("? ");
                 }
-                else if (line.Type == ChangeType.Unchanged)
-                {
-                    sb.Append("  ");
-                }
+                //else if (line.Type == ChangeType.Unchanged)
+                //{
+                //    sb.Append("  ");
+                //}
 
                 sb.Append(line.Text + "<br/>");
             }

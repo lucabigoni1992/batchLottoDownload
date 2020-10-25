@@ -17,7 +17,7 @@ namespace lbControlWebPages
 {
     public static class InteractiveDB
     {
-        public static KendoSiteInputMapping  GetAllSite()
+        public static KendoSiteInputMapping GetAllSite()
         {
             //         AddUpdateSiteAsync("https://acpol2.army.mil/vacancy/vacancy_list.asp", 24);
             var siteElems = DbManagement._SiteAllRow();
@@ -42,9 +42,9 @@ namespace lbControlWebPages
             try
             {
                 if (elem.Action == siteAction.delete)
-                     DbManagement._dsSiteData_deleteRow(elem.Url);
+                    DbManagement._dsSiteData_deleteRow(elem.Url);
                 else if (elem.Action == siteAction.disable)
-                     DbManagement._dsSiteData_disableRow(elem.Url);
+                    DbManagement._dsSiteData_disableRow(elem.Url);
                 return true;
             }
             catch (Exception EX)
@@ -57,7 +57,7 @@ namespace lbControlWebPages
             try
             {
                 //      return true;
-                if (row.Active==0) 
+                if (row.Active == 0)
                     return false;
                 if (String.IsNullOrEmpty(row.Url))
                     return false;
@@ -74,18 +74,20 @@ namespace lbControlWebPages
                     }
                     row.State = (row.PostHTML == row.PreHTML || row.PostHTML != string.Empty) ? true : false;
                 }
-                else {
+                else
+                {
                     Console.WriteLine("CARICO " + row.Url);
                     var ris = await SendRequestAsync(row.Url, "GET", new Dictionary<string, string> { { "FormAction2", "2" } });
-                    if (row.IsPreHTMLNull()|| row.PreHTML == String.Empty) 
-                        row.PreHTML = ElaboraByTag(ris,row.Tag);                        
+                    if (row.IsPreHTMLNull() || row.PreHTML == String.Empty)
+                        row.PreHTML = ElaboraByTag(ris, row.Tag);
                     else
                     {
                         row.PostHTML = row.PreHTML;
                         row.PreHTML = ElaboraByTag(ris, row.Tag);
-                        if (row.PostHTML != row.PreHTML) {
+                        if (row.PostHTML != row.PreHTML)
+                        {
                             //send mail
-                         Mail.   SendMessage( row);
+                                        Mail.   SendMessage( row);
                         }
                     }
 
@@ -98,9 +100,9 @@ namespace lbControlWebPages
                 return false;
             }
         }
-       
 
-        private static string ElaboraByTag(string ris,string tag)
+
+        private static string ElaboraByTag(string ris, string tag)
         {
             HtmlDocument doc = new HtmlDocument();
             doc.LoadHtml(ris);
@@ -109,6 +111,9 @@ namespace lbControlWebPages
                 tag = "body";
             else
                 tag.Replace("<", "").Replace(">", "");
+           if(ris.Contains("<rss version="))
+                return ris;
+
             var postcd = doc.DocumentNode.SelectNodes($"//{tag}");
             if (postcd != null)
                 return postcd[0].InnerHtml;
@@ -120,8 +125,8 @@ namespace lbControlWebPages
             HtmlDocument doc = new HtmlDocument();
             doc.LoadHtml(ris);
             var postcd = doc.DocumentNode.SelectNodes("//form[contains(@method,'POST')]");
-            if (postcd!=null)
-            return postcd[0].InnerHtml;
+            if (postcd != null)
+                return postcd[0].InnerHtml;
             else return "";
         }
 
@@ -132,7 +137,7 @@ namespace lbControlWebPages
             try
             {
                 var content = new FormUrlEncodedContent(Data);
-                HttpResponseMessage response=null;
+                HttpResponseMessage response = null;
                 if (Method == "POST")
                     response = client.PostAsync(url, content).Result;
                 if (Method == "GET")

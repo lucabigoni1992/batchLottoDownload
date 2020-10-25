@@ -23,7 +23,7 @@ namespace lbControlWebPages
             try
             {
                 MailMessage mail = new MailMessage();
-                mail.From = new System.Net.Mail.MailAddress("luca.bigoni@live.it");
+                mail.From = new System.Net.Mail.MailAddress("comapareSite@outlook.it");
 
                 // The important part -- configuring the SMTP client
                 SmtpClient smtp = new SmtpClient();
@@ -31,8 +31,8 @@ namespace lbControlWebPages
                 smtp.EnableSsl = true;
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new NetworkCredential(mail.From.Address, "Hunter_92");
-                smtp.Host = "smtp.live.com";
+                smtp.Credentials = new NetworkCredential(mail.From.Address, "comapare92");
+                smtp.Host = "smtp.outlook.com";
 
                 //recipient address
                 mail.To.Add(new MailAddress(row.Email));

@@ -75,7 +75,7 @@ namespace libraryLotto
                         if (Data <= Variabili.annoDiInizio)
                             continue;
                         Task<string> taskDetailes = Task.Run(async () => await downloadDataEstrazioniLottoDetailes(row.hrfQuotazioni));
-
+                        if (taskDetailes == null) continue;
 
                         int countEstrazione = dettagliEstrazione(taskDetailes.Result);
                         row.id = creaIndice(countEstrazione);
@@ -99,10 +99,16 @@ namespace libraryLotto
 
         private int dettagliEstrazione(string result)
         {
-            docDetailes.LoadHtml(result);
-            HtmlNodeCollection nodesid = docDetailes.DocumentNode.SelectNodes(@"(//p[@itemprop='description'])");
-            int.TryParse(nodesid[0].InnerHtml.Split("<strong>")[1].Split("<sup>")[0], out int id);
-            return id;
+            try
+            {
+                docDetailes.LoadHtml(result);
+                HtmlNodeCollection nodesid = docDetailes.DocumentNode.SelectNodes(@"(//p[@itemprop='description'])");
+                int.TryParse(nodesid[0].InnerHtml.Split("<strong>")[1].Split("<sup>")[0], out int id);
+                return id;
+            }catch(Exception ex)
+            {
+                throw ex;
+            }
         }
         private void inserisciDettagli(int id)
         {
