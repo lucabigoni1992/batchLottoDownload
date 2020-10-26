@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?>
+<SiteData xmlns="http://tempuri.org/SiteData.xsd">
+  <Site>
+    <Url>https://acpol2.army.mil/vacancy/vacancy_list.asp</Url>
+    <State>false</State>
+    <Email>luca.bigoni@live.it</Email>
+    <Ore>24</Ore>
+    <Tag />
+    <Active>1</Active>
+  </Site>
+</SiteData>
