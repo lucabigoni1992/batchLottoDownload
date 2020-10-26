@@ -90,9 +90,8 @@ namespace lbControlWebPages
                                         Mail.   SendMessage( row);
                         }
                     }
-
                 }
-
+                _DsSiteSave();
                 return true;
             }
             catch (Exception EX)
@@ -101,6 +100,10 @@ namespace lbControlWebPages
             }
         }
 
+        private static void _DsSiteSave()
+        {
+            throw new NotImplementedException();
+        }
 
         private static string ElaboraByTag(string ris, string tag)
         {
@@ -130,12 +133,16 @@ namespace lbControlWebPages
             else return "";
         }
 
-        private static readonly HttpClient client = new HttpClient();
 
         private static async Task<string> SendRequestAsync(string url, string Method, Dictionary<string, string> Data)
         {
             try
             {
+                HttpClient client = new HttpClient();
+                HttpClientHandler clientHandler = new HttpClientHandler();
+                clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+                if (url.StartsWith("https"))
+                    client = new HttpClient(clientHandler);
                 var content = new FormUrlEncodedContent(Data);
                 HttpResponseMessage response = null;
                 if (Method == "POST")
