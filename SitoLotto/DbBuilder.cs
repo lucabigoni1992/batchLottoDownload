@@ -34,7 +34,7 @@ namespace SitoLotto
 
         public Task StartAsync(CancellationToken stoppingToken)
         {
-            _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromSeconds(60 ));
+            _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromSeconds(60));
             return Task.CompletedTask;
         }
 
@@ -44,9 +44,9 @@ namespace SitoLotto
             {
                 lastDay = DateTime.Now.Day;
                 lottoData.downloadAllLotto();
-   //             DbManagement.DsSiteLoad();
+                DbManagement.DsSiteLoad();
             }
-  //              PingMe();//if i don't do it the sise go down
+            PingMe();//if i don't do it the sise go down
 
         }
 
@@ -94,10 +94,10 @@ namespace SitoLotto
             using (Stream stream = response.GetResponseStream())
             using (var reader = new StreamReader(stream))
             {
-                Console.WriteLine(reader.ReadToEnd());
+                Console.WriteLine("PingMe"+reader.ReadToEnd());
             }
 
-          
-        } 
+
+        }
     }
 }
