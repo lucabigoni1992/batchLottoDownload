@@ -86,7 +86,7 @@ namespace LottoWeb.ClientApp
             };//in un ambiante professionale si deve gestire meglio
         }
 
-        [HttpGet("quote/{id}", Name = "Detailes")<]
+        [HttpGet("quote/{id}", Name = "Detailes")]
         public string GetDetailes(int id)
         {
             try
