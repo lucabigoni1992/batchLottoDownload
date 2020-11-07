@@ -85,9 +85,9 @@ namespace SitoLotto
         }
 
 
-        private void PingMe()
+        private static void PingMe()
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://luca-site-test.herokuapp.com/api/Lotto/active");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri("https://luca-site-test.herokuapp.com/api/Lotto/active"));
             request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
 
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
