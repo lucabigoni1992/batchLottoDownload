@@ -34,7 +34,7 @@ namespace SitoLotto
 
         public Task StartAsync(CancellationToken stoppingToken)
         {
-            _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromSeconds(60 ));
+            _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromSeconds(60));
             return Task.CompletedTask;
         }
 
@@ -44,9 +44,9 @@ namespace SitoLotto
             {
                 lastDay = DateTime.Now.Day;
                 lottoData.downloadAllLotto();
-                DbManagement._DsSiteLoad();
+                DbManagement.DsSiteLoad();
             }
-                PingMe();//if i don't do it the sise go down
+            PingMe();//if i don't do it the sise go down
 
         }
 
@@ -85,19 +85,19 @@ namespace SitoLotto
         }
 
 
-        private void PingMe()
+        private static void PingMe()
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://luca-site-test.herokuapp.com/api/Lotto/active");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri("https://luca-site-test.herokuapp.com/api/Lotto/active"));
             request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
 
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
             using (Stream stream = response.GetResponseStream())
             using (var reader = new StreamReader(stream))
             {
-                Console.WriteLine(reader.ReadToEnd());
+                Console.WriteLine("PingMe"+reader.ReadToEnd());
             }
 
-          
-        } 
+
+        }
     }
 }

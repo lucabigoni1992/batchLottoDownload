@@ -96,83 +96,81 @@
     </div>
     <button class="btn btn-primary" type="submit">Submit form</button>
 </form>
-
+<!--
 <form [formGroup]="registerForm">
     <blockquote class="blockquote text-center">
         <p class="mb-0">In questa Pagina puoi aggiungere un nuovo Url da controllare e impostare la notifica </p>
         <br />
         <br />
         <dl class="row text-left">
-            <!--text-left-->
-            <dd class="col-sm-3"><cite title="Source Title">Aggiungi l'Url</cite></dd>
-            <dd class="col-sm-2"></dd>
-            <dd class="col-sm-7">
-                <div class="form-group">
-                    <label for="validationTooltip01">First name</label>
-                    <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
-                    <div class="valid-tooltip">
-                        Looks good!
-                    </div>
+<dd class="col-sm-3"><cite title="Source Title">Aggiungi l'Url</cite></dd>
+<dd class="col-sm-2"></dd>
+<dd class="col-sm-7">
+    <div class="form-group">
+        <label for="validationTooltip01">First name</label>
+        <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+        <div class="valid-tooltip">
+            Looks good!
+        </div>
 
-                    <input type="Url" formControlName="First name" class="form-control" [ngClass]="{ 'is-invalid':f.Url.dirty && f.Url.errors }" />
-                    <div *ngIf="f.Url.dirty && f.Url.errors" class="invalid-feedback">
-                        <div *ngIf="f.Url.errors.required">First name</div>
-                    </div>
-                    <div class="valid-tooltip">
-                        Looks good!
-                    </div>
-                    <small id="EmailHelp" class="form-text text-muted"></small>
-                </div>
-            </dd>
+        <input type="Url" formControlName="First name" class="form-control" [ngClass]="{ 'is-invalid':f.Url.dirty && f.Url.errors }" />
+        <div *ngIf="f.Url.dirty && f.Url.errors" class="invalid-feedback">
+            <div *ngIf="f.Url.errors.required">First name</div>
+        </div>
+        <div class="valid-tooltip">
+            Looks good!
+        </div>
+        <small id="EmailHelp" class="form-text text-muted"></small>
+    </div>
+</dd>
 
-            <dd class="col-sm-3"><cite title="Source Title">Email</cite></dd>
-            <dd class="col-sm-2"></dd>
-            <dd class="col-sm-7">
-                <div class="form-group">
-                    <input type="text" formControlName="Email" class="form-control" [ngClass]="{ 'is-invalid':f.Email.dirty &&  f.Email.errors }" />
-                    <div *ngIf="f.Email.dirty && f.Email.errors" class="invalid-feedback">
-                        <div *ngIf="f.Email.errors.required">Il l'Email è obligatoria</div>
-                        <div *ngIf="f.Email.errors.Email">Il l'Email è obligatoria</div>
-                    </div>
-                    <small id="EmailHelp" class="form-text text-muted">Insserisci l'Email a cui notificare</small>
-                </div>
-            </dd>
-            <dd class="col-sm-3"><cite title="Source Title">Ogni quanto controllare </cite></dd>
-            <dd class="col-sm-2">(Ore)</dd>
-            <dd class="col-sm-7">
-                <div class="form-group">
-                    <input type="number" min="12" formControlName="Ore" class="form-control" [ngClass]="{ 'is-invalid':f.Ore.dirty &&  f.Ore.errors }" />
-                    <div *ngIf="f.Ore.dirty  && f.Ore.errors" class="invalid-feedback">
-                        <div *ngIf="f.Ore.errors.required">Il numero di Ore è obligatorio</div>
-                    </div>
-                    <small id="HHHelp" class="form-text text-muted">Ogni quanto verrà effettuato il controllo del sito in questione (in Ore)</small>
-                </div>
-            </dd>
-            <dd class="col-sm-3"><cite title="Source Title">Tag </cite></dd>
-            <dd class="col-sm-2">(opzionale)</dd>
-            <dd class="col-sm-7">
-                <div class="form-group">
-                    <input type="text" formControlName="Tag" class="form-control" />
-                    <small id="EmailHelp" class="form-text text-muted">Tag da controllare (opzionale)< body > < / body > </small>
-                </div>
-            </dd>
-            <dd class="col-sm-3"><cite title="Source Title">Active</cite></dd>
-            <dd class="col-sm-2"></dd>
-            <dd class="col-sm-7">
-                <div class="form-group">
-                    <input type="checkbox" formControlName="Active" id="Active" class="form-check-input" />
-                </div>
-            </dd>
+<dd class="col-sm-3"><cite title="Source Title">Email</cite></dd>
+<dd class="col-sm-2"></dd>
+<dd class="col-sm-7">
+    <div class="form-group">
+        <input type="text" formControlName="Email" class="form-control" [ngClass]="{ 'is-invalid':f.Email.dirty &&  f.Email.errors }" />
+        <div *ngIf="f.Email.dirty && f.Email.errors" class="invalid-feedback">
+            <div *ngIf="f.Email.errors.required">Il l'Email è obligatoria</div>
+            <div *ngIf="f.Email.errors.Email">Il l'Email è obligatoria</div>
+        </div>
+        <small id="EmailHelp" class="form-text text-muted">Insserisci l'Email a cui notificare</small>
+    </div>
+</dd>
+<dd class="col-sm-3"><cite title="Source Title">Ogni quanto controllare </cite></dd>
+<dd class="col-sm-2">(Ore)</dd>
+<dd class="col-sm-7">
+    <div class="form-group">
+        <input type="number" min="12" formControlName="Ore" class="form-control" [ngClass]="{ 'is-invalid':f.Ore.dirty &&  f.Ore.errors }" />
+        <div *ngIf="f.Ore.dirty  && f.Ore.errors" class="invalid-feedback">
+            <div *ngIf="f.Ore.errors.required">Il numero di Ore è obligatorio</div>
+        </div>
+        <small id="HHHelp" class="form-text text-muted">Ogni quanto verrà effettuato il controllo del sito in questione (in Ore)</small>
+    </div>
+</dd>
+<dd class="col-sm-3"><cite title="Source Title">Tag </cite></dd>
+<dd class="col-sm-2">(opzionale)</dd>
+<dd class="col-sm-7">
+    <div class="form-group">
+        <input type="text" formControlName="Tag" class="form-control" />
+        <small id="EmailHelp" class="form-text text-muted">Tag da controllare (opzionale)< body > < / body > </small>
+    </div>
+</dd>
+<dd class="col-sm-3"><cite title="Source Title">Active</cite></dd>
+<dd class="col-sm-2"></dd>
+<dd class="col-sm-7">
+    <div class="form-group">
+        <input type="checkbox" formControlName="Active" id="Active" class="form-check-input" />
+    </div>
+</dd>
         </dl>
     </blockquote>
 </form>
-
-
-<button kendoButton class="dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [primary]="true" (click)="showStatistics()">
+<button kendoButton class="dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [primary]="true" (click)="return true;">
     <fa name="cog" animation="spin" style="margin-right: 9px;"> </fa>
     Statistics
 </button>
 
+-->
 
 <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields

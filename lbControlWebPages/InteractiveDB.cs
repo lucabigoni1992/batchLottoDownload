@@ -20,16 +20,16 @@ namespace lbControlWebPages
         public static KendoSiteInputMapping GetAllSite()
         {
             //         AddUpdateSiteAsync("https://acpol2.army.mil/vacancy/vacancy_list.asp", 24);
-            var siteElems = DbManagement._SiteAllRow();
+            var siteElems = DbManagement.SiteAllRow();
             return new KendoSiteInputMapping(siteElems.ToList());
         }
         public static bool AddSite(SiteInputMapping elem)
         {
             try
             {
-                SiteRow row = DbManagement._dsSiteData_newRow(elem);
-                DbManagement._LottoDs_addRow(row);
-                DbManagement._SiteAllRow();
+                SiteRow row = DbManagement.DsSiteData_newRow(elem);
+                DbManagement.LottoDs_addRow(row);
+                DbManagement.SiteAllRow();
                 return true;
             }
             catch (Exception EX)
@@ -42,9 +42,9 @@ namespace lbControlWebPages
             try
             {
                 if (elem.Action == siteAction.delete)
-                    DbManagement._dsSiteData_deleteRow(elem.Url);
+                    DbManagement.DsSiteData_deleteRow(elem.Url);
                 else if (elem.Action == siteAction.disable)
-                    DbManagement._dsSiteData_disableRow(elem.Url);
+                    DbManagement.DsSiteData_disableRow(elem.Url);
                 return true;
             }
             catch (Exception EX)
@@ -72,7 +72,7 @@ namespace lbControlWebPages
                         row.PostHTML = row.PreHTML;
                         row.PreHTML = ElaboraCampDearby(ris);
                     }
-                    row.State = (row.PostHTML == row.PreHTML || row.PostHTML != string.Empty) ? true : false;
+                    row.State = (row.PostHTML == row.PreHTML || row.PostHTML != string.Empty);
                 }
                 else
                 {
@@ -91,16 +91,17 @@ namespace lbControlWebPages
                         }
                     }
                 }
-                _DsSiteSave();
+                DsSiteSave();
                 return true;
             }
             catch (Exception EX)
             {
+                Console.WriteLine(EX.ToString());
                 return false;
             }
         }
 
-        private static void _DsSiteSave()
+        private static void DsSiteSave()
         {
             throw new NotImplementedException();
         }
@@ -139,8 +140,10 @@ namespace lbControlWebPages
             try
             {
                 HttpClient client = new HttpClient();
-                HttpClientHandler clientHandler = new HttpClientHandler();
-                clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+                HttpClientHandler clientHandler = new HttpClientHandler
+                {
+                    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; }
+                };
                 if (url.StartsWith("https"))
                     client = new HttpClient(clientHandler);
                 var content = new FormUrlEncodedContent(Data);
