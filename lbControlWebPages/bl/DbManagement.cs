@@ -16,7 +16,7 @@ using static libraryLotto.dlm.SiteMapping;
 
 namespace libraryLotto
 {
-    internal static class DbManagement
+    public static class DbManagement
     {
         internal static List<Registry> Scheduler = new List<Registry>();
         internal static string fileDsName = Path.Combine(GetApplicationRoot(), Resources.bkDbXml_folder, Resources.bkDbXml_SiteDb);
@@ -46,7 +46,7 @@ namespace libraryLotto
             _DSSiteData.AcceptChanges();
         }
             
-        internal static void _DsSiteLoad()
+        public static void _DsSiteLoad()
         {
             if (_DSSiteData.Site.Rows.Count > 0)
                 _DSSiteData.Site.Rows.Clear();

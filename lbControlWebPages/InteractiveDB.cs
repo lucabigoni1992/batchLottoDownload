@@ -87,7 +87,7 @@ namespace lbControlWebPages
                         if (row.PostHTML != row.PreHTML)
                         {
                             //send mail
-                                        Mail.   SendMessage( row);
+                            Mail.SendMessage(row);
                         }
                     }
                 }
@@ -114,7 +114,7 @@ namespace lbControlWebPages
                 tag = "body";
             else
                 tag.Replace("<", "").Replace(">", "");
-           if(ris.Contains("<rss version="))
+            if (ris.Contains("<rss version="))
                 return ris;
 
             var postcd = doc.DocumentNode.SelectNodes($"//{tag}");

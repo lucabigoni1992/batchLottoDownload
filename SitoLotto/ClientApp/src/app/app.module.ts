@@ -35,6 +35,7 @@ import { MaterialModule } from './app.module.material';
 import { ConfrontositiGridDataService } from './confronto-siti/service/confronto-siti-GridData.service';
 import { ConfrontoSitiComponent } from './confronto-siti/confronto-siti.component';
 import { ConfrontoSitiAddRecordComponent } from './confronto-siti/modali/directive/confrontoSitiAddRecord.component';
+import { FiscalCodeComponent } from './simulator/fiscal-code/fiscal-code.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
@@ -49,6 +50,7 @@ import { ReactiveFormsModule } from '@angular/forms';
         LottoDatiEstrazioneComponent,
         LottoDatiVinciteComponent,
         LottoDatiStatisticsComponent,
+        FiscalCodeComponent,
         FileManagerComponent,
         UploadComponent,
         DownloadComponent,
@@ -68,8 +70,9 @@ import { ReactiveFormsModule } from '@angular/forms';
             { path: '', component: HomeComponent, pathMatch: 'full' },
             { path: 'testModali', component: testModaliComponent },
             { path: 'fetch-data', component: FetchDataComponent },
-            { path: 'confronto-siti', component: ConfrontoSitiComponent },
-            { path: 'storico-lotto', component: StoricoLottoComponent }
+            { path: 'confronto-siti', component: ConfrontoSitiComponent }, 
+            { path: 'storico-lotto', component: StoricoLottoComponent },
+            { path: 'simulator/fiscal-code', component: FiscalCodeComponent }
         ]),
         ButtonsModule,
         BrowserAnimationsModule,

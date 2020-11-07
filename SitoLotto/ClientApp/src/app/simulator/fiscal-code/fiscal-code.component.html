@@ -1,0 +1,196 @@
+<style type="text/css">
+
+    /**mi sono divertito a sovrascrivere i colori del bootstrap per questo ho fatto così
+        la soluzione migliore era mettere le variabili e le parti usate in tutto il sito in un file e metterlo nella root cosa che farà nelle prossime pagine
+    */
+    /*bootstrap*/
+
+
+    * {
+        --primary-color-kendo-lotto: #ff6358 !important;
+        --event-color-kendo-lotto: #ff6358 !important;
+        --active-color-kendo-lotto: #c32727 !important;
+    }
+
+    .dropdown-item-primary {
+        background-color: var(--primary-color-kendo-lotto);
+        border-color: var(--primary-color-kendo-lotto);
+    }
+
+    .dropdown-item:hover, .dropdown-item:active {
+        background-color: var(--event-color-kendo-lotto);
+        border-color: var(--event-color-kendo-lotto);
+    }
+
+    .dropdown-item.active {
+        background-color: var(--active-color-kendo-lotto);
+        border-color: var(--active-color-kendo-lotto);
+    }
+</style>
+
+<h1>Page in Pogress</h1>
+
+<p>Page in Pogress</p>
+<p>
+    Page in Pogress
+</p>
+<ul>
+    <li>
+        <p>Page in Pogress</p>
+    </li>
+    <li>
+        <p>Page in Pogress</p>
+    </li>
+</ul>
+<form class="needs-validation" novalidate>
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="validationTooltip01">First name</label>
+            <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+            <div class="valid-tooltip">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationTooltip02">Last name</label>
+            <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
+            <div class="valid-tooltip">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationTooltipUsername">Username</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                </div>
+                <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+                <div class="invalid-tooltip">
+                    Please choose a unique and valid username.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label for="validationTooltip03">City</label>
+            <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+            <div class="invalid-tooltip">
+                Please provide a valid city.
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationTooltip04">State</label>
+            <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+            <div class="invalid-tooltip">
+                Please provide a valid state.
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationTooltip05">Zip</label>
+            <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
+            <div class="invalid-tooltip">
+                Please provide a valid zip.
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+
+<form [formGroup]="registerForm">
+    <blockquote class="blockquote text-center">
+        <p class="mb-0">In questa Pagina puoi aggiungere un nuovo Url da controllare e impostare la notifica </p>
+        <br />
+        <br />
+        <dl class="row text-left">
+            <!--text-left-->
+            <dd class="col-sm-3"><cite title="Source Title">Aggiungi l'Url</cite></dd>
+            <dd class="col-sm-2"></dd>
+            <dd class="col-sm-7">
+                <div class="form-group">
+                    <label for="validationTooltip01">First name</label>
+                    <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+                    <div class="valid-tooltip">
+                        Looks good!
+                    </div>
+
+                    <input type="Url" formControlName="First name" class="form-control" [ngClass]="{ 'is-invalid':f.Url.dirty && f.Url.errors }" />
+                    <div *ngIf="f.Url.dirty && f.Url.errors" class="invalid-feedback">
+                        <div *ngIf="f.Url.errors.required">First name</div>
+                    </div>
+                    <div class="valid-tooltip">
+                        Looks good!
+                    </div>
+                    <small id="EmailHelp" class="form-text text-muted"></small>
+                </div>
+            </dd>
+
+            <dd class="col-sm-3"><cite title="Source Title">Email</cite></dd>
+            <dd class="col-sm-2"></dd>
+            <dd class="col-sm-7">
+                <div class="form-group">
+                    <input type="text" formControlName="Email" class="form-control" [ngClass]="{ 'is-invalid':f.Email.dirty &&  f.Email.errors }" />
+                    <div *ngIf="f.Email.dirty && f.Email.errors" class="invalid-feedback">
+                        <div *ngIf="f.Email.errors.required">Il l'Email è obligatoria</div>
+                        <div *ngIf="f.Email.errors.Email">Il l'Email è obligatoria</div>
+                    </div>
+                    <small id="EmailHelp" class="form-text text-muted">Insserisci l'Email a cui notificare</small>
+                </div>
+            </dd>
+            <dd class="col-sm-3"><cite title="Source Title">Ogni quanto controllare </cite></dd>
+            <dd class="col-sm-2">(Ore)</dd>
+            <dd class="col-sm-7">
+                <div class="form-group">
+                    <input type="number" min="12" formControlName="Ore" class="form-control" [ngClass]="{ 'is-invalid':f.Ore.dirty &&  f.Ore.errors }" />
+                    <div *ngIf="f.Ore.dirty  && f.Ore.errors" class="invalid-feedback">
+                        <div *ngIf="f.Ore.errors.required">Il numero di Ore è obligatorio</div>
+                    </div>
+                    <small id="HHHelp" class="form-text text-muted">Ogni quanto verrà effettuato il controllo del sito in questione (in Ore)</small>
+                </div>
+            </dd>
+            <dd class="col-sm-3"><cite title="Source Title">Tag </cite></dd>
+            <dd class="col-sm-2">(opzionale)</dd>
+            <dd class="col-sm-7">
+                <div class="form-group">
+                    <input type="text" formControlName="Tag" class="form-control" />
+                    <small id="EmailHelp" class="form-text text-muted">Tag da controllare (opzionale)< body > < / body > </small>
+                </div>
+            </dd>
+            <dd class="col-sm-3"><cite title="Source Title">Active</cite></dd>
+            <dd class="col-sm-2"></dd>
+            <dd class="col-sm-7">
+                <div class="form-group">
+                    <input type="checkbox" formControlName="Active" id="Active" class="form-check-input" />
+                </div>
+            </dd>
+        </dl>
+    </blockquote>
+</form>
+
+
+<button kendoButton class="dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [primary]="true" (click)="showStatistics()">
+    <fa name="cog" animation="spin" style="margin-right: 9px;"> </fa>
+    Statistics
+</button>
+
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
