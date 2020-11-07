@@ -44,9 +44,9 @@ namespace SitoLotto
             {
                 lastDay = DateTime.Now.Day;
                 lottoData.downloadAllLotto();
-                DbManagement._DsSiteLoad();
+   //             DbManagement.DsSiteLoad();
             }
-                PingMe();//if i don't do it the sise go down
+  //              PingMe();//if i don't do it the sise go down
 
         }
 

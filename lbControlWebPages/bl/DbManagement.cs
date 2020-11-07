@@ -20,11 +20,11 @@ namespace libraryLotto
     {
         internal static List<Registry> Scheduler = new List<Registry>();
         internal static string fileDsName = Path.Combine(GetApplicationRoot(), Resources.bkDbXml_folder, Resources.bkDbXml_SiteDb);
-        private static SiteData _DSSiteData = new SiteData();
+        private static readonly SiteData _DSSiteData = new SiteData();
 
         static DbManagement()
         {
-            _DsSiteLoad();
+            DsSiteLoad();
         }
 
         //struttura Dati 
@@ -36,7 +36,7 @@ namespace libraryLotto
             var appRoot = appPathMatcher.Match(exePath).Value;
             return appRoot;
         }
-        internal static void _DsSiteSave()
+        internal static void DsSiteSave()
         {
             string dir = (Path.GetDirectoryName(fileDsName));
             Console.WriteLine("file-> " + fileDsName);
@@ -46,7 +46,7 @@ namespace libraryLotto
             _DSSiteData.AcceptChanges();
         }
             
-        public static void _DsSiteLoad()
+        public static void DsSiteLoad()
         {
             if (_DSSiteData.Site.Rows.Count > 0)
                 _DSSiteData.Site.Rows.Clear();
@@ -54,7 +54,7 @@ namespace libraryLotto
                 _DSSiteData.ReadXml(fileDsName);
             Scheduler.Clear();
             foreach (SiteRow row in _DSSiteData.Site.Rows)
-                addSchedule(row);
+                AddSchedule(row);
 
             JobManager.StopAndBlock();
             JobManager.RemoveAllJobs();
@@ -64,34 +64,34 @@ namespace libraryLotto
 
 
         //Site
-        internal static SiteRow _dsSiteData_newRow(SiteInputMapping elem)
+        internal static SiteRow DsSiteData_newRow(SiteInputMapping elem)
         {
             SiteRow rows = _DSSiteData.Site.FindByUrl(elem.Url);
             if (rows != null)
                 return rows;
-             rows= _dsSiteData_newRow();
+             rows= DsSiteData_newRow();
            FromInputSiteToRow (elem, ref rows);
             return rows;
         }  //Site
-        internal static SiteRow _dsSiteData_newRow(string Url)
+        internal static SiteRow DsSiteData_newRow(string Url)
         {
             SiteRow rows = _DSSiteData.Site.FindByUrl(Url);
             if (rows != null)
                 return rows;
             else
-                return _dsSiteData_newRow();
+                return DsSiteData_newRow();
         }
-        internal static SiteRow _dsSiteData_newRow() { return _DSSiteData.Site.NewSiteRow(); }
-        internal static void _LottoDs_addRow(SiteRow row)
+        internal static SiteRow DsSiteData_newRow() { return _DSSiteData.Site.NewSiteRow(); }
+        internal static void LottoDs_addRow(SiteRow row)
         {
             if (_DSSiteData.Site.FindByUrl(row.Url) == null)
             {
                 _DSSiteData.Site.AddSiteRow(row);
-                _DsSiteSave();
-                _DsSiteLoad();
+                DsSiteSave();
+                DsSiteLoad();
             }
         }
-        internal static void _dsSiteData_disableRow(string url)
+        internal static void DsSiteData_disableRow(string url)
         {
             if (_DSSiteData.Site.FindByUrl(url) != null)
             {
@@ -100,19 +100,19 @@ namespace libraryLotto
             }
         }
 
-        internal static void _dsSiteData_deleteRow(string url)
+        internal static void DsSiteData_deleteRow(string url)
         {
             if (_DSSiteData.Site.FindByUrl(url) != null)
                 _DSSiteData.Site.RemoveSiteRow(_DSSiteData.Site.FindByUrl(url));
             _DSSiteData.Site.AcceptChanges();
-            _DsSiteSave();
-            _DsSiteLoad();
+            DsSiteSave();
+            DsSiteLoad();
         }
-        internal static SiteDataTable _Site() { return _DSSiteData.Site; }
+        internal static SiteDataTable Site() { return _DSSiteData.Site; }
 
 
         //gestione job
-        private static void addSchedule(SiteRow row)
+        private static void AddSchedule(SiteRow row)
         {
             var r = new Registry();
             _ = r.Schedule(async () =>
@@ -130,7 +130,7 @@ namespace libraryLotto
             Scheduler.Add(r);
         }
 
-        internal static IEnumerable<SiteMapping> _SiteAllRow()
+        internal static IEnumerable<SiteMapping> SiteAllRow()
         {
             try
             {
