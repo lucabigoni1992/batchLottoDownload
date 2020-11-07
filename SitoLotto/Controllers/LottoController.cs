@@ -19,7 +19,7 @@ namespace LottoWeb.ClientApp
     {
         private readonly ILogger<FileDispenserController> logger;
 
-        public LottoController( ILogger<FileDispenserController> logger)
+        public LottoController(ILogger<FileDispenserController> logger)
         {
             this.logger = logger;
         }
@@ -49,7 +49,7 @@ namespace LottoWeb.ClientApp
         {
             try
             {
-                return JsonConvert.SerializeObject(a.GetLottoKendoQuery(ParamKendo)); 
+                return JsonConvert.SerializeObject(a.GetLottoKendoQuery(ParamKendo));
             }
             catch (Exception ex)
             {
@@ -63,7 +63,21 @@ namespace LottoWeb.ClientApp
         {
             try
             {
-                return JsonConvert.SerializeObject(a.GetLottoPallefromId(id)); 
+                return JsonConvert.SerializeObject(a.GetLottoPallefromId(id));
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.ToString());
+                return "";
+            };//in un ambiante professionale si deve gestire meglio
+        }
+        // GET: api/Lotto
+        [HttpGet("active", Name = "active")]
+        public string GetActive()
+        {
+            try
+            {
+                return JsonConvert.SerializeObject(DateTime.UtcNow);
             }
             catch (Exception ex)
             {
@@ -72,7 +86,7 @@ namespace LottoWeb.ClientApp
             };//in un ambiante professionale si deve gestire meglio
         }
 
-        [HttpGet("quote/{id}", Name = "Detailes")]
+        [HttpGet("quote/{id}", Name = "Detailes")<]
         public string GetDetailes(int id)
         {
             try

@@ -1,4 +1,5 @@
 using libraryLotto;
+using lbControlWebPages;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +11,11 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.SignalR.Protocol;
+using System.Net.NetworkInformation;
+using System.Text;
+using System.IO;
+using System.Net;
 
 namespace SitoLotto
 {
@@ -28,7 +34,7 @@ namespace SitoLotto
 
         public Task StartAsync(CancellationToken stoppingToken)
         {
-            _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromSeconds(60 * 1000));
+            _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromSeconds(60 ));
             return Task.CompletedTask;
         }
 
@@ -38,9 +44,12 @@ namespace SitoLotto
             {
                 lastDay = DateTime.Now.Day;
                 lottoData.downloadAllLotto();
+                DbManagement._DsSiteLoad();
             }
+                PingMe();//if i don't do it the sise go down
 
         }
+
 
         public Task StopAsync(CancellationToken stoppingToken)
         {
@@ -50,7 +59,7 @@ namespace SitoLotto
         public void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this); 
+            GC.SuppressFinalize(this);
         }
         protected virtual void Dispose(bool disposing)
         {
@@ -74,5 +83,21 @@ namespace SitoLotto
         {
             return base.ToString();
         }
+
+
+        private void PingMe()
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://luca-site-test.herokuapp.com/api/Lotto/active");
+            request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
+
+            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            using (Stream stream = response.GetResponseStream())
+            using (var reader = new StreamReader(stream))
+            {
+                Console.WriteLine(reader.ReadToEnd());
+            }
+
+          
+        } 
     }
 }

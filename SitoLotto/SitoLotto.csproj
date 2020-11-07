@@ -41,11 +41,15 @@
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Compile Remove="ClientApp\src\app\storico-lotto\service\**" />
+    <Compile Remove="DOCUMENTAZIONE !!!!!\NewFolder\**" />
     <Content Remove="$(SpaRoot)**" />
     <Content Remove="ClientApp\src\app\storico-lotto\service\**" />
+    <Content Remove="DOCUMENTAZIONE !!!!!\NewFolder\**" />
     <EmbeddedResource Remove="ClientApp\src\app\storico-lotto\service\**" />
+    <EmbeddedResource Remove="DOCUMENTAZIONE !!!!!\NewFolder\**" />
     <None Remove="$(SpaRoot)**" />
     <None Remove="ClientApp\src\app\storico-lotto\service\**" />
+    <None Remove="DOCUMENTAZIONE !!!!!\NewFolder\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
@@ -66,8 +70,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\src\app\simulator\fiscal-code\modali\directive\" />
+    <Folder Include="ClientApp\src\app\simulator\fiscal-code\modali\modelData\" />
+    <Folder Include="ClientApp\src\app\simulator\fiscal-code\modali\template\" />
+    <Folder Include="ClientApp\src\app\simulator\fiscal-code\service\" />
     <Folder Include="ClientApp\src\assets\Images\" />
-    <Folder Include="DOCUMENTAZIONE !!!!!\NewFolder\" />
     <Folder Include="log\" />
     <Folder Include="wwwroot\File\Excel\Creati\" />
   </ItemGroup>
